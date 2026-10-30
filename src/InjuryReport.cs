@@ -10,8 +10,8 @@ using System.Text.RegularExpressions;
 namespace NbaQuant
 {
     // Official NBA injury report -> overrides\injuries_DATE.csv, so cloud runs apply the same statuses a person would.
-    // Finds the newest PDF for the date on official.nba.com, converts it with pdftotext -layout (poppler) and reads the
-    // player rows (columns are separated by runs of spaces in layout mode).
+    // Finds the newest PDF for the date (fixed 15-minute addresses), converts it with pdftotext -layout (poppler) and
+    // reads the player rows (columns are separated by runs of spaces in layout mode).
     static class InjuryReport
     {
         static readonly Dictionary<string, string> Teams = new Dictionary<string, string>
@@ -32,15 +32,26 @@ namespace NbaQuant
         public static string Apply(DateTime d, Action<string> log)
         {
             string ds = d.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-            string page = Net.Get("https://official.nba.com/nba-injury-report-2026-27-season/");
-            var links = Regex.Matches(page, @"https://ak-static\.cms\.nba\.com/referee/injury/Injury-Report_" + ds + @"_(\d{2})_(\d{2})(AM|PM)\.pdf")
-                .Cast<Match>().Select(m => new { Url = m.Value, Min = (int.Parse(m.Groups[1].Value) % 12 + (m.Groups[3].Value == "PM" ? 12 : 0)) * 60 + int.Parse(m.Groups[2].Value), Label = m.Groups[1].Value + ":" + m.Groups[2].Value + " " + m.Groups[3].Value })
-                .GroupBy(x => x.Url).Select(g => g.First()).OrderByDescending(x => x.Min).ToList();
-            if (links.Count == 0) return "Official injury report: no PDF listed yet for " + ds + "; ESPN statuses only.";
-            var best = links[0];
             string dir = Program.P(@"data\cache\inj"); Directory.CreateDirectory(dir);
             string pdf = Path.Combine(dir, "report_" + ds + ".pdf"), txt = Path.Combine(dir, "report_" + ds + ".txt");
-            using (var wc = new System.Net.WebClient()) { wc.Headers.Add("User-Agent", "Mozilla/5.0"); wc.DownloadFile(best.Url, pdf); }
+            if (File.Exists(txt)) File.Delete(txt);
+            // reports are posted every 15 minutes at a fixed address; the listing page served to the cloud runner was hours
+            // stale, so probe the addresses directly, newest first, from now (or the end of the day for past dates)
+            var t = d.Date == DateTime.Now.Date ? DateTime.Now : d.Date.AddHours(23).AddMinutes(45);
+            t = t.AddMinutes(-(t.Minute % 15)).AddSeconds(-t.Second);
+            string label = null;
+            using (var wc = new System.Net.WebClient())
+            {
+                wc.Headers.Add("User-Agent", "Mozilla/5.0");
+                for (int k = 0; k < 96 && t.Date == d.Date && label == null; k++, t = t.AddMinutes(-15))
+                {
+                    string stamp = t.ToString("hh_mmtt", CultureInfo.InvariantCulture);
+                    try { wc.DownloadFile("https://ak-static.cms.nba.com/referee/injury/Injury-Report_" + ds + "_" + stamp + ".pdf", pdf); label = t.ToString("h:mm tt", CultureInfo.InvariantCulture); }
+                    catch (System.Net.WebException) { }
+                }
+            }
+            if (label == null) return "Official injury report: no PDF posted yet for " + ds + "; ESPN statuses only.";
+            var best = new { Label = label };
             string exe = Environment.GetEnvironmentVariable("PDFTOTEXT"); if (string.IsNullOrEmpty(exe)) exe = "pdftotext";
             var psi = new ProcessStartInfo(exe, "-layout \"" + pdf + "\" \"" + txt + "\"") { UseShellExecute = false, CreateNoWindow = true };
             using (var p = Process.Start(psi)) { p.WaitForExit(60000); }

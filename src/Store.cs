@@ -88,10 +88,14 @@ namespace NbaQuant
         {
             string ds = d.ToString("yyyyMMdd");
             var json = Net.Cached(Espn.Base + "scoreboard?dates=" + ds, C(@"espn\scoreboard_" + ds + ".json"), AgeFor(d));
-            if (d.Date < DateTime.Now.Date && J.A(J.Parse(json), "events").Any(e => J.S(e, "competitions.0.status.type.state") == "in"))
-            {   // saved while a game was still going: a past date's scoreboard is re-read until it is final, or it would be frozen mid-game
+            var evs = J.A(J.Parse(json), "events");
+            if (d.Date < DateTime.Now.Date && (evs.Length == 0 || evs.Any(e => { var st = J.S(e, "competitions.0.status.type.state"); return st == "in" || st == "pre"; })))
+            {   // a past date's scoreboard saved mid-game, before tip, or empty (a throttled response during a cold-cache
+                // cloud run dropped two whole dates) is re-read; an empty answer is never kept, so the next run tries again
                 json = Net.Get(Espn.Base + "scoreboard?dates=" + ds);
-                File.WriteAllText(C(@"espn\scoreboard_" + ds + ".json"), json, new UTF8Encoding(false));
+                string path = C(@"espn\scoreboard_" + ds + ".json");
+                if (J.A(J.Parse(json), "events").Length > 0) File.WriteAllText(path, json, new UTF8Encoding(false));
+                else if (File.Exists(path)) File.Delete(path);
             }
             var res = new List<EventRef>();
             foreach (var e in J.A(J.Parse(json), "events"))
