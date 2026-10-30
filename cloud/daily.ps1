@@ -39,6 +39,10 @@ switch ($Task) {
       Step "Four-leg tickets $aw@$hm" { & $cli sgp4 $Date "$aw@$hm" }
     }
   }
+  'stress' {
+    # -Variants carries the matchup, e.g. CHA@WSH
+    Step "Stress test $Variants" { & $cli stress $Date $Variants --sims 50000 }
+  }
   'test' {
     Step 'Backtest: current settings' { & $cli validate | Select-String -Pattern '^\s+(PROPS|ML|SPREAD|TOTAL|SGP|PTS|REB|AST|3PM|PRA|DD|Q3ALL)\s|Reliability' }
     foreach ($v in ($Variants -split ';' | Where-Object { $_.Trim() })) {

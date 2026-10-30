@@ -164,6 +164,52 @@ namespace NbaQuant
             }
         }
 
+        // nbaquant-cli stress DATE AWAY@HOME : re-simulate one game under changed assumptions to see how solid the pick is
+        public static void Stress(DateTime d, string matchup, int sims)
+        {
+            var log = Program.Log; var S = Program.S;
+            var parts = matchup.ToUpperInvariant().Split('@');
+            var ev = Store.Events(d).FirstOrDefault(e => e.Away == parts[0] && e.Home == parts[1]);
+            if (ev == null) { log("Game not found: " + matchup); return; }
+            Program.ForceIncludeId = ev.Id;
+            Func<GameCtx> build = () =>
+            {
+                Program.BuildSlate(d, true, true);
+                Program.Games = Program.Games.Where(g => g.Def.EspnId == ev.Id).ToList();
+                if (Program.Games.Count == 0) return null;
+                Program.Simulate(sims, true); return Program.Games[0];
+            };
+            var rows = new List<string>();
+            Action<string, GameCtx> line = (name, g) =>
+            {
+                if (g == null) { rows.Add(name + ": game not available"); return; }
+                rows.Add(string.Format(U.IC, "{0,-46} {1} win {2,6} | margin {3} {4:+0.0;-0.0} | total {5:0.0}, over {6} {7} | {1} covers {8:+0.0;-0.0}: {9}",
+                    name, g.Def.Away, U.Pct(1 - g.WinH), g.Def.Home, g.MeanMargin, g.MeanTotal, g.Def.DK.Total, U.Pct(g.POver), -g.Def.DK.SprH, U.Pct(1 - g.PCoverH)));
+            };
+            var baseG = build(); line("Base (current model)", baseG);
+            if (baseG == null) { foreach (var r in rows) log(r); return; }
+            log(string.Format(U.IC, "{0}: DraftKings {1} {2} ML {3}/{4}, total {5}. Model alone {6} {7}; DraftKings no-vig {6} {8}.", matchup, baseG.Def.Home, baseG.Def.DK.SprH, U.Am(baseG.Def.DK.MlA), U.Am(baseG.Def.DK.MlH), baseG.Def.DK.Total,
+                baseG.Def.Away, U.Pct(1 - baseG.ModelWinH), U.Pct(1 - Program.NoVigHome(baseG.Def.DK))));
+            Analysis.Run(false);
+            var keyAway = Analysis.Players.Where(p => !p.Home).OrderByDescending(p => p.Pra.Mean * p.PPlays).FirstOrDefault();
+            var keyHome = Analysis.Players.Where(p => p.Home).OrderByDescending(p => p.Pra.Mean * p.PPlays).FirstOrDefault();
+            var qs = baseG.H.Pl.Concat(baseG.A.Pl).Where(p => p.Status == "Q").ToList();
+            double mw = S.MarketWeight, smin = S.SigmaMin, spl = S.SigmaPlayer, tf = S.TeamFormWeight;
+            S.MarketWeight = 0; line("Model alone (no market)", build()); S.MarketWeight = mw;
+            S.MarketWeight = 0.5; line("Half model, half market", build()); S.MarketWeight = mw;
+            S.MarketWeight = 1; line("Market only", build()); S.MarketWeight = mw;
+            S.TeamFormWeight = 0.5; line("Team form on (half strength)", build()); S.TeamFormWeight = tf;
+            S.SigmaMin = 0.20; S.SigmaPlayer = 0; line("Less randomness (minutes 0.20, shooting 0)", build()); S.SigmaMin = smin; S.SigmaPlayer = spl;
+            S.SigmaMin = 0.45; S.SigmaPlayer = 0.18; line("More randomness (minutes 0.45, shooting 0.18)", build()); S.SigmaMin = smin; S.SigmaPlayer = spl;
+            if (keyAway != null) { Program.ForceOut.Add(keyAway.P.Pid); line(keyAway.P.Name + " (" + keyAway.P.Team + ") out", build()); Program.ForceOut.Remove(keyAway.P.Pid); }
+            if (keyHome != null) { Program.ForceOut.Add(keyHome.P.Pid); line(keyHome.P.Name + " (" + keyHome.P.Team + ") out", build()); Program.ForceOut.Remove(keyHome.P.Pid); }
+            foreach (var q in qs.Take(3)) { Program.ForceOut.Add(q.Pid); line(q.Name + " (" + q.Team + ", questionable) out", build()); Program.ForceOut.Remove(q.Pid); }
+            log("=== STRESS TEST " + matchup + " (" + sims.ToString("N0", U.IC) + " sims per scenario) ===");
+            foreach (var r in rows) log(r);
+            var wins = rows.Select(r => System.Text.RegularExpressions.Regex.Match(r, " win +([0-9.]+)%")).Where(m => m.Success).Select(m => double.Parse(m.Groups[1].Value, U.IC)).ToList();
+            if (wins.Count > 0) log(string.Format(U.IC, "{0} win range across scenarios: {1:0.0}% to {2:0.0}%; pick holds in {3} of {4}.", baseG.Def.Away, wins.Min(), wins.Max(), wins.Count(w => (w >= 50) == (1 - baseG.WinH >= 0.5)), wins.Count));
+        }
+
         // nbaquant-cli sgp4 DATE AWAY@HOME : four-leg parlays for one game in three risk bands, saved for grading
         public static void FourLeg(DateTime d, string matchup, int sims)
         {
@@ -253,6 +299,7 @@ namespace NbaQuant
                         }
                     case "audit": AppOps.Audit(args.Length > 1 && args[1].EndsWith(".csv") ? args[1] : "backtest_latest.csv"); break;
                     case "sgp4": AppOps.FourLeg(date(1), args[2], sims); break;
+                    case "stress": AppOps.Stress(date(1), args[2], sims); break;
                     case "live": AppOps.Live(date(1), args[2], sims); break;
                     case "next": Console.WriteLine(AppOps.NextSlateDate().ToString("yyyy-MM-dd")); break;
                     default: Console.WriteLine("usage: nbaquant-cli run [yyyy-MM-dd|next] [--sims N] | grade [yyyy-MM-dd] | recalibrate | next"); return 1;

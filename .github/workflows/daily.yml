@@ -13,7 +13,7 @@ on:
       task:
         description: 'What to run'
         type: choice
-        options: [slate, learn, test]
+        options: [slate, learn, test, stress]
         default: slate
       date:
         description: 'Slate date yyyy-MM-dd (blank = today ET, or yesterday for learn)'
