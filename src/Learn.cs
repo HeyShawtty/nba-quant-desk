@@ -313,6 +313,31 @@ namespace NbaQuant
                     if (sw) cur = res; else fld.SetValue(S, keepV);
                     slopeNote += string.Format(U.IC, "\n{0} {1} vs {2}: prop Brier earlier half {3:0.00000} vs {4:0.00000}, later half {5:0.00000} vs {6:0.00000}. Using {7}.", alt.Item1, keepV, alt.Item2, sw ? res.Item1 : cur.Item1, res.Item1, sw ? res.Item2 : cur.Item2, res.Item2, fld.GetValue(S));
                 }
+
+                // team form vs the market (how far each team has beaten its DraftKings spreads so far): judged on moneyline
+                // Brier, which it targets, and adopted only if that improves on both halves without hurting player props
+                Func<List<Pred>, Tuple<double, double>> mlHalves = ps =>
+                {
+                    var l = ps.Where(p => p.Kind == "ML" && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P)).ToList();
+                    var ds = l.Select(p => p.Date).Distinct().OrderBy(x => x).ToList(); string cut = ds[ds.Count / 2];
+                    Func<IEnumerable<Pred>, double> b = xs => xs.Average(x => (x.P - x.Y) * (x.P - x.Y));
+                    return Tuple.Create(b(l.Where(p => string.CompareOrdinal(p.Date, cut) < 0)), b(l.Where(p => string.CompareOrdinal(p.Date, cut) >= 0)));
+                };
+                double keepW = S.TeamFormWeight, bestW = keepW;
+                var basePreds = Run(from, to, S.BacktestSims, log);
+                var baseMl = mlHalves(basePreds); var baseProp = halves(basePreds); var bestMl = baseMl;
+                var formNotes = new List<string> { string.Format(U.IC, "{0}: {1:0.00000} / {2:0.00000}", keepW, baseMl.Item1, baseMl.Item2) };
+                foreach (double w in new[] { 0.0, 0.5, 1.0 })
+                {
+                    if (Math.Abs(w - keepW) < 1e-9) continue;
+                    S.TeamFormWeight = w;
+                    log(string.Format(U.IC, "Backtest with team-form weight {0} ...", w));
+                    var ps = Run(from, to, S.BacktestSims, log); var ml = mlHalves(ps); var pr = halves(ps);
+                    formNotes.Add(string.Format(U.IC, "{0}: {1:0.00000} / {2:0.00000} (props {3:0.00000} / {4:0.00000})", w, ml.Item1, ml.Item2, pr.Item1, pr.Item2));
+                    if (ml.Item1 < bestMl.Item1 && ml.Item2 < bestMl.Item2 && pr.Item1 <= baseProp.Item1 + 0.0002 && pr.Item2 <= baseProp.Item2 + 0.0002) { bestW = w; bestMl = ml; }
+                }
+                S.TeamFormWeight = bestW;
+                slopeNote += "\nTeam form vs market, moneyline Brier earlier / later half: " + string.Join("; ", formNotes) + string.Format(U.IC, ". Using {0}.", bestW);
             }
             slopeNote += "\n" + FitDdCalibration(preds0);
             slopeNote += "\n" + FitPropCalibration(preds0);

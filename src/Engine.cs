@@ -19,7 +19,7 @@ namespace NbaQuant
         public double ModelPtsH, ModelPtsA, ModelPoss, MktPtsH, MktPtsA, BlendPtsH, BlendPtsA, BlendPoss;
         public double OffH, DefH, OffA, DefA, PaceH, PaceA;
         public SimResult Res;
-        public double ModelWinH, ModelMeanMargin, ModelMeanTotal;
+        public double ModelWinH, ModelMeanMargin, ModelMeanTotal, FormShift;
         public double WinH, MeanMargin, MeanTotal, SdMargin, SdTotal, PCoverH, POver, POT, PBlowout, PClose;
         public int[] TotalPct = new int[5];
         public List<PlayerP> Players = new List<PlayerP>();
@@ -540,12 +540,31 @@ namespace NbaQuant
                 ctx.MktPtsH = double.NaN; ctx.MktPtsA = double.NaN; ctx.BlendPtsH = ctx.ModelPtsH; ctx.BlendPtsA = ctx.ModelPtsA;
                 d.DK = new MarketLine { Book = "none", SprH = Math.Round(ctx.ModelPtsA - ctx.ModelPtsH) + 0.5, Total = Math.Round(ctx.ModelPtsH + ctx.ModelPtsA) + 0.5, SprHOdds = -110, SprAOdds = -110, OverOdds = -110, UnderOdds = -110 };
             }
+            if (S.TeamFormWeight > 0)
+            {   // team form vs the market: shift the expected margin toward teams that keep beating their spreads (tested in Recalibrate)
+                ctx.FormShift = S.TeamFormWeight * (TeamForm(d.Home) - TeamForm(d.Away));
+                ctx.BlendPtsH += ctx.FormShift / 2; ctx.BlendPtsA -= ctx.FormShift / 2;
+            }
             ctx.BlendPoss = ctx.ModelPoss * Math.Sqrt((ctx.BlendPtsH + ctx.BlendPtsA) / (ctx.ModelPtsH + ctx.ModelPtsA));
             int hh = TallestStarter(ctx.H), ha = TallestStarter(ctx.A);
             ctx.P.PTipHome = live ? Math.Max(0.3, Math.Min(0.7, 0.5 + 0.035 * (hh - ha))) : 0.5;
             ctx.P.QShare = QShareEmp.Select(x => 0.5 * x + 0.5 * 0.25).ToArray();
             double qs = ctx.P.QShare.Sum(); for (int q = 0; q < 4; q++) ctx.P.QShare[q] /= qs;
             ctx.Players.Clear(); ctx.Players.AddRange(ctx.H.Pl); ctx.Players.AddRange(ctx.A.Pl);
+        }
+
+        // average of (actual margin - DraftKings margin) over this season's games before the slate, shrunk toward 0 with
+        // TeamFormPrior games of nothing; Completed holds only earlier games, so backtests have no look-ahead
+        public static double TeamForm(string team)
+        {
+            double sum = 0; int n = 0;
+            foreach (var g in Completed)
+            {
+                if (double.IsNaN(g.DkSprH)) continue;
+                if (g.Home == team) { sum += (g.HomePts - g.AwayPts) + g.DkSprH; n++; }
+                else if (g.Away == team) { sum += (g.AwayPts - g.HomePts) - g.DkSprH; n++; }
+            }
+            return n == 0 ? 0 : sum / (n + S.TeamFormPrior);
         }
 
         static int TallestStarter(SimTeam t)
