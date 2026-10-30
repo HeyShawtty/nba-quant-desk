@@ -30,7 +30,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: nbaquant
+  group: nbaquant-v2   # v2: runs stuck in the first queue during the 2026-10-30 GitHub incident can't block new ones
   cancel-in-progress: false
 
 jobs:
