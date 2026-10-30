@@ -1,10 +1,10 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/30/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/30/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-CHA,Dennis Schroder,Q,0.9,Official: Probable
+CHA,Dennis Schroder,AVAIL,1,Official: Available
 CHA,Coby White,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 CHA,Grant Williams,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 WSH,Reece Beekman,OUT,0,Official: Out (G League - Two-Way)
@@ -49,26 +49,26 @@ TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 HOU,Steven Adams,OUT,0,Official: Out (Injury/Illness - Right Soleus Strain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
-HOU,Alperen Sengun,Q,0.5,Official: Questionable (Injury/Illness - Low Back Soreness)
+HOU,Alperen Sengun,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
 HOU,Reed Sheppard,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
 HOU,Marcus Smart,Q,0.5,Official: Questionable (Injury/Illness - Left Forearm Strain)
-DAL,Santi Aldama,Q,0.25,Official: Doubtful (Injury/Illness - Right Knee Surgery)
-DAL,Tarik Biberovic,Q,0.25,Official: Doubtful (Injury/Illness - Right Heel Bursitis)
+DAL,Santi Aldama,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
-DAL,Naji Marshall,Q,0.9,Official: Probable (Injury/Illness - Illness)
+DAL,Naji Marshall,AVAIL,1,Official: Available (Injury/Illness - Illness)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
-IND,Andrew Nembhard,Q,0.9,Official: Probable
-IND,Aaron Nesmith,Q,0.9,Official: Probable (Injury/Illness - Left Hamstring Strain)
+IND,Andrew Nembhard,AVAIL,1,Official: Available
+IND,Aaron Nesmith,AVAIL,1,Official: Available (Injury/Illness - Left Hamstring Strain)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
-IND,Obi Toppin,Q,0.5,Official: Questionable (Injury/Illness - Low Back Soreness)
+IND,Obi Toppin,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
 IND,Ivica Zubac,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 MIA,Simone Fontecchio,AVAIL,1,Official: Available (Injury/Illness - Illness)
 LAC,Bradley Beal,OUT,0,Official: Out
-LAC,Rui Hachimura,Q,0.9,Official: Probable (Injury/Illness - Left Quad Soreness)
+LAC,Rui Hachimura,AVAIL,1,Official: Available (Injury/Illness - Left Quad Soreness)
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
 LAC,Jordan Miller,OUT,0,Official: Out
 LAC,Yanic Konan Niederhauser,OUT,0,Official: Out (Injury/Illness - Right Lisfranc Surgery)
