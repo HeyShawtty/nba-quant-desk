@@ -85,7 +85,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A ledger predictions reports site data/bank overrides settings.ini
+          git add -A ledger predictions reports site data/bank data/static overrides settings.ini
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) {
             git commit -m "${{ env.TASK }}: $(Get-Date -Format 'yyyy-MM-dd HH:mm') ET"

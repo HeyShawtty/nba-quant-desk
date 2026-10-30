@@ -65,6 +65,44 @@ namespace NbaQuant
         }
     }
 
+    // DraftKings lines kept in the repo (data\static\lines_2627.csv). ESPN drops the line from many finished games when they
+    // are fetched later (the cloud runner got 13 of 71), so backtests read the line from here; every run records new games'
+    // lines while they are still pre-tip and freezes them once final.
+    static class LinesRecord
+    {
+        static Dictionary<string, string[]> rows;
+        static readonly object Gate = new object();
+        static string Path_ { get { return Path.Combine(Store.Root, "data", "static", "lines_2627.csv"); } }
+        static void Load()
+        {
+            if (rows != null) return;
+            rows = new Dictionary<string, string[]>();
+            if (File.Exists(Path_)) foreach (var r in U.ReadCsv(Path_).Skip(1)) if (r.Length >= 8) rows[r[1]] = r;
+        }
+        public static void Sync(GameData g)
+        {
+            if (g == null || string.IsNullOrEmpty(g.Id) || Store.Root == null) return;
+            lock (Gate)
+            {
+                Load();
+                string[] r; bool have = rows.TryGetValue(g.Id, out r);
+                bool espnHas = !double.IsNaN(g.DkTotal) && !double.IsNaN(g.DkSprH);
+                if (!espnHas && have)
+                {
+                    g.DkSprH = U.D(r[4], double.NaN); g.DkTotal = U.D(r[5], double.NaN);
+                    g.DkMlH = U.D(r[6], double.NaN); g.DkMlA = U.D(r[7], double.NaN);
+                    return;
+                }
+                if (!espnHas || (have && g.Completed)) return;
+                Func<double, string> f = v => double.IsNaN(v) ? "" : v.ToString("R", CultureInfo.InvariantCulture);
+                rows[g.Id] = new[] { g.Date, g.Id, g.Away, g.Home, f(g.DkSprH), f(g.DkTotal), f(g.DkMlH), f(g.DkMlA) };
+                Directory.CreateDirectory(Path.GetDirectoryName(Path_));
+                File.WriteAllLines(Path_, new[] { "date,game_id,away,home,spread_home,total,ml_home,ml_away" }
+                    .Concat(rows.Values.OrderBy(x => x[0]).ThenBy(x => x[1]).Select(x => string.Join(",", x))), new UTF8Encoding(false));
+            }
+        }
+    }
+
     class EventRef { public string Id, Home, Away, HomeId, AwayId, HomeName, AwayName, StartUtc, Status, State; public bool Completed; }
     class RosterEntry { public string Pid, Name, Pos, Height; }
     class AnGame { public string Id, HomeName, AwayName; public List<MarketLine> Books = new List<MarketLine>(); }
@@ -125,6 +163,7 @@ namespace NbaQuant
                 File.WriteAllText(C(@"espn\games\" + id + ".json"), json, new UTF8Encoding(false));
                 g = Espn.ParseSummary(json);
             }
+            LinesRecord.Sync(g);
             if (completed && g.Completed) lock (Final) Final[id] = g;
             return g;
         }
