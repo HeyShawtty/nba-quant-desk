@@ -55,6 +55,31 @@ namespace NbaQuant
         }
     }
 
+    // Headline lists (top 5 of ~150 players by probability) carry a winner's-curse bias: the ranked picks hit less often than
+    // their stated odds (25+ list: 42% vs 54% in the walk-forward backtest, 29% vs 50% live), while the same probabilities
+    // are well calibrated across all players. Factor = (hits + 10) / (expected + 10) for the list's tag in the backtest,
+    // shrunk toward 1 and applied to the displayed probability. The live record is the held-out check.
+    static class TrackAdjust
+    {
+        static Dictionary<string, Tuple<double, int>> f;
+        public static Tuple<double, int> Of(string tag)
+        {
+            if (f == null)
+            {
+                f = new Dictionary<string, Tuple<double, int>>();
+                string bt = Program.P(@"ledger\backtest_latest.csv");
+                if (File.Exists(bt))
+                    foreach (var g in Pred.Load(bt).Where(p => !string.IsNullOrEmpty(p.Tag) && p.Tag.StartsWith("top") && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P)).GroupBy(p => p.Tag))
+                    {
+                        double hits = g.Sum(x => x.Y), exp = g.Sum(x => x.P);
+                        f[g.Key] = Tuple.Create(Math.Max(0.5, Math.Min(1.2, (hits + 10) / (exp + 10))), g.Count());
+                    }
+            }
+            Tuple<double, int> v; return f.TryGetValue(tag, out v) ? v : Tuple.Create(1.0, 0);
+        }
+        public static double Adj(string tag, double p) { return Math.Min(0.99, p * Of(tag).Item1); }
+    }
+
     class GameRec { public string Date, Game; public double MktMargin, ModelMargin, MktNoVig, Blend; public int HomeWon; public double Margin, Total, MktTotal; }
 
     static class Walk

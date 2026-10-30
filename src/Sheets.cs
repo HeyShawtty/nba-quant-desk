@@ -124,13 +124,15 @@ namespace NbaQuant
                 row.Add(Cell.Str(Notes.Q3Note(t), Styles.Wrap));
             }
 
+            var t25 = TrackAdjust.Of("top5_25pts");
             Section(sh, "D. Top 5 players to score 25+ points", 7);
-            Hdr(sh, "Player", "P(25+)", "Fair odds", "Mean pts", "Median", "Confidence", "Context");
+            if (t25.Item2 > 0) Note(sh, string.Format(U.IC, "Track-record adjusted: this list has hit {0:0%} of its stated odds over {1} backtest picks (top-ranked picks are biased high), so each probability is scaled by {0:0.00}. Model shows the raw simulation.", t25.Item1, t25.Item2));
+            Hdr(sh, "Player", "P(25+) adjusted", "Fair odds", "Mean pts", "Model P(25+)", "Confidence", "Context");
             foreach (var p in Analysis.Players.OrderByDescending(p => p.Pts.PAtLeast(25)).Take(5))
             {
-                var row = sh.Row(); int rn = sh.Rows.Count; double pr = p.Pts.PAtLeast(25);
+                var row = sh.Row(); int rn = sh.Rows.Count; double raw = p.Pts.PAtLeast(25), pr = TrackAdjust.Adj("top5_25pts", raw);
                 row.Add(Cell.Str(PName(p) + " vs " + p.Opp, Styles.Bold)); row.Add(Cell.Num(pr, Styles.PctB)); row.Add(FairOddsFx(R(1, rn), pr));
-                row.Add(Cell.Num(p.Pts.Mean, Styles.N1)); row.Add(Cell.Num(p.Pts.P50, Styles.Int)); row.Add(Cell.Num(p.Conf, Styles.Int));
+                row.Add(Cell.Num(p.Pts.Mean, Styles.N1)); row.Add(Cell.Num(raw, Styles.Pct)); row.Add(Cell.Num(p.Conf, Styles.Int));
                 row.Add(Cell.Str(string.Format(U.IC, "{0:0.0} proj. min; 2026-27 {1:0.0} ppg in {2} games; prior season {3}", p.MeanMin, p.P.Gp > 0 ? p.P.CsPts / p.P.Gp : 0, p.P.Gp, p.P.HasPs ? (p.P.Ps.PTS / Math.Max(1, p.P.Ps.G)).ToString("0.0", U.IC) + " ppg" + (p.P.PsStale ? " (2024-25)" : "") : "n/a"), Styles.Wrap));
             }
 
@@ -151,17 +153,17 @@ namespace NbaQuant
             Hdr(sh, "Player", "Market", "Probability", "Fair odds", "Season", "Projection", "Matchup");
             foreach (var ps in Analysis.Players.Where(p => p.MeanMin >= 20 && p.P.Status != "Q" && p.DD <= 0.95).OrderByDescending(p => p.DD).Take(5))
             {
-                var r = sh.Row(); int rn = sh.Rows.Count; var f = FormOf(ps);
-                r.Add(Cell.Str(PName(ps) + " vs " + ps.Opp, Styles.Bold)); r.Add(Cell.Str("Double-double")); r.Add(Cell.Num(ps.DD, Styles.PctB)); r.Add(FairOddsFx(R(2, rn), ps.DD));
+                var r = sh.Row(); int rn = sh.Rows.Count; var f = FormOf(ps); double dd = TrackAdjust.Adj("top5_dd", ps.DD);
+                r.Add(Cell.Str(PName(ps) + " vs " + ps.Opp, Styles.Bold)); r.Add(Cell.Str("Double-double")); r.Add(Cell.Num(dd, Styles.PctB)); r.Add(FairOddsFx(R(2, rn), dd));
                 r.Add(Cell.Str(f == null ? "-" : f.DdGames >= 0 ? f.DdGames + " DD in " + f.Gp + " games" : string.Format(U.IC, "{0:0.0} pts / {1:0.0} reb / {2:0.0} ast (2025-26)", f.Ppg, f.Rpg, f.Apg)));
-                r.Add(Cell.Str(string.Format(U.IC, "{0:0.0} pts / {1:0.0} reb / {2:0.0} ast", ps.Pts.Mean, ps.Reb.Mean, ps.Ast.Mean))); r.Add(Cell.Str(ps.P.MatchupNote, Styles.Wrap));
+                r.Add(Cell.Str(string.Format(U.IC, "{0:0.0} pts / {1:0.0} reb / {2:0.0} ast; model {3}, track-record adjusted {4}", ps.Pts.Mean, ps.Reb.Mean, ps.Ast.Mean, U.Pct(ps.DD), U.Pct(dd)))); r.Add(Cell.Str(ps.P.MatchupNote, Styles.Wrap));
             }
             foreach (var ps in Analysis.Players.Where(p => p.MeanMin >= 20 && p.P.Status != "Q").OrderByDescending(p => p.Tpm.PAtLeast(3)).Take(5))
             {
-                var r = sh.Row(); int rn = sh.Rows.Count; var f = FormOf(ps); double pr = ps.Tpm.PAtLeast(3);
+                var r = sh.Row(); int rn = sh.Rows.Count; var f = FormOf(ps); double raw = ps.Tpm.PAtLeast(3), pr = TrackAdjust.Adj("top5_3pm", raw);
                 r.Add(Cell.Str(PName(ps) + " vs " + ps.Opp, Styles.Bold)); r.Add(Cell.Str("3+ threes")); r.Add(Cell.Num(pr, Styles.PctB)); r.Add(FairOddsFx(R(2, rn), pr));
                 r.Add(Cell.Str(f == null ? "-" : string.Format(U.IC, "{0:0.0} made / {1:0.0} att per game{2}", f.Tpm, f.Tpa, f.FromPrior ? " (2025-26)" : "")));
-                r.Add(Cell.Str(string.Format(U.IC, "{0:0.0} made; P(2+) {1}, P(4+) {2}", ps.Tpm.Mean, U.Pct(ps.Tpm.PAtLeast(2)), U.Pct(ps.Tpm.PAtLeast(4))))); r.Add(Cell.Str(ps.P.MatchupNote, Styles.Wrap));
+                r.Add(Cell.Str(string.Format(U.IC, "{0:0.0} made; P(2+) {1}, P(4+) {2}; model {3}, track-record adjusted {4}", ps.Tpm.Mean, U.Pct(ps.Tpm.PAtLeast(2)), U.Pct(ps.Tpm.PAtLeast(4)), U.Pct(raw), U.Pct(pr)))); r.Add(Cell.Str(ps.P.MatchupNote, Styles.Wrap));
             }
             Note(sh, "No posted prices were captured for these markets; fair odds are the break-even prices. Full tables are on the DD & 3PT Props tab.");
 
