@@ -4,9 +4,12 @@ name: NBA Quant Desk
 # (an hour earlier in standard time from November 1).
 on:
   schedule:
+    # GitHub fired the 6:40 run 29 minutes late on its first day, so each pre-tip slot has an earlier backup
     - cron: '0 15 * * *'    # learn: grade yesterday, recalibrate, audit (11:00 AM ET)
+    - cron: '15 22 * * *'   # slate: early pre-tip run (6:15 PM ET)
     - cron: '40 22 * * *'   # slate: first pre-tip run (6:40 PM ET)
     - cron: '40 23 * * *'   # slate: final report before 8:00 PM tips (7:40 PM ET)
+    - cron: '15 1 * * *'    # slate: late West Coast games, backup (9:15 PM ET)
     - cron: '40 1 * * *'    # slate: late West Coast games (9:40 PM ET)
   workflow_dispatch:
     inputs:
@@ -89,9 +92,18 @@ jobs:
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) {
             git commit -m "${{ env.TASK }}: $(Get-Date -Format 'yyyy-MM-dd HH:mm') ET"
-            git pull --rebase --autostash
-            git push
+            # overlapping runs rewrite the same outputs: replay this run on top of the latest commit and let its files win
+            # on conflicts; if that still fails, skip the commit (the website is still published and the next run re-saves)
+            for ($i = 0; $i -lt 3; $i++) {
+              git fetch origin main
+              git rebase -X theirs origin/main
+              if ($LASTEXITCODE -ne 0) { git rebase --abort; Write-Host "::warning::Could not rebase results onto origin/main"; break }
+              git push origin HEAD:main
+              if ($LASTEXITCODE -eq 0) { break }
+              Start-Sleep -Seconds 10
+            }
           }
+          exit 0
 
       - name: Upload website
         if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
