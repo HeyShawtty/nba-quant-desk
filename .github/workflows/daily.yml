@@ -37,9 +37,8 @@ jobs:
   run:
     runs-on: windows-latest
     timeout-minutes: 150
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      site: ${{ steps.site.outputs.ready }}
     env:
       TASK: ${{ github.event_name == 'workflow_dispatch' && inputs.task || (github.event.schedule == '0 15 * * *' && 'learn' || 'slate') }}
     steps:
@@ -94,17 +93,28 @@ jobs:
             git push
           }
 
-      - name: Configure Pages
-        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
-        uses: actions/configure-pages@v5
-
       - name: Upload website
         if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
         uses: actions/upload-pages-artifact@v3
         with:
           path: _pages
 
+      - name: Website ready?
+        id: site
+        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
+        shell: pwsh
+        run: '"ready=yes" >> $env:GITHUB_OUTPUT'
+
+  # publishing runs on its own so the Pages environment gate never holds up the model run
+  publish:
+    needs: run
+    if: needs.run.outputs.site == 'yes'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
       - name: Publish website
         id: deployment
-        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
         uses: actions/deploy-pages@v4
