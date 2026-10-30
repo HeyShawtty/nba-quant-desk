@@ -1,0 +1,17 @@
+# build output (the cloud runner compiles from src\ every run)
+*.exe
+*.pdb
+error.log
+
+# downloaded third-party data stays out of the public repo; the runner keeps it in the Actions cache
+data/cache/
+data/bbref/NBA_*.csv
+data/*.txt
+data/*.png
+
+# large, regenerated every morning by the backtest
+ledger/backtest_*.csv
+
+# local-only files
+settings.before-audit.ini
+_pages/

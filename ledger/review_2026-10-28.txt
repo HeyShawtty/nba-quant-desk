@@ -1,0 +1,79 @@
+SLATE 2026-10-28: 12 games | model favorite won 9/12 | 5 overs, 7 unders vs DK | total MAE model 15.9 vs DK 15.6 | margin MAE model 11.6 vs DK 11.7 | headline picks & parlays 39/135 | players projected 15+ min: 190 | pts MAE 5.0, within 5 pts 58.4% | causes: on track 111, minutes surplus 28, minutes short 24, cold shooting 14, hot shooting 13
+=== SA @ UTAH: SA 117-111 UTAH | fav SA 82.7% RIGHT | margin model -13.4 DK -13.5 actual -6 | total model 234.8 DK 233.5 actual 228 | Q1-3 85/85 | picks 5/12
+  RIGHT: SA won as the model's favorite (82.7%); 5 of 12 picks/parlays hit
+  WRONG: 3 of 9 main players within 4 pts of projection; Victor Wembanyama 36 pts vs 24.3 (minutes surplus (39 vs 30)); Devin Vassell 21 pts vs 12.0 (minutes surplus (38 vs 29)); Keyonte George 31 pts vs 22.9 (hot shooting (11-27 FG, 5-12 3PT)); Lauri Markkanen projected 22 min but did not play
+  [top3_ml] SA ML (82.7%) HIT 
+  [top3_q3] SA 100+ thru Q3 (27.1%) MISS 
+  [top5_dd] Victor Wembanyama DD (58.0%) HIT actual 2
+  [top5_ffg] Victor Wembanyama FFG (12.8%) MISS actual 0
+=== HOU @ MIL: HOU 132-100 MIL | fav HOU 72.0% RIGHT | margin model -7.9 DK -8.5 actual -32 | total model 225.6 DK 226.5 actual 232 | Q1-3 95/69 | picks 2/13
+  RIGHT: HOU won as the model's favorite (72.0%); 2 of 13 picks/parlays hit
+  WRONG: margin -32 vs -7.9 projected (blowout); 1 of 10 main players within 4 pts of projection; Fred VanVleet 24 pts vs 13.1 (hot shooting (7-14 FG, 4-9 3PT)); Ryan Rollins 4 pts vs 13.2 (minutes short (17 vs 27): blowout); Bogdan Bogdanovic 16 pts vs 7.2 (hot shooting (5-6 FG, 4-5 3PT)); Nate Ament played 20 min unprojected (8 pts)
+  [top3_ml] HOU ML (72.0%) HIT 
+  [top5_25pts] Kevin Durant PTS 25+ (53.8%) MISS actual 18
+  [top5_3pm] Reed Sheppard 3PM 3+ (54.0%) MISS actual 1
+  [top5_ffg] Kevin Durant FFG (12.7%) MISS actual 0
+  [top5_q3all] Kevin Durant Q3ALL (45.1%) MISS actual 2
+=== NY @ CHI: NY 133-127 CHI | fav NY 70.9% RIGHT | margin model -7.7 DK -7.5 actual -6 | total model 232.8 DK 232.5 actual 260 | Q1-3 90/96 | picks 8/14
+  RIGHT: NY won as the model's favorite (70.9%); margin within 5; 8 of 14 picks/parlays hit
+  WRONG: total 260 vs 233 projected (+27); 3 of 9 main players within 4 pts of projection; Jalen Brunson 38 pts vs 25.6 (hot shooting (13-25 FG, 6-10 3PT)); Norman Powell 30 pts vs 17.9 (minutes surplus (37 vs 28)); Josh Hart 2 pts vs 11.4 (minutes surplus (36 vs 30))
+  [best_sgp] Over 232.5 + Josh Hart 10+ pts + Josh Hart 2+ threes (23.5%) MISS 1/3 legs; missed: Josh Hart 10+ pts, Josh Hart 2+ threes
+  [top3_ml] NY ML (70.9%) HIT 
+  [top3_q3] NY 100+ thru Q3 (19.0%) MISS 
+  [top5_25pts] Jalen Brunson PTS 25+ (53.3%) HIT actual 38
+  [top5_dd] Karl-Anthony Towns DD (64.5%) HIT actual 2
+  [top5_ffg] Jalen Brunson FFG (13.4%) MISS actual 0
+  [top5_q3all] Jalen Brunson Q3ALL (44.5%) HIT actual 5
+=== OKC @ DAL: OKC 96-120 DAL | fav OKC 65.9% WRONG | margin model -5.5 DK -4.5 actual +24 | total model 225.6 DK 226.5 actual 216 | Q1-3 81/94 | picks 3/12
+  RIGHT: 3 of 12 picks/parlays hit
+  WRONG: OKC lost at 65.9%; margin +24 vs -5.5 projected (blowout); 4 of 10 main players within 4 pts of projection; Ajay Mitchell 29 pts vs 13.7 (hot shooting (12-20 FG, 2-5 3PT)); Shai Gilgeous-Alexander 21 pts vs 32.8 (minutes short (28 vs 37): blowout); Jaylin Williams 0 pts vs 8.8 (cold shooting (0-2 FG, 0-2 3PT))
+  [top5_25pts] Shai Gilgeous-Alexander PTS 25+ (82.0%) MISS actual 21
+  [top5_dd] Isaiah Hartenstein DD (55.4%) HIT actual 2
+  [top5_ffg] Shai Gilgeous-Alexander FFG (16.9%) MISS actual 0
+  [top5_q3all] Shai Gilgeous-Alexander Q3ALL (65.6%) MISS actual 0
+=== DEN @ NO: DEN 104-91 NO | fav DEN 65.5% RIGHT | margin model -5.4 DK -4.5 actual -13 | total model 240.4 DK 240.5 actual 195 | Q1-3 79/73 | picks 2/14
+  RIGHT: DEN won as the model's favorite (65.5%); 2 of 14 picks/parlays hit
+  WRONG: total 195 vs 240 projected (-45); 4 of 9 main players within 4 pts of projection; Trey Murphy III 6 pts vs 16.9 (cold shooting (2-7 FG, 2-7 3PT)); DeMar DeRozan 6 pts vs 15.2 (cold shooting (1-6 FG, 0-0 3PT))
+  [top3_q3] DEN 100+ thru Q3 (24.4%) MISS 
+  [top5_25pts] Nikola Jokic PTS 25+ (57.3%) MISS actual 21
+  [top5_3pm] Jamal Murray 3PM 3+ (61.5%) HIT actual 5
+  [top5_dd] Nikola Jokic DD (70.0%) HIT actual 3
+  [top5_ffg] Nikola Jokic FFG (12.9%) MISS actual 0
+  [top5_q3all] Nikola Jokic Q3ALL (47.4%) MISS actual 0
+=== GS @ MIN: GS 119-114 MIN | fav MIN 60.9% WRONG | margin model +3.9 DK +4.5 actual -5 | total model 227.2 DK 227.5 actual 233 | Q1-3 93/81 | picks 3/10
+  RIGHT: total within 6 pts; 3 of 10 picks/parlays hit
+  WRONG: MIN lost at 60.9%; 3 of 9 main players within 4 pts of projection; Stephen Curry 44 pts vs 20.8 (hot shooting (11-27 FG, 6-16 3PT)); LaMelo Ball 8 pts vs 19.6 (cold shooting (3-11 FG, 2-8 3PT)); Rudy Gobert 1 pts vs 10.9 (minutes short (20 vs 32): fouls, injury or rotation)
+  [top5_3pm] LaMelo Ball 3PM 3+ (69.7%) MISS actual 2
+  [top5_3pm] Stephen Curry 3PM 3+ (61.6%) HIT actual 6
+=== LAL @ LAC: LAL 103-87 LAC | fav LAL 50.7% RIGHT | margin model -0.1 DK +1.5 actual -16 | total model 223.7 DK 224.5 actual 190 | Q1-3 85/66 | picks 0/12
+  RIGHT: LAL won as the model's favorite (50.7%)
+  WRONG: total 190 vs 224 projected (-34); margin -16 vs -0.1 projected; 2 of 12 main players within 4 pts of projection; Darius Garland 14 pts vs 25.4 (minutes short (26 vs 37): blowout); Brook Lopez 2 pts vs 12.6 (cold shooting (1-5 FG, 0-2 3PT)); Quentin Grimes 23 pts vs 13.3 (hot shooting (7-15 FG, 0-3 3PT)); Jarred Vanderbilt played 21 min unprojected (0 pts)
+  [top5_25pts] Darius Garland PTS 25+ (52.1%) MISS actual 14
+  [top5_3pm] Darius Garland 3PM 3+ (68.1%) MISS actual 1
+  [top5_dd] Walker Kessler DD (57.7%) MISS actual 1
+  [top5_q3all] Darius Garland Q3ALL (44.0%) MISS actual 0
+=== WSH @ CLE: WSH 111-121 CLE | fav CLE 77.7% RIGHT | margin model +10.4 DK +9.5 actual +10 | total model 241.3 DK 240.5 actual 232 | Q1-3 92/92 | picks 2/11
+  RIGHT: CLE won as the model's favorite (77.7%); margin within 5; 2 of 11 picks/parlays hit
+  WRONG: 3 of 12 main players within 4 pts of projection; Peyton Watson 22 pts vs 13.2 (hot shooting (9-17 FG, 1-4 3PT)); AJ Dybantsa played 27 min unprojected (19 pts)
+  [top3_ml] CLE ML (77.7%) HIT 
+  [top3_q3] CLE 100+ thru Q3 (32.6%) MISS 
+  [top5_25pts] Donovan Mitchell PTS 25+ (55.7%) MISS actual 19
+  [top5_q3all] Donovan Mitchell Q3ALL (44.7%) MISS actual 0
+=== PHI @ IND: PHI 114-109 IND | fav PHI 73.0% RIGHT | margin model -8.4 DK -7.5 actual -5 | total model 236.4 DK 234.5 actual 223 | Q1-3 75/88 | picks 3/9
+  RIGHT: PHI won as the model's favorite (73.0%); margin within 5; 8 of 11 main players within 4 pts of projection; 3 of 9 picks/parlays hit
+  WRONG: total 223 vs 236 projected (-13); Anfernee Simons 20 pts vs 9.0 (minutes surplus (27 vs 19))
+  [top3_ml] PHI ML (73.0%) HIT 
+=== CHA @ DET: CHA 89-97 DET | fav DET 69.4% RIGHT | margin model +6.9 DK +7.5 actual +8 | total model 213.3 DK 212.5 actual 186 | Q1-3 70/76 | picks 3/8
+  RIGHT: DET won as the model's favorite (69.4%); margin within 5; 6 of 11 main players within 4 pts of projection; 3 of 8 picks/parlays hit
+  WRONG: total 186 vs 213 projected (-27); Brandon Miller 31 pts vs 21.0 (hot shooting (12-26 FG, 3-10 3PT)); John Collins 4 pts vs 12.7 (minutes short (18 vs 28): fouls, injury or rotation); Naz Reid 7 pts vs 15.3 (minutes short (13 vs 30): fouls, injury or rotation)
+  [best_sgp] Grayson Allen 15+ pts + Grayson Allen 3+ threes + Moussa Diabate 8+ reb (23.4%) MISS 1/3 legs; missed: Grayson Allen 15+ pts, Grayson Allen 3+ threes
+=== ORL @ TOR: ORL 99-129 TOR | fav TOR 62.5% RIGHT | margin model +4.3 DK +4.5 actual +30 | total model 224.9 DK 224.5 actual 228 | Q1-3 76/103 | picks 4/8
+  RIGHT: TOR won as the model's favorite (62.5%); total within 3 pts; 4 of 8 picks/parlays hit
+  WRONG: margin +30 vs +4.3 projected (blowout); 2 of 9 main players within 4 pts of projection; Wendell Carter Jr. 3 pts vs 12.9 (minutes short (26 vs 34): blowout); Scottie Barnes 28 pts vs 18.8 (hot shooting (11-17 FG, 0-2 3PT)); Tristan da Silva 20 pts vs 11.2 (hot shooting (8-10 FG, 4-5 3PT)); Trayce Jackson-Davis played 20 min unprojected (6 pts)
+=== MIA @ ATL: MIA 129-117 ATL | fav ATL 55.7% WRONG | margin model +2.0 DK +2.5 actual -12 | total model 243.3 DK 243.5 actual 246 | Q1-3 97/85 | picks 4/12
+  RIGHT: total within 3 pts; 4 of 12 picks/parlays hit
+  WRONG: ATL lost at 55.7%; 4 of 11 main players within 4 pts of projection; Kingston Flemings 23 pts vs 6.5 (minutes surplus (28 vs 17)); Jalen Johnson 12 pts vs 21.8 (cold shooting (4-12 FG, 2-4 3PT))
+  [top3_q3] ATL 100+ thru Q3 (24.4%) MISS 
+  [top5_25pts] Giannis Antetokounmpo PTS 25+ (63.4%) MISS actual 24
+  [top5_ffg] Giannis Antetokounmpo FFG (13.7%) MISS actual 0
+  [top5_q3all] Giannis Antetokounmpo Q3ALL (54.3%) MISS actual 2

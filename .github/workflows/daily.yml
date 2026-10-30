@@ -1,0 +1,110 @@
+name: NBA Quant Desk
+
+# GitHub's cron runs on UTC and can start a few minutes late. Times below are US Eastern during daylight time
+# (an hour earlier in standard time from November 1).
+on:
+  schedule:
+    - cron: '0 15 * * *'    # learn: grade yesterday, recalibrate, audit (11:00 AM ET)
+    - cron: '40 22 * * *'   # slate: first pre-tip run (6:40 PM ET)
+    - cron: '40 23 * * *'   # slate: final report before 8:00 PM tips (7:40 PM ET)
+    - cron: '40 1 * * *'    # slate: late West Coast games (9:40 PM ET)
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'What to run'
+        type: choice
+        options: [slate, learn, test]
+        default: slate
+      date:
+        description: 'Slate date yyyy-MM-dd (blank = today ET, or yesterday for learn)'
+        required: false
+        default: ''
+      variants:
+        description: 'For test: settings to backtest, e.g. RatePriorMin=300; GammaOverride=1.0'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nbaquant
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: windows-latest
+    timeout-minutes: 150
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      TASK: ${{ github.event_name == 'workflow_dispatch' && inputs.task || (github.event.schedule == '0 15 * * *' && 'learn' || 'slate') }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use US Eastern time
+        run: tzutil /s "Eastern Standard Time"
+
+      - name: Restore data cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/cache
+            data/bbref/NBA_*.csv
+            ledger/backtest_latest.csv
+          key: nbaq-${{ github.run_id }}
+          restore-keys: nbaq-
+
+      - name: Install pdftotext (official injury report)
+        if: env.TASK == 'slate'
+        run: choco install poppler -y --no-progress
+
+      - name: Build
+        shell: cmd
+        run: build.bat
+
+      - name: Run ${{ env.TASK }}
+        shell: pwsh
+        run: ./cloud/daily.ps1 -Task "${{ env.TASK }}" -Date "${{ inputs.date }}" -Variants "${{ inputs.variants }}"
+
+      - name: Save data cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/cache
+            data/bbref/NBA_*.csv
+            ledger/backtest_latest.csv
+          key: nbaq-${{ github.run_id }}
+
+      - name: Commit results
+        if: env.TASK != 'test'
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A ledger predictions reports site data/bank overrides settings.ini
+          git diff --cached --quiet
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "${{ env.TASK }}: $(Get-Date -Format 'yyyy-MM-dd HH:mm') ET"
+            git pull --rebase --autostash
+            git push
+          }
+
+      - name: Configure Pages
+        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _pages
+
+      - name: Publish website
+        id: deployment
+        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
+        uses: actions/deploy-pages@v4

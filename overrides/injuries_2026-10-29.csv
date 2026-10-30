@@ -1,0 +1,31 @@
+team,name,status,p_play,note
+# Source: NBA official injury report 10/29/26 06:30 PM ET (all six teams submitted; MEM listed no one).
+# status: OUT, Q (set p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+CLE,Khalifa Diop,OUT,0,Official: Out (G League assignment)
+CLE,Meleek Thomas,Q,0.5,Official: Questionable (right foot inflammation)
+CLE,Nae'Qwan Tomlin,OUT,0,Official: Out (low back stress reaction)
+CLE,Jaylon Tyson,Q,0.5,Official: Questionable (cervical strain)
+ATL,RayJ Dennis,Q,0.5,Official: Questionable (G League two-way)
+ATL,Zuby Ejiofor,AVAIL,1,Official: Available
+ATL,Keshon Gilbert,Q,0.5,Official: Questionable (G League two-way)
+ATL,Mouhamed Gueye,OUT,0,Official: Out (left foot fracture)
+ATL,Jock Landale,AVAIL,1,Official: Available (nasal fracture)
+ATL,Henri Veesaar,OUT,0,Official: Out (right ACL tear)
+ATL,Jalen Wilson,Q,0.5,Official: Questionable (G League two-way)
+SAC,Dylan Cardwell,OUT,0,Official: Out (left calf strain)
+SAC,Keegan Murray,OUT,0,Official: Out (left ankle capsulitis)
+SAC,Sean Pedulla,OUT,0,Official: Out (G League two-way)
+SAC,Maxime Raynaud,OUT,0,Official: Out (right patella subluxation)
+SAC,Ben Simmons,OUT,0,Official: Out (right Achilles repair)
+NO,Malik Dia,OUT,0,Official: Out (G League two-way)
+NO,Yves Missi,OUT,0,Official: Out (left knee contusion / bone bruise)
+NO,Dejounte Murray,OUT,0,Official: Out (personal reasons)
+NO,Jaron Pierre Jr.,OUT,0,Official: Out (G League two-way)
+NO,Jordan Poole,OUT,0,Official: Out (left ankle sprain)
+NO,Julian Reese,AVAIL,1,Official: Available (G League two-way)
+POR,Jayson Kent,Q,0.5,Official: Questionable (G League two-way)
+POR,Shaedon Sharpe,OUT,0,Official: Out (right meniscus surgery)
+POR,John Tonje,Q,0.5,Official: Questionable (G League two-way)
+POR,Robert Williams III,Q,0.25,Official: Doubtful (left knee injury management)
+POR,Hansen Yang,AVAIL,1,Official: Available
+POR,Chris Youngblood,Q,0.5,Official: Questionable (G League two-way)
