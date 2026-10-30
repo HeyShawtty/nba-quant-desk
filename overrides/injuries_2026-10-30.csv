@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/30/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/30/26 7:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
@@ -51,7 +51,7 @@ HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
 HOU,Alperen Sengun,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
 HOU,Reed Sheppard,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
-HOU,Marcus Smart,Q,0.5,Official: Questionable (Injury/Illness - Left Forearm Strain)
+HOU,Marcus Smart,AVAIL,1,Official: Available (Injury/Illness - Left Forearm Strain)
 DAL,Santi Aldama,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
