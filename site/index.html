@@ -359,6 +359,21 @@ svg.spark circle { fill: var(--accent) }
     return h;
   }
 
+  function eruptDud() {
+    if (!D.erupt || !D.dud) return "";
+    var rows = function (list, erupt) {
+      return list.map(function (p) {
+        return '<tr><td class="pl"><span class="n">' + esc(p.name) + '</span> <span class="muted">' + p.team + " vs " + p.opp + "</span>" + chips({ flags: p.flags, bias: p.bias, biasN: p.biasN }) + "</td>" +
+          "<td>" + f1(p.season) + '</td><td title="Projected average ' + f1(p.proj) + '">' + p.mode + "</td><td>" + (erupt ? p.line + "+" : "≤ " + p.line) + '</td><td><b class="' + (erupt ? "ev-pos" : "ev-neg") + '">' + pct(p.p, 0) + "</b></td>" +
+          '<td title="Season minutes → tonight">' + f1(p.seasonMin) + " → " + f1(p.min) + "</td></tr>";
+      }).join("");
+    };
+    var head = '<thead><tr><th>Player</th><th>Season PPG</th><th>Most common</th><th>Line</th><th>Chance</th><th>Minutes</th></tr></thead>';
+    return '<div style="display:grid;gap:10px"><h2>Who could erupt, who could be a dud</h2><p class="muted">Measured against each player\'s own 2026-27 scoring. Erupt = 1.5× his season average or 6 more points, whichever is higher. Dud = half his average or less. Chances come from the simulations of games he plays; tags come from the season data bank. Both lists are graded every day.</p></div>' +
+      '<div class="two"><div class="panel tscroll"><h3>Could erupt</h3><table>' + head + "<tbody>" + rows(D.erupt, true) + "</tbody></table></div>" +
+      '<div class="panel tscroll"><h3>Dud risk</h3><table>' + head + "<tbody>" + rows(D.dud, false) + "</tbody></table></div></div>";
+  }
+
   function renderTonight() {
     var b = D.bestSgp, m = D.meta;
     var games = D.games.map(gameCard).join("");
@@ -368,6 +383,7 @@ svg.spark circle { fill: var(--accent) }
         '<div class="kv"><div><span class="label">Joint</span><span class="v">' + pct(b.sgp.joint) + '</span></div><div><span class="label">Fair odds</span><span class="v">' + am(b.sgp.fair) + '</span></div><div><span class="label">Lift</span><span class="v">' + b.sgp.lift.toFixed(2) + '×</span></div><div><span class="label">Needs</span><span class="v">+300 or longer</span></div></div></div>' : "") +
       "</div>" +
       '<div class="games" id="games">' + games + "</div>" +
+      eruptDud() +
       '<div id="detail">' + detail() + "</div>";
     $("view-tonight").innerHTML = h;
     Array.prototype.forEach.call(document.querySelectorAll(".game"), function (card) {
@@ -471,7 +487,7 @@ svg.spark circle { fill: var(--accent) }
       h += '<div class="panel"><h3>Do correlated parlays hold up?</h3><p class="muted" style="font-size:13px;margin-bottom:10px">The simulation prices legs together. If legs were treated as independent, most parlays would look less likely than they turned out to be.</p><div class="bars">' +
         sg.map(function (x) { return '<span class="label" style="margin-top:4px">' + esc(names[x.tag] || x.tag) + " · " + x.n + " tickets</span>" + barRow("Simulated (joint)", x.joint, 1, "var(--accent)", pct(x.joint, 0)) + barRow("Independent legs", x.indep, 1, "var(--muted)", pct(x.indep, 0)) + barRow("Actually hit", x.obs, 1, "var(--ink)", pct(x.obs, 0)); }).join("") + "</div></div></div>";
     }
-    var tagNames = { top3_ml: "Top-3 moneylines", top5_dd: "Double-double picks", top5_25pts: "25+ point picks", top5_3pm: "3+ threes picks", top5_q3all: "3+ points every quarter", top5_ffg: "First basket", top3_q3: "Team 100+ through Q3", boost_candidate: "Boost parlays", best_sgp: "Best boost pick", sgp_best_hit: "Safest 3-leg parlay", sgp_most_correlated: "Most correlated parlay", sgp_4leg: "Four-leg parlay" };
+    var tagNames = { top3_ml: "Top-3 moneylines", top5_dd: "Double-double picks", top5_25pts: "25+ point picks", top5_3pm: "3+ threes picks", top5_q3all: "3+ points every quarter", top5_ffg: "First basket", top3_q3: "Team 100+ through Q3", boost_candidate: "Boost parlays", best_sgp: "Best boost pick", sgp_best_hit: "Safest 3-leg parlay", sgp_most_correlated: "Most correlated parlay", sgp_4leg: "Four-leg parlay", erupt: "Erupt calls", dud: "Dud calls", sgp4_safest: "Four-leg, safest", sgp4_boost_range: "Four-leg, boost range", sgp4_bigger_payout: "Four-leg, bigger payout" };
     h += '<div style="display:grid;gap:10px"><h2>Live record</h2><p class="muted">Predictions published before tip-off and graded afterwards' + (r.mlBrier != null ? ". Moneyline Brier " + r.mlBrier.toFixed(3) + " vs DraftKings " + r.mlBrierMkt.toFixed(3) : "") + ".</p></div>";
     h += '<div class="two"><div class="panel"><h3>Picks by type</h3><div class="tscroll"><table><thead><tr><th>Pick type</th><th>Hits</th><th>Expected</th><th>Hit rate</th></tr></thead><tbody>' +
       r.tags.map(function (t) { var exp = t.pred * t.n, cls = t.hits >= exp ? "won" : "lost"; return '<tr><td class="pl">' + esc(tagNames[t.tag] || t.tag) + "</td><td>" + t.hits + "/" + t.n + "</td><td>" + exp.toFixed(1) + '</td><td class="' + cls + '">' + pct(t.hits / t.n, 0) + "</td></tr>"; }).join("") + "</tbody></table></div></div>";

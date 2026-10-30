@@ -147,6 +147,17 @@ namespace NbaQuant
             }
             var best = Notes.BestSgp();
 
+            // erupt / dud lists against this season's scoring
+            Func<PStat, bool, object> ed = (p, erupt) =>
+            {
+                RotRow rr; rot.TryGetValue(p, out rr); var fm = FormOf(p);
+                return O("name", p.P.Name, "team", p.P.Team, "opp", p.Opp, "season", R1(p.SeasonPpg), "proj", R1(p.Pts.Mean), "mode", ModeIdx(p.Pts.Hist),
+                    "line", erupt ? p.EruptLine : p.DudLine, "p", R3(TrackAdjust.Adj(erupt ? "erupt" : "dud", erupt ? p.PErupt : p.PDud)),
+                    "seasonMin", fm == null ? 0 : R1(fm.Mpg), "min", R1(p.MeanMin), "flags", rr != null ? rr.Flags : new List<string>(), "bias", Bank.Player(p.P.Pid) != null && Bank.Player(p.P.Pid).ModelN > 0 ? (object)R1(Bank.Player(p.P.Pid).ModelPtsBias) : null, "biasN", Bank.Player(p.P.Pid) != null ? Bank.Player(p.P.Pid).ModelN : 0);
+            };
+            var eruptJson = Analysis.EruptList().Select(p => ed(p, true)).ToList();
+            var dudJson = Analysis.DudList().Select(p => ed(p, false)).ToList();
+
             // season bank: tonight's teams and every flagged player on them
             var teams = Program.Games.SelectMany(g => new[] { g.Def.Away, g.Def.Home }).ToList();
             var bankTeams = teams.Select(Bank.Team).Where(t => t != null).Select(t => (object)O("team", t.Team, "gp", t.Gp, "w", t.W, "l", t.L, "ppg", R1(t.Ppg), "opp", R1(t.OppPpg), "margin", R1(t.Margin), "pace", R1(t.Pace), "ortg", R1(t.ORtg), "drtg", R1(t.DRtg),
@@ -210,6 +221,7 @@ namespace NbaQuant
                         "csWeight", S.CsWeight, "minUsageSlope", S.MinUsageSlope, "matchup", S.MatchupStrength, "gamma", Program.Gamma, "hca", R1(Program.HCA))),
                 "games", games,
                 "bestSgp", best == null ? null : O("game", Notes.GameOf(best), "sgp", ComboJson(best)),
+                "erupt", eruptJson, "dud", dudJson,
                 "bank", O("teams", bankTeams, "players", bankPlayers),
                 "record", O("tags", tagRec, "slates", slates, "mlBrier", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.P - p.Y) * (p.P - p.Y))) : null, "mlBrierMkt", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.PMarket - p.Y) * (p.PMarket - p.Y))) : null),
                 "audit", audit);

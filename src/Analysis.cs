@@ -33,6 +33,8 @@ namespace NbaQuant
         public double MeanMin, PPlays;   // minutes when playing; share of simulations in which the player logs minutes
         public Dist Pts, Reb, Ast, Tpm, Pra;
         public double DD, DDRaw, TD, Q3All, FirstFG;   // DD is calibrated (backtest map); DDRaw is the raw simulation share
+        // erupt / dud against this season's scoring (2+ games, 6+ ppg): erupt = 1.5x season ppg or +6, dud = half or less
+        public double SeasonPpg = double.NaN, PErupt = double.NaN, PDud = double.NaN; public int EruptLine, DudLine;
         public int Conf; public string ConfNote;
     }
 
@@ -87,6 +89,10 @@ namespace NbaQuant
         }
         static void ApplyMap(Dist d, string stat) { var m = PropMap(stat); d.CalA = m.Item1; d.CalB = m.Item2; }
 
+        // slate-wide erupt candidates and dud risks (healthy rotation players; duds only for 10+ ppg scorers, where it matters)
+        public static List<PStat> EruptList(int take = 10) { return Players.Where(p => !double.IsNaN(p.PErupt) && p.MeanMin >= 15 && p.P.Status != "Q" && p.PPlays >= 0.9).OrderByDescending(p => p.PErupt).Take(take).ToList(); }
+        public static List<PStat> DudList(int take = 10) { return Players.Where(p => !double.IsNaN(p.PDud) && p.SeasonPpg >= 10 && p.P.Status != "Q" && p.PPlays >= 0.9).OrderByDescending(p => p.PDud).Take(take).ToList(); }
+
         public static double CalibrateDd(double p)
         {
             var S = Program.S;
@@ -130,6 +136,13 @@ namespace NbaQuant
                     }
                     ps.DDRaw = (double)dd / np; ps.TD = (double)td / np; ps.Q3All = (double)q3 / np; ps.FirstFG = (double)ff / np;
                     ps.DD = CalibrateDd(ps.DDRaw);
+                    if (ps.P.Gp >= 2 && ps.P.CsPts / ps.P.Gp >= 6)
+                    {
+                        ps.SeasonPpg = ps.P.CsPts / ps.P.Gp;
+                        ps.EruptLine = (int)Math.Ceiling(Math.Max(ps.SeasonPpg + 6, 1.5 * ps.SeasonPpg));
+                        ps.DudLine = (int)Math.Floor(0.5 * ps.SeasonPpg);
+                        ps.PErupt = ps.Pts.PAtLeast(ps.EruptLine); ps.PDud = 1 - ps.Pts.PAtLeast(ps.DudLine + 1);
+                    }
                     Confidence(ps);
                     Players.Add(ps);
                 }

@@ -92,6 +92,11 @@ namespace NbaQuant
                 foreach (var s in new[] { Tuple.Create("PTS", p.Pts.Mean), Tuple.Create("REB", p.Reb.Mean), Tuple.Create("AST", p.Ast.Mean), Tuple.Create("3PM", p.Tpm.Mean), Tuple.Create("MIN", p.MeanMin) })
                     res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "MEAN", Stat = s.Item1, Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Mean = s.Item2, Line = p.P.Usage, Selection = p.P.Name + " mean " + s.Item1 });
             }
+            // erupt (scores eruption line or more) and dud (half his season scoring or less), graded like any prop
+            foreach (var p in Analysis.EruptList())
+                res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTS", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.EruptLine, P = p.PErupt, Mean = p.SeasonPpg, Tag = "erupt", Selection = p.P.Name + " erupts: " + p.EruptLine + "+ pts" });
+            foreach (var p in Analysis.DudList())
+                res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTSU", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.DudLine, P = p.PDud, Mean = p.SeasonPpg, Tag = "dud", Selection = p.P.Name + " dud: " + p.DudLine + " pts or fewer" });
             var best = Notes.BestSgp();
             foreach (var g in Program.Games)
             {
@@ -116,7 +121,7 @@ namespace NbaQuant
         {
             switch (s)
             {
-                case "PTS": return b.Pts; case "REB": return b.Reb; case "AST": return b.Ast; case "3PM": return b.Tpm;
+                case "PTS": case "PTSU": return b.Pts; case "REB": return b.Reb; case "AST": return b.Ast; case "3PM": return b.Tpm;
                 case "PRA": return b.Pts + b.Reb + b.Ast;
                 case "MIN": return (int)Math.Round(b.Min);
             }
@@ -156,6 +161,7 @@ namespace NbaQuant
                 case "TD": return DdCount(b) >= 3 ? 1 : 0;
                 case "Q3ALL": return b.QPts.All(v => v >= 3) ? 1 : 0;
                 case "FFG": return g.FirstFgPid == pid ? 1 : 0;
+                case "PTSU": return b.Pts <= line ? 1 : 0;   // dud: at or under the line
                 default: return Stat(b, st) >= line ? 1 : 0;
             }
         }

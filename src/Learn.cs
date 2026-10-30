@@ -69,7 +69,7 @@ namespace NbaQuant
                 f = new Dictionary<string, Tuple<double, int>>();
                 string bt = Program.P(@"ledger\backtest_latest.csv");
                 if (File.Exists(bt))
-                    foreach (var g in Pred.Load(bt).Where(p => !string.IsNullOrEmpty(p.Tag) && p.Tag.StartsWith("top") && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P)).GroupBy(p => p.Tag))
+                    foreach (var g in Pred.Load(bt).Where(p => !string.IsNullOrEmpty(p.Tag) && (p.Tag.StartsWith("top") || p.Tag == "erupt" || p.Tag == "dud") && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P)).GroupBy(p => p.Tag))
                     {
                         double hits = g.Sum(x => x.Y), exp = g.Sum(x => x.P);
                         f[g.Key] = Tuple.Create(Math.Max(0.5, Math.Min(1.2, (hits + 10) / (exp + 10))), g.Count());

@@ -55,6 +55,42 @@ namespace NbaQuant
             File.WriteAllText(Program.P(@"data\box_scores.txt"), txt.ToString());
         }
 
+        // Who could erupt and who could be a dud tonight, measured against each player's own 2026-27 scoring, with the
+        // trends behind it. Lists carry the track-record factor once the backtest has graded enough of them.
+        static void EruptDudSheet()
+        {
+            var sh = New("Erupt or Dud", "Who could erupt, who could be a dud (against this season's scoring)",
+                "Erupt = scores 1.5x his 2026-27 average or 6 more, whichever is higher. Dud = half his average or less. Chances come from the 100,000 simulations (games he plays). Trends come from the season data bank. Both lists are graded every day.",
+                24, 6, 6, 8, 8, 9, 9, 10, 10, 9, 70);
+            var rot = Rotations().ToDictionary(x => x.Ps, x => x);
+            var txt = new StringBuilder();
+            Action<string, string, List<PStat>, bool> table = (title, tag, list, erupt) =>
+            {
+                var f = TrackAdjust.Of(tag);
+                Section(sh, title, 11);
+                if (f.Item2 > 0) Note(sh, string.Format(U.IC, "Track record so far: scaled by {0:0.00} ({1} backtest calls).", f.Item1, f.Item2));
+                Hdr(sh, "Player", "Team", "Opp", "Season PPG", "Proj pts", "Most common", erupt ? "Erupt line" : "Dud line", erupt ? "P(erupt)" : "P(dud)", "Season MIN", "Tonight MIN", "Why");
+                foreach (var p in list)
+                {
+                    double pr = TrackAdjust.Adj(tag, erupt ? p.PErupt : p.PDud);
+                    var why = new List<string>(); RotRow rr; if (rot.TryGetValue(p, out rr)) why.AddRange(rr.Flags);
+                    var fm = FormOf(p);
+                    var r = sh.Row();
+                    r.Add(Cell.Str(p.P.Name, Styles.Bold)); r.Add(Cell.Str(p.P.Team)); r.Add(Cell.Str(p.Opp)); r.Add(Cell.Num(p.SeasonPpg, Styles.N1)); r.Add(Cell.Num(p.Pts.Mean, Styles.N1));
+                    int mode = 0; for (int v = 1; v < p.Pts.Hist.Length; v++) if (p.Pts.Hist[v] > p.Pts.Hist[mode]) mode = v;
+                    r.Add(Cell.Num(mode, Styles.Int)); r.Add(Cell.Str((erupt ? p.EruptLine + "+" : p.DudLine + " or fewer"))); r.Add(Cell.Num(pr, Styles.PctB));
+                    r.Add(fm == null ? Cell.Str("-") : Cell.Num(fm.Mpg, Styles.N1)); r.Add(Cell.Num(p.MeanMin, Styles.N1));
+                    r.Add(Cell.Str(string.Join("; ", why.Where(w => !w.StartsWith("model below season"))), Styles.Wrap));
+                    txt.AppendLine(string.Format(U.IC, "{0}|{1}|{2}|vs {3}|season {4:0.0}|proj {5:0.0}|mode {6}|{7}|{8:0}%|min {9:0.0}->{10:0.0}|{11}", erupt ? "ERUPT" : "DUD", p.P.Name, p.P.Team, p.Opp, p.SeasonPpg, p.Pts.Mean, mode,
+                        erupt ? p.EruptLine + "+" : "<=" + p.DudLine, 100 * pr, fm == null ? double.NaN : fm.Mpg, p.MeanMin, string.Join("; ", why.Where(w => !w.StartsWith("model below season")))));
+                }
+            };
+            table("Erupt candidates: best chance to blow past their season scoring", "erupt", Analysis.EruptList(12), true);
+            table("Dud risks: 10+ ppg scorers with the best chance of half their usual output or less", "dud", Analysis.DudList(12), false);
+            Note(sh, "A role player's 1.5x line is only a few points, so bench names reach the erupt list more easily; the Why column shows whether minutes or form back it up.");
+            File.WriteAllText(Program.P(@"data\erupt.txt"), txt.ToString());
+        }
+
         class RotRow
         {
             public PStat Ps; public bool Starter; public SeasonForm F; public double Per36, Per36Prior = double.NaN, MinNow;

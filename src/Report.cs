@@ -34,6 +34,7 @@ namespace NbaQuant
             Summary();
             BoxScoresSheet();
             RotationsSheet();
+            EruptDudSheet();
             SeasonBankSheet();
             StandoutsSheet();
             DdThreesSheet();
