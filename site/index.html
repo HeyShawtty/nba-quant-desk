@@ -365,10 +365,11 @@ svg.spark circle { fill: var(--accent) }
       return list.map(function (p) {
         return '<tr><td class="pl"><span class="n">' + esc(p.name) + '</span> <span class="muted">' + p.team + " vs " + p.opp + "</span>" + chips({ flags: p.flags, bias: p.bias, biasN: p.biasN }) + "</td>" +
           "<td>" + f1(p.season) + '</td><td title="Projected average ' + f1(p.proj) + '">' + p.mode + "</td><td>" + (erupt ? p.line + "+" : "≤ " + p.line) + '</td><td><b class="' + (erupt ? "ev-pos" : "ev-neg") + '">' + pct(p.p, 0) + "</b></td>" +
+          '<td><span class="chip ' + (p.check === "bank agrees" ? "up" : p.check === "bank disagrees" ? "down" : p.check === "mixed" ? "warn" : "") + '">' + esc(p.check || "no signal") + "</span></td>" +
           '<td title="Season minutes → tonight">' + f1(p.seasonMin) + " → " + f1(p.min) + "</td></tr>";
       }).join("");
     };
-    var head = '<thead><tr><th>Player</th><th>Season PPG</th><th>Most common</th><th>Line</th><th>Chance</th><th>Minutes</th></tr></thead>';
+    var head = '<thead><tr><th>Player</th><th>Season PPG</th><th>Most common</th><th>Line</th><th>Chance</th><th title="Does this season\'s data bank back the call? Model\'s season-long miss on him, minutes and scoring trends, tonight\'s minutes">Bank check</th><th>Minutes</th></tr></thead>';
     return '<div style="display:grid;gap:10px"><h2>Who could erupt, who could be a dud</h2><p class="muted">Measured against each player\'s own 2026-27 scoring. Erupt = 1.5× his season average or 6 more points, whichever is higher. Dud = half his average or less. Chances come from the simulations of games he plays; tags come from the season data bank. Both lists are graded every day.</p></div>' +
       '<div class="two"><div class="panel tscroll"><h3>Could erupt</h3><table>' + head + "<tbody>" + rows(D.erupt, true) + "</tbody></table></div>" +
       '<div class="panel tscroll"><h3>Dud risk</h3><table>' + head + "<tbody>" + rows(D.dud, false) + "</tbody></table></div></div>";

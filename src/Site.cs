@@ -152,7 +152,7 @@ namespace NbaQuant
             {
                 RotRow rr; rot.TryGetValue(p, out rr); var fm = FormOf(p);
                 return O("name", p.P.Name, "team", p.P.Team, "opp", p.Opp, "season", R1(p.SeasonPpg), "proj", R1(p.Pts.Mean), "mode", ModeIdx(p.Pts.Hist),
-                    "line", erupt ? p.EruptLine : p.DudLine, "p", R3(TrackAdjust.Adj(erupt ? "erupt" : "dud", erupt ? p.PErupt : p.PDud)),
+                    "line", erupt ? p.EruptLine : p.DudLine, "p", R3(TrackAdjust.Adj(erupt ? "erupt" : "dud", erupt ? p.PErupt : p.PDud)), "check", BankCheck(p, erupt),
                     "seasonMin", fm == null ? 0 : R1(fm.Mpg), "min", R1(p.MeanMin), "flags", rr != null ? rr.Flags : new List<string>(), "bias", Bank.Player(p.P.Pid) != null && Bank.Player(p.P.Pid).ModelN > 0 ? (object)R1(Bank.Player(p.P.Pid).ModelPtsBias) : null, "biasN", Bank.Player(p.P.Pid) != null ? Bank.Player(p.P.Pid).ModelN : 0);
             };
             var eruptJson = Analysis.EruptList().Select(p => ed(p, true)).ToList();

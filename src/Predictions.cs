@@ -94,9 +94,9 @@ namespace NbaQuant
             }
             // erupt (scores eruption line or more) and dud (half his season scoring or less), graded like any prop
             foreach (var p in Analysis.EruptList())
-                res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTS", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.EruptLine, P = p.PErupt, Mean = p.SeasonPpg, Tag = "erupt", Selection = p.P.Name + " erupts: " + p.EruptLine + "+ pts" });
+                res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTS", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.EruptLine, P = p.PErupt, Mean = p.SeasonPpg, Tag = "erupt", Selection = p.P.Name + " erupts: " + p.EruptLine + "+ pts [" + Report.BankCheck(p, true) + "]" });
             foreach (var p in Analysis.DudList())
-                res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTSU", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.DudLine, P = p.PDud, Mean = p.SeasonPpg, Tag = "dud", Selection = p.P.Name + " dud: " + p.DudLine + " pts or fewer" });
+                res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTSU", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.DudLine, P = p.PDud, Mean = p.SeasonPpg, Tag = "dud", Selection = p.P.Name + " dud: " + p.DudLine + " pts or fewer [" + Report.BankCheck(p, false) + "]" });
             var best = Notes.BestSgp();
             foreach (var g in Program.Games)
             {

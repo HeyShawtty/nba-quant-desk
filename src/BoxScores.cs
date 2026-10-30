@@ -55,6 +55,27 @@ namespace NbaQuant
             File.WriteAllText(Program.P(@"data\box_scores.txt"), txt.ToString());
         }
 
+        // Does this season's data bank back the call? The model fades hot starts and has season-long misses on some players,
+        // so an erupt call on a player it keeps over-projecting (or a dud call on a breakout) is flagged as a disagreement.
+        public static string BankCheck(PStat p, bool erupt)
+        {
+            var b = Bank.Player(p.P.Pid); int up = 0, down = 0;
+            if (b != null)
+            {
+                if (b.ModelN >= 3 && b.ModelPtsBias <= -2) up++;        // model has been too low on him
+                if (b.ModelN >= 3 && b.ModelPtsBias >= 2) down++;       // model has been too high on him
+                foreach (var fl in b.Flags)
+                {
+                    if (fl.StartsWith("minutes rising") || fl.StartsWith("scoring up") || fl.StartsWith("moved into")) up++;
+                    if (fl.StartsWith("minutes falling") || fl.StartsWith("scoring down") || fl.StartsWith("moved to the bench")) down++;
+                }
+                if (b.Gp >= 2 && p.MeanMin >= b.Mpg + 4) up++;
+                if (b.Gp >= 2 && p.MeanMin <= b.Mpg - 4) down++;
+            }
+            int agree = erupt ? up : down, against = erupt ? down : up;
+            return agree > 0 && against > 0 ? "mixed" : agree > 0 ? "bank agrees" : against > 0 ? "bank disagrees" : "no signal";
+        }
+
         // Who could erupt and who could be a dud tonight, measured against each player's own 2026-27 scoring, with the
         // trends behind it. Lists carry the track-record factor once the backtest has graded enough of them.
         static void EruptDudSheet()
@@ -69,7 +90,7 @@ namespace NbaQuant
                 var f = TrackAdjust.Of(tag);
                 Section(sh, title, 11);
                 if (f.Item2 > 0) Note(sh, string.Format(U.IC, "Track record so far: scaled by {0:0.00} ({1} backtest calls).", f.Item1, f.Item2));
-                Hdr(sh, "Player", "Team", "Opp", "Season PPG", "Proj pts", "Most common", erupt ? "Erupt line" : "Dud line", erupt ? "P(erupt)" : "P(dud)", "Season MIN", "Tonight MIN", "Why");
+                Hdr(sh, "Player", "Team", "Opp", "Season PPG", "Proj pts", "Most common", erupt ? "Erupt line" : "Dud line", erupt ? "P(erupt)" : "P(dud)", "Season MIN", "Tonight MIN", "Bank check: why");
                 foreach (var p in list)
                 {
                     double pr = TrackAdjust.Adj(tag, erupt ? p.PErupt : p.PDud);
@@ -80,9 +101,10 @@ namespace NbaQuant
                     int mode = 0; for (int v = 1; v < p.Pts.Hist.Length; v++) if (p.Pts.Hist[v] > p.Pts.Hist[mode]) mode = v;
                     r.Add(Cell.Num(mode, Styles.Int)); r.Add(Cell.Str((erupt ? p.EruptLine + "+" : p.DudLine + " or fewer"))); r.Add(Cell.Num(pr, Styles.PctB));
                     r.Add(fm == null ? Cell.Str("-") : Cell.Num(fm.Mpg, Styles.N1)); r.Add(Cell.Num(p.MeanMin, Styles.N1));
-                    r.Add(Cell.Str(string.Join("; ", why.Where(w => !w.StartsWith("model below season"))), Styles.Wrap));
-                    txt.AppendLine(string.Format(U.IC, "{0}|{1}|{2}|vs {3}|season {4:0.0}|proj {5:0.0}|mode {6}|{7}|{8:0}%|min {9:0.0}->{10:0.0}|{11}", erupt ? "ERUPT" : "DUD", p.P.Name, p.P.Team, p.Opp, p.SeasonPpg, p.Pts.Mean, mode,
-                        erupt ? p.EruptLine + "+" : "<=" + p.DudLine, 100 * pr, fm == null ? double.NaN : fm.Mpg, p.MeanMin, string.Join("; ", why.Where(w => !w.StartsWith("model below season")))));
+                    string chk = BankCheck(p, erupt);
+                    r.Add(Cell.Str(chk.ToUpperInvariant() + (why.Count > 0 ? ": " : "") + string.Join("; ", why.Where(w => !w.StartsWith("model below season"))), Styles.Wrap));
+                    txt.AppendLine(string.Format(U.IC, "{0}|{1}|{2}|vs {3}|season {4:0.0}|proj {5:0.0}|mode {6}|{7}|{8:0}%|min {9:0.0}->{10:0.0}|{11}|{12}", erupt ? "ERUPT" : "DUD", p.P.Name, p.P.Team, p.Opp, p.SeasonPpg, p.Pts.Mean, mode,
+                        erupt ? p.EruptLine + "+" : "<=" + p.DudLine, 100 * pr, fm == null ? double.NaN : fm.Mpg, p.MeanMin, chk, string.Join("; ", why.Where(w => !w.StartsWith("model below season")))));
                 }
             };
             table("Erupt candidates: best chance to blow past their season scoring", "erupt", Analysis.EruptList(12), true);
