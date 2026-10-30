@@ -176,9 +176,11 @@ svg.spark polyline { fill: none; stroke: var(--ink); stroke-width: 1.5 }
 svg.spark circle { fill: var(--accent) }
 .foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px }
 
+/* grid children shrink to the column instead of stretching it to their widest table (tables scroll inside their own box) */
+.view > *, main .wrap > *, .detail > *, .boxes > *, .rep > *, .two > *, .games > *, .tickets > *, .verdict > *, .teams > * { min-width: 0 }
 @media (max-width: 900px) {
-  .games, .teams { grid-template-columns: 1fr }
-  .verdict, .boxes, .tickets, .two { grid-template-columns: 1fr }
+  .games, .teams { grid-template-columns: minmax(0, 1fr) }
+  .verdict, .boxes, .tickets, .two { grid-template-columns: minmax(0, 1fr) }
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
 @media (max-width: 480px) {
