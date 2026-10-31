@@ -219,7 +219,11 @@ namespace NbaQuant
                     var b = favs.Where(x => x.P >= lo && x.P < hi).ToList();
                     return O("lo", lo, "hi", hi, "n", b.Count, "won", (int)b.Sum(x => x.Y), "exp", R1(b.Sum(x => x.P)));
                 };
-                tiers = O("games", favs.Count, "bands", new List<object> { band(0.75, 1.01), band(0.65, 0.75), band(0.55, 0.65), band(0, 0.55) }, "parlay", band(0.70, 1.01));
+                // sides the model liked at 5%+ expected value against the DraftKings price, and how they actually paid
+                Func<double, double> pay = o => o > 0 ? o / 100 : 100 / -o;
+                var edges = bt.Preds.Where(p => p.Kind == "ML" && Gradable(p) && !double.IsNaN(p.Odds) && p.Odds != 0 && p.P * pay(p.Odds) - (1 - p.P) >= 0.05).ToList();
+                tiers = O("games", favs.Count, "bands", new List<object> { band(0.75, 1.01), band(0.65, 0.75), band(0.55, 0.65), band(0, 0.55) }, "parlay", band(0.70, 1.01),
+                    "edges", O("n", edges.Count, "won", (int)edges.Sum(x => x.Y), "exp", R1(edges.Sum(x => x.P)), "units", R1(edges.Sum(x => x.Y >= 1 ? pay(x.Odds) : -1))));
             }
 
             var data = O(

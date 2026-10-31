@@ -300,7 +300,7 @@ svg.spark circle { fill: var(--accent) }
     edges.sort(function (a, b) { return b.ev - a.ev; });
     return '<div class="panel"><span class="label">Model vs Vegas</span><div class="call">' + (edges.length ? edges.length + (edges.length === 1 ? " side" : " sides") + " the model likes more than DraftKings" : "Model agrees with DraftKings tonight") + "</div>" +
       (edges.length ? '<ul class="legs">' + edges.map(function (s) { return "<li><span>" + s.t + " ML " + am(s.ml) + ' <span class="muted">model ' + pct(s.p, 0) + " · DraftKings " + pct(s.mkt, 0) + '</span></span><span class="num ev-pos">EV ' + sgn(100 * s.ev) + "%</span></li>"; }).join("") + "</ul>" : "") +
-      '<p class="muted" style="margin-top:8px">Win chances come from the model\'s own simulation; DraftKings never feeds it. These are the games where the two disagree enough to matter at DraftKings\' price. It is an early-season sample, so keep stakes small.</p></div>';
+      '<p class="muted" style="margin-top:8px">Win chances come from the model\'s own simulation; DraftKings never feeds it. These are the games where the two disagree enough to matter at DraftKings\' price. It is an early-season sample, so keep stakes small.</p>' + rec + "</div>";
   }
 
   // ---------- TONIGHT ----------
