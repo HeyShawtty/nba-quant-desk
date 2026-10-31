@@ -1,0 +1,68 @@
+team,name,status,p_play,note
+# Source: NBA official injury report 10/31/26 3:00 PM ET (read automatically). All listed teams submitted.
+# status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+POR,Jayson Kent,OUT,0,Official: Out (G League - Two-Way)
+POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+POR,Shaedon Sharpe,OUT,0,Official: Out
+POR,John Tonje,OUT,0,Official: Out (G League - Two-Way)
+POR,Robert Williams III,AVAIL,1,Official: Available
+POR,Chris Youngblood,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Soreness)
+UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
+UTAH,Kobe Bufkin,OUT,0,Official: Out (G League - Two-Way)
+UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
+UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right Knee MCL Tear)
+UTAH,Lauri Markkanen,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
+UTAH,Jusuf Nurkic,OUT,0,Official: Out
+PHI,Dominick Barlow,OUT,0,Official: Out
+PHI,Jaylen Brown,Q,0.5,Official: Questionable
+PHI,Joel Embiid,OUT,0,Official: Out
+PHI,Tacko Fall,Q,0.5,Official: Questionable (Injury/Illness - Left Quadriceps Strain)
+PHI,Ariel Hukporti,OUT,0,Official: Out
+PHI,LeBron James,OUT,0,Official: Out
+PHI,Jabari Walker,Q,0.5,Official: Questionable
+CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
+CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
+CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+CHA,Coby White,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+CHA,Grant Williams,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+ATL,RayJ Dennis,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Zuby Ejiofor,Q,0.25,Official: Doubtful (G League - On Assignment)
+ATL,Keshon Gilbert,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
+ATL,Jock Landale,AVAIL,1,Official: Available (Injury/Illness - Nasal Fracture)
+ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
+ATL,Jalen Wilson,Q,0.25,Official: Doubtful (G League - Two-Way)
+NO,Malik Dia,Q,0.5,Official: Questionable (G League - Two-Way)
+NO,Yves Missi,OUT,0,Official: Out
+NO,Jaron Pierre Jr.,Q,0.5,Official: Questionable (G League - Two-Way)
+NO,Jordan Poole,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
+CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
+CLE,Meleek Thomas,Q,0.9,Official: Probable
+CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
+CLE,Jaylon Tyson,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+CLE,"Jr., Ernest Udeh",OUT,0,Official: Out (G League - Two-Way)
+MIN,Donte DiVincenzo,OUT,0,Official: Out
+MIN,Anthony Edwards,OUT,0,Official: Out
+MIN,Rudy Gobert,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
+SA,Stephon Castle,Q,0.5,Official: Questionable (Injury/Illness - Migraine)
+SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+SAC,Dylan Cardwell,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SAC,Keegan Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Capsulitis)
+SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
+SAC,Maxime Raynaud,OUT,0,Official: Out
+SAC,Ben Simmons,OUT,0,Official: Out
+MEM,Ty Jerome,Q,0.5,Official: Questionable (Injury/Illness - Upper Back Soreness)
+MEM,Scotty Pippen Jr.,Q,0.5,Official: Questionable (Injury/Illness - Low Back Soreness)
+MEM,Quinten Post,Q,0.25,Official: Doubtful (Injury/Illness - Right Ankle Sprain)
+OKC,Alex Caruso,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+OKC,Chet Holmgren,OUT,0,Official: Out
+OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+OKC,Nikola Topic,OUT,0,Official: Out (Injury/Illness - Low back surgery)
+OKC,Cason Wallace,OUT,0,Official: Out
+OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
+HOU,Steven Adams,OUT,0,Official: Out (Injury/Illness - Right Soleus Strain)
+HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
+HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
+HOU,Reed Sheppard,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
+HOU,Fred VanVleet,OUT,0,Official: Out
