@@ -23,6 +23,7 @@ namespace NbaQuant
             if (!x.Projected) return b != null && b.Played && b.Min >= 15 ? "not in the projection (injury replacement / rotation change)" : "";
             if (b == null || !b.Played) return x.PMin >= 12 ? "did not play (late scratch or coach's decision)" : "did not play";
             double dm = b.Min - x.PMin, dp = b.Pts - x.PPts;
+            if (dm <= -6 && b.Pf >= 5) return string.Format(U.IC, "minutes short ({0:0} vs {1:0}): foul trouble ({2} fouls{3})", b.Min, x.PMin, b.Pf, b.Pf >= 6 ? ", fouled out" : "");
             if (dm <= -6) return Math.Abs(teamMargin) >= 15 ? string.Format(U.IC, "minutes short ({0:0} vs {1:0}): blowout", b.Min, x.PMin) : string.Format(U.IC, "minutes short ({0:0} vs {1:0}): fouls, injury or rotation", b.Min, x.PMin);
             if (dm >= 6) return string.Format(U.IC, "minutes surplus ({0:0} vs {1:0})", b.Min, x.PMin);
             if (dp >= 7) return string.Format(U.IC, "hot shooting ({0}-{1} FG, {2}-{3} 3PT)", b.Fgm, b.Fga, b.Tpm, b.Tpa);
