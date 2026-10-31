@@ -1,6 +1,6 @@
-Custom tickets for 2026-10-30, priced 21:42 ET (100,000 simulations)
+Custom tickets for 2026-10-30, priced 22:04 ET (100,000 simulations)
 
-LAL@GS: LAL win 60.1%, GS win 39.9% | DraftKings GS +2.5, total 234.5, ML LAL -148 / GS +124
+LAL@GS: LAL win 60.1%, GS win 39.9% | DraftKings GS +2.5, total 234.5, ML LAL -142 / GS +120
   Head-to-head Luka Doncic vs Yaxel Lendeborg (100,000 simulations with both playing):
     points   Luka Doncic more 81.3%, Yaxel Lendeborg more 16.5%, tie 2.1% | average 30.7 vs 18.9
     rebounds Luka Doncic more 40.7%, Yaxel Lendeborg more 49.7%, tie 9.6% | average 6.7 vs 7.3
