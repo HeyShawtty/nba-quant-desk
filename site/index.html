@@ -100,6 +100,9 @@ section[hidden] { display: none !important }
 .outs { font-size: 13px; color: var(--muted) }
 .outs b { color: var(--ink); font-weight: 600 }
 .ev-neg { color: var(--bad) } .ev-pos { color: var(--good) }
+.pick { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; min-width: 0 }
+.tier { font-family: var(--display); font-weight: 700; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--chip); white-space: nowrap }
+.t-strong { color: var(--good) } .t-solid { color: var(--ink) } .t-upset { color: var(--warn) } .t-coin { color: var(--bad) }
 
 /* box score */
 .detail { display: grid; gap: 18px }
@@ -259,6 +262,34 @@ svg.spark circle { fill: var(--accent) }
     return out.length ? '<div class="chips">' + out.join("") + "</div>" : "";
   }
 
+  // ---------- upset-risk tiers (favorite's win chance; season record per tier from the walk-forward backtest, D.tiers) ----------
+  var TIERS = [
+    { lo: .75, key: "strong", label: "Strong favorite", range: "75%+" },
+    { lo: .65, key: "solid", label: "Solid favorite", range: "65–75%" },
+    { lo: .55, key: "upset", label: "Upset zone", range: "55–65%" },
+    { lo: 0, key: "coin", label: "Coin flip", range: "under 55%" }
+  ];
+  function favP(g) { return Math.max(g.winHome, 1 - g.winHome); }
+  function tierOf(p) { for (var i = 0; i < TIERS.length; i++) if (p >= TIERS[i].lo) return i; return TIERS.length - 1; }
+  function tierChip(p) {
+    var i = tierOf(p), t = TIERS[i], b = D.tiers && D.tiers.bands[i];
+    var tip = b && b.n ? ' title="Favorites at ' + t.range + " this season: " + b.won + " of " + b.n + " won (" + f1(b.exp) + ' expected)"' : "";
+    return '<span class="tier t-' + t.key + '"' + tip + ">" + t.label + "</span>";
+  }
+  function upsetWatch() {
+    var rows = TIERS.map(function (t, i) {
+      var tonight = D.games.filter(function (g) { return tierOf(favP(g)) === i; })
+        .map(function (g) { return (g.winHome >= .5 ? g.home : g.away) + " " + pct(favP(g), 0); });
+      var b = D.tiers && D.tiers.bands[i];
+      return '<tr><td class="pl">' + tierChip(t.lo || .5) + ' <span class="muted">' + t.range + '</span></td><td class="pl">' + (tonight.length ? esc(tonight.join(", ")) : '<span class="muted">none</span>') + "</td>" +
+        "<td>" + (b && b.n ? b.won + " of " + b.n : "–") + "</td><td>" + (b && b.n ? f1(b.exp) : "–") + "</td></tr>";
+    }).join("");
+    var pr = D.tiers && D.tiers.parlay;
+    return '<div class="panel tscroll"><h3>Upset watch</h3><p class="muted" style="margin:4px 0 10px">How shaky each favorite is. The season record covers every game since opening night, each priced before tip-off using only earlier games. A 60% favorite still loses 4 times in 10, so the tier says how many upsets to expect, not which game they come in.</p>' +
+      '<table><thead><tr><th>Tier</th><th>Tonight</th><th>Favorites won this season</th><th>Expected</th></tr></thead><tbody>' + rows + "</tbody></table>" +
+      (pr && pr.n ? '<p class="muted" style="margin-top:10px">Moneyline parlays: only use teams at 70% or higher. Those favorites have won <b style="color:var(--ink)">' + pr.won + " of " + pr.n + "</b> this season (" + f1(pr.exp) + " expected).</p>" : "") + "</div>";
+  }
+
   // ---------- TONIGHT ----------
   var sel = 0;
   function gameCard(g, i) {
@@ -297,7 +328,8 @@ svg.spark circle { fill: var(--accent) }
         '<div style="grid-column:1/-1"><dt>Value at DraftKings (EV per $1)</dt><dd>' + ev + "</dd></div>" +
       "</dl>" +
       '<p class="outs"><b>Out:</b> ' + esc(g.away + ": " + outA + "; " + g.home + ": " + outH) + (q.length ? ' · <b>Questionable:</b> ' + esc(q.join(", ")) : "") + "</p>" +
-      '<div class="g-foot"><span class="label">Model pick: <span style="color:var(--ink)">' + fav + " " + pct(Math.max(g.winHome, wa)) + "</span></span>" +
+      '<div class="g-foot"><span class="pick"><span class="label">Model pick: <span style="color:var(--ink)">' + fav + " " + pct(favP(g)) + "</span></span>" + tierChip(favP(g)) +
+        (favP(g) >= .7 ? '<span class="chip up" title="70%+ favorite: OK for a moneyline parlay">Parlay OK</span>' : "") + "</span>" +
       '<button class="boxbtn" type="button" id="boxbtn-' + i + '" aria-pressed="' + (i === sel) + '" aria-controls="detail">Box score</button></div>' +
     "</article>";
   }
@@ -385,6 +417,7 @@ svg.spark circle { fill: var(--accent) }
       (b ? '<div class="panel"><span class="label">Best $5 boost parlay · ' + esc(b.game) + '</span><ul class="legs">' + b.sgp.legs.map(function (l, i) { return "<li><span>" + esc(l) + '</span><span class="num muted">' + pct(b.sgp.legP[i], 0) + "</span></li>"; }).join("") + "</ul>" +
         '<div class="kv"><div><span class="label">Joint</span><span class="v">' + pct(b.sgp.joint) + '</span></div><div><span class="label">Fair odds</span><span class="v">' + am(b.sgp.fair) + '</span></div><div><span class="label">Lift</span><span class="v">' + b.sgp.lift.toFixed(2) + '×</span></div><div><span class="label">Needs</span><span class="v">+300 or longer</span></div></div></div>' : "") +
       "</div>" +
+      upsetWatch() +
       '<div class="games" id="games">' + games + "</div>" +
       eruptDud() +
       '<div id="detail">' + detail() + "</div>";

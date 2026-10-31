@@ -190,7 +190,7 @@ namespace NbaQuant
             }).ToList();
 
             // audit on the walk-forward backtest
-            object audit = null;
+            object audit = null, tiers = null;
             string btPath = Program.P(@"ledger\backtest_latest.csv");
             if (File.Exists(btPath))
             {
@@ -212,6 +212,14 @@ namespace NbaQuant
                     "blowoutShare", R3(gi.Count(x => Math.Abs(x.Margin) >= 20) / (double)Math.Max(1, gi.Count)),
                     "ptsMae", R1(means.Average(c => Math.Abs(c.ProjPts - c.ActPts))), "minMae", R1(means.Average(c => Math.Abs(c.ProjMin - c.ActMin))),
                     "reliability", rel, "segments", segs, "causes", causes, "sgp", sgp);
+                // upset risk: how often the model's favorite actually won, by how strongly it was favored (every backtest game, out of sample)
+                var favs = bt.Preds.Where(p => p.Kind == "ML" && Gradable(p)).GroupBy(p => p.Date + "|" + p.GameId).Select(gr => gr.OrderByDescending(x => x.P).First()).ToList();
+                Func<double, double, object> band = (lo, hi) =>
+                {
+                    var b = favs.Where(x => x.P >= lo && x.P < hi).ToList();
+                    return O("lo", lo, "hi", hi, "n", b.Count, "won", (int)b.Sum(x => x.Y), "exp", R1(b.Sum(x => x.P)));
+                };
+                tiers = O("games", favs.Count, "bands", new List<object> { band(0.75, 1.01), band(0.65, 0.75), band(0.55, 0.65), band(0, 0.55) }, "parlay", band(0.70, 1.01));
             }
 
             var data = O(
@@ -224,7 +232,7 @@ namespace NbaQuant
                 "erupt", eruptJson, "dud", dudJson,
                 "bank", O("teams", bankTeams, "players", bankPlayers),
                 "record", O("tags", tagRec, "slates", slates, "mlBrier", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.P - p.Y) * (p.P - p.Y))) : null, "mlBrierMkt", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.PMarket - p.Y) * (p.PMarket - p.Y))) : null),
-                "audit", audit);
+                "audit", audit, "tiers", tiers);
             var ser = new JavaScriptSerializer { MaxJsonLength = int.MaxValue };
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             File.WriteAllText(path, "window.NBA = " + ser.Serialize(data) + ";\n", new UTF8Encoding(false));
