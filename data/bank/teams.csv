@@ -1,31 +1,31 @@
 team,gp,w,l,ppg,opp_ppg,margin,pace,ortg,drtg,q123,opp_q123,bench_ppg,rpg,apg,tpm,blowouts,ats_w,ats_l,overs,unders,model_games,model_margin_bias,model_total_bias,flags
-ATL,6,3,3,119.2,114.5,4.7,104.6,114.0,109.3,89.3,87.3,41.5,43.3,32.5,14.8,1,3,3,4,2,6,-5.7,-1.0,
-BKN,5,0,5,110.2,121.2,-11.0,104.7,103.0,113.4,77.8,92.4,45.2,44.8,23.2,14.6,1,2,3,3,2,5,3.2,-6.8,
-BOS,5,4,1,120.8,111.6,9.2,102.0,116.0,107.5,92.2,77.2,48.2,43.6,27.8,14.8,1,2,3,2,3,5,-0.5,-7.0,
-CHA,6,3,3,97.3,106.0,-8.7,98.6,98.6,107.4,75.5,79.3,30.7,48.7,20.8,13.0,1,3,3,0,6,6,8.0,18.5,model margin off by +8.0 per game (6 games): worse than projected; their games land 18.5 pts under the model total; totals 0-6 over/under vs DK
-CHI,6,1,5,113.5,129.3,-15.8,109.3,103.9,118.3,83.3,99.7,36.7,45.8,24.3,12.2,2,3,3,2,4,6,8.1,-6.6,model margin off by +8.1 per game (6 games): worse than projected
-CLE,5,3,2,118.0,117.0,1.0,103.7,111.9,110.7,89.2,85.8,32.8,46.6,26.2,13.6,0,1,4,2,3,5,3.8,2.2,
-DAL,6,4,2,114.3,111.8,2.5,101.7,112.5,109.9,86.0,86.2,40.0,43.7,27.0,13.0,1,4,2,2,4,6,-10.6,4.8,model margin off by -10.6 per game (6 games): better than projected
-DEN,5,3,2,114.0,115.2,-1.2,99.4,111.8,113.4,83.8,88.8,30.2,43.6,26.8,13.0,1,2,3,3,2,5,6.2,7.1,model margin off by +6.2 per game (5 games): worse than projected
-DET,6,5,1,109.8,101.8,8.0,100.2,109.4,101.6,82.5,76.8,37.3,45.8,26.7,13.5,0,5,1,2,4,6,-5.5,12.1,their games land 12.1 pts under the model total
-GS,6,3,3,116.7,115.3,1.3,101.1,115.6,114.1,88.0,88.8,43.5,43.8,26.3,15.7,2,4,2,3,3,6,-5.8,-2.4,
-HOU,6,5,1,121.0,110.0,11.0,101.7,119.0,108.2,91.2,78.0,30.8,45.5,27.8,12.0,1,5,1,5,1,6,-7.1,-5.4,model margin off by -7.1 per game (6 games): better than projected
-IND,6,2,4,116.7,119.8,-3.2,103.9,112.2,115.4,87.5,88.7,41.7,42.8,29.2,12.7,2,3,3,3,3,6,2.8,0.8,
-LAC,5,1,4,105.4,111.8,-6.4,101.8,103.4,109.8,81.2,86.6,44.6,41.0,24.8,13.4,2,3,2,2,3,5,0.6,6.5,
-LAL,6,4,2,118.5,113.3,5.2,101.3,116.7,111.7,96.0,85.2,27.7,39.2,23.0,13.7,1,3,3,3,3,6,-0.1,-1.2,
-MEM,5,5,0,118.2,106.2,12.0,101.8,116.0,104.3,91.6,83.6,42.6,50.8,26.4,15.4,2,5,0,1,4,5,-12.9,12.0,model margin off by -12.9 per game (5 games): better than projected; their games land 12.0 pts under the model total
-MIA,6,2,4,118.3,121.5,-3.2,105.6,112.2,115.1,86.7,92.3,36.2,43.7,28.8,13.0,2,2,4,3,3,6,6.2,-2.1,model margin off by +6.2 per game (6 games): worse than projected
-MIL,5,1,4,113.4,124.2,-10.8,105.6,107.4,117.6,87.4,93.8,43.2,49.8,24.6,14.0,1,2,3,4,1,5,6.2,-2.9,model margin off by +6.2 per game (5 games): worse than projected
-MIN,6,4,2,121.5,106.7,14.8,103.5,115.6,101.1,90.0,77.2,43.0,50.2,27.8,16.0,4,5,1,3,3,6,-14.0,3.6,model margin off by -14.0 per game (6 games): better than projected; 4 of 6 games decided by 20+ (starter minutes risk)
-NO,5,1,4,119.4,121.6,-2.2,105.8,110.2,112.5,93.0,85.6,45.8,43.0,25.2,9.2,0,3,2,4,1,5,-0.8,-2.9,
-NY,6,2,4,107.0,107.7,-0.7,100.2,106.8,107.5,78.3,78.8,28.7,47.7,26.2,13.8,0,1,5,1,5,6,4.2,11.3,their games land 11.3 pts under the model total
-OKC,5,4,1,108.2,104.6,3.6,101.0,107.0,103.6,84.0,79.8,34.2,46.0,22.0,10.0,1,3,2,1,4,5,4.5,14.3,their games land 14.3 pts under the model total
-ORL,5,2,3,109.8,118.4,-8.6,103.0,107.0,115.1,80.4,90.2,33.4,39.4,26.8,13.4,2,2,3,3,2,5,6.0,0.8,model margin off by +6.0 per game (5 games): worse than projected
-PHI,6,5,1,108.7,105.0,3.7,103.6,104.8,101.5,80.5,81.3,20.5,41.7,24.8,11.5,0,3,3,1,5,6,-0.9,19.6,their games land 19.6 pts under the model total
-PHX,4,1,3,112.0,124.5,-12.5,100.5,111.4,124.0,86.5,100.3,38.0,40.3,27.5,14.0,1,0,4,3,1,4,10.2,-11.0,model margin off by +10.2 per game (4 games): worse than projected; their games land 11.0 pts over the model total
-POR,4,3,1,122.8,114.0,8.8,103.2,119.1,110.2,98.8,87.5,40.5,46.0,28.8,15.8,2,2,2,2,2,4,-4.2,-4.4,2 of 4 games decided by 20+ (starter minutes risk)
-SA,5,3,2,116.6,110.0,6.6,101.5,112.9,106.3,89.0,86.4,29.0,45.0,28.2,13.2,1,2,3,1,4,5,3.8,2.5,
-SAC,5,0,5,110.2,126.8,-16.6,105.0,104.9,120.9,83.6,100.2,19.4,41.0,24.4,10.2,2,1,4,4,1,5,7.4,-6.3,model margin off by +7.4 per game (5 games): worse than projected
-TOR,5,3,2,116.8,106.2,10.6,104.0,112.4,103.3,87.4,81.8,34.6,44.2,28.0,10.6,3,3,2,2,3,5,-5.2,7.4,3 of 5 games decided by 20+ (starter minutes risk)
-UTAH,5,1,4,112.4,120.2,-7.8,101.7,108.4,115.9,85.2,93.0,35.8,46.8,26.8,11.8,1,1,4,2,3,5,3.5,5.7,
-WSH,6,3,3,110.5,109.7,0.8,101.4,108.9,108.1,83.8,81.2,31.7,42.2,24.5,9.2,0,3,3,1,5,6,-5.1,13.4,their games land 13.4 pts under the model total
+ATL,6,3,3,119.2,114.5,4.7,104.6,114.0,109.3,89.3,87.3,41.5,43.3,32.5,14.8,1,3,3,4,2,6,-7.8,-2.0,model margin off by -7.8 per game (6 games): better than projected
+BKN,5,0,5,110.2,121.2,-11.0,104.7,103.0,113.4,77.8,92.4,45.2,44.8,23.2,14.6,1,2,3,3,2,5,3.6,-9.5,their games land 9.5 pts over the model total
+BOS,5,4,1,120.8,111.6,9.2,102.0,116.0,107.5,92.2,77.2,48.2,43.6,27.8,14.8,1,2,3,2,3,5,-2.3,-12.0,their games land 12.0 pts over the model total
+CHA,6,3,3,97.3,106.0,-8.7,98.6,98.6,107.4,75.5,79.3,30.7,48.7,20.8,13.0,1,3,3,0,6,6,11.1,17.8,model margin off by +11.1 per game (6 games): worse than projected; their games land 17.8 pts under the model total; totals 0-6 over/under vs DK
+CHI,6,1,5,113.5,129.3,-15.8,109.3,103.9,118.3,83.3,99.7,36.7,45.8,24.3,12.2,2,3,3,2,4,6,8.8,-11.0,model margin off by +8.8 per game (6 games): worse than projected; their games land 11.0 pts over the model total
+CLE,5,3,2,118.0,117.0,1.0,103.7,111.9,110.7,89.2,85.8,32.8,46.6,26.2,13.6,0,1,4,2,3,5,6.1,6.7,model margin off by +6.1 per game (5 games): worse than projected
+DAL,6,4,2,114.3,111.8,2.5,101.7,112.5,109.9,86.0,86.2,40.0,43.7,27.0,13.0,1,4,2,2,4,6,-10.8,1.4,model margin off by -10.8 per game (6 games): better than projected
+DEN,5,3,2,114.0,115.2,-1.2,99.4,111.8,113.4,83.8,88.8,30.2,43.6,26.8,13.0,1,2,3,3,2,5,9.2,5.1,model margin off by +9.2 per game (5 games): worse than projected
+DET,6,5,1,109.8,101.8,8.0,100.2,109.4,101.6,82.5,76.8,37.3,45.8,26.7,13.5,0,5,1,2,4,6,-5.4,13.2,their games land 13.2 pts under the model total
+GS,6,3,3,116.7,115.3,1.3,101.1,115.6,114.1,88.0,88.8,43.5,43.8,26.3,15.7,2,4,2,3,3,6,-7.5,-8.3,model margin off by -7.5 per game (6 games): better than projected; their games land 8.3 pts over the model total
+HOU,6,5,1,121.0,110.0,11.0,101.7,119.0,108.2,91.2,78.0,30.8,45.5,27.8,12.0,1,5,1,5,1,6,-8.0,-9.0,model margin off by -8.0 per game (6 games): better than projected; their games land 9.0 pts over the model total
+IND,6,2,4,116.7,119.8,-3.2,103.9,112.2,115.4,87.5,88.7,41.7,42.8,29.2,12.7,2,3,3,3,3,6,0.2,1.0,
+LAC,5,1,4,105.4,111.8,-6.4,101.8,103.4,109.8,81.2,86.6,44.6,41.0,24.8,13.4,2,3,2,2,3,5,-2.1,4.0,
+LAL,6,4,2,118.5,113.3,5.2,101.3,116.7,111.7,96.0,85.2,27.7,39.2,23.0,13.7,1,3,3,3,3,6,3.1,-4.1,
+MEM,5,5,0,118.2,106.2,12.0,101.8,116.0,104.3,91.6,83.6,42.6,50.8,26.4,15.4,2,5,0,1,4,5,-12.4,11.4,model margin off by -12.4 per game (5 games): better than projected; their games land 11.4 pts under the model total
+MIA,6,2,4,118.3,121.5,-3.2,105.6,112.2,115.1,86.7,92.3,36.2,43.7,28.8,13.0,2,2,4,3,3,6,6.6,-1.1,model margin off by +6.6 per game (6 games): worse than projected
+MIL,5,1,4,113.4,124.2,-10.8,105.6,107.4,117.6,87.4,93.8,43.2,49.8,24.6,14.0,1,2,3,4,1,5,8.3,-8.2,model margin off by +8.3 per game (5 games): worse than projected; their games land 8.2 pts over the model total
+MIN,6,4,2,121.5,106.7,14.8,103.5,115.6,101.1,90.0,77.2,43.0,50.2,27.8,16.0,4,5,1,3,3,6,-14.6,5.2,model margin off by -14.6 per game (6 games): better than projected; 4 of 6 games decided by 20+ (starter minutes risk)
+NO,5,1,4,119.4,121.6,-2.2,105.8,110.2,112.5,93.0,85.6,45.8,43.0,25.2,9.2,0,3,2,4,1,5,-1.4,-3.4,
+NY,6,2,4,107.0,107.7,-0.7,100.2,106.8,107.5,78.3,78.8,28.7,47.7,26.2,13.8,0,1,5,1,5,6,3.0,11.7,their games land 11.7 pts under the model total
+OKC,5,4,1,108.2,104.6,3.6,101.0,107.0,103.6,84.0,79.8,34.2,46.0,22.0,10.0,1,3,2,1,4,5,6.1,11.9,model margin off by +6.1 per game (5 games): worse than projected; their games land 11.9 pts under the model total
+ORL,5,2,3,109.8,118.4,-8.6,103.0,107.0,115.1,80.4,90.2,33.4,39.4,26.8,13.4,2,2,3,3,2,5,7.0,1.2,model margin off by +7.0 per game (5 games): worse than projected
+PHI,6,5,1,108.7,105.0,3.7,103.6,104.8,101.5,80.5,81.3,20.5,41.7,24.8,11.5,0,3,3,1,5,6,1.2,23.7,their games land 23.7 pts under the model total
+PHX,4,1,3,112.0,124.5,-12.5,100.5,111.4,124.0,86.5,100.3,38.0,40.3,27.5,14.0,1,0,4,3,1,4,8.9,-15.0,model margin off by +8.9 per game (4 games): worse than projected; their games land 15.0 pts over the model total
+POR,4,3,1,122.8,114.0,8.8,103.2,119.1,110.2,98.8,87.5,40.5,46.0,28.8,15.8,2,2,2,2,2,4,-4.9,-6.0,2 of 4 games decided by 20+ (starter minutes risk)
+SA,5,3,2,116.6,110.0,6.6,101.5,112.9,106.3,89.0,86.4,29.0,45.0,28.2,13.2,1,2,3,1,4,5,4.8,1.1,
+SAC,5,0,5,110.2,126.8,-16.6,105.0,104.9,120.9,83.6,100.2,19.4,41.0,24.4,10.2,2,1,4,4,1,5,6.1,-9.5,model margin off by +6.1 per game (5 games): worse than projected; their games land 9.5 pts over the model total
+TOR,5,3,2,116.8,106.2,10.6,104.0,112.4,103.3,87.4,81.8,34.6,44.2,28.0,10.6,3,3,2,2,3,5,-5.2,6.4,3 of 5 games decided by 20+ (starter minutes risk)
+UTAH,5,1,4,112.4,120.2,-7.8,101.7,108.4,115.9,85.2,93.0,35.8,46.8,26.8,11.8,1,1,4,2,3,5,2.9,8.9,their games land 8.9 pts under the model total
+WSH,6,3,3,110.5,109.7,0.8,101.4,108.9,108.1,83.8,81.2,31.7,42.2,24.5,9.2,0,3,3,1,5,6,-8.2,11.8,model margin off by -8.2 per game (6 games): better than projected; their games land 11.8 pts under the model total
