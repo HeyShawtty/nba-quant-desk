@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/31/26 5:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/31/26 6:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 POR,Jayson Kent,OUT,0,Official: Out (G League - Two-Way)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -44,7 +44,7 @@ CLE,Jaylon Tyson,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 CLE,"Jr., Ernest Udeh",OUT,0,Official: Out (G League - Two-Way)
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
-MIN,Rudy Gobert,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
+MIN,Rudy Gobert,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
 SA,Stephon Castle,Q,0.5,Official: Questionable (Injury/Illness - Migraine)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
