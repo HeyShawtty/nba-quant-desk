@@ -290,6 +290,19 @@ svg.spark circle { fill: var(--accent) }
       (pr && pr.n ? '<p class="muted" style="margin-top:10px">Moneyline parlays: only use teams at 70% or higher. Those favorites have won <b style="color:var(--ink)">' + pr.won + " of " + pr.n + "</b> this season (" + f1(pr.exp) + " expected).</p>" : "") + "</div>";
   }
 
+  // moneylines the model's own simulation likes more than DraftKings does (5%+ expected value at the DraftKings price)
+  function vsVegas() {
+    var edges = [];
+    D.games.forEach(function (g) {
+      [{ t: g.away, p: 1 - g.winHome, ml: g.dk.mlAway, ev: g.evAway, mkt: 1 - g.marketWinHome }, { t: g.home, p: g.winHome, ml: g.dk.mlHome, ev: g.evHome, mkt: g.marketWinHome }]
+        .forEach(function (s) { if (s.ml && s.ev >= 0.05) edges.push(s); });
+    });
+    edges.sort(function (a, b) { return b.ev - a.ev; });
+    return '<div class="panel"><span class="label">Model vs Vegas</span><div class="call">' + (edges.length ? edges.length + (edges.length === 1 ? " side" : " sides") + " the model likes more than DraftKings" : "Model agrees with DraftKings tonight") + "</div>" +
+      (edges.length ? '<ul class="legs">' + edges.map(function (s) { return "<li><span>" + s.t + " ML " + am(s.ml) + ' <span class="muted">model ' + pct(s.p, 0) + " · DraftKings " + pct(s.mkt, 0) + '</span></span><span class="num ev-pos">EV ' + sgn(100 * s.ev) + "%</span></li>"; }).join("") + "</ul>" : "") +
+      '<p class="muted" style="margin-top:8px">Win chances come from the model\'s own simulation; DraftKings never feeds it. These are the games where the two disagree enough to matter at DraftKings\' price. It is an early-season sample, so keep stakes small.</p></div>';
+  }
+
   // ---------- TONIGHT ----------
   var sel = 0;
   function gameCard(g, i) {
@@ -413,7 +426,7 @@ svg.spark circle { fill: var(--accent) }
     var b = D.bestSgp, m = D.meta;
     var games = D.games.map(gameCard).join("");
     var h = '<div style="display:grid;gap:10px"><h2>Tonight: ' + D.games.length + " games, " + esc(m.slateLabel) + '</h2><div class="sub"><span><b>' + m.sims.toLocaleString() + "</b> possession-level simulations per game</span><span>Season bank through <b>" + esc(m.bankThrough) + "</b> (" + m.bankGames + ' games)</span><span>Built <b>' + esc(m.built) + "</b></span></div></div>" +
-      '<div class="verdict"><div class="panel"><span class="label">Straight bets</span><div class="call">No qualifying bet</div><p class="muted" style="margin-top:6px">Every moneyline needs a higher win rate than the model gives it at DraftKings prices. A side only qualifies when its expected value stays positive under a wider margin assumption.</p></div>' +
+      '<div class="verdict">' + vsVegas() +
       (b ? '<div class="panel"><span class="label">Best $5 boost parlay · ' + esc(b.game) + '</span><ul class="legs">' + b.sgp.legs.map(function (l, i) { return "<li><span>" + esc(l) + '</span><span class="num muted">' + pct(b.sgp.legP[i], 0) + "</span></li>"; }).join("") + "</ul>" +
         '<div class="kv"><div><span class="label">Joint</span><span class="v">' + pct(b.sgp.joint) + '</span></div><div><span class="label">Fair odds</span><span class="v">' + am(b.sgp.fair) + '</span></div><div><span class="label">Lift</span><span class="v">' + b.sgp.lift.toFixed(2) + '×</span></div><div><span class="label">Needs</span><span class="v">+300 or longer</span></div></div></div>' : "") +
       "</div>" +
@@ -440,7 +453,7 @@ svg.spark circle { fill: var(--accent) }
     var steps = [
       ["Collect the inputs", "Every 2026-27 box score and play-by-play from ESPN, last season's player stats from Basketball-Reference, DraftKings spreads, totals and moneylines, and the NBA's official injury report (applied as overrides before tip-off)."],
       ["Project each player", "Minutes blend this season with last season, with this season's games counting " + s.csWeight + "× as much. Per-minute rates for twos, threes, free throws, turnovers, rebounds and assists are shrunk toward position averages. Questionable players enter as lineup scenarios."],
-      ["Set team strength", "Each team's expected score is " + pct(s.marketWeight, 0) + " the DraftKings line and " + pct(1 - s.marketWeight, 0) + " an independent player-rating model, with home court worth " + s.hca + " points and a back-to-back penalty."],
+      ["Set team strength", (s.marketWeight > 0 ? "Each team's expected score is " + pct(s.marketWeight, 0) + " the DraftKings line and " + pct(1 - s.marketWeight, 0) + " an independent player-rating model" : "Each team's expected score comes from the model's own player ratings and this season's games; DraftKings lines are shown only for comparison and never feed the simulation") + ", with home court worth " + s.hca + " points and a back-to-back penalty."],
       ["Simulate 100,000 games", "Each game is played possession by possession: the shooter is drawn by usage, shots become twos, threes, free throws or turnovers, then assists and rebounds. Leading teams ease off, starters sit in fourth-quarter blowouts, and ties go to overtime."],
       ["Read the outputs", "Win probabilities, spreads, totals, Q1–Q3 points, every player's stat distribution, first basket, double-doubles, and joint probabilities for parlays, all counted from the same simulated games."],
       ["Grade and recalibrate", "Every published prediction is graded from box scores. A walk-forward backtest replays the season using only earlier games, and a setting changes only when it improves accuracy on both the earlier and later halves of the season."]

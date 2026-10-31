@@ -271,10 +271,8 @@ namespace NbaQuant
                 }
                 wRes.Add(Tuple.Create(w, ll / Math.Max(1, recs.Count), br / Math.Max(1, recs.Count)));
             }
-            var wBest = wRes.OrderBy(x => x.Item2).First();
-            var wCur = wRes.OrderBy(x => Math.Abs(x.Item1 - S.MarketWeight)).First();
-            bool moveW = recs.Count >= 100 && wCur.Item2 - wBest.Item2 > 0.01;
-            if (moveW) S.MarketWeight = wBest.Item1;
+            // the owner runs the model as its own predictor (2026-10-31): the market weight is reported here, never moved automatically
+            bool moveW = false;
 
             string slopeNote = FitMinutesSlope(preds0);
             // opponent defensive profiles: only switched on (or strengthened) when they improve out-of-sample prop accuracy
@@ -357,7 +355,7 @@ namespace NbaQuant
                 sb.AppendLine(string.Format(U.IC, "Moneyline Brier: simulation {0:0.0000}; DraftKings closing no-vig {1:0.0000} (n={2}). Mean margin error: market {3:0.0}, model-only {4:0.0} pts. Mean total error vs closing total {5:+0.0;-0.0} pts.",
                     bBlend, withMl.Count > 0 ? withMl.Average(r => (r.MktNoVig - r.HomeWon) * (r.MktNoVig - r.HomeWon)) : double.NaN, withMl.Count,
                     recs.Average(r => Math.Abs(r.Margin - r.MktMargin)), recs.Average(r => Math.Abs(r.Margin - r.ModelMargin)), recs.Average(r => r.Total - r.MktTotal)));
-                sb.AppendLine("Market weight check (log loss, normal approximation): " + string.Join("; ", wRes.Select(x => string.Format(U.IC, "w={0:0.00}: {1:0.0000}", x.Item1, x.Item2))) + (moveW ? string.Format(U.IC, ". Market weight moved to {0:0.00}.", S.MarketWeight) : ". Market weight kept (sample too small or difference too small to justify a change)."));
+                sb.AppendLine("Market weight check (log loss, normal approximation): " + string.Join("; ", wRes.Select(x => string.Format(U.IC, "w={0:0.00}: {1:0.0000}", x.Item1, x.Item2))) + (moveW ? string.Format(U.IC, ". Market weight moved to {0:0.00}.", S.MarketWeight) : string.Format(U.IC, ". Market weight stays {0:0.00}: the model runs on its own numbers and DraftKings is only a comparison.", S.MarketWeight)));
             }
             foreach (var st in new[] { "PTS", "REB", "AST", "3PM", "MIN" })
             {
