@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/31/26 4:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/31/26 5:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 POR,Jayson Kent,OUT,0,Official: Out (G League - Two-Way)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -14,26 +14,27 @@ UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right Knee MCL Tear
 UTAH,Lauri Markkanen,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 UTAH,Jusuf Nurkic,OUT,0,Official: Out
 PHI,Dominick Barlow,OUT,0,Official: Out
-PHI,Jaylen Brown,Q,0.5,Official: Questionable
+PHI,Jaylen Brown,AVAIL,1,Official: Available
 PHI,Joel Embiid,OUT,0,Official: Out
-PHI,Tacko Fall,Q,0.5,Official: Questionable (Injury/Illness - Left Quadriceps Strain)
+PHI,Tacko Fall,AVAIL,1,Official: Available (Injury/Illness - Left Quadriceps Strain)
 PHI,Ariel Hukporti,OUT,0,Official: Out
 PHI,LeBron James,OUT,0,Official: Out
-PHI,Jabari Walker,Q,0.5,Official: Questionable
+PHI,Jabari Walker,AVAIL,1,Official: Available
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 CHA,Coby White,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 CHA,Grant Williams,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
-ATL,RayJ Dennis,Q,0.25,Official: Doubtful (G League - Two-Way)
-ATL,Zuby Ejiofor,Q,0.25,Official: Doubtful (G League - On Assignment)
-ATL,Keshon Gilbert,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,RayJ Dennis,OUT,0,Official: Out (G League - Two-Way)
+ATL,Zuby Ejiofor,OUT,0,Official: Out (G League - On Assignment)
+ATL,Keshon Gilbert,OUT,0,Official: Out (G League - Two-Way)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
 ATL,Jock Landale,AVAIL,1,Official: Available (Injury/Illness - Nasal Fracture)
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
-ATL,Jalen Wilson,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 NO,Malik Dia,Q,0.5,Official: Questionable (G League - Two-Way)
 NO,Yves Missi,OUT,0,Official: Out
+NO,Dejounte Murray,OUT,0,Official: Out (Personal Reasons)
 NO,Jaron Pierre Jr.,Q,0.5,Official: Questionable (G League - Two-Way)
 NO,Jordan Poole,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
