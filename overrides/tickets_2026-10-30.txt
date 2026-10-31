@@ -1,0 +1,16 @@
+# Custom same-game parlays, priced by `nbaquant-cli ticket 2026-10-30` (also re-priced by every slate run)
+#   AWAY@HOME | name | leg; leg; ...    or    AWAY@HOME | vs | Player A; Player B
+# Luka vs Yax rematch: Lendeborg said he "lost all respect" for Doncic on opening night (LAL won 127-105, Luka 28/8/7)
+LAL@GS | vs | Luka Doncic; Yaxel Lendeborg
+LAL@GS | Both show up | Luka Doncic 30+ pts; Yaxel Lendeborg 20+ pts; LAL moneyline
+LAL@GS | Rivalry boost | Luka Doncic 30+ pts; Yaxel Lendeborg 20+ pts; Yaxel Lendeborg 6+ reb
+LAL@GS | Rivalry boost, threes | Luka Doncic 30+ pts; Luka Doncic 3+ threes; Yaxel Lendeborg 20+ pts
+LAL@GS | Shootout | Over; Luka Doncic 30+ pts; Yaxel Lendeborg 20+ pts
+LAL@GS | Luka answers again | LAL moneyline; Luka Doncic 25+ pts; Luka Doncic 6+ ast; Luka Doncic 6+ reb
+LAL@GS | Luka takes over | LAL moneyline; Luka Doncic 35+ pts; Luka Doncic 4+ threes
+LAL@GS | Luka by a lot | LAL spread; Luka Doncic 30+ pts; Luka Doncic 8+ ast
+LAL@GS | Yax gets revenge | GS moneyline; Yaxel Lendeborg 20+ pts; Yaxel Lendeborg 8+ reb
+LAL@GS | Yax 25 | Yaxel Lendeborg 25+ pts; Yaxel Lendeborg 8+ reb; Luka Doncic 30+ pts
+LAL@GS | Both stuff the sheet | Luka Doncic 30+ pts; Luka Doncic 6+ ast; Yaxel Lendeborg 15+ pts; Yaxel Lendeborg 6+ reb
+LAL@GS | Safe rivalry | Luka Doncic 25+ pts; Luka Doncic 4+ ast; Yaxel Lendeborg 15+ pts; Yaxel Lendeborg 4+ reb
+LAL@GS | Double trouble | Luka Doncic double-double; Yaxel Lendeborg double-double

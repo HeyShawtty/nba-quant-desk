@@ -225,7 +225,8 @@ namespace NbaQuant
             return (int)((x * 0x0101010101010101UL) >> 56);
         }
 
-        static List<Leg> BuildLegs(GameCtx g)
+        // all = every leg at every threshold for anyone playing 10+ minutes (custom tickets); otherwise the parlay-search pool
+        public static List<Leg> BuildLegs(GameCtx g, bool all = false)
         {
             var r = g.Res; int n = r.N; var d = g.Def; var legs = new List<Leg>();
             Action<string, string, string, Func<int, bool>, PStat, int> add = (desc, kind, key, f, ps, line) =>
@@ -250,17 +251,17 @@ namespace NbaQuant
             addG("Over " + tot.ToString(U.IC), "TOT", "OVER", tot, s => r.HomePts[s] + r.AwayPts[s] > tot);
             addG("Under " + tot.ToString(U.IC), "TOT", "UNDER", tot, s => r.HomePts[s] + r.AwayPts[s] < tot);
             // 15+ minutes so bench players with real roles can enter parlays, not only the headline names
-            foreach (var ps in Players.Where(x => x.G == g && x.MeanMin >= 15 && x.PPlays >= 0.9 && x.P.Status != "Q"))
+            foreach (var ps in Players.Where(x => x.G == g && (all ? x.MeanMin >= 10 : x.MeanMin >= 15 && x.PPlays >= 0.9 && x.P.Status != "Q")))
             {
                 int gi = ps.Gi; string nm = ps.P.Name;
-                foreach (int t in new[] { 10, 15, 20, 25, 30, 35 }) { int tt = t; add(nm + " " + t + "+ pts", "PTS", nm + "|PTS", s => r.Pts[gi][s] >= tt, ps, t); }
+                foreach (int t in all ? new[] { 10, 15, 20, 25, 30, 35, 40, 45 } : new[] { 10, 15, 20, 25, 30, 35 }) { int tt = t; add(nm + " " + t + "+ pts", "PTS", nm + "|PTS", s => r.Pts[gi][s] >= tt, ps, t); }
                 foreach (int t in new[] { 4, 6, 8, 10, 12 }) { int tt = t; add(nm + " " + t + "+ reb", "REB", nm + "|REB", s => r.Reb[gi][s] >= tt, ps, t); }
                 foreach (int t in new[] { 2, 4, 6, 8, 10 }) { int tt = t; add(nm + " " + t + "+ ast", "AST", nm + "|AST", s => r.Ast[gi][s] >= tt, ps, t); }
                 foreach (int t in new[] { 1, 2, 3, 4 }) { int tt = t; add(nm + " " + t + "+ threes", "3PM", nm + "|3PM", s => r.Tpm[gi][s] >= tt, ps, t); }
                 foreach (int t in new[] { 15, 20, 25, 30, 35, 40, 45 }) { int tt = t; add(nm + " " + t + "+ PRA", "PRA", nm + "|PRA", s => r.Pts[gi][s] + r.Reb[gi][s] + r.Ast[gi][s] >= tt, ps, t); }
                 add(nm + " double-double", "DD", nm + "|DD", s => (r.Pts[gi][s] >= 10 ? 1 : 0) + (r.Reb[gi][s] >= 10 ? 1 : 0) + (r.Ast[gi][s] >= 10 ? 1 : 0) >= 2, ps, 0);
             }
-            return legs.Where(l => l.P >= 0.40 && l.P <= 0.93).ToList();
+            return all ? legs : legs.Where(l => l.P >= 0.40 && l.P <= 0.93).ToList();
         }
 
         // Four-leg tickets for one game, from the joint simulation. Keeps the combinations whose joint probability falls in
@@ -316,7 +317,7 @@ namespace NbaQuant
             return true;
         }
 
-        static double JointP(int n, params Leg[] ls)
+        public static double JointP(int n, params Leg[] ls)
         {
             long c = 0; int w = ls[0].Bits.Length;
             if (ls.Length == 3) { var a = ls[0].Bits; var b = ls[1].Bits; var d = ls[2].Bits; for (int k = 0; k < w; k++) c += Pop(a[k] & b[k] & d[k]); }

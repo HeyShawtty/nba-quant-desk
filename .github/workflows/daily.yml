@@ -16,7 +16,7 @@ on:
       task:
         description: 'What to run'
         type: choice
-        options: [slate, learn, test, stress]
+        options: [slate, learn, test, stress, ticket]
         default: slate
       date:
         description: 'Slate date yyyy-MM-dd (blank = today ET, or yesterday for learn)'
@@ -61,7 +61,7 @@ jobs:
           restore-keys: nbaq-
 
       - name: Install pdftotext (official injury report)
-        if: env.TASK == 'slate'
+        if: env.TASK == 'slate' || env.TASK == 'ticket'
         run: choco install poppler -y --no-progress
 
       - name: Build

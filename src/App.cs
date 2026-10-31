@@ -244,6 +244,90 @@ namespace NbaQuant
             foreach (var x in ps) log(string.Format(U.IC, "  {0,-22} {1} min {2:0.0} | pts {3:0.0} reb {4:0.0} ast {5:0.0} 3pm {6:0.0} | P(20+) {7} P(DD) {8} P(3+ 3s) {9}", x.P.Name, x.P.Team, x.MeanMin, x.Pts.Mean, x.Reb.Mean, x.Ast.Mean, x.Tpm.Mean, U.Pct(x.Pts.PAtLeast(20)), U.Pct(x.DD), U.Pct(x.Tpm.PAtLeast(3))));
             log(string.Format(U.IC, "  Game: {0} win {1}, {2} win {3}, mean total {4:0.0}, P(over {5}) {6}", gm.Def.Away, U.Pct(1 - gm.WinH), gm.Def.Home, U.Pct(gm.WinH), gm.MeanTotal, gm.Def.DK.Total, U.Pct(gm.POver)));
         }
+
+        // nbaquant-cli ticket DATE : price your own same-game parlays listed in overrides\tickets_DATE.txt, one line each:
+        //   AWAY@HOME | name | leg; leg; ...     legs as the reports word them ("Luka Doncic 30+ pts", "LAL moneyline", "LAL spread", "Over")
+        //   AWAY@HOME | vs | Player A; Player B  head-to-head: how often each one has more points, rebounds, assists and PRA
+        // Results go to ledger\tickets_DATE.txt and to the predictions file (tag "ticket"), so they are graded with the slate.
+        public static void Ticket(DateTime d, int sims)
+        {
+            var log = Program.Log;
+            string src = Program.P(@"overrides\tickets_" + d.ToString("yyyy-MM-dd") + ".txt");
+            if (!File.Exists(src)) { log("No tickets file: " + src); return; }
+            var lines = File.ReadAllLines(src).Select(x => x.Trim()).Where(x => x.Length > 0 && !x.StartsWith("#"))
+                .Select(x => x.Split('|').Select(f => f.Trim()).ToArray()).Where(f => f.Length >= 2).ToList();
+            var want = new HashSet<string>(lines.Select(f => f[0].ToUpperInvariant()));
+            Program.BuildSlate(d, true);
+            Program.Games = Program.Games.Where(g => want.Contains(g.Def.Away + "@" + g.Def.Home)).ToList();
+            if (Program.Games.Count == 0) { log("None of the ticket games are still to be played."); return; }
+            Program.Simulate(sims, false);
+            Analysis.Run(false);
+            var outp = new List<string> { string.Format(U.IC, "Custom tickets for {0}, priced {1} ET ({2:N0} simulations)", d.ToString("yyyy-MM-dd"), DateTime.Now.ToString("HH:mm"), sims) };
+            var preds = new List<Pred>();
+            foreach (var gm in Program.Games)
+            {
+                string mu = gm.Def.Away + "@" + gm.Def.Home;
+                var legs = Analysis.BuildLegs(gm, true);
+                Func<string, Leg> find = sp =>
+                {
+                    var l = legs.FirstOrDefault(x => string.Equals(x.Desc, sp, StringComparison.OrdinalIgnoreCase));
+                    if (l != null) return l;
+                    string lo = sp.ToLowerInvariant();
+                    if (lo == "over" || lo == "under") return legs.FirstOrDefault(x => x.Kind == "TOT" && x.Team == sp.ToUpperInvariant());
+                    if (lo.EndsWith(" spread")) return legs.FirstOrDefault(x => x.Kind == "SPR" && x.Team == sp.Substring(0, sp.Length - 7).Trim().ToUpperInvariant());
+                    return null;
+                };
+                outp.Add("");
+                outp.Add(string.Format(U.IC, "{0}: {1} win {2}, {3} win {4} | DraftKings {3} {5:+0.0;-0.0}, total {6}, ML {1} {7} / {3} {8}",
+                    mu, gm.Def.Away, U.Pct(1 - gm.WinH), gm.Def.Home, U.Pct(gm.WinH), gm.Def.DK.SprH, gm.Def.DK.Total, U.Am(gm.Def.DK.MlA), U.Am(gm.Def.DK.MlH)));
+                foreach (var f in lines.Where(f => f[0].ToUpperInvariant() == mu))
+                {
+                    string name = f.Length >= 3 ? f[1] : "";
+                    var specs = f[f.Length - 1].Split(';').Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
+                    if (name.ToLowerInvariant() == "vs") { outp.AddRange(HeadToHead(gm, specs)); continue; }
+                    var ls = specs.Select(find).ToList();
+                    var missing = specs.Where((sp, i) => ls[i] == null).ToList();
+                    if (missing.Count > 0 || ls.Count == 0) { outp.Add("  " + name + ": not priced, unknown leg(s): " + string.Join(", ", missing)); continue; }
+                    double jp = Analysis.JointP(gm.Res.N, ls.ToArray()), prod = ls.Aggregate(1.0, (x, l) => x * l.P);
+                    outp.Add(string.Format(U.IC, "  {0}: {1:0.0}% (fair {2}, {3:0.00}x the legs multiplied) = {4}", name == "" ? "ticket" : name, 100 * jp, U.Am(U.FairAmerican(jp)), jp / prod,
+                        string.Join(" + ", ls.Select(l => l.Desc + " [" + U.Pct(l.P) + "]"))));
+                    preds.Add(new Pred { Date = d.ToString("yyyy-MM-dd"), GameId = gm.Def.EspnId, Game = gm.Def.Away + " @ " + gm.Def.Home, Kind = "SGP", P = jp, Mean = prod,
+                        Legs = string.Join(";", ls.Select(Predictions.LegCode)), Tag = "ticket", Selection = (name == "" ? "" : name + ": ") + string.Join(" + ", ls.Select(l => l.Desc)) });
+                }
+            }
+            foreach (var o in outp) log(o);
+            File.WriteAllLines(Program.P(@"ledger\tickets_" + d.ToString("yyyy-MM-dd") + ".txt"), outp, new UTF8Encoding(false));
+            string pp = PredPath(d);
+            var ids = new HashSet<string>(Program.Games.Select(g => g.Def.EspnId));
+            var all = File.Exists(pp) ? Pred.Load(pp).Where(x => !(x.Tag == "ticket" && ids.Contains(x.GameId))).ToList() : new List<Pred>();
+            all.AddRange(preds);
+            Pred.Save(pp, all);
+            log("Saved " + preds.Count + " custom tickets to " + pp + " for grading.");
+        }
+
+        // who has the bigger night, in the simulations where both players take the floor
+        static List<string> HeadToHead(GameCtx gm, List<string> names)
+        {
+            Func<string, PStat> get = nm => Analysis.Players.FirstOrDefault(p => p.G == gm && string.Equals(p.P.Name, nm, StringComparison.OrdinalIgnoreCase));
+            var a = names.Count >= 2 ? get(names[0]) : null; var b = names.Count >= 2 ? get(names[1]) : null;
+            if (a == null || b == null) return new List<string> { "  head-to-head: player not found (" + string.Join(", ", names) + ")" };
+            var r = gm.Res; int n = r.N, both = 0;
+            var stats = new[] { "points", "rebounds", "assists", "PRA" };
+            var aw = new int[4]; var bw = new int[4]; var am = new double[4]; var bm = new double[4];
+            for (int s = 0; s < n; s++)
+            {
+                if (!r.Played[a.Gi][s] || !r.Played[b.Gi][s]) continue;
+                both++;
+                double[] va = { r.Pts[a.Gi][s], r.Reb[a.Gi][s], r.Ast[a.Gi][s], 0 }, vb = { r.Pts[b.Gi][s], r.Reb[b.Gi][s], r.Ast[b.Gi][s], 0 };
+                va[3] = va[0] + va[1] + va[2]; vb[3] = vb[0] + vb[1] + vb[2];
+                for (int k = 0; k < 4; k++) { if (va[k] > vb[k]) aw[k]++; else if (vb[k] > va[k]) bw[k]++; am[k] += va[k]; bm[k] += vb[k]; }
+            }
+            var res = new List<string> { string.Format(U.IC, "  Head-to-head {0} vs {1} ({2:N0} simulations with both playing):", a.P.Name, b.P.Name, both) };
+            for (int k = 0; k < 4 && both > 0; k++)
+                res.Add(string.Format(U.IC, "    {0,-8} {1} more {2}, {3} more {4}, tie {5} | average {6:0.0} vs {7:0.0}", stats[k], a.P.Name, U.Pct((double)aw[k] / both),
+                    b.P.Name, U.Pct((double)bw[k] / both), U.Pct(1 - (double)(aw[k] + bw[k]) / both), am[k] / both, bm[k] / both));
+            return res;
+        }
     }
 
     static class EntryPoint
@@ -299,6 +383,7 @@ namespace NbaQuant
                         }
                     case "audit": AppOps.Audit(args.Length > 1 && args[1].EndsWith(".csv") ? args[1] : "backtest_latest.csv"); break;
                     case "sgp4": AppOps.FourLeg(date(1), args[2], sims); break;
+                    case "ticket": AppOps.Ticket(date(1), sims); break;
                     case "stress": AppOps.Stress(date(1), args[2], sims); break;
                     case "live": AppOps.Live(date(1), args[2], sims); break;
                     case "next": Console.WriteLine(AppOps.NextSlateDate().ToString("yyyy-MM-dd")); break;

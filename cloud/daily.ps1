@@ -1,6 +1,7 @@
 # Cloud runner for the NBA Quant Desk (GitHub Actions, Windows, clock set to US Eastern).
 #   learn : grade yesterday (builds the game review), recalibrate on every completed game, validate, audit, data bank
 #   slate : official injury report -> overrides, price today's slate (report, predictions, website data), four-leg tickets
+#   ticket: price the custom parlays in overrides\tickets_DATE.txt (slate runs price them too)
 #   test  : walk-forward backtest of the current settings plus each "--set Key=Value" variant passed in -Variants
 param([string]$Task = 'slate', [string]$Date = '', [string]$Variants = '')
 $ErrorActionPreference = 'Continue'
@@ -38,6 +39,12 @@ switch ($Task) {
       $aw = ($c.competitors | Where-Object homeAway -eq 'away').team.abbreviation
       Step "Four-leg tickets $aw@$hm" { & $cli sgp4 $Date "$aw@$hm" }
     }
+    if (Test-Path "overrides\tickets_$Date.txt") { Step 'Custom tickets' { & $cli ticket $Date } }
+  }
+  'ticket' {
+    # price only the parlays in overrides\tickets_DATE.txt, on the latest injury report
+    Step 'Official injury report' { & $cli injuries $Date }
+    Step 'Custom tickets' { & $cli ticket $Date }
   }
   'stress' {
     # -Variants carries the matchup, e.g. CHA@WSH
