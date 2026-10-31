@@ -1,20 +1,20 @@
-Custom tickets for 2026-10-30, priced 21:04 ET (100,000 simulations)
+Custom tickets for 2026-10-30, priced 21:42 ET (100,000 simulations)
 
-LAL@GS: LAL win 61.6%, GS win 38.4% | DraftKings GS +3.5, total 234.5, ML LAL -155 / GS +130
+LAL@GS: LAL win 60.1%, GS win 39.9% | DraftKings GS +2.5, total 234.5, ML LAL -148 / GS +124
   Head-to-head Luka Doncic vs Yaxel Lendeborg (100,000 simulations with both playing):
-    points   Luka Doncic more 81.8%, Yaxel Lendeborg more 16.2%, tie 2.0% | average 30.8 vs 18.9
-    rebounds Luka Doncic more 41.0%, Yaxel Lendeborg more 49.6%, tie 9.4% | average 6.7 vs 7.3
-    assists  Luka Doncic more 80.4%, Yaxel Lendeborg more 12.0%, tie 7.6% | average 6.6 vs 3.4
-    PRA      Luka Doncic more 82.2%, Yaxel Lendeborg more 16.2%, tie 1.6% | average 44.2 vs 29.5
-  Both show up: 14.9% (fair +569, 1.02x the legs multiplied) = Luka Doncic 30+ pts [54.0%] + Yaxel Lendeborg 20+ pts [44.0%] + LAL moneyline [61.6%]
-  Rivalry boost: 19.3% (fair +417, 1.19x the legs multiplied) = Luka Doncic 30+ pts [54.0%] + Yaxel Lendeborg 20+ pts [44.0%] + Yaxel Lendeborg 6+ reb [68.5%]
-  Rivalry boost, threes: 22.4% (fair +346, 1.29x the legs multiplied) = Luka Doncic 30+ pts [54.0%] + Luka Doncic 3+ threes [73.1%] + Yaxel Lendeborg 20+ pts [44.0%]
-  Shootout: 14.8% (fair +576, 1.34x the legs multiplied) = Over 234.5 [46.6%] + Luka Doncic 30+ pts [54.0%] + Yaxel Lendeborg 20+ pts [44.0%]
-  Luka answers again: 24.2% (fair +312, 1.32x the legs multiplied) = LAL moneyline [61.6%] + Luka Doncic 25+ pts [72.2%] + Luka Doncic 6+ ast [64.3%] + Luka Doncic 6+ reb [64.4%]
-  Luka takes over: 21.4% (fair +367, 1.82x the legs multiplied) = LAL moneyline [61.6%] + Luka Doncic 35+ pts [35.2%] + Luka Doncic 4+ threes [54.3%]
-  Luka by a lot: 12.6% (fair +694, 1.27x the legs multiplied) = LAL -3.5 [52.9%] + Luka Doncic 30+ pts [54.0%] + Luka Doncic 8+ ast [34.8%]
-  Yax gets revenge: 11.4% (fair +774, 1.54x the legs multiplied) = GS moneyline [38.4%] + Yaxel Lendeborg 20+ pts [44.0%] + Yaxel Lendeborg 8+ reb [44.0%]
-  Yax 25: 7.9% (fair +1170, 1.43x the legs multiplied) = Yaxel Lendeborg 25+ pts [23.3%] + Yaxel Lendeborg 8+ reb [44.0%] + Luka Doncic 30+ pts [54.0%]
-  Both stuff the sheet: 19.1% (fair +424, 1.17x the legs multiplied) = Luka Doncic 30+ pts [54.0%] + Luka Doncic 6+ ast [64.3%] + Yaxel Lendeborg 15+ pts [68.4%] + Yaxel Lendeborg 6+ reb [68.5%]
-  Safe rivalry: 41.8% (fair +139, 1.07x the legs multiplied) = Luka Doncic 25+ pts [72.2%] + Luka Doncic 4+ ast [88.9%] + Yaxel Lendeborg 15+ pts [68.4%] + Yaxel Lendeborg 4+ reb [88.8%]
-  Double trouble: 8.9% (fair +1024, 1.03x the legs multiplied) = Luka Doncic double-double [31.8%] + Yaxel Lendeborg double-double [27.1%]
+    points   Luka Doncic more 81.3%, Yaxel Lendeborg more 16.5%, tie 2.1% | average 30.7 vs 18.9
+    rebounds Luka Doncic more 40.7%, Yaxel Lendeborg more 49.7%, tie 9.6% | average 6.7 vs 7.3
+    assists  Luka Doncic more 80.8%, Yaxel Lendeborg more 11.9%, tie 7.3% | average 6.6 vs 3.4
+    PRA      Luka Doncic more 81.8%, Yaxel Lendeborg more 16.6%, tie 1.6% | average 44.1 vs 29.5
+  Both show up: 14.7% (fair +579, 1.03x the legs multiplied) = Luka Doncic 30+ pts [53.6%] + Yaxel Lendeborg 20+ pts [44.2%] + LAL moneyline [60.1%]
+  Rivalry boost: 19.3% (fair +419, 1.19x the legs multiplied) = Luka Doncic 30+ pts [53.6%] + Yaxel Lendeborg 20+ pts [44.2%] + Yaxel Lendeborg 6+ reb [68.6%]
+  Rivalry boost, threes: 22.4% (fair +346, 1.30x the legs multiplied) = Luka Doncic 30+ pts [53.6%] + Luka Doncic 3+ threes [72.7%] + Yaxel Lendeborg 20+ pts [44.2%]
+  Shootout: 14.7% (fair +580, 1.34x the legs multiplied) = Over 234.5 [46.5%] + Luka Doncic 30+ pts [53.6%] + Yaxel Lendeborg 20+ pts [44.2%]
+  Luka answers again: 23.9% (fair +319, 1.33x the legs multiplied) = LAL moneyline [60.1%] + Luka Doncic 25+ pts [71.9%] + Luka Doncic 6+ ast [64.5%] + Luka Doncic 6+ reb [64.3%]
+  Luka takes over: 21.0% (fair +377, 1.85x the legs multiplied) = LAL moneyline [60.1%] + Luka Doncic 35+ pts [35.0%] + Luka Doncic 4+ threes [53.8%]
+  Luka by a lot: 13.0% (fair +669, 1.28x the legs multiplied) = LAL -2.5 [54.3%] + Luka Doncic 30+ pts [53.6%] + Luka Doncic 8+ ast [35.0%]
+  Yax gets revenge: 11.9% (fair +741, 1.53x the legs multiplied) = GS moneyline [39.9%] + Yaxel Lendeborg 20+ pts [44.2%] + Yaxel Lendeborg 8+ reb [44.1%]
+  Yax 25: 7.9% (fair +1163, 1.43x the legs multiplied) = Yaxel Lendeborg 25+ pts [23.3%] + Yaxel Lendeborg 8+ reb [44.1%] + Luka Doncic 30+ pts [53.6%]
+  Both stuff the sheet: 19.0% (fair +427, 1.17x the legs multiplied) = Luka Doncic 30+ pts [53.6%] + Luka Doncic 6+ ast [64.5%] + Yaxel Lendeborg 15+ pts [68.5%] + Yaxel Lendeborg 6+ reb [68.6%]
+  Safe rivalry: 41.6% (fair +141, 1.07x the legs multiplied) = Luka Doncic 25+ pts [71.9%] + Luka Doncic 4+ ast [88.8%] + Yaxel Lendeborg 15+ pts [68.5%] + Yaxel Lendeborg 4+ reb [88.9%]
+  Double trouble: 8.8% (fair +1040, 1.01x the legs multiplied) = Luka Doncic double-double [31.8%] + Yaxel Lendeborg double-double [27.3%]

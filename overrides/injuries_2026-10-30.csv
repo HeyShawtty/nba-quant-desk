@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/30/26 9:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/30/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
@@ -75,8 +75,8 @@ LAC,Yanic Konan Niederhauser,OUT,0,Official: Out (Injury/Illness - Right Lisfran
 LAC,Max Strus,OUT,0,Official: Out
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
-DEN,Alpha Diallo,Q,0.25,Official: Doubtful
-DEN,Cameron Johnson,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
+DEN,Alpha Diallo,OUT,0,Official: Out
+DEN,Cameron Johnson,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
 DEN,Spencer Jones,OUT,0,Official: Out
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 PHX,Oso Ighodaro,AVAIL,1,Official: Available (Injury/Illness - Right Oblique Strain)
