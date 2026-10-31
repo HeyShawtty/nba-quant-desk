@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/31/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/31/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 POR,Jayson Kent,OUT,0,Official: Out (G League - Two-Way)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -38,7 +38,7 @@ NO,Dejounte Murray,OUT,0,Official: Out (Personal Reasons)
 NO,Jaron Pierre Jr.,OUT,0,Official: Out (G League - Two-Way)
 NO,Jordan Poole,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
-CLE,Meleek Thomas,Q,0.9,Official: Probable
+CLE,Meleek Thomas,AVAIL,1,Official: Available
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Jaylon Tyson,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 CLE,"Jr., Ernest Udeh",OUT,0,Official: Out (G League - Two-Way)
@@ -53,9 +53,9 @@ SAC,Keegan Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Capsulitis)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
-MEM,Ty Jerome,Q,0.5,Official: Questionable (Injury/Illness - Upper Back Soreness)
-MEM,Scotty Pippen Jr.,Q,0.5,Official: Questionable (Injury/Illness - Low Back Soreness)
-MEM,Quinten Post,Q,0.25,Official: Doubtful (Injury/Illness - Right Ankle Sprain)
+MEM,Ty Jerome,OUT,0,Official: Out (Injury/Illness - Upper Back Soreness)
+MEM,Scotty Pippen Jr.,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
+MEM,Quinten Post,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 OKC,Alex Caruso,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 OKC,Chet Holmgren,OUT,0,Official: Out
 OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
