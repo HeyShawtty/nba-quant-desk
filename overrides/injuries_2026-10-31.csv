@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 10/31/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 10/31/26 8:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 POR,Jayson Kent,OUT,0,Official: Out (G League - Two-Way)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
