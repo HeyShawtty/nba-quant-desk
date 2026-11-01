@@ -1,8 +1,8 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/01/26 2:15 AM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/01/26 3:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (Injury/Illness - Illness)
-BOS,Mitchell Robinson,Q,0.5,Official: Questionable (Rest)
+BOS,Mitchell Robinson,OUT,0,Official: Out (Rest)
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
