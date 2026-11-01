@@ -1,0 +1,40 @@
+team,name,status,p_play,note
+# Source: NBA official injury report 11/01/26 2:15 AM ET (read automatically). All listed teams submitted.
+# status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+BOS,Devin Carter,OUT,0,Official: Out (Injury/Illness - Illness)
+BOS,Mitchell Robinson,Q,0.5,Official: Questionable (Rest)
+ORL,Paolo Banchero,OUT,0,Official: Out
+ORL,Jonathan Isaac,OUT,0,Official: Out
+ORL,Izaiyah Nelson,OUT,0,Official: Out
+ORL,Noah Penda,OUT,0,Official: Out
+ORL,Jalen Suggs,OUT,0,Official: Out
+BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
+BKN,Mikel Brown Jr.,OUT,0,Official: Out
+BKN,Egor Demin,OUT,0,Official: Out (Injury/Illness - Right Bone Bruise)
+BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
+BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
+BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
+IND,Johnny Furphy,OUT,0,Official: Out (Injury/Illness - Right ACL Repair /)
+IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+IND,T.J. McConnell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+IND,Aaron Nesmith,Q,0.9,Official: Probable (Injury/Illness - Left Hamstring Strain)
+IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
+IND,Obi Toppin,Q,0.5,Official: Questionable (Injury/Illness - Low Back Soreness)
+IND,Ivica Zubac,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
+LAC,Bradley Beal,OUT,0,Official: Out
+LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
+LAC,Jordan Miller,OUT,0,Official: Out
+LAC,Yanic Konan Niederhauser,OUT,0,Official: Out (Injury/Illness - Right Lisfranc Surgery)
+LAC,Max Strus,OUT,0,Official: Out
+GS,Jimmy Butler III,OUT,0,Official: Out
+GS,Stephen Curry,OUT,0,Official: Out
+GS,Draymond Green,OUT,0,Official: Out
+GS,Moses Moody,OUT,0,Official: Out (Injury/Illness - Left Patellar Tendon)
+GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
+GS,Gui Santos,Q,0.9,Official: Probable (Injury/Illness - Left Knee Tendinitis)
+TOR,Nate Bittle,OUT,0,Official: Out
+TOR,Kawhi Leonard,OUT,0,Official: Out
+TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
+LAL,Walker Kessler,AVAIL,1,Official: Available (Injury/Illness - Left Finger Splint)
+LAL,Adou Thiero,OUT,0,Official: Out
+LAL,Ziaire Williams,Q,0.5,Official: Questionable
