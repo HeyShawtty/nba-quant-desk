@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/01/26 3:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/01/26 5:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (Injury/Illness - Illness)
 BOS,Mitchell Robinson,OUT,0,Official: Out (Rest)
@@ -17,9 +17,9 @@ BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
 IND,Johnny Furphy,OUT,0,Official: Out (Injury/Illness - Right ACL Repair /)
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
-IND,Aaron Nesmith,Q,0.9,Official: Probable (Injury/Illness - Left Hamstring Strain)
+IND,Aaron Nesmith,AVAIL,1,Official: Available (Injury/Illness - Left Hamstring Strain)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
-IND,Obi Toppin,Q,0.5,Official: Questionable (Injury/Illness - Low Back Soreness)
+IND,Obi Toppin,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
 IND,Ivica Zubac,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
@@ -37,4 +37,4 @@ TOR,Kawhi Leonard,OUT,0,Official: Out
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 LAL,Walker Kessler,AVAIL,1,Official: Available (Injury/Illness - Left Finger Splint)
 LAL,Adou Thiero,OUT,0,Official: Out
-LAL,Ziaire Williams,Q,0.5,Official: Questionable
+LAL,Ziaire Williams,OUT,0,Official: Out
