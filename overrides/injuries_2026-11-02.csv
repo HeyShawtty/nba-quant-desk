@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/02/26 5:45 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/02/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 OKC,Alex Caruso,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 OKC,Chet Holmgren,OUT,0,Official: Out
@@ -15,26 +15,26 @@ CLE,Peyton Watson,Q,0.5,Official: Questionable
 ATL,Kingston Flemings,OUT,0,Official: Out (League Suspension)
 ATL,Keshon Gilbert,OUT,0,Official: Out (G League - Two-Way)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
-ATL,Jalen Johnson,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
+ATL,Jalen Johnson,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 ATL,Jock Landale,OUT,0,Official: Out (Injury/Illness - Left Hip Strain)
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
 ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
-IND,Larry Nance Jr.,Q,0.25,Official: Doubtful (Injury/Illness - Illness)
+IND,Larry Nance Jr.,OUT,0,Official: Out (Injury/Illness - Illness)
 IND,Andrew Nembhard,OUT,0,Official: Out
 IND,Aaron Nesmith,OUT,0,Official: Out
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 IND,Pascal Siakam,OUT,0,Official: Out (Rest)
-IND,Obi Toppin,Q,0.5,Official: Questionable (Injury/Illness - Lumbar Sprain)
+IND,Obi Toppin,OUT,0,Official: Out (Injury/Illness - Lumbar Sprain)
 IND,Ivica Zubac,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
 BKN,Egor Demin,OUT,0,Official: Out (Injury/Illness - Right Bone Bruise)
 BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
 BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
 BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
-NY,Jose Alvarado,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
+NY,Jose Alvarado,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
 CHI,Tobe Awaka,AVAIL,1,Official: Available (-)
 CHI,Nic Claxton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 CHI,Jalen Smith,AVAIL,1,Official: Available (-)
