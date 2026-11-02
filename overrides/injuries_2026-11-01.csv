@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/01/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/01/26 9:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (Injury/Illness - Illness)
 BOS,Mitchell Robinson,OUT,0,Official: Out (Rest)
@@ -31,9 +31,10 @@ GS,Stephen Curry,OUT,0,Official: Out
 GS,Draymond Green,OUT,0,Official: Out
 GS,Moses Moody,OUT,0,Official: Out (Injury/Illness - Left Patellar Tendon)
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
-GS,Gui Santos,Q,0.9,Official: Probable (Injury/Illness - Left Knee Tendinitis)
+GS,Gui Santos,AVAIL,1,Official: Available (Injury/Illness - Left Knee Tendinitis)
 TOR,Nate Bittle,OUT,0,Official: Out
 TOR,Kawhi Leonard,OUT,0,Official: Out
+TOR,Jakob Poeltl,OUT,0,Official: Out (Injury/Illness - Left Shoulder Bursitis)
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 LAL,Walker Kessler,AVAIL,1,Official: Available (Injury/Illness - Left Finger Splint)
 LAL,Adou Thiero,OUT,0,Official: Out
