@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/02/26 9:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/02/26 9:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 OKC,Alex Caruso,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 OKC,Chet Holmgren,OUT,0,Official: Out
@@ -104,7 +104,7 @@ POR,Jayson Kent,OUT,0,Official: Out (G League - Two-Way)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 POR,Shaedon Sharpe,OUT,0,Official: Out
 POR,John Tonje,OUT,0,Official: Out (G League - Two-Way)
-DEN,Alpha Diallo,Q,0.5,Official: Questionable (Injury/Illness - Right Wrist Sprain)
+DEN,Alpha Diallo,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 DEN,Spencer Jones,OUT,0,Official: Out
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 MIA,Tre Donaldson,AVAIL,1,Official: Available (G League - Two-Way)
@@ -120,10 +120,10 @@ GS,Moses Moody,OUT,0,Official: Out
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
 GS,Gui Santos,OUT,0,Official: Out (Injury/Illness - Left Knee Tendinitis)
 GS,Brandon Williams,OUT,0,Official: Out
-TOR,Scottie Barnes,Q,0.5,Official: Questionable
+TOR,Scottie Barnes,Q,0.9,Official: Probable
 TOR,Nate Bittle,OUT,0,Official: Out
 TOR,Kawhi Leonard,OUT,0,Official: Out
-TOR,Jakob Poeltl,Q,0.5,Official: Questionable (Injury/Illness - Left Shoulder Bursitis)
+TOR,Jakob Poeltl,Q,0.25,Official: Doubtful (Injury/Illness - Left Shoulder Bursitis)
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Rui Hachimura,OUT,0,Official: Out
