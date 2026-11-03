@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/02/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/02/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 OKC,Alex Caruso,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 OKC,Chet Holmgren,OUT,0,Official: Out
@@ -11,7 +11,7 @@ CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Jaylon Tyson,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 CLE,"Jr., Ernest Udeh",OUT,0,Official: Out (G League - Two-Way)
-CLE,Peyton Watson,Q,0.5,Official: Questionable
+CLE,Peyton Watson,OUT,0,Official: Out
 ATL,Kingston Flemings,OUT,0,Official: Out (League Suspension)
 ATL,Keshon Gilbert,OUT,0,Official: Out (G League - Two-Way)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
@@ -63,7 +63,7 @@ ORL,Jalen Suggs,OUT,0,Official: Out
 MIN,LaMelo Ball,Q,0.5,Official: Questionable (Injury/Illness - Right Wrist Contusion)
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
-MIN,Terrence Shannon Jr,Q,0.5,Official: Questionable (Injury/Illness - Left Hip Contusion)
+MIN,Terrence Shannon Jr,OUT,0,Official: Out (Injury/Illness - Left Hip Contusion)
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Yves Missi,OUT,0,Official: Out
 NO,Trey Murphy III,AVAIL,1,Official: Available
@@ -73,16 +73,16 @@ NO,Jordan Poole,OUT,0,Official: Out
 NO,Julian Reese,AVAIL,1,Official: Available (G League - Two-Way)
 MEM,Scotty Pippen Jr.,Q,0.25,Official: Doubtful (Injury/Illness - Low Back Soreness)
 MEM,Quinten Post,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
-SAC,Dylan Cardwell,Q,0.25,Official: Doubtful (Injury/Illness - Left Calf Strain)
-SAC,Zach LaVine,Q,0.5,Official: Questionable
+SAC,Dylan Cardwell,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SAC,Zach LaVine,AVAIL,1,Official: Available (-)
 SAC,Keegan Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Capsulitis)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
-DAL,Santi Aldama,Q,0.25,Official: Doubtful (Injury/Illness - Right Knee Surgery)
+DAL,Santi Aldama,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
-DAL,Kyrie Irving,Q,0.25,Official: Doubtful
+DAL,Kyrie Irving,OUT,0,Official: Out (Injury/Illness - Left Knee Injury)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
 BOS,Devin Carter,OUT,0,Official: Out (Injury/Illness - Illness)
@@ -93,7 +93,7 @@ HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
 HOU,Reed Sheppard,Q,0.5,Official: Questionable (Injury/Illness - Low Back Strain)
 UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
-UTAH,Kobe Bufkin,Q,0.5,Official: Questionable (G League - Two-Way)
+UTAH,Kobe Bufkin,AVAIL,1,Official: Available (G League - Two-Way)
 UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Jusuf Nurkic,OUT,0,Official: Out
