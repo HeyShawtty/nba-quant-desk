@@ -308,7 +308,7 @@ svg.spark circle { fill: var(--accent) }
     var ir = D.meta.injuryReport ? esc(D.meta.injuryReport.replace(/\.\s*$/, "")) : "latest injury news (official report not read on this run)";
     return '<div class="panel tscroll"><span class="label">Moneylines ranked</span><h3 style="margin:2px 0 4px">Every pick by the model\'s win chance</h3>' +
       '<p class="muted" style="margin-bottom:10px">Built <b style="color:var(--ink)">' + esc(D.meta.built) + "</b> on the " + ir + ". The board reruns about 25 minutes before each tip-off on the newest injury report, so it updates through the night. Games that have tipped drop off.</p>" +
-      "<table><thead><tr><th>#</th><th>Pick</th><th>Win</th><th>Tier</th><th>DraftKings</th><th title=\"DraftKings' no-vig win chance\">Vegas</th><th title=\"Expected value per $1 at the DraftKings price\">Value</th></tr></thead><tbody>" + body + "</tbody></table></div>";
+      "<table><thead><tr><th>#</th><th style=\"text-align:left\">Pick</th><th>Win</th><th>Tier</th><th>DraftKings</th><th title=\"DraftKings' no-vig win chance\">Vegas</th><th title=\"Expected value per $1 at the DraftKings price\">Value</th></tr></thead><tbody>" + body + "</tbody></table></div>";
   }
 
   // moneylines the model's own simulation likes more than DraftKings does (5%+ expected value at the DraftKings price)
