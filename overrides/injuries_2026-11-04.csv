@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/04/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/04/26 6:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ATL,RayJ Dennis,OUT,0,Official: Out (G League - Two-Way)
 ATL,Keshon Gilbert,OUT,0,Official: Out (G League - Two-Way)
@@ -26,7 +26,7 @@ CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
 CHA,PJ Hall,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kon Knueppel,AVAIL,1,Official: Available (Injury/Illness - Left Hamstring Strain)
-CHA,Coby White,Q,0.9,Official: Probable
+CHA,Coby White,AVAIL,1,Official: Available
 CHA,Grant Williams,OUT,0,Official: Out (G League - On Assignment)
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
 BKN,Egor Demin,OUT,0,Official: Out (Injury/Illness - Right Bone Bruise)
