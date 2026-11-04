@@ -28,6 +28,8 @@ switch ($Task) {
     Step 'Data bank' { & $cli bank }
   }
   'slate' {
+    # team form compares each team with the model's own pre-game margins; the walk-forward backtest writes them (learn does daily)
+    if (-not (Test-Path 'data\static\model_margins.csv')) { Step 'Model margins for team form (walk-forward)' { & $cli validate } }
     Step 'Official injury report' { & $cli injuries $Date }
     Step "Price $Date" { & $cli run $Date }
     $ymd = $Date.Replace('-', '')
