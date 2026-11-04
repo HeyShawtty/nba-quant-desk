@@ -27,8 +27,9 @@ namespace NbaQuant
         public double MinPriorK = 1.0;       // multiplier on the games' worth of weight given to last season's minutes
         public double RatePriorMin = 150;    // minutes of position-average play blended into each player's per-minute rates
         public double GammaOverride = 0;     // shot-concentration exponent; 0 = fitted from this season's box scores
-        public double TeamFormWeight = 0;    // share of each team's season residual vs its DraftKings spreads added to the margin (0 = off)
+        public double TeamFormWeight = 0;    // share of each team's season residual added to the expected margin (0 = off)
         public double TeamFormPrior = 6;     // games of zero residual mixed in before trusting a team's form
+        public string TeamFormSource = "model"; // residual vs the model's own pre-game margins ("model") or vs DraftKings spreads ("market")
         public double HotStartWeight = 1.0;  // extra multiplier on CsWeight for players outscoring last season's rate (1 = off)
         public string PropCal = "";          // per-stat logit maps for player thresholds, "PTS:shift:slope;..." (fitted out of sample)
         public string LastRecalibration = "";

@@ -226,8 +226,12 @@ namespace NbaQuant
                     "edges", O("n", edges.Count, "won", (int)edges.Sum(x => x.Y), "exp", R1(edges.Sum(x => x.P)), "units", R1(edges.Sum(x => x.Y >= 1 ? pay(x.Odds) : -1))));
             }
 
+            // which official injury report this run used (first "# Source:" line of the overrides file written by `injuries`)
+            string irPath = Program.P(@"overrides\injuries_" + d.ToString("yyyy-MM-dd") + ".csv"), injuryReport = null;
+            if (File.Exists(irPath)) injuryReport = File.ReadLines(irPath).Where(l => l.StartsWith("# Source:")).Select(l => l.Substring(9).Trim()).FirstOrDefault();
             var data = O(
                 "meta", O("slate", d.ToString("yyyy-MM-dd"), "slateLabel", d.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), "built", DateTime.Now.ToString("ddd MMM d, h:mm tt", CultureInfo.InvariantCulture),
+                    "injuryReport", injuryReport,
                     "sims", Program.NSIM, "bankThrough", Bank.BuiltThrough, "bankGames", Bank.Games.Count, "bankPlayers", Bank.Players.Values.Count(p => p.Gp > 0),
                     "recal", S.LastRecalibration, "settings", O("marketWeight", S.MarketWeight, "alpha", S.Alpha, "sigmaEff", S.SigmaEff, "sigmaPace", S.SigmaPace, "sigmaMin", S.SigmaMin,
                         "csWeight", S.CsWeight, "minUsageSlope", S.MinUsageSlope, "matchup", S.MatchupStrength, "gamma", Program.Gamma, "hca", R1(Program.HCA))),

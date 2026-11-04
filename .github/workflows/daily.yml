@@ -6,12 +6,10 @@ on:
   schedule:
     # GitHub fired the 6:40 run 29 minutes late on its first day, so each pre-tip slot has an earlier backup
     - cron: '0 15 * * *'    # learn: grade yesterday, recalibrate, audit (11:00 AM ET)
+    # pre-tip pricing is driven by timer.yml (a run 25 minutes before each tip-off); these slots are backups
     - cron: '45 19 * * 0,6' # slate: weekend afternoon games (2:45 PM ET standard time)
-    - cron: '15 22 * * *'   # slate: early pre-tip run (6:15 PM ET)
-    - cron: '40 22 * * *'   # slate: first pre-tip run (6:40 PM ET)
-    - cron: '40 23 * * *'   # slate: final report before 8:00 PM tips (7:40 PM ET)
-    - cron: '15 1 * * *'    # slate: late West Coast games, backup (9:15 PM ET)
-    - cron: '40 1 * * *'    # slate: late West Coast games (9:40 PM ET)
+    - cron: '40 22 * * *'   # slate: backup before the evening games (5:40 PM ET standard time)
+    - cron: '40 1 * * *'    # slate: backup for late West Coast games (8:40 PM ET standard time)
   workflow_dispatch:
     inputs:
       task:

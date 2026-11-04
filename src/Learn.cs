@@ -89,6 +89,7 @@ namespace NbaQuant
         public static List<Pred> Run(DateTime from, DateTime to, int nsim, Action<string> log, bool sgp = false)
         {
             var all = new List<Pred>(); GameRecs = new List<GameRec>();
+            lock (Program.BaseMargins) Program.BaseMargins.Clear();   // rebuilt date by date, so team form only sees earlier games
             for (var d = from.Date; d <= to.Date; d = d.AddDays(1))
             {
                 Program.BuildSlate(d, false, true);
@@ -214,6 +215,7 @@ namespace NbaQuant
             var S = Program.S;
             var preds = Run(S.SeasonStart, DateTime.Now.Date.AddDays(-1), S.BacktestSims, log, true);
             Pred.Save(Program.P(@"ledger\" + outName), preds);
+            if (outName == "backtest_latest.csv") Program.SaveBaseMargins();   // live team form reads these walk-forward margins
             log("Brier by market (all / earlier half / later half of dates):\n" + Metrics(preds));
             var hi = preds.Where(p => p.Kind == "MEAN" && !p.Void && !double.IsNaN(p.Actual) && p.Line >= 0.62).ToList();
             string s = string.Format(U.IC, "Validation backtest with current settings: player-prop Brier {0:0.00000}; high-usage minutes bias {1:+0.00;-0.00}, points bias {2:+0.00;-0.00}",
@@ -312,8 +314,10 @@ namespace NbaQuant
                     slopeNote += string.Format(U.IC, "\n{0} {1} vs {2}: prop Brier earlier half {3:0.00000} vs {4:0.00000}, later half {5:0.00000} vs {6:0.00000}. Using {7}.", alt.Item1, keepV, alt.Item2, sw ? res.Item1 : cur.Item1, res.Item1, sw ? res.Item2 : cur.Item2, res.Item2, fld.GetValue(S));
                 }
 
-                // team form vs the market (how far each team has beaten its DraftKings spreads so far): judged on moneyline
-                // Brier, which it targets, and adopted only if that improves on both halves without hurting player props
+                // team form vs the model's own pre-game margins (how far each team has beaten what the model expected so far):
+                // judged on moneyline Brier, which it targets, and adopted only if that improves on both halves without hurting
+                // player props. The owner runs the model without market inputs (2026-10-31), so only the model-based form is tested.
+                S.TeamFormSource = "model";
                 Func<List<Pred>, Tuple<double, double>> mlHalves = ps =>
                 {
                     var l = ps.Where(p => p.Kind == "ML" && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P)).ToList();
@@ -335,7 +339,7 @@ namespace NbaQuant
                     if (ml.Item1 < bestMl.Item1 && ml.Item2 < bestMl.Item2 && pr.Item1 <= baseProp.Item1 + 0.0002 && pr.Item2 <= baseProp.Item2 + 0.0002) { bestW = w; bestMl = ml; }
                 }
                 S.TeamFormWeight = bestW;
-                slopeNote += "\nTeam form vs market, moneyline Brier earlier / later half: " + string.Join("; ", formNotes) + string.Format(U.IC, ". Using {0}.", bestW);
+                slopeNote += "\nTeam form vs the model's own margins, moneyline Brier earlier / later half: " + string.Join("; ", formNotes) + string.Format(U.IC, ". Using {0}.", bestW);
             }
             slopeNote += "\n" + FitDdCalibration(preds0);
             slopeNote += "\n" + FitPropCalibration(preds0);

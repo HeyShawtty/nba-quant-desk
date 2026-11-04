@@ -161,6 +161,7 @@ namespace NbaQuant
             CalAlpha = S.Alpha; CalSigmaEff = S.SigmaEff; CalSigmaPace = S.SigmaPace;
 
             Completed = Store.CompletedBefore(d, S.SeasonStart);
+            if (live) LoadBaseMargins();   // backtests build their own, date by date (Walk.Run)
             Environment(quiet);
             CalibrateGamma();
             DefenseProfiles();
@@ -214,6 +215,7 @@ namespace NbaQuant
             if (live) ApplyOverrides(d);
             foreach (var p in AllPlayers.Values) Project(p, Pri);
             foreach (var g in Games) FinishGame(g, live);
+            if (live) SaveBaseMargins();
             if (!quiet) foreach (var g in Games) Say(string.Format(U.IC, "{0} @ {1}: market {2} | model {3:0.0}-{4:0.0} | blend {5:0.0}-{6:0.0} | Q players {7}", g.Def.Away, g.Def.Home, g.HasMarket ? g.MarketSource : "none", g.ModelPtsA, g.ModelPtsH, g.BlendPtsA, g.BlendPtsH,
                 string.Join(", ", g.H.Pl.Concat(g.A.Pl).Where(x => x.Status == "Q").Select(x => x.Name))));
         }
@@ -540,8 +542,9 @@ namespace NbaQuant
                 ctx.MktPtsH = double.NaN; ctx.MktPtsA = double.NaN; ctx.BlendPtsH = ctx.ModelPtsH; ctx.BlendPtsA = ctx.ModelPtsA;
                 d.DK = new MarketLine { Book = "none", SprH = Math.Round(ctx.ModelPtsA - ctx.ModelPtsH) + 0.5, Total = Math.Round(ctx.ModelPtsH + ctx.ModelPtsA) + 0.5, SprHOdds = -110, SprAOdds = -110, OverOdds = -110, UnderOdds = -110 };
             }
+            lock (BaseMargins) BaseMargins[d.EspnId] = ctx.ModelPtsH - ctx.ModelPtsA;
             if (S.TeamFormWeight > 0)
-            {   // team form vs the market: shift the expected margin toward teams that keep beating their spreads (tested in Recalibrate)
+            {   // team form: shift the expected margin toward teams that keep beating what was expected of them (tested in Recalibrate)
                 ctx.FormShift = S.TeamFormWeight * (TeamForm(d.Home) - TeamForm(d.Away));
                 ctx.BlendPtsH += ctx.FormShift / 2; ctx.BlendPtsA -= ctx.FormShift / 2;
             }
@@ -553,18 +556,44 @@ namespace NbaQuant
             ctx.Players.Clear(); ctx.Players.AddRange(ctx.H.Pl); ctx.Players.AddRange(ctx.A.Pl);
         }
 
-        // average of (actual margin - DraftKings margin) over this season's games before the slate, shrunk toward 0 with
-        // TeamFormPrior games of nothing; Completed holds only earlier games, so backtests have no look-ahead
+        // average of (actual margin - expected margin) over this season's games before the slate, shrunk toward 0 with
+        // TeamFormPrior games of nothing. Expected = the model's own pre-game margin (default) or the DraftKings spread.
+        // Completed holds only earlier games, so backtests have no look-ahead.
         public static double TeamForm(string team)
         {
-            double sum = 0; int n = 0;
+            double sum = 0; int n = 0; bool model = S.TeamFormSource != "market";
             foreach (var g in Completed)
             {
-                if (double.IsNaN(g.DkSprH)) continue;
-                if (g.Home == team) { sum += (g.HomePts - g.AwayPts) + g.DkSprH; n++; }
-                else if (g.Away == team) { sum += (g.AwayPts - g.HomePts) - g.DkSprH; n++; }
+                double exp;
+                if (model) { lock (BaseMargins) if (!BaseMargins.TryGetValue(g.Id, out exp)) continue; }
+                else { if (double.IsNaN(g.DkSprH)) continue; exp = -g.DkSprH; }
+                double resid = g.HomePts - g.AwayPts - exp;
+                if (g.Home == team) { sum += resid; n++; }
+                else if (g.Away == team) { sum -= resid; n++; }
             }
             return n == 0 ? 0 : sum / (n + S.TeamFormPrior);
+        }
+
+        // the model's own pre-game margin (home minus away, before any team-form shift) for every game it has priced:
+        // recorded game by game in walk-forward backtests and live runs, kept in data\static\model_margins.csv
+        public static Dictionary<string, double> BaseMargins = new Dictionary<string, double>();
+        static string MarginsPath { get { return Path.Combine(Store.Root, "data", "static", "model_margins.csv"); } }
+        public static void LoadBaseMargins()
+        {
+            lock (BaseMargins)
+            {
+                BaseMargins.Clear();
+                if (File.Exists(MarginsPath)) foreach (var r in U.ReadCsv(MarginsPath).Skip(1)) if (r.Length >= 2) BaseMargins[r[0]] = U.D(r[1]);
+            }
+        }
+        public static void SaveBaseMargins()
+        {
+            lock (BaseMargins)
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(MarginsPath));
+                File.WriteAllLines(MarginsPath, new[] { "game_id,model_margin_home" }.Concat(BaseMargins.OrderBy(kv => kv.Key, StringComparer.Ordinal)
+                    .Select(kv => kv.Key + "," + kv.Value.ToString("0.00", U.IC))), new UTF8Encoding(false));
+            }
         }
 
         static int TallestStarter(SimTeam t)

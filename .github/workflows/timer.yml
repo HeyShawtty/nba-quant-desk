@@ -1,0 +1,47 @@
+name: Pre-tip timer
+
+# GitHub's cron starts runs 5-60 minutes late, which priced 7:00 PM games on a 5:30 PM injury report. This job starts
+# early, reads today's tip-off times from ESPN, sleeps, and dispatches the NBA Quant Desk slate run 25 minutes before
+# each tip-off, so every game is priced on the newest official injury report. Two starts split the evening because a
+# job can run at most six hours: the first dispatches before 00:45 UTC, the second from 00:45 UTC on.
+on:
+  schedule:
+    - cron: '30 20 * * *'   # early window (3:30 PM ET standard time)
+    - cron: '15 0 * * *'    # late window (7:15 PM ET standard time)
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  timer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - name: Dispatch a slate run before each tip-off
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          WINDOW: ${{ github.event.schedule == '30 20 * * *' && 'early' || (github.event.schedule == '15 0 * * *' && 'late' || 'all') }}
+        run: |
+          $now = [DateTime]::UtcNow
+          $et = [TimeZoneInfo]::ConvertTimeBySystemTimeZoneId($now, 'America/New_York')
+          $date = $et.ToString('yyyy-MM-dd')
+          $cut = if ($now.Hour -ge 12) { $now.Date.AddDays(1).AddMinutes(45) } else { $now.Date.AddMinutes(45) }
+          $sb = Invoke-RestMethod "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=$($et.ToString('yyyyMMdd'))"
+          $tips = @($sb.events | Where-Object { $_.status.type.state -eq 'pre' } | ForEach-Object { [DateTimeOffset]::Parse($_.date).UtcDateTime } | Sort-Object -Unique)
+          $plan = foreach ($t in $tips) {
+            $at = $t.AddMinutes(-25)
+            $mine = switch ($env:WINDOW) { 'early' { $at -lt $cut } 'late' { $at -ge $cut } default { $true } }
+            if ($mine -and $t -gt [DateTime]::UtcNow) { [pscustomobject]@{ Tip = $t; At = $at } }
+          }
+          Write-Host "Slate $date, window $($env:WINDOW): $(@($plan).Count) tip-off time(s) to cover"
+          foreach ($p in $plan) {
+            $wait = ($p.At - [DateTime]::UtcNow).TotalSeconds
+            if ($wait -gt 0) { Write-Host ("Sleeping until {0:HH:mm} UTC (tip {1:HH:mm} UTC)" -f $p.At, $p.Tip); Start-Sleep -Seconds ([int]$wait) }
+            if ($p.Tip -le [DateTime]::UtcNow) { continue }
+            gh workflow run daily.yml --ref main -f task=slate -f date=$date
+            Write-Host ("Dispatched slate run at {0:HH:mm} UTC for the {1:HH:mm} UTC tip-off" -f [DateTime]::UtcNow, $p.Tip)
+          }
