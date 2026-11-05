@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/04/26 8:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/04/26 9:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ATL,RayJ Dennis,OUT,0,Official: Out (G League - Two-Way)
 ATL,Keshon Gilbert,OUT,0,Official: Out (G League - Two-Way)
@@ -99,6 +99,7 @@ TOR,Nate Bittle,OUT,0,Official: Out
 TOR,Kawhi Leonard,OUT,0,Official: Out
 TOR,Jakob Poeltl,AVAIL,1,Official: Available (Injury/Illness - Left Shoulder Bursitis)
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
+DEN,DeMar DeRozan,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
 DEN,Alpha Diallo,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 DEN,Cameron Johnson,AVAIL,1,Official: Available
 DEN,Spencer Jones,OUT,0,Official: Out
@@ -119,7 +120,7 @@ SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Daeqwon Plowden,OUT,0,Official: Out (Injury/Illness - Illness)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
-MIA,Giannis Antetokounmpo,Q,0.9,Official: Probable (Injury/Illness - Right Wrist Sprain)
+MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 MIA,Myron Gardner,AVAIL,1,Official: Available
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
