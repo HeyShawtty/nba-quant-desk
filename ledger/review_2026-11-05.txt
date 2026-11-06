@@ -1,0 +1,73 @@
+SLATE 2026-11-05: 2 games | model favorite won 2/2 | 0 overs, 2 unders vs DK | total MAE model 10.4 vs DK 8.5 | margin MAE model 13.6 vs DK 14.0 | headline picks & parlays 27/80 | players projected 15+ min: 32 | pts MAE 5.2, within 5 pts 46.9% | causes: on track 23, cold shooting 4, minutes surplus 2, minutes short 2, hot shooting 1
+=== MIA @ GS: MIA 100-120 GS | fav GS 65.4% RIGHT | margin model +5.7 DK +3.5 actual +20 | total model 238.5 DK 235.5 actual 220 | Q1-3 76/91 | picks 13/46
+  RIGHT: GS won as the model's favorite (65.4%); 4 of 8 main players within 4 pts of projection; 13 of 46 picks/parlays hit
+  WRONG: total 220 vs 239 projected (-19); Davion Mitchell 22 pts vs 10.4 (minutes surplus (38 vs 31)); Bobby Portis 0 pts vs 9.5 (minutes short (14 vs 21): blowout); Andrew Wiggins 2 pts vs 10.4 (cold shooting (1-6 FG, 0-2 3PT)); Ryan Conwell played 30 min unprojected (13 pts)
+  [best_sgp] Giannis Antetokounmpo 10+ reb + Giannis Antetokounmpo double-double + Bobby Portis 6+ reb (23.5%) MISS 2/3 legs; missed: Bobby Portis 6+ reb
+  [sgp4_bigger_payout] Stephen Curry 4+ threes + GS -3.5 + Brandin Podziemski 4+ ast + Over 235.5 (13.8%) MISS 2/4 legs; missed: Brandin Podziemski 4+ ast, Over 235.5
+  [sgp4_bigger_payout] Bam Adebayo 15+ pts + Stephen Curry 4+ threes + Over 235.5 + Stephen Curry 4+ reb (14.0%) MISS 2/4 legs; missed: Over 235.5, Stephen Curry 4+ reb
+  [sgp4_bigger_payout] Bam Adebayo 15+ pts + Andrew Wiggins 2+ ast + Brandin Podziemski 4+ ast + Over 235.5 (14.0%) MISS 2/4 legs; missed: Brandin Podziemski 4+ ast, Over 235.5
+  [sgp4_boost_range] Klay Thompson 2+ threes + Draymond Green 4+ ast + Davion Mitchell 6+ ast + Draymond Green 4+ reb (25.9%) HIT 4/4 legs
+  [sgp4_boost_range] Giannis Antetokounmpo 4+ ast + Draymond Green 4+ ast + Bam Adebayo 1+ threes + Draymond Green 4+ reb (25.6%) MISS 3/4 legs; missed: Bam Adebayo 1+ threes
+  [sgp4_boost_range] Davion Mitchell 1+ threes + Draymond Green 4+ ast + Yaxel Lendeborg 15+ pts + Draymond Green 4+ reb (25.8%) HIT 4/4 legs
+  [sgp4_safest] Stephen Curry 2+ threes + Yaxel Lendeborg 10+ pts + Stephen Curry 15+ pts + Yaxel Lendeborg 1+ threes (67.8%) HIT 4/4 legs
+  [sgp4_safest] Klay Thompson 1+ threes + Stephen Curry 2+ threes + Stephen Curry 2+ ast + Stephen Curry 15+ pts (68.7%) HIT 4/4 legs
+  [sgp4_safest] Klay Thompson 1+ threes + Yaxel Lendeborg 10+ pts + Yaxel Lendeborg 1+ threes + Yaxel Lendeborg 4+ reb (65.5%) HIT 4/4 legs
+  [top3_ml] GS ML (65.4%) HIT 
+  [top3_ml] MIA ML (34.6%) MISS 
+  [top3_q3] GS 100+ thru Q3 (23.6%) MISS 
+  [top3_q3] MIA 100+ thru Q3 (11.8%) MISS 
+  [top5_25pts] Yaxel Lendeborg PTS 25+ (24.8%) MISS actual 17
+  [top5_25pts] Brandin Podziemski PTS 25+ (8.5%) MISS actual 9
+  [top5_25pts] Stephen Curry PTS 25+ (53.6%) HIT actual 29
+  [top5_25pts] Giannis Antetokounmpo PTS 25+ (61.1%) MISS actual 20
+  [top5_25pts] Bam Adebayo PTS 25+ (17.5%) MISS actual 18
+  [top5_3pm] Yaxel Lendeborg 3PM 3+ (37.6%) MISS actual 1
+  [top5_3pm] Brandin Podziemski 3PM 3+ (31.4%) MISS actual 2
+  [top5_3pm] Stephen Curry 3PM 3+ (75.7%) HIT actual 6
+  [top5_3pm] De'Anthony Melton 3PM 3+ (22.9%) MISS actual 0
+  [top5_3pm] Klay Thompson 3PM 3+ (50.0%) MISS actual 2
+  [top5_dd] Yaxel Lendeborg DD (18.5%) MISS actual 1
+  [top5_dd] Brandin Podziemski DD (8.8%) MISS actual 0
+  [top5_dd] Giannis Antetokounmpo DD (57.4%) HIT actual 2
+  [top5_dd] Bam Adebayo DD (34.5%) HIT actual 2
+  [top5_dd] Davion Mitchell DD (13.8%) MISS actual 1
+  [top5_ffg] Yaxel Lendeborg FFG (8.5%) MISS actual 0
+  [top5_ffg] Brandin Podziemski FFG (6.9%) MISS actual 0
+  [top5_ffg] Stephen Curry FFG (11.2%) MISS actual 0
+  [top5_ffg] Giannis Antetokounmpo FFG (14.6%) MISS actual 0
+  [top5_ffg] Bam Adebayo FFG (8.8%) MISS actual 0
+  [top5_q3all] Yaxel Lendeborg Q3ALL (25.0%) MISS actual 2
+  [top5_q3all] Brandin Podziemski Q3ALL (12.1%) MISS actual 1
+  [top5_q3all] Stephen Curry Q3ALL (42.9%) HIT actual 3
+  [top5_q3all] Giannis Antetokounmpo Q3ALL (54.0%) MISS actual 1
+  [top5_q3all] Bam Adebayo Q3ALL (20.3%) HIT actual 3
+=== ORL @ PHX: ORL 104-117 PHX | fav PHX 50.5% RIGHT | margin model +0.2 DK +1.5 actual +13 | total model 223.2 DK 222.5 actual 221 | Q1-3 73/96 | picks 14/34
+  RIGHT: PHX won as the model's favorite (50.5%); total within 2 pts; 14 of 34 picks/parlays hit
+  WRONG: 2 of 10 main players within 4 pts of projection; Wendell Carter Jr. 27 pts vs 12.2 (hot shooting (10-12 FG, 2-2 3PT)); Jalen Green 6 pts vs 16.3 (cold shooting (3-7 FG, 0-1 3PT))
+  [best_sgp] Collin Gillespie 10+ pts + Collin Gillespie 2+ threes + Luke Kennard 2+ ast (23.4%) MISS 2/3 legs; missed: Collin Gillespie 10+ pts
+  [sgp4_bigger_payout] Anthony Black 4+ ast + Wendell Carter Jr. 2+ ast + Jalen Green 15+ pts + Jalen Green 2+ threes (14.0%) MISS 2/4 legs; missed: Jalen Green 15+ pts, Jalen Green 2+ threes
+  [sgp4_bigger_payout] Collin Gillespie 2+ threes + Dillon Brooks 2+ threes + Jalen Green 15+ pts + Jalen Green 2+ threes (13.8%) MISS 2/4 legs; missed: Jalen Green 15+ pts, Jalen Green 2+ threes
+  [sgp4_bigger_payout] Anthony Black 4+ reb + Jalen Green 4+ reb + Anthony Black 4+ ast + Jalen Green 2+ threes (13.8%) MISS 2/4 legs; missed: Jalen Green 4+ reb, Jalen Green 2+ threes
+  [sgp4_boost_range] Desmond Bane 15+ pts + Oso Ighodaro 2+ ast + Franz Wagner 4+ ast + Oso Ighodaro 4+ reb (25.9%) MISS 3/4 legs; missed: Oso Ighodaro 2+ ast
+  [sgp4_boost_range] Devin Booker 4+ ast + Oso Ighodaro 2+ ast + Tristan da Silva 15+ PRA + Oso Ighodaro 4+ reb (25.9%) MISS 3/4 legs; missed: Oso Ighodaro 2+ ast
+  [sgp4_boost_range] Desmond Bane 2+ threes + Dillon Brooks 20+ PRA + Oso Ighodaro 2+ ast + Oso Ighodaro 4+ reb (25.7%) MISS 3/4 legs; missed: Oso Ighodaro 2+ ast
+  [sgp4_safest] Desmond Bane 1+ threes + Desmond Bane 10+ pts + Dillon Brooks 10+ pts + Dillon Brooks 1+ threes (66.2%) HIT 4/4 legs
+  [sgp4_safest] Miles Bridges 15+ PRA + Desmond Bane 1+ threes + Collin Gillespie 2+ ast + Desmond Bane 10+ pts (70.8%) HIT 4/4 legs
+  [sgp4_safest] Desmond Bane 1+ threes + Desmond Bane 10+ pts + Jalen Green 1+ threes + Jalen Green 10+ pts (63.2%) MISS 2/4 legs; missed: Jalen Green 1+ threes, Jalen Green 10+ pts
+  [top3_ml] PHX ML (50.5%) HIT 
+  [top3_ml] ORL ML (49.5%) MISS 
+  [top3_q3] PHX 100+ thru Q3 (6.0%) MISS 
+  [top5_25pts] Devin Booker PTS 25+ (44.5%) HIT actual 30
+  [top5_25pts] Franz Wagner PTS 25+ (38.6%) MISS actual 15
+  [top5_25pts] Desmond Bane PTS 25+ (24.6%) MISS actual 15
+  [top5_3pm] Desmond Bane 3PM 3+ (47.3%) HIT actual 3
+  [top5_3pm] Tristan da Silva 3PM 3+ (36.2%) HIT actual 4
+  [top5_dd] Miles Bridges DD (19.1%) HIT actual 2
+  [top5_dd] Franz Wagner DD (19.5%) HIT actual 2
+  [top5_dd] Wendell Carter Jr. DD (32.3%) HIT actual 2
+  [top5_ffg] Devin Booker FFG (11.9%) HIT actual 1
+  [top5_ffg] Dillon Brooks FFG (9.9%) MISS actual 0
+  [top5_ffg] Franz Wagner FFG (10.5%) MISS actual 0
+  [top5_q3all] Devin Booker Q3ALL (39.7%) HIT actual 3
+  [top5_q3all] Franz Wagner Q3ALL (36.4%) MISS actual 0
+  [top5_q3all] Desmond Bane Q3ALL (25.6%) HIT actual 3
