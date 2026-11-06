@@ -7,7 +7,8 @@ name: Pre-tip timer
 on:
   schedule:
     - cron: '30 20 * * *'   # early window (3:30 PM ET standard time)
-    - cron: '15 0 * * *'    # late window (7:15 PM ET standard time)
+    # GitHub started the late window 70 minutes late on Nov 4 and 5, so it is scheduled early enough to land before 8:05 PM
+    - cron: '30 23 * * *'   # late window (6:30 PM ET standard time)
   workflow_dispatch:
 
 permissions:
@@ -24,7 +25,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          WINDOW: ${{ github.event.schedule == '30 20 * * *' && 'early' || (github.event.schedule == '15 0 * * *' && 'late' || 'all') }}
+          WINDOW: ${{ github.event.schedule == '30 20 * * *' && 'early' || (github.event.schedule == '30 23 * * *' && 'late' || 'all') }}
         run: |
           $now = [DateTime]::UtcNow
           $et = [TimeZoneInfo]::ConvertTimeBySystemTimeZoneId($now, 'America/New_York')

@@ -71,6 +71,8 @@ namespace NbaQuant
                     fresh = merged;
                     log("Earlier run archived (" + stamp + "); " + old.Select(x => x.GameId).Where(id => !string.IsNullOrEmpty(id)).Distinct().Count(id => !ids.Contains(id)) + " started game(s) keep their earlier predictions.");
                 }
+                try { Safest.Update(d, fresh, Report.InjuryReportUsed(d)); log("Top 3 safest board: " + Safest.FilePath(d)); }
+                catch (Exception e) { log("Top 3 safest board not updated: " + e.Message); }
                 Report.Build(path);
                 try { log("Website data: " + Report.ExportSite(Program.P(@"site\data.js"), d)); } catch (Exception e) { log("Website data not written: " + e.Message); }
                 Pred.Save(pp, fresh);
@@ -96,7 +98,7 @@ namespace NbaQuant
                 catch (Exception e) { sb.AppendLine("Review not built: " + e.Message); }
                 foreach (var s in Grader.Summarize(preds).Where(x => !x.Group.StartsWith("PLAYER ")))
                     sb.AppendLine(string.Format(U.IC, "  {0,-24} n={1,5}  predicted {2,6}  hit {3,6}  Brier {4:0.000}{5}", s.Group, s.N, U.Pct(s.MeanP), U.Pct(s.HitRate), s.Brier, double.IsNaN(s.BrierMkt) ? "" : string.Format(U.IC, " (market {0:0.000})", s.BrierMkt)));
-                foreach (var p in preds.Where(x => x.Tag != null && (x.Tag.StartsWith("top") || x.Tag == "best_sgp")))
+                foreach (var p in preds.Where(x => x.Tag != null && (x.Tag.StartsWith("top") || x.Tag.StartsWith("safe3_") || x.Tag == "best_sgp")))
                     sb.AppendLine(string.Format(U.IC, "  [{0}] {1} ({2}) -> {3}", p.Tag, p.Selection, U.Pct(p.P), p.Void ? "VOID" : p.Y >= 1 ? "HIT" : "MISS"));
                 return sb.ToString();
             }

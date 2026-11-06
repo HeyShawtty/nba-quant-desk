@@ -98,6 +98,13 @@ namespace NbaQuant
             return O("legs", c.Legs.Select(l => l.Desc).ToList(), "legP", c.Legs.Select(l => R3(l.P)).ToList(), "joint", R3(c.Joint), "lift", Math.Round(c.Lift, 2), "fair", Math.Round(U.FairAmerican(c.Joint)));
         }
 
+        // which official injury report a run used (first "# Source:" line of the overrides file written by `injuries`)
+        public static string InjuryReportUsed(DateTime d)
+        {
+            string irPath = Program.P(@"overrides\injuries_" + d.ToString("yyyy-MM-dd") + ".csv");
+            return File.Exists(irPath) ? File.ReadLines(irPath).Where(l => l.StartsWith("# Source:")).Select(l => l.Substring(9).Trim()).FirstOrDefault() : null;
+        }
+
         public static string ExportSite(string path, DateTime d)
         {
             var S = Program.S;
@@ -226,9 +233,7 @@ namespace NbaQuant
                     "edges", O("n", edges.Count, "won", (int)edges.Sum(x => x.Y), "exp", R1(edges.Sum(x => x.P)), "units", R1(edges.Sum(x => x.Y >= 1 ? pay(x.Odds) : -1))));
             }
 
-            // which official injury report this run used (first "# Source:" line of the overrides file written by `injuries`)
-            string irPath = Program.P(@"overrides\injuries_" + d.ToString("yyyy-MM-dd") + ".csv"), injuryReport = null;
-            if (File.Exists(irPath)) injuryReport = File.ReadLines(irPath).Where(l => l.StartsWith("# Source:")).Select(l => l.Substring(9).Trim()).FirstOrDefault();
+            string injuryReport = InjuryReportUsed(d);
             var data = O(
                 "meta", O("slate", d.ToString("yyyy-MM-dd"), "slateLabel", d.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), "built", DateTime.Now.ToString("ddd MMM d, h:mm tt", CultureInfo.InvariantCulture),
                     "injuryReport", injuryReport,
@@ -240,7 +245,7 @@ namespace NbaQuant
                 "erupt", eruptJson, "dud", dudJson,
                 "bank", O("teams", bankTeams, "players", bankPlayers),
                 "record", O("tags", tagRec, "slates", slates, "mlBrier", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.P - p.Y) * (p.P - p.Y))) : null, "mlBrierMkt", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.PMarket - p.Y) * (p.PMarket - p.Y))) : null),
-                "audit", audit, "tiers", tiers);
+                "audit", audit, "tiers", tiers, "safest", Safest.Json());
             var ser = new JavaScriptSerializer { MaxJsonLength = int.MaxValue };
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             File.WriteAllText(path, "window.NBA = " + ser.Serialize(data) + ";\n", new UTF8Encoding(false));

@@ -311,6 +311,45 @@ svg.spark circle { fill: var(--accent) }
       "<table><thead><tr><th>#</th><th style=\"text-align:left\">Pick</th><th>Win</th><th>Tier</th><th>DraftKings</th><th title=\"DraftKings' no-vig win chance\">Vegas</th><th title=\"Expected value per $1 at the DraftKings price\">Value</th></tr></thead><tbody>" + body + "</tbody></table></div>";
   }
 
+  // top 3 safest (D.safest): the model's three strongest favorites in each tip window and across the slate. A game keeps its
+  // last pre-tip numbers once it tips, so a window's list is final after its last game is priced on the report just before tip-off
+  function safestBoard() {
+    var S = D.safest; if (!S) return "";
+    function rep(p) {
+      if (!p.pricedAt) return "From " + esc(p.report);
+      var m = /(\d{1,2}:\d{2} [AP]M) ET/.exec(p.report || "");
+      return "Priced " + esc(p.pricedAt) + " on the " + (m ? m[1] + " injury report" : esc(p.report || "latest injury news")) + (p.complete ? "" : " (not every team had submitted)");
+    }
+    function status(p) {
+      if (p.status === "locked") return '<span class="chip" title="Tipped: these are its numbers from the last run before tip-off">Locked at tip</span>';
+      if (p.status === "final") return '<span class="chip up" title="Priced on the injury report just before tip-off">Final</span>';
+      return '<span class="chip warn" title="Reprices on the newest injury report about 25 minutes before tip-off">Updates ' + esc(p.repriceAt) + "</span>";
+    }
+    function table(picks) {
+      if (!picks.length) return '<p class="muted">No games in this window.</p>';
+      return "<table><thead><tr><th>#</th><th style=\"text-align:left\">Pick</th><th>Win</th><th>Tier</th><th>DraftKings</th><th title=\"Expected value per $1 at the DraftKings price\">Value</th><th style=\"text-align:left\">Status</th></tr></thead><tbody>" +
+        picks.map(function (p, i) {
+          var tk = p.ticket ? '<div class="muted" style="font-size:12px;white-space:normal;margin-top:2px">Safest 4-leg: ' + esc(p.ticket.legs.join(" + ")) + " · " + pct(p.ticket.joint, 0) + " (fair " + am(p.ticket.fair) + ")</div>" : "";
+          return "<tr><td>" + (i + 1) + '</td><td class="pl"><b>' + p.team + "</b> " + p.at + " " + p.opp + ' <span class="muted">' + esc(p.tip) + "</span>" + tk + "</td>" +
+            "<td><b>" + pct(p.p) + "</b></td><td>" + tierChip(p.p) + (p.p >= .7 ? ' <span class="chip up">Parlay OK</span>' : "") + "</td>" +
+            "<td>" + (p.ml ? am(p.ml) : "–") + "</td><td>" + (p.ev == null ? "–" : '<span class="' + (p.ev >= 0 ? "ev-pos" : "ev-neg") + '">' + sgn(100 * p.ev) + "%</span>") + "</td>" +
+            '<td class="pl" style="min-width:180px">' + status(p) + '<div class="muted" style="font-size:12px">' + rep(p) + "</div></td></tr>";
+        }).join("") + "</tbody></table>";
+    }
+    var r = S.record, recs = [];
+    if (r.top3.n) recs.push("top-3 picks won <b style=\"color:var(--ink)\">" + r.top3.hits + " of " + r.top3.n + "</b> (" + pct(r.top3.pred, 0) + " stated)");
+    if (r.fav70.n) recs.push("70%+ favorites <b style=\"color:var(--ink)\">" + r.fav70.hits + " of " + r.fav70.n + "</b>");
+    if (r.four.n) recs.push("safest 4-leg tickets <b style=\"color:var(--ink)\">" + r.four.hits + " of " + r.four.n + "</b> (" + pct(r.four.pred, 0) + " stated)");
+    var below = S.overall.some(function (p) { return p.p < .7; }) || S.windows.some(function (w) { return w.picks.some(function (p) { return p.p < .7; }); });
+    return '<div class="panel tscroll"><span class="label">Top 3 safest</span><h3 style="margin:2px 0 4px">The model\'s strongest picks, priced on the last injury report before each tip</h3>' +
+      '<p class="muted" style="margin-bottom:6px">Each game reruns about 25 minutes before tip-off on the newest official injury report, and keeps those numbers once it tips. A list is final when every game in it says Final or Locked.' + (recs.length ? " Live record so far: " + recs.join(", ") + "." : "") + "</p>" +
+      (below ? '<p class="muted" style="margin-bottom:6px">Picks under 70% are listed because they are the best in their window, not because they are safe: favorites at 55–70% have won far less often than 70%+ this season.</p>' : "") +
+      S.windows.map(function (w) {
+        return '<div class="band">' + esc(w.label) + " · " + esc(w.range) + " · " + w.games + (w.games === 1 ? " game" : " games") + " · " + (w.final ? '<span class="ev-pos">Final</span>' : "Updating") + "</div>" + table(w.picks);
+      }).join("") +
+      '<div class="band">Best 3 all around · whole slate · ' + (S.overallFinal ? '<span class="ev-pos">Final</span>' : "Updating") + "</div>" + table(S.overall) + "</div>";
+  }
+
   // moneylines the model's own simulation likes more than DraftKings does (5%+ expected value at the DraftKings price)
   function vsVegas() {
     var edges = [];
@@ -449,7 +488,7 @@ svg.spark circle { fill: var(--accent) }
     var b = D.bestSgp, m = D.meta;
     var games = D.games.map(gameCard).join("");
     var h = '<div style="display:grid;gap:10px"><h2>Tonight: ' + D.games.length + " games, " + esc(m.slateLabel) + '</h2><div class="sub"><span><b>' + m.sims.toLocaleString() + "</b> possession-level simulations per game</span><span>Season bank through <b>" + esc(m.bankThrough) + "</b> (" + m.bankGames + ' games)</span><span>Built <b>' + esc(m.built) + "</b></span></div></div>" +
-      mlBoard() +
+      safestBoard() + mlBoard() +
       '<div class="verdict">' + vsVegas() +
       (b ? '<div class="panel"><span class="label">Best $5 boost parlay · ' + esc(b.game) + '</span><ul class="legs">' + b.sgp.legs.map(function (l, i) { return "<li><span>" + esc(l) + '</span><span class="num muted">' + pct(b.sgp.legP[i], 0) + "</span></li>"; }).join("") + "</ul>" +
         '<div class="kv"><div><span class="label">Joint</span><span class="v">' + pct(b.sgp.joint) + '</span></div><div><span class="label">Fair odds</span><span class="v">' + am(b.sgp.fair) + '</span></div><div><span class="label">Lift</span><span class="v">' + b.sgp.lift.toFixed(2) + '×</span></div><div><span class="label">Needs</span><span class="v">+300 or longer</span></div></div></div>' : "") +
