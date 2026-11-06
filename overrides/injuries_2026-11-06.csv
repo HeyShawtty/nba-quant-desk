@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/06/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/06/26 6:45 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Christopher Cenac Jr.,OUT,0,Official: Out (G League - On Assignment)
@@ -32,13 +32,13 @@ ATL,Jalen Wilson,AVAIL,1,Official: Available (G League - Two-Way)
 PHI,Dominick Barlow,OUT,0,Official: Out
 PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
 PHI,Ariel Hukporti,OUT,0,Official: Out
-CLE,Jarrett Allen,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Contusion)
+CLE,Jarrett Allen,OUT,0,Official: Out (Injury/Illness - Right Knee Contusion)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Tyrese Proctor,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Jaylon Tyson,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 CLE,"Jr., Ernest Udeh",OUT,0,Official: Out (G League - Two-Way)
-CLE,Peyton Watson,Q,0.5,Official: Questionable
+CLE,Peyton Watson,AVAIL,1,Official: Available
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
 MIN,Terrence Shannon Jr,OUT,0,Official: Out (Injury/Illness - Left Hip Contusion)
@@ -55,13 +55,13 @@ OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low back Spasms)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Isaiah Stewart,OUT,0,Official: Out
-TOR,Kyle Anderson,Q,0.5,Official: Questionable (Injury/Illness - Illness)
-TOR,Scottie Barnes,Q,0.5,Official: Questionable
+TOR,Kyle Anderson,Q,0.9,Official: Probable (Injury/Illness - Illness)
+TOR,Scottie Barnes,Q,0.25,Official: Doubtful (Injury/Illness - Left Groin Strain)
 TOR,Nate Bittle,OUT,0,Official: Out
 TOR,Kawhi Leonard,OUT,0,Official: Out
 TOR,Kevin McCullar Jr.,OUT,0,Official: Out (G League - Two-Way)
-TOR,Jakob Poeltl,Q,0.9,Official: Probable (Injury/Illness - Left Shoulder Bursitis)
-TOR,Immanuel Quickley,Q,0.5,Official: Questionable
+TOR,Jakob Poeltl,AVAIL,1,Official: Available (Injury/Illness - Left Shoulder Bursitis)
+TOR,Immanuel Quickley,Q,0.25,Official: Doubtful
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
 MIL,Bogoljub Markovic,OUT,0,Official: Out (G League - On Assignment)
