@@ -317,8 +317,9 @@ svg.spark circle { fill: var(--accent) }
     var S = D.safest; if (!S) return "";
     function rep(p) {
       if (!p.pricedAt) return "From " + esc(p.report);
-      var m = /(\d{1,2}:\d{2} [AP]M) ET/.exec(p.report || "");
-      return "Priced " + esc(p.pricedAt) + " on the " + (m ? m[1] + " injury report" : esc(p.report || "latest injury news")) + (p.complete ? "" : " (not every team had submitted)");
+      if (!p.report) return "Priced " + esc(p.pricedAt) + " on ESPN injury news (official report not out yet)";
+      var m = /(\d{1,2}:\d{2} [AP]M) ET/.exec(p.report);
+      return "Priced " + esc(p.pricedAt) + " on the " + (m ? m[1] + " injury report" : esc(p.report)) + (p.complete ? "" : " (not every team had submitted)");
     }
     function status(p) {
       if (p.status === "locked") return '<span class="chip" title="Tipped: these are its numbers from the last run before tip-off">Locked at tip</span>';
