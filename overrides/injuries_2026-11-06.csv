@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/06/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/06/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Christopher Cenac Jr.,OUT,0,Official: Out (G League - On Assignment)
@@ -53,6 +53,7 @@ OKC,Nikola Topic,OUT,0,Official: Out (Injury/Illness - Low Back Surgery)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low back Spasms)
+MEM,Carson Cooper,OUT,0,Official: Out (G League - Two-Way)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Isaiah Stewart,OUT,0,Official: Out
 TOR,Kyle Anderson,AVAIL,1,Official: Available (Injury/Illness - Illness)
@@ -71,11 +72,11 @@ UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Jusuf Nurkic,OUT,0,Official: Out
-DAL,Santi Aldama,Q,0.9,Official: Probable (Injury/Illness - Right Knee Surgery)
+DAL,Santi Aldama,AVAIL,1,Official: Available (Injury/Illness - Right Knee Surgery)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
-DAL,Max Christie,Q,0.9,Official: Probable
+DAL,Max Christie,AVAIL,1,Official: Available
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
-DAL,Kyrie Irving,Q,0.9,Official: Probable (Injury/Illness - Illness)
+DAL,Kyrie Irving,AVAIL,1,Official: Available (Injury/Illness - Illness)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
 POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
@@ -90,7 +91,7 @@ SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
 SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-SAC,De'Andre Hunter,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+SAC,De'Andre Hunter,OUT,0,Official: Out (Injury/Illness - Illness)
 SAC,Keegan Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Capsulitis)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
