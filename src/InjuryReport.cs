@@ -86,9 +86,10 @@ namespace NbaQuant
                 {
                     Tuple<string, double> st;
                     if (!Status.TryGetValue(cols[i + 1].Trim(), out st)) continue;
-                    var nm = cols[i].Trim(); int comma = nm.IndexOf(", ", StringComparison.Ordinal);
+                    // "Last, First", "Last Jr., First" or "Last, Jr., First": the first name follows the last comma
+                    var nm = cols[i].Trim(); int comma = nm.LastIndexOf(", ", StringComparison.Ordinal);
                     if (comma <= 0) continue;
-                    string name = nm.Substring(comma + 2).Trim() + " " + nm.Substring(0, comma).Trim();
+                    string name = nm.Substring(comma + 2).Trim() + " " + nm.Substring(0, comma).Replace(",", "").Trim();
                     string reason = i + 2 < cols.Length ? cols[i + 2].Trim() : "";
                     res.Add(new[] { curTeam, name, st.Item1, st.Item2.ToString("0.##", CultureInfo.InvariantCulture), cols[i + 1].Trim() + (reason.Length > 0 ? " (" + reason + ")" : "") });
                     break;
