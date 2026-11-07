@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/07/26 4:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/07/26 6:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DEN,DeMar DeRozan,AVAIL,1,Official: Available (Injury/Illness - Low Back Spasms)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
@@ -15,14 +15,14 @@ BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
 BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
 BKN,Drake Powell,AVAIL,1,Official: Available (G League - On Assignment)
 BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
-ATL,RayJ Dennis,Q,0.5,Official: Questionable (G League - Two-Way)
+ATL,RayJ Dennis,OUT,0,Official: Out (G League - Two-Way)
 ATL,Keshon Gilbert,OUT,0,Official: Out (Inflammation/Non-Surgical)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
-ATL,Jalen Johnson,Q,0.9,Official: Probable (Injury/Illness - Left Ankle Sprain)
+ATL,Jalen Johnson,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
 ATL,Jock Landale,OUT,0,Official: Out (Injury/Illness - Left Hip Strain)
 ATL,Asa Newell,OUT,0,Official: Out
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
-ATL,Jalen Wilson,Q,0.5,Official: Questionable (G League - Two-Way)
+ATL,Jalen Wilson,AVAIL,1,Official: Available (G League - Two-Way)
 NY,Josh Hart,OUT,0,Official: Out (Injury/Illness - Right Ankle Soreness)
 CLE,Jarrett Allen,OUT,0,Official: Out (Injury/Illness - Right Knee Contusion)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
