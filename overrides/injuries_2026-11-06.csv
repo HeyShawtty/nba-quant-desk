@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/06/26 9:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/06/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Christopher Cenac Jr.,OUT,0,Official: Out (G League - On Assignment)
