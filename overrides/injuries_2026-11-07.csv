@@ -1,12 +1,12 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/07/26 3:15 PM ET (read automatically). Not yet submitted: SA, POR.
+# Source: NBA official injury report 11/07/26 4:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
-DEN,DeMar DeRozan,Q,0.9,Official: Probable (Injury/Illness - Low Back Spasms)
+DEN,DeMar DeRozan,AVAIL,1,Official: Available (Injury/Illness - Low Back Spasms)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-IND,T.J. McConnell,Q,0.5,Official: Questionable (Injury/Illness - Right Hamstring Strain)
-IND,Kelly Oubre Jr.,Q,0.5,Official: Questionable (Injury/Illness - Left Calf Contusion)
+IND,T.J. McConnell,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
+IND,Kelly Oubre Jr.,AVAIL,1,Official: Available (Injury/Illness - Left Calf Contusion)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
 BKN,Noah Clowney,Q,0.5,Official: Questionable (Injury/Illness - Illness)
@@ -63,3 +63,12 @@ HOU,Bruce Thornton,AVAIL,1,Official: Available (G League - On Assignment)
 PHX,Rasheer Fleming,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
 PHX,Jordan Goodwin,Q,0.25,Official: Doubtful
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
+SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
+SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
+SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
+POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+POR,Shaedon Sharpe,OUT,0,Official: Out
+POR,John Tonje,OUT,0,Official: Out (G League - Two-Way)
+POR,Robert Williams III,OUT,0,Official: Out (Rest)
