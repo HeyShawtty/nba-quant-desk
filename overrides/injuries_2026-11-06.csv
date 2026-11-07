@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/06/26 6:45 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/06/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Christopher Cenac Jr.,OUT,0,Official: Out (G League - On Assignment)
@@ -55,13 +55,13 @@ OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low back Spasms)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Isaiah Stewart,OUT,0,Official: Out
-TOR,Kyle Anderson,Q,0.9,Official: Probable (Injury/Illness - Illness)
-TOR,Scottie Barnes,Q,0.25,Official: Doubtful (Injury/Illness - Left Groin Strain)
+TOR,Kyle Anderson,AVAIL,1,Official: Available (Injury/Illness - Illness)
+TOR,Scottie Barnes,OUT,0,Official: Out (Injury/Illness - Left Groin Strain)
 TOR,Nate Bittle,OUT,0,Official: Out
 TOR,Kawhi Leonard,OUT,0,Official: Out
 TOR,Kevin McCullar Jr.,OUT,0,Official: Out (G League - Two-Way)
 TOR,Jakob Poeltl,AVAIL,1,Official: Available (Injury/Illness - Left Shoulder Bursitis)
-TOR,Immanuel Quickley,Q,0.25,Official: Doubtful
+TOR,Immanuel Quickley,OUT,0,Official: Out
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
 MIL,Bogoljub Markovic,OUT,0,Official: Out (G League - On Assignment)
