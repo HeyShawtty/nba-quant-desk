@@ -1,0 +1,155 @@
+SLATE 2026-11-06: 9 games | model favorite won 7/9 | 4 overs, 5 unders vs DK | total MAE model 14.4 vs DK 11.9 | margin MAE model 12.3 vs DK 11.8 | headline picks & parlays 66/195 | players projected 15+ min: 144 | pts MAE 5.0, within 5 pts 59.0% | causes: on track 92, minutes short 21, minutes surplus 11, hot shooting 11, cold shooting 9
+=== SA @ SAC: SA 124-109 SAC | fav SA 88.0% RIGHT | margin model -16.6 DK -17.5 actual -15 | total model 231.4 DK 231.5 actual 233 | Q1-3 99/80 | picks 14/27
+  RIGHT: SA won as the model's favorite (88.0%); total within 2 pts; margin within 5; 7 of 10 main players within 4 pts of projection; 14 of 27 picks/parlays hit
+  WRONG: Keldon Johnson 3 pts vs 12.1 (cold shooting (1-3 FG, 0-0 3PT)); Harrison Barnes 13 pts vs 4.7 (minutes surplus (19 vs 12)); Daeqwon Plowden projected 16 min but did not play
+  [sgp4_bigger_payout] Domantas Sabonis double-double + Victor Wembanyama 40+ PRA + Zach LaVine 25+ PRA + Domantas Sabonis 12+ reb (14.0%) MISS 3/4 legs; missed: Zach LaVine 25+ PRA
+  [sgp4_bigger_payout] Precious Achiuwa 6+ reb + Precious Achiuwa 10+ pts + SAC +17.5 + Domantas Sabonis 12+ reb (13.9%) MISS 2/4 legs; missed: Precious Achiuwa 6+ reb, Precious Achiuwa 10+ pts
+  [sgp4_bigger_payout] Victor Wembanyama double-double + Domantas Sabonis double-double + Precious Achiuwa 10+ pts + Domantas Sabonis 12+ reb (13.9%) MISS 3/4 legs; missed: Precious Achiuwa 10+ pts
+  [sgp4_boost_range] De'Aaron Fox 20+ PRA + Zach LaVine 15+ pts + Victor Wembanyama 35+ PRA + Dylan Harper 20+ PRA (25.9%) MISS 2/4 legs; missed: De'Aaron Fox 20+ PRA, Zach LaVine 15+ pts
+  [sgp4_safest] Dylan Harper 2+ ast + Darius Acuff Jr. 1+ threes + Zach LaVine 1+ threes + Zach LaVine 10+ pts (73.8%) HIT 4/4 legs
+  [sgp4_safest] Stephon Castle 15+ PRA + De'Aaron Fox 15+ PRA + Zach LaVine 1+ threes + Zach LaVine 10+ pts (72.3%) HIT 4/4 legs
+  [sgp4_safest] Dylan Harper 2+ ast + Darius Acuff Jr. 1+ threes + Stephon Castle 15+ PRA + Darius Acuff Jr. 15+ pts (70.1%) HIT 4/4 legs
+  [top3_ml] SA ML (88.0%) HIT 
+  [top3_q3] SA 100+ thru Q3 (26.7%) MISS 
+  [top5_25pts] Darius Acuff Jr. PTS 25+ (42.0%) MISS actual 22
+  [top5_25pts] Victor Wembanyama PTS 25+ (60.4%) HIT actual 30
+  [top5_3pm] Darius Acuff Jr. 3PM 3+ (51.8%) HIT actual 3
+  [top5_3pm] Zach LaVine 3PM 3+ (46.3%) MISS actual 1
+  [top5_dd] Domantas Sabonis DD (57.7%) HIT actual 2
+  [top5_dd] Victor Wembanyama DD (58.3%) HIT actual 2
+  [top5_ffg] Victor Wembanyama FFG (15.4%) MISS actual 0
+  [top5_ffg] Dylan Harper FFG (9.6%) MISS actual 0
+  [top5_q3all] Darius Acuff Jr. Q3ALL (37.4%) HIT actual 3
+  [top5_q3all] Victor Wembanyama Q3ALL (47.4%) HIT actual 4
+=== POR @ LAL: POR 118-124 LAL | fav LAL 59.8% RIGHT | margin model +3.4 DK +3.5 actual +6 | total model 235.2 DK 231.5 actual 242 | Q1-3 75/87 | picks 22/34
+  RIGHT: LAL won as the model's favorite (59.8%); margin within 5; 22 of 34 picks/parlays hit
+  WRONG: 3 of 9 main players within 4 pts of projection; Luka Doncic 53 pts vs 32.7 (hot shooting (17-33 FG, 5-15 3PT)); Scoot Henderson 2 pts vs 11.9 (cold shooting (0-2 FG, 0-1 3PT)); Collin Sexton 0 pts vs 9.5 (cold shooting (0-4 FG, 0-1 3PT))
+  [best_sgp] Walker Kessler 10+ pts + Damian Lillard 20+ pts + Damian Lillard 3+ threes (23.4%) HIT 3/3 legs
+  [sgp4_bigger_payout] Luka Doncic 45+ PRA + Over 231.5 + Toumani Camara 10+ pts + Deni Avdija 6+ ast (13.9%) HIT 4/4 legs
+  [sgp4_bigger_payout] Sidy Cissoko 2+ ast + Luka Doncic 45+ PRA + Over 231.5 + Sidy Cissoko 1+ threes (13.9%) HIT 4/4 legs
+  [sgp4_bigger_payout] Toumani Camara 2+ ast + Walker Kessler 20+ PRA + Over 231.5 + Toumani Camara 10+ pts (13.8%) MISS 3/4 legs; missed: Toumani Camara 2+ ast
+  [sgp4_boost_range] Damian Lillard 2+ threes + Damian Lillard 15+ pts + Toumani Camara 2+ threes + Jrue Holiday 20+ PRA (25.4%) HIT 4/4 legs
+  [sgp4_boost_range] Damian Lillard 15+ pts + Austin Reaves 25+ PRA + Damian Lillard 4+ ast + Toumani Camara 2+ threes (25.6%) HIT 4/4 legs
+  [sgp4_boost_range] Jrue Holiday 10+ pts + Jrue Holiday 4+ ast + Austin Reaves 25+ PRA + Toumani Camara 2+ threes (25.8%) HIT 4/4 legs
+  [sgp4_safest] Austin Reaves 10+ pts + Damian Lillard 1+ threes + Damian Lillard 10+ pts + Austin Reaves 1+ threes (71.3%) HIT 4/4 legs
+  [sgp4_safest] Damian Lillard 1+ threes + Luka Doncic 4+ reb + Damian Lillard 10+ pts + Luka Doncic 4+ ast (69.2%) HIT 4/4 legs
+  [sgp4_safest] Damian Lillard 1+ threes + Damian Lillard 10+ pts + Luka Doncic 3+ threes + Luka Doncic 25+ pts (60.7%) HIT 4/4 legs
+  [top3_q3] LAL 100+ thru Q3 (17.4%) MISS 
+  [top3_q3] POR 100+ thru Q3 (11.4%) MISS 
+  [top5_25pts] Luka Doncic PTS 25+ (78.2%) HIT actual 53
+  [top5_25pts] Austin Reaves PTS 25+ (30.0%) HIT actual 25
+  [top5_25pts] Deni Avdija PTS 25+ (42.0%) MISS actual 22
+  [top5_3pm] Luka Doncic 3PM 3+ (79.6%) HIT actual 5
+  [top5_3pm] Damian Lillard 3PM 3+ (50.4%) HIT actual 4
+  [top5_3pm] Toumani Camara 3PM 3+ (40.9%) HIT actual 4
+  [top5_dd] Luka Doncic DD (31.2%) MISS actual 1
+  [top5_dd] Walker Kessler DD (27.7%) HIT actual 2
+  [top5_dd] Donovan Clingan DD (29.2%) HIT actual 2
+  [top5_ffg] Luka Doncic FFG (14.9%) HIT actual 1
+  [top5_ffg] Austin Reaves FFG (9.7%) MISS actual 0
+  [top5_ffg] Deni Avdija FFG (10.5%) MISS actual 0
+  [top5_q3all] Luka Doncic Q3ALL (63.5%) HIT actual 10
+  [top5_q3all] Austin Reaves Q3ALL (28.9%) MISS actual 0
+  [top5_q3all] Deni Avdija Q3ALL (39.8%) MISS actual 0
+=== UTAH @ DAL: UTAH 100-112 DAL | fav DAL 70.7% RIGHT | margin model +7.6 DK +6.5 actual +12 | total model 234.9 DK 226.5 actual 212 | Q1-3 76/89 | picks 2/20
+  RIGHT: DAL won as the model's favorite (70.7%); margin within 5; 2 of 20 picks/parlays hit
+  WRONG: total 212 vs 235 projected (-23); 3 of 7 main players within 4 pts of projection; P.J. Washington 26 pts vs 14.3 (hot shooting (7-14 FG, 6-10 3PT)); Brice Sensabaugh 0 pts vs 10.3 (minutes short (10 vs 17): fouls, injury or rotation); Darryn Peterson 21 pts vs 12.3 (hot shooting (6-12 FG, 3-7 3PT))
+  [sgp4_bigger_payout] Keyonte George 4+ reb + Kyrie Irving 20+ pts + Kyrie Irving 3+ threes + Kyrie Irving 4+ ast (13.9%) MISS 1/4 legs; missed: Kyrie Irving 20+ pts, Kyrie Irving 3+ threes, Kyrie Irving 4+ ast
+  [sgp4_bigger_payout] Keyonte George 2+ threes + Kyrie Irving 20+ pts + Kyrie Irving 3+ threes + Ace Bailey 20+ PRA (13.9%) MISS 0/4 legs; missed: Keyonte George 2+ threes, Kyrie Irving 20+ pts, Kyrie Irving 3+ threes, Ace Bailey 20+ PRA
+  [sgp4_bigger_payout] Ace Bailey 2+ ast + DAL -6.5 + Kyrie Irving 20+ pts + Kyrie Irving 3+ threes (13.7%) MISS 1/4 legs; missed: Ace Bailey 2+ ast, Kyrie Irving 20+ pts, Kyrie Irving 3+ threes
+  [sgp4_boost_range] Keyonte George 4+ ast + Lauri Markkanen 25+ PRA + Over 226.5 + P.J. Washington 20+ PRA (25.8%) MISS 3/4 legs; missed: Over 226.5
+  [sgp4_boost_range] P.J. Washington 10+ pts + Isaiah Collier 4+ ast + Lauri Markkanen 25+ PRA + Over 226.5 (26.0%) MISS 2/4 legs; missed: Isaiah Collier 4+ ast, Over 226.5
+  [sgp4_boost_range] Keyonte George 25+ PRA + Lauri Markkanen 2+ threes + Over 226.5 + P.J. Washington 20+ PRA (25.9%) MISS 3/4 legs; missed: Over 226.5
+  [sgp4_safest] Kyrie Irving 1+ threes + Kyrie Irving 10+ pts + Lauri Markkanen 10+ pts + Lauri Markkanen 1+ threes (74.7%) MISS 3/4 legs; missed: Kyrie Irving 1+ threes
+  [sgp4_safest] Kyrie Irving 1+ threes + Cooper Flagg 2+ ast + Kyrie Irving 10+ pts + Kyrie Irving 2+ ast (72.0%) MISS 3/4 legs; missed: Kyrie Irving 1+ threes
+  [sgp4_safest] Cooper Flagg 2+ ast + Lauri Markkanen 10+ pts + Lauri Markkanen 1+ threes + Lauri Markkanen 4+ reb (68.6%) HIT 4/4 legs
+  [top3_ml] DAL ML (70.7%) HIT 
+  [top3_q3] DAL 100+ thru Q3 (21.4%) MISS 
+  [top5_3pm] Kyrie Irving 3PM 3+ (53.1%) MISS actual 0
+=== MIN @ NO: MIN 115-109 NO | fav MIN 61.2% RIGHT | margin model -4.1 DK -3.5 actual -6 | total model 234.4 DK 230.5 actual 224 | Q1-3 77/79 | picks 7/18
+  RIGHT: MIN won as the model's favorite (61.2%); margin within 5; 7 of 18 picks/parlays hit
+  WRONG: 4 of 10 main players within 4 pts of projection; Karlo Matkovic 18 pts vs 4.5 (hot shooting (7-13 FG, 4-8 3PT)); Jeremiah Fears 24 pts vs 12.8 (minutes surplus (36 vs 26)); Dejounte Murray 7 pts vs 15.9 (cold shooting (3-11 FG, 1-2 3PT))
+  [sgp4_bigger_payout] Saddiq Bey 2+ ast + Rudy Gobert 2+ ast + Jonathan Kuminga 15+ pts + Jonathan Kuminga 2+ threes (13.7%) MISS 2/4 legs; missed: Rudy Gobert 2+ ast, Jonathan Kuminga 2+ threes
+  [sgp4_bigger_payout] Rudy Gobert 10+ reb + Herbert Jones 1+ threes + Jonathan Kuminga 15+ pts + Jonathan Kuminga 2+ threes (14.0%) MISS 2/4 legs; missed: Herbert Jones 1+ threes, Jonathan Kuminga 2+ threes
+  [sgp4_bigger_payout] Zion Williamson 25+ PRA + Jonathan Kuminga 15+ pts + Jonathan Kuminga 2+ threes + Dejounte Murray 15+ pts (13.8%) MISS 2/4 legs; missed: Jonathan Kuminga 2+ threes, Dejounte Murray 15+ pts
+  [sgp4_boost_range] Derik Queen 15+ PRA + Joan Beringer 4+ reb + Jaden McDaniels 4+ reb + Saddiq Bey 15+ PRA (25.6%) MISS 2/4 legs; missed: Derik Queen 15+ PRA, Joan Beringer 4+ reb
+  [sgp4_boost_range] Jeremiah Fears 15+ PRA + Zion Williamson 4+ reb + Derik Queen 15+ PRA + Saddiq Bey 15+ PRA (26.0%) MISS 3/4 legs; missed: Derik Queen 15+ PRA
+  [sgp4_safest] Jaden McDaniels 15+ PRA + Ayo Dosunmu 2+ ast + Ayo Dosunmu 10+ pts + Ayo Dosunmu 1+ threes (67.0%) HIT 4/4 legs
+  [sgp4_safest] Jaden McDaniels 15+ PRA + Ayo Dosunmu 2+ ast + LaMelo Ball 15+ pts + LaMelo Ball 3+ threes (62.0%) HIT 4/4 legs
+  [sgp4_safest] Zion Williamson 10+ pts + LaMelo Ball 4+ ast + LaMelo Ball 15+ pts + LaMelo Ball 3+ threes (58.6%) HIT 4/4 legs
+  [top5_3pm] LaMelo Ball 3PM 3+ (77.4%) HIT actual 3
+  [top5_dd] Rudy Gobert DD (38.0%) MISS actual 1
+=== PHI @ CLE: PHI 95-119 CLE | fav PHI 58.3% WRONG | margin model -2.9 DK -2.5 actual +24 | total model 243.9 DK 232.5 actual 214 | Q1-3 74/91 | picks 3/19
+  RIGHT: 3 of 19 picks/parlays hit
+  WRONG: PHI lost at 58.3%; total 214 vs 244 projected (-30); margin +24 vs -2.9 projected (blowout); 4 of 10 main players within 4 pts of projection; Joel Embiid 6 pts vs 22.5 (minutes short (25 vs 33): blowout); Sam Merrill 0 pts vs 10.6 (minutes short (13 vs 27): blowout); LeBron James 8 pts vs 16.3 (cold shooting (3-12 FG, 0-4 3PT))
+  [sgp4_bigger_payout] Kentavious Caldwell-Pope 2+ ast + Kentavious Caldwell-Pope 1+ threes + PHI moneyline + LeBron James 6+ reb (14.0%) MISS 2/4 legs; missed: Kentavious Caldwell-Pope 2+ ast, PHI moneyline
+  [sgp4_bigger_payout] Joel Embiid 20+ pts + James Harden 30+ PRA + PHI moneyline + Joel Embiid 4+ ast (14.0%) MISS 0/4 legs; missed: Joel Embiid 20+ pts, James Harden 30+ PRA, PHI moneyline, Joel Embiid 4+ ast
+  [sgp4_bigger_payout] LeBron James 6+ ast + Joel Embiid 8+ reb + Joel Embiid 4+ ast + LeBron James 6+ reb (14.0%) MISS 1/4 legs; missed: LeBron James 6+ ast, Joel Embiid 8+ reb, Joel Embiid 4+ ast
+  [sgp4_safest] James Harden 1+ threes + Tyrese Maxey 1+ threes + James Harden 10+ pts + Tyrese Maxey 15+ pts (71.9%) HIT 4/4 legs
+  [sgp4_safest] James Harden 1+ threes + Jaylen Brown 2+ ast + James Harden 10+ pts + James Harden 4+ ast (74.1%) MISS 3/4 legs; missed: James Harden 4+ ast
+  [sgp4_safest] James Harden 1+ threes + James Harden 10+ pts + Donovan Mitchell 15+ pts + Donovan Mitchell 2+ threes (66.3%) MISS 3/4 legs; missed: Donovan Mitchell 2+ threes
+  [top3_q3] PHI 100+ thru Q3 (24.8%) MISS 
+  [top5_25pts] Donovan Mitchell PTS 25+ (53.5%) MISS actual 23
+  [top5_3pm] Donovan Mitchell 3PM 3+ (58.5%) MISS actual 1
+  [top5_dd] Evan Mobley DD (38.0%) MISS actual 1
+  [top5_dd] Joel Embiid DD (37.7%) MISS actual 0
+  [top5_q3all] Donovan Mitchell Q3ALL (46.0%) MISS actual 0
+=== TOR @ MIL: TOR 121-107 MIL | fav TOR 57.1% RIGHT | margin model -2.5 DK -3.5 actual -14 | total model 224.4 DK 228.5 actual 228 | Q1-3 89/87 | picks 2/20
+  RIGHT: TOR won as the model's favorite (57.1%); total within 4 pts; 6 of 10 main players within 4 pts of projection; 2 of 20 picks/parlays hit
+  WRONG: Alijah Martin 27 pts vs 5.3 (minutes surplus (31 vs 11)); Brayden Burries 21 pts vs 9.1 (minutes surplus (38 vs 18)); Myles Turner 0 pts vs 9.9 (cold shooting (0-7 FG, 0-4 3PT))
+  [best_sgp] Myles Turner 2+ ast + Ja'Kobe Walter 15+ pts + Ja'Kobe Walter 3+ threes (23.5%) MISS 0/3 legs; missed: Myles Turner 2+ ast, Ja'Kobe Walter 15+ pts, Ja'Kobe Walter 3+ threes
+  [sgp4_bigger_payout] RJ Barrett 2+ threes + Ryan Rollins 20+ PRA + RJ Barrett 25+ pts + Myles Turner 2+ ast (13.8%) MISS 1/4 legs; missed: RJ Barrett 2+ threes, Ryan Rollins 20+ PRA, Myles Turner 2+ ast
+  [sgp4_bigger_payout] RJ Barrett 2+ threes + Kyle Kuzma 10+ pts + Ryan Rollins 4+ reb + RJ Barrett 25+ pts (13.9%) MISS 2/4 legs; missed: RJ Barrett 2+ threes, Ryan Rollins 4+ reb
+  [sgp4_bigger_payout] Kyle Kuzma 1+ threes + Kyle Kuzma 10+ pts + Ryan Rollins 4+ reb + Myles Turner 2+ ast (14.0%) MISS 2/4 legs; missed: Ryan Rollins 4+ reb, Myles Turner 2+ ast
+  [sgp4_boost_range] Ja'Kobe Walter 2+ ast + Tyler Herro 15+ pts + Ja'Kobe Walter 4+ reb + Jakob Poeltl 20+ PRA (26.0%) HIT 4/4 legs
+  [sgp4_boost_range] Ja'Kobe Walter 2+ ast + Kel'el Ware 6+ reb + Ja'Kobe Walter 4+ reb + Jamal Shead 6+ ast (25.6%) MISS 3/4 legs; missed: Kel'el Ware 6+ reb
+  [sgp4_boost_range] Collin Murray-Boyles 10+ pts + Tyler Herro 15+ pts + Kel'el Ware 6+ reb + Jamal Shead 6+ ast (25.9%) MISS 3/4 legs; missed: Kel'el Ware 6+ reb
+  [sgp4_safest] Tyler Herro 1+ threes + RJ Barrett 15+ pts + Tyler Herro 10+ pts + RJ Barrett 1+ threes (71.6%) MISS 3/4 legs; missed: RJ Barrett 1+ threes
+  [sgp4_safest] Ja'Kobe Walter 1+ threes + Tyler Herro 1+ threes + Ryan Rollins 2+ ast + Tyler Herro 10+ pts (72.9%) MISS 3/4 legs; missed: Ryan Rollins 2+ ast
+  [sgp4_safest] Ja'Kobe Walter 1+ threes + RJ Barrett 15+ pts + RJ Barrett 4+ reb + RJ Barrett 1+ threes (70.2%) MISS 3/4 legs; missed: RJ Barrett 1+ threes
+  [top5_25pts] RJ Barrett PTS 25+ (54.8%) HIT actual 27
+  [top5_3pm] Ja'Kobe Walter 3PM 3+ (53.5%) MISS actual 1
+  [top5_ffg] RJ Barrett FFG (13.5%) MISS actual 0
+  [top5_q3all] RJ Barrett Q3ALL (47.5%) MISS actual 2
+=== OKC @ MEM: OKC 128-97 MEM | fav MEM 53.1% WRONG | margin model +1.2 DK -4.5 actual -31 | total model 227.7 DK 223.5 actual 225 | Q1-3 98/76 | picks 6/21
+  RIGHT: total within 3 pts; 4 of 8 main players within 4 pts of projection; 6 of 21 picks/parlays hit
+  WRONG: MEM lost at 53.1%; margin -31 vs +1.2 projected (blowout); Ajay Mitchell 35 pts vs 17.1 (hot shooting (14-20 FG, 4-7 3PT)); Jared McCain 21 pts vs 12.3 (hot shooting (9-14 FG, 3-8 3PT)); GG Jackson projected 16 min but did not play
+  [sgp4_bigger_payout] Ajay Mitchell 4+ ast + Over 223.5 + Shai Gilgeous-Alexander 30+ pts + Cameron Boozer 2+ threes (13.8%) MISS 2/4 legs; missed: Shai Gilgeous-Alexander 30+ pts, Cameron Boozer 2+ threes
+  [sgp4_bigger_payout] Ajay Mitchell 4+ ast + Over 223.5 + Cedric Coward 20+ PRA + Shai Gilgeous-Alexander 40+ PRA (13.8%) MISS 2/4 legs; missed: Cedric Coward 20+ PRA, Shai Gilgeous-Alexander 40+ PRA
+  [sgp4_bigger_payout] Ajay Mitchell 15+ pts + Over 223.5 + Ty Jerome 30+ PRA + Shai Gilgeous-Alexander 40+ PRA (14.0%) MISS 2/4 legs; missed: Ty Jerome 30+ PRA, Shai Gilgeous-Alexander 40+ PRA
+  [sgp4_boost_range] Shai Gilgeous-Alexander 25+ pts + Shai Gilgeous-Alexander 4+ ast + Cameron Boozer 4+ ast + Ajay Mitchell 1+ threes (26.0%) HIT 4/4 legs
+  [sgp4_boost_range] Ty Jerome 4+ ast + Shai Gilgeous-Alexander 4+ ast + Ty Jerome 2+ threes + Ajay Mitchell 1+ threes (25.7%) HIT 4/4 legs
+  [sgp4_boost_range] Cameron Boozer 6+ reb + Isaiah Hartenstein 20+ PRA + Cameron Boozer 4+ ast + Kenrich Williams 1+ threes (25.9%) MISS 3/4 legs; missed: Isaiah Hartenstein 20+ PRA
+  [sgp4_safest] Cameron Boozer 4+ reb + Cam Spencer 2+ ast + Shai Gilgeous-Alexander 20+ pts + Shai Gilgeous-Alexander 1+ threes (68.0%) MISS 3/4 legs; missed: Cam Spencer 2+ ast
+  [sgp4_safest] Cameron Boozer 4+ reb + Ajay Mitchell 15+ PRA + Ty Jerome 1+ threes + Ty Jerome 15+ pts (66.7%) HIT 4/4 legs
+  [sgp4_safest] Cameron Boozer 4+ reb + Cam Spencer 2+ ast + Cameron Boozer 1+ threes + Cameron Boozer 10+ pts (61.1%) MISS 1/4 legs; missed: Cam Spencer 2+ ast, Cameron Boozer 1+ threes, Cameron Boozer 10+ pts
+  [top5_25pts] Shai Gilgeous-Alexander PTS 25+ (74.9%) HIT actual 28
+  [top5_ffg] Ty Jerome FFG (12.4%) MISS actual 0
+  [top5_ffg] Shai Gilgeous-Alexander FFG (14.3%) MISS actual 0
+  [top5_q3all] Shai Gilgeous-Alexander Q3ALL (62.3%) MISS actual 0
+=== BOS @ CHA: BOS 119-80 CHA | fav BOS 74.7% RIGHT | margin model -9.4 DK -10.5 actual -39 | total model 210.0 DK 209.5 actual 199 | Q1-3 96/57 | picks 4/20
+  RIGHT: BOS won as the model's favorite (74.7%); 4 of 20 picks/parlays hit
+  WRONG: margin -39 vs -9.4 projected (blowout); 2 of 9 main players within 4 pts of projection; Grayson Allen 0 pts vs 16.0 (minutes short (22 vs 32): blowout); Brandon Miller 8 pts vs 20.7 (minutes short (14 vs 35): blowout); Paul George 8 pts vs 18.1 (minutes short (22 vs 31): blowout); Hannes Steinbach played 27 min unprojected (4 pts)
+  [sgp4_bigger_payout] Grayson Allen 3+ threes + Grayson Allen 15+ pts + Payton Pritchard 20+ PRA + Grayson Allen 4+ ast (14.0%) MISS 1/4 legs; missed: Grayson Allen 3+ threes, Grayson Allen 15+ pts, Grayson Allen 4+ ast
+  [sgp4_bigger_payout] Coby White 4+ ast + Brandon Miller 3+ threes + Brandon Miller 20+ pts + Neemias Queta 15+ PRA (13.9%) MISS 0/4 legs; missed: Coby White 4+ ast, Brandon Miller 3+ threes, Brandon Miller 20+ pts, Neemias Queta 15+ PRA
+  [sgp4_bigger_payout] Coby White 2+ threes + Derrick White 20+ PRA + Coby White 15+ pts + Grayson Allen 4+ ast (13.9%) MISS 1/4 legs; missed: Coby White 2+ threes, Coby White 15+ pts, Grayson Allen 4+ ast
+  [sgp4_boost_range] Paul George 2+ threes + Naz Reid 2+ ast + Paul George 4+ reb + Derrick White 10+ pts (26.0%) HIT 4/4 legs
+  [sgp4_boost_range] BOS moneyline + Paul George 4+ reb + Derrick White 10+ pts + Payton Pritchard 10+ pts (25.6%) HIT 4/4 legs
+  [sgp4_boost_range] Brandon Miller 15+ pts + Naz Reid 2+ ast + Derrick White 10+ pts + Payton Pritchard 10+ pts (25.8%) MISS 3/4 legs; missed: Brandon Miller 15+ pts
+  [sgp4_safest] Paul George 1+ threes + Paul George 10+ pts + Grayson Allen 2+ threes + Grayson Allen 10+ pts (62.2%) MISS 1/4 legs; missed: Paul George 10+ pts, Grayson Allen 2+ threes, Grayson Allen 10+ pts
+  [sgp4_safest] Paul George 1+ threes + Brandon Miller 10+ pts + Paul George 2+ ast + Paul George 10+ pts (69.3%) MISS 1/4 legs; missed: Brandon Miller 10+ pts, Paul George 2+ ast, Paul George 10+ pts
+  [sgp4_safest] Paul George 1+ threes + Naz Reid 1+ threes + Paul George 10+ pts + Naz Reid 10+ pts (65.4%) MISS 3/4 legs; missed: Paul George 10+ pts
+  [top3_ml] BOS ML (74.7%) HIT 
+  [top5_3pm] Grayson Allen 3PM 3+ (59.1%) MISS actual 0
+  [top5_ffg] Jayson Tatum FFG (13.4%) HIT actual 1
+=== WSH @ ATL: WSH 132-139 ATL | fav ATL 69.5% RIGHT | margin model +7.2 DK +8.5 actual +7 | total model 230.3 DK 227.5 actual 271 | Q1-3 94/105 | picks 6/16
+  RIGHT: ATL won as the model's favorite (69.5%); margin within 5; 6 of 16 picks/parlays hit
+  WRONG: total 271 vs 230 projected (+41); 5 of 12 main players within 4 pts of projection; Kyshawn George 33 pts vs 16.3 (hot shooting (10-19 FG, 5-7 3PT)); CJ McCollum 4 pts vs 19.5 (minutes short (23 vs 31): fouls, injury or rotation); Luguentz Dort 25 pts vs 9.8 (hot shooting (9-15 FG, 5-7 3PT))
+  [sgp4_bigger_payout] AJ Dybantsa 6+ reb + Alex Sarr 1+ threes + Alex Sarr 8+ reb + AJ Dybantsa 15+ pts (14.0%) MISS 3/4 legs; missed: AJ Dybantsa 15+ pts
+  [sgp4_bigger_payout] CJ McCollum 4+ reb + Alex Sarr 1+ threes + Alex Sarr 8+ reb + CJ McCollum 4+ ast (13.7%) MISS 3/4 legs; missed: CJ McCollum 4+ reb
+  [sgp4_bigger_payout] AJ Dybantsa 6+ reb + Trae Young 2+ threes + AJ Dybantsa 15+ pts + Nickeil Alexander-Walker 30+ PRA (13.9%) MISS 3/4 legs; missed: AJ Dybantsa 15+ pts
+  [sgp4_safest] Trae Young 10+ pts + CJ McCollum 1+ threes + CJ McCollum 10+ pts + Trae Young 1+ threes (69.8%) MISS 2/4 legs; missed: CJ McCollum 1+ threes, CJ McCollum 10+ pts
+  [sgp4_safest] CJ McCollum 1+ threes + CJ McCollum 10+ pts + Nickeil Alexander-Walker 2+ threes + Nickeil Alexander-Walker 15+ pts (67.7%) MISS 2/4 legs; missed: CJ McCollum 1+ threes, CJ McCollum 10+ pts
+  [sgp4_safest] Dyson Daniels 15+ PRA + CJ McCollum 1+ threes + CJ McCollum 2+ ast + CJ McCollum 10+ pts (71.2%) MISS 2/4 legs; missed: CJ McCollum 1+ threes, CJ McCollum 10+ pts
+  [top5_3pm] Nickeil Alexander-Walker 3PM 3+ (73.5%) HIT actual 4
+  [top5_dd] Onyeka Okongwu DD (44.3%) HIT actual 2
