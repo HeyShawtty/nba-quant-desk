@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/08/26 5:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/08/26 6:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 PHI,Dominick Barlow,OUT,0,Official: Out
 PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
@@ -54,6 +54,7 @@ SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Keegan Murray,AVAIL,1,Official: Available (-)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
+SAC,Domantas Sabonis,Q,0.5,Official: Questionable (Injury/Illness - Left Knee Soreness)
 SAC,Ben Simmons,OUT,0,Official: Out
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Yves Missi,OUT,0,Official: Out
