@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/08/26 3:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/08/26 5:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 PHI,Dominick Barlow,OUT,0,Official: Out
 PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
@@ -51,7 +51,7 @@ MIL,Gary Trent Jr.,Q,0.5,Official: Questionable (Injury/Illness - Illness)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
-SAC,Keegan Murray,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Capsulitis)
+SAC,Keegan Murray,AVAIL,1,Official: Available (-)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
