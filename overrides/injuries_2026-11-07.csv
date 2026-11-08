@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/07/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/07/26 8:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DEN,DeMar DeRozan,AVAIL,1,Official: Available (Injury/Illness - Low Back Spasms)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
@@ -60,8 +60,9 @@ HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
 HOU,Bruce Thornton,AVAIL,1,Official: Available (G League - On Assignment)
-PHX,Rasheer Fleming,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
-PHX,Jordan Goodwin,Q,0.25,Official: Doubtful
+PHX,Rasheer Fleming,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
+PHX,Jordan Goodwin,OUT,0,Official: Out
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
 SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
