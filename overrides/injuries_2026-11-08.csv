@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/08/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/08/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 PHI,Dominick Barlow,OUT,0,Official: Out
 PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
@@ -41,7 +41,7 @@ DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Sprai
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Christopher Cenac Jr.,OUT,0,Official: Out (G League - On Assignment)
 BOS,Dillon Mitchell,OUT,0,Official: Out (G League - Two-Way)
-BOS,Mitchell Robinson,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+BOS,Mitchell Robinson,AVAIL,1,Official: Available (Injury/Illness - Illness)
 BOS,Amari Williams,OUT,0,Official: Out (G League - Two-Way)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
 MIL,Bogoljub Markovic,OUT,0,Official: Out (G League - On Assignment)
