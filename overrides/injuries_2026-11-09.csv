@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/09/26 8:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/09/26 9:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CLE,Jarrett Allen,AVAIL,1,Official: Available (Injury/Illness - Right Knee Contusion)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
@@ -85,7 +85,7 @@ NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 NO,Zion Williamson,OUT,0,Official: Out (Rest)
 GS,Jimmy Butler III,OUT,0,Official: Out (Injury/Illness - Right ACL Repair /)
 GS,Moses Moody,OUT,0,Official: Out
-GS,Gary Payton II,Q,0.5,Official: Questionable
+GS,Gary Payton II,OUT,0,Official: Out
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
 GS,Will Richard,OUT,0,Official: Out (Injury/Illness - Left Thumb UCL Tear)
-GS,Gui Santos,Q,0.9,Official: Probable (Injury/Illness - Left Knee Tendinitis)
+GS,Gui Santos,AVAIL,1,Official: Available (Injury/Illness - Left Knee Tendinitis)
