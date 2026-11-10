@@ -3,7 +3,9 @@
 #   slate : official injury report -> overrides, price today's slate (report, predictions, website data), four-leg tickets
 #   ticket: price the custom parlays in overrides\tickets_DATE.txt (slate runs price them too)
 #   test  : walk-forward backtest of the current settings plus each "--set Key=Value" variant passed in -Variants
-param([string]$Task = 'slate', [string]$Date = '', [string]$Variants = '')
+#   ban / unban : -Team "CLE: reason" adds or removes a team in overrides\banned_teams.csv. Banned teams' games are not
+#           simulated or priced anywhere (slates, tickets, stress tests, backtests); their data is still collected.
+param([string]$Task = 'slate', [string]$Date = '', [string]$Variants = '', [string]$Team = '')
 $ErrorActionPreference = 'Continue'
 Set-Location (Split-Path -Parent $PSScriptRoot)
 $cli = Join-Path (Get-Location) 'nbaquant-cli.exe'
@@ -26,7 +28,10 @@ switch ($Task) {
     Step 'Validate with parlays' { & $cli validate }
     Step 'Audit' { & $cli audit }
     Step 'Data bank' { & $cli bank }
+    if (Test-Path 'overrides\banned_teams.csv') { Step 'Banned teams watch (information only)' { & $cli banned } }
   }
+  'ban'   { Step "Ban $Team" { & $cli ban $Team }; Step 'Banned teams watch (information only)' { & $cli banned } }
+  'unban' { Step "Unban $Team" { & $cli unban $Team } }
   'slate' {
     # team form compares each team with the model's own pre-game margins; the walk-forward backtest writes them (learn does daily)
     if (-not (Test-Path 'data\static\model_margins.csv')) { Step 'Model margins for team form (walk-forward)' { & $cli validate } }
@@ -34,11 +39,13 @@ switch ($Task) {
     Step "Price $Date" { & $cli run $Date }
     $ymd = $Date.Replace('-', '')
     $sb = Invoke-RestMethod "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=$ymd"
+    $banned = @(); if (Test-Path 'overrides\banned_teams.csv') { $banned = @(Import-Csv 'overrides\banned_teams.csv' | ForEach-Object { "$($_.team)".Trim().ToUpper() } | Where-Object { $_ -and -not $_.StartsWith('#') }) }
     foreach ($e in $sb.events) {
       if ($e.status.type.state -ne 'pre') { continue }
       $c = $e.competitions[0]
       $hm = ($c.competitors | Where-Object homeAway -eq 'home').team.abbreviation
       $aw = ($c.competitors | Where-Object homeAway -eq 'away').team.abbreviation
+      if ($banned -contains $hm -or $banned -contains $aw) { Write-Host "Four-leg tickets $aw@$hm skipped: banned team (information only)"; continue }
       Step "Four-leg tickets $aw@$hm" { & $cli sgp4 $Date "$aw@$hm" }
     }
     if (Test-Path "overrides\tickets_$Date.txt") { Step 'Custom tickets' { & $cli ticket $Date } }

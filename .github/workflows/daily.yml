@@ -15,7 +15,7 @@ on:
       task:
         description: 'What to run'
         type: choice
-        options: [slate, learn, test, stress, ticket]
+        options: [slate, learn, test, stress, ticket, ban, unban]
         default: slate
       date:
         description: 'Slate date yyyy-MM-dd (blank = today ET, or yesterday for learn)'
@@ -23,6 +23,10 @@ on:
         default: ''
       variants:
         description: 'For test: settings to backtest, e.g. RatePriorMin=300; GammaOverride=1.0'
+        required: false
+        default: ''
+      team:
+        description: 'For ban / unban: team code, optionally with a reason, e.g. CLE: unreliable'
         required: false
         default: ''
 
@@ -69,7 +73,9 @@ jobs:
 
       - name: Run ${{ env.TASK }}
         shell: pwsh
-        run: ./cloud/daily.ps1 -Task "${{ env.TASK }}" -Date "${{ inputs.date }}" -Variants "${{ inputs.variants }}"
+        env:
+          TEAM_INPUT: ${{ inputs.team }}   # passed through the environment so free text is never spliced into the script
+        run: ./cloud/daily.ps1 -Task "${{ env.TASK }}" -Date "${{ inputs.date }}" -Variants "${{ inputs.variants }}" -Team "$env:TEAM_INPUT"
 
       - name: Save data cache
         if: always()

@@ -485,11 +485,37 @@ svg.spark circle { fill: var(--accent) }
       '<div class="panel tscroll"><h3>Dud risk</h3><table>' + head + "<tbody>" + rows(D.dud, false) + "</tbody></table></div></div>";
   }
 
+  // banned teams (D.banned): left out of every simulation, pick and parlay; their results are tracked here as information only
+  function bannedPanel() {
+    var B = D.banned; if (!B || !B.teams || !B.teams.length) return "";
+    function roll(r) {
+      if (!r || !r.n) return '<span class="muted">no games yet</span>';
+      return "<b>" + r.w + "–" + r.l + "</b> · ATS " + r.atsW + "–" + r.atsL + (r.atsP ? "–" + r.atsP : "") + " · avg margin " + sgn(r.margin) +
+        " · " + sgn(r.vsLine) + " vs the DraftKings spread · " + r.w + " wins vs " + f1(r.expW) + " DraftKings expected";
+    }
+    var rows = B.teams.map(function (t) {
+      var games = (B.tonight || []).filter(function (g) { return (" " + g + " ").indexOf(" " + t.team + " ") >= 0; });
+      var recent = (t.recent || []).map(function (g) {
+        var m = g.pts - g.oppPts, cov = g.spread == null ? "" : (m + g.spread > 0 ? ", covered" : m + g.spread < 0 ? ", no cover" : ", push");
+        return esc(g.date.slice(5)) + " " + g.where + " " + esc(g.opp) + " " + g.pts + "–" + g.oppPts + " " + (m > 0 ? "W" : "L") + (g.spread == null ? "" : " (DK " + line(g.spread) + cov + ")");
+      }).join(" · ");
+      return '<div style="margin-top:8px"><b>' + esc(t.team) + '</b> <span class="chip down">Banned since ' + esc(t.since) + "</span>" + (t.reason ? ' <span class="muted">' + esc(t.reason) + "</span>" : "") +
+        (games.length ? '<div class="muted" style="margin-top:4px">Left out tonight: <b style="color:var(--ink)">' + games.map(esc).join(", ") + "</b>. No win chance, props or parlays are made for these games.</div>" : "") +
+        '<div style="margin-top:4px;font-size:13px">Season: ' + roll(t.season) + "</div>" +
+        '<div style="font-size:13px">Last 10: ' + roll(t.last10) + "</div>" +
+        '<div style="font-size:13px">Since the ban: ' + roll(t.sinceBan) + "</div>" +
+        (t.model ? '<div class="muted" style="font-size:12px">Model on ' + esc(t.team) + " games before the ban: picked the winner in " + t.model.right + " of " + t.model.n + " (accuracy score " + t.model.brier.toFixed(3) + " vs DraftKings " + t.model.brierMkt.toFixed(3) + ", lower is better)</div>" : "") +
+        (recent ? '<div class="muted" style="font-size:12px">Latest: ' + recent + "</div>" : "") + "</div>";
+    }).join("");
+    return '<div class="panel"><span class="label">Banned teams · information only</span><h3 style="margin:2px 0 4px">Not simulated, priced or parlayed until further notice</h3>' +
+      '<p class="muted">Their games stay out of every pick, ticket and backtest. Scores, box scores, DraftKings lines and injury reports are still collected, so a steady trend shows up here before a team comes back.</p>' + rows + "</div>";
+  }
+
   function renderTonight() {
     var b = D.bestSgp, m = D.meta;
     var games = D.games.map(gameCard).join("");
     var h = '<div style="display:grid;gap:10px"><h2>Tonight: ' + D.games.length + " games, " + esc(m.slateLabel) + '</h2><div class="sub"><span><b>' + m.sims.toLocaleString() + "</b> possession-level simulations per game</span><span>Season bank through <b>" + esc(m.bankThrough) + "</b> (" + m.bankGames + ' games)</span><span>Built <b>' + esc(m.built) + "</b></span></div></div>" +
-      safestBoard() + mlBoard() +
+      bannedPanel() + safestBoard() + mlBoard() +
       '<div class="verdict">' + vsVegas() +
       (b ? '<div class="panel"><span class="label">Best $5 boost parlay · ' + esc(b.game) + '</span><ul class="legs">' + b.sgp.legs.map(function (l, i) { return "<li><span>" + esc(l) + '</span><span class="num muted">' + pct(b.sgp.legP[i], 0) + "</span></li>"; }).join("") + "</ul>" +
         '<div class="kv"><div><span class="label">Joint</span><span class="v">' + pct(b.sgp.joint) + '</span></div><div><span class="label">Fair odds</span><span class="v">' + am(b.sgp.fair) + '</span></div><div><span class="label">Lift</span><span class="v">' + b.sgp.lift.toFixed(2) + '×</span></div><div><span class="label">Needs</span><span class="v">+300 or longer</span></div></div></div>' : "") +

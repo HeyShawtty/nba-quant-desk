@@ -29,7 +29,12 @@ nbaquant-cli live 2026-10-28 LAL@LAC          # re-simulate the rest of an in-pr
 nbaquant-cli bank                             # rebuild the 2026-27 data bank (also done by every run)
 nbaquant-cli review 2026-10-28                # game-by-game right/wrong review (also built by grade)
 nbaquant-cli site 2026-10-29                  # website data only (site\data.js); every run also writes it
+nbaquant-cli ban CLE: unreliable              # banned list: the team's games are never simulated or priced
+nbaquant-cli unban CLE                        # bring a team back
+nbaquant-cli banned                           # watch report for banned teams (also ledger\banned_watch.csv)
 ```
+
+Banned teams (`overrides\banned_teams.csv`) are left out of every simulation: slates, four-leg and custom tickets, stress tests, live re-sims and the walk-forward backtests behind recalibration. Their games against everyone are skipped, since a game can't be simulated without both teams. Their information is still collected (scores, box scores, DraftKings lines, injury reports, the data bank), and the website and the `banned` report track their record, cover rate and margin against the DraftKings spread, so a trend shows before a team is brought back. In the cloud, run the `ban` or `unban` task with the team (for example `CLE: reason`). Every change is logged in `ledger\ban_log.csv`.
 
 ## Running in the cloud (GitHub Actions)
 

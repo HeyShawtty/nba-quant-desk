@@ -50,7 +50,9 @@ namespace NbaQuant
         public static List<string> Warnings = new List<string>();
         public static DateTime RunTime;
         public static List<string> SkippedStarted = new List<string>();
-        public static string ForceIncludeId;                       // in-game mode: price this game even though it has started
+        public static List<string> SkippedBanned = new List<string>();   // games left out because a team is banned (Ban.cs)
+        public static HashSet<string> BannedIds = new HashSet<string>();  // ESPN ids of the date's games that involve a banned team
+        public static string ForceIncludeId;                      // in-game mode: price this game even though it has started
         public static HashSet<string> ForceOut = new HashSet<string>(); // in-game mode: players listed inactive in the live box
 
         // In-game: calibrate on the pre-tip blend, then simulate only the rest of the game from the live score and box.
@@ -171,7 +173,14 @@ namespace NbaQuant
             // live runs only price games that have not tipped (in-progress games would pick up live lines and box scores)
             var events = Store.Events(d).Where(e => live ? !e.Completed && (e.State == "pre" || e.State == "" || e.Id == ForceIncludeId) : e.Completed).ToList();
             if (live) SkippedStarted = Store.Events(d).Where(e => !(e.State == "pre" || e.State == "")).Select(e => e.Away + " @ " + e.Home).ToList();
-            if (events.Count == 0) { Warnings.Add("No " + (live ? "upcoming" : "completed") + " games found for " + d.ToString("yyyy-MM-dd")); return; }
+            // banned teams (overrides\banned_teams.csv): their games are never simulated, live or in backtests. Live runs still
+            // read the game summary so its DraftKings line and injury news stay on record (information only).
+            BannedIds = new HashSet<string>(Store.Events(d).Where(e => Ban.Involves(e.Away, e.Home)).Select(e => e.Id));
+            var banned = events.Where(e => BannedIds.Contains(e.Id)).ToList();
+            SkippedBanned = banned.Select(e => e.Away + " @ " + e.Home + (live ? " " + TipTime(e.StartUtc) : "")).ToList();
+            if (live) foreach (var e in banned) { try { Store.Summary(e.Id, false); } catch (Exception ex) { Warnings.Add("Banned game " + e.Away + " @ " + e.Home + ": summary not read (" + ex.Message + ")"); } }
+            events = events.Where(e => !BannedIds.Contains(e.Id)).ToList();
+            if (events.Count == 0) { Warnings.Add("No " + (live ? "upcoming" : "completed") + " games found for " + d.ToString("yyyy-MM-dd") + (banned.Count > 0 ? " (banned, not priced: " + string.Join(", ", SkippedBanned) + ")" : "")); return; }
             var odds = live ? Store.AnOdds(d) : new List<AnGame>();
             var lastGame = new Dictionary<string, DateTime>();
             foreach (var g in Completed) { var gd = DateTime.ParseExact(g.Date, "yyyy-MM-dd", CultureInfo.InvariantCulture); foreach (var t in new[] { g.Home, g.Away }) if (!lastGame.ContainsKey(t) || lastGame[t] < gd) lastGame[t] = gd; }

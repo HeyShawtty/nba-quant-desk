@@ -36,12 +36,15 @@ namespace NbaQuant
                 try { log(Bank.Build(d.AddDays(-1))); Report.BuildBankWorkbook(Program.P(@"reports\Data_Bank_2026-27.xlsx")); }
                 catch (Exception e) { log("Data bank not refreshed: " + e.Message); }
                 Program.BuildSlate(d, true);
-                if (Program.Games.Count == 0) { log("No games left to price for that date (all started or finished)."); return null; }
+                if (Program.SkippedBanned.Count > 0) log("Banned, not simulated or priced (information only): " + string.Join(", ", Program.SkippedBanned));
+                if (Program.Games.Count == 0) { log("No games left to price for that date (all started, finished or banned)."); return null; }
                 if (Program.SkippedStarted.Count > 0)
                 {
                     Program.Verification.Add(new[] { "Games already started", "EXCLUDED", string.Join("; ", Program.SkippedStarted) + ". Their earlier pre-tip predictions stay on record for grading." });
                     log("Skipping games already under way: " + string.Join(", ", Program.SkippedStarted));
                 }
+                if (Program.SkippedBanned.Count > 0)
+                    Program.Verification.Add(new[] { "Banned teams", "EXCLUDED", string.Join("; ", Program.SkippedBanned) + ": not simulated or priced while " + string.Join(", ", Ban.List().Select(b => b.Team)) + " banned. Their data is still collected." });
                 int props = 0;
                 foreach (var g in Program.Games.Where(x => !string.IsNullOrEmpty(x.Def.AnId)))
                 {
@@ -66,7 +69,8 @@ namespace NbaQuant
                     var ids = new HashSet<string>(Program.Games.Select(g => g.Def.EspnId));
                     bool partial = Program.SkippedStarted.Count > 0;
                     var merged = fresh.Where(x => !(partial && x.Kind == "LEADER")).ToList();
-                    merged.AddRange(old.Where(x => x.Kind != "LEADER" && !ids.Contains(x.GameId)));
+                    // a game banned after an earlier run priced it loses those predictions too
+                    merged.AddRange(old.Where(x => x.Kind != "LEADER" && !ids.Contains(x.GameId) && !Program.BannedIds.Contains(x.GameId)));
                     if (partial) merged.AddRange(old.Where(x => x.Kind == "LEADER"));
                     fresh = merged;
                     log("Earlier run archived (" + stamp + "); " + old.Select(x => x.GameId).Where(id => !string.IsNullOrEmpty(id)).Distinct().Count(id => !ids.Contains(id)) + " started game(s) keep their earlier predictions.");
@@ -126,6 +130,7 @@ namespace NbaQuant
         {
             var log = Program.Log;
             var parts = matchup.ToUpperInvariant().Split('@');
+            if (parts.Length == 2 && Ban.Involves(parts[0], parts[1])) { log(matchup + ": " + Ban.Who(parts[0], parts[1]) + " banned, not simulated (information only)."); return; }
             var ev = Store.Events(d).FirstOrDefault(e => e.Away == parts[0] && e.Home == parts[1]);
             if (ev == null) { log("Game not found: " + matchup); return; }
             var pre = Espn.ParseSummary(Net.Get(Espn.Base + "summary?event=" + ev.Id));
@@ -171,6 +176,7 @@ namespace NbaQuant
         {
             var log = Program.Log; var S = Program.S;
             var parts = matchup.ToUpperInvariant().Split('@');
+            if (parts.Length == 2 && Ban.Involves(parts[0], parts[1])) { log(matchup + ": " + Ban.Who(parts[0], parts[1]) + " banned, not simulated (information only)."); return; }
             var ev = Store.Events(d).FirstOrDefault(e => e.Away == parts[0] && e.Home == parts[1]);
             if (ev == null) { log("Game not found: " + matchup); return; }
             Program.ForceIncludeId = ev.Id;
@@ -216,9 +222,10 @@ namespace NbaQuant
         public static void FourLeg(DateTime d, string matchup, int sims)
         {
             var log = Program.Log;
-            Program.BuildSlate(d, true);
             var parts = matchup.ToUpperInvariant().Split('@');
-            Program.Games = Program.Games.Where(g => g.Def.Away == parts[0] && g.Def.Home == parts[1]).ToList();
+            if (parts.Length == 2 && Ban.Involves(parts[0], parts[1])) { log(matchup + ": " + Ban.Who(parts[0], parts[1]) + " banned, no tickets (information only)."); return; }
+            Program.BuildSlate(d, true);
+            Program.Games =Program.Games.Where(g => g.Def.Away == parts[0] && g.Def.Home == parts[1]).ToList();
             if (Program.Games.Count == 0) { log("Game not found or already started: " + matchup); return; }
             var gm = Program.Games[0];
             log(string.Format(U.IC, "{0}: DK spread {1} total {2} ML {3}/{4}. Out: {5}. Questionable: {6}", matchup, gm.Def.DK.SprH, gm.Def.DK.Total, U.Am(gm.Def.DK.MlH), U.Am(gm.Def.DK.MlA),
@@ -259,6 +266,9 @@ namespace NbaQuant
             var lines = File.ReadAllLines(src).Select(x => x.Trim()).Where(x => x.Length > 0 && !x.StartsWith("#"))
                 .Select(x => x.Split('|').Select(f => f.Trim()).ToArray()).Where(f => f.Length >= 2).ToList();
             var want = new HashSet<string>(lines.Select(f => f[0].ToUpperInvariant()));
+            foreach (var mu in want.Where(m => { var t = m.Split('@'); return t.Length == 2 && Ban.Involves(t[0], t[1]); }).ToList())
+            { log(mu + ": banned, ticket not priced (information only)."); want.Remove(mu); }
+            if (want.Count == 0) { log("No ticket games left to price."); return; }
             Program.BuildSlate(d, true);
             Program.Games = Program.Games.Where(g => want.Contains(g.Def.Away + "@" + g.Def.Home)).ToList();
             if (Program.Games.Count == 0) { log("None of the ticket games are still to be played."); return; }
@@ -389,7 +399,11 @@ namespace NbaQuant
                     case "stress": AppOps.Stress(date(1), args[2], sims); break;
                     case "live": AppOps.Live(date(1), args[2], sims); break;
                     case "next": Console.WriteLine(AppOps.NextSlateDate().ToString("yyyy-MM-dd")); break;
-                    default: Console.WriteLine("usage: nbaquant-cli run [yyyy-MM-dd|next] [--sims N] | grade [yyyy-MM-dd] | recalibrate | next"); return 1;
+                    // banned teams: "ban CLE: reason", "unban CLE", "banned" (the watch report)
+                    case "ban": Console.WriteLine(Ban.Add(string.Join(" ", args.Skip(1)))); break;
+                    case "unban": Console.WriteLine(Ban.Remove(string.Join(" ", args.Skip(1)))); break;
+                    case "banned": Console.WriteLine(Ban.Watch()); break;
+                    default: Console.WriteLine("usage: nbaquant-cli run [yyyy-MM-dd|next] [--sims N] | grade [yyyy-MM-dd] | recalibrate | next | ban TEAM[: reason] | unban TEAM | banned"); return 1;
                 }
                 return 0;
             }

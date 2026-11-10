@@ -58,6 +58,7 @@ namespace NbaQuant
         {
             string path = FilePath(d);
             var rows = Load(path).ToDictionary(r => r.GameId, r => r);
+            foreach (var id in rows.Keys.Where(Program.BannedIds.Contains).ToList()) rows.Remove(id);   // banned after an earlier run
             var events = Store.Events(d).ToDictionary(e => e.Id, e => e);
             string now = DateTime.Now.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
             bool complete = injuryReport != null && injuryReport.Contains("All listed teams submitted");

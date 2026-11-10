@@ -245,7 +245,7 @@ namespace NbaQuant
                 "erupt", eruptJson, "dud", dudJson,
                 "bank", O("teams", bankTeams, "players", bankPlayers),
                 "record", O("tags", tagRec, "slates", slates, "mlBrier", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.P - p.Y) * (p.P - p.Y))) : null, "mlBrierMkt", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.PMarket - p.Y) * (p.PMarket - p.Y))) : null),
-                "audit", audit, "tiers", tiers, "safest", Safest.Json());
+                "audit", audit, "tiers", tiers, "safest", Safest.Json(), "banned", Ban.Json());
             var ser = new JavaScriptSerializer { MaxJsonLength = int.MaxValue };
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             File.WriteAllText(path, "window.NBA = " + ser.Serialize(data) + ";\n", new UTF8Encoding(false));
