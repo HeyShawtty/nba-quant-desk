@@ -1,0 +1,10 @@
+game_id,game,start_utc,tip,window,team,opp,at,p,odds,ev,report,complete,priced_at,ticket,ticket_p,ticket_fair
+401909968,BOS @ TOR,2026-11-12T00:00Z,7:00 PM ET,evening,BOS,TOR,@,0.66944,,,,0,2026-11-10 02:10,RJ Barrett 10+ pts + Jayson Tatum 1+ threes + Jayson Tatum 4+ reb + Jayson Tatum 15+ pts,0.69337,-226.12594984182897
+401909966,WSH @ IND,2026-11-12T00:00Z,7:00 PM ET,evening,IND,WSH,vs,0.59091,,,,0,2026-11-10 02:10,Kyshawn George 2+ ast + Andrew Nembhard 15+ PRA + Trae Young 10+ pts + Trae Young 1+ threes,0.64619288161532673,-182.6398758073488
+401909972,BKN @ NO,2026-11-12T01:00Z,8:00 PM ET,evening,NO,BKN,vs,0.61377,,,,0,2026-11-10 02:10,Julius Randle 2+ ast + Michael Porter Jr. 4+ reb + Michael Porter Jr. 2+ threes + Michael Porter Jr. 15+ pts,0.60458,-152.89565525264277
+401909970,DEN @ MEM,2026-11-12T01:00Z,8:00 PM ET,evening,DEN,MEM,@,0.56622,,,,0,2026-11-10 02:10,Ty Jerome 1+ threes + Jamal Murray 15+ pts + Ty Jerome 15+ pts + Jamal Murray 2+ threes,0.62149,-164.19381258090934
+401909971,LAL @ MIL,2026-11-12T01:00Z,8:00 PM ET,evening,LAL,MIL,@,0.87979,,,,0,2026-11-10 02:10,Luka Doncic 4+ reb + LAL moneyline + Luka Doncic 25+ pts + Luka Doncic 3+ threes,0.63416,-173.34353815875789
+401909969,SA @ CHI,2026-11-12T01:00Z,8:00 PM ET,evening,SA,CHI,@,0.89678,,,,0,2026-11-10 02:10,Dylan Harper 2+ ast + Josh Giddey 4+ ast + Caleb Wilson 1+ threes + Caleb Wilson 10+ pts,0.6291,-169.61445133459154
+401909973,ORL @ UTAH,2026-11-12T02:00Z,9:00 PM ET,night,ORL,UTAH,@,0.53206,,,,0,2026-11-10 02:10,Desmond Bane 1+ threes + Desmond Bane 10+ pts + Darryn Peterson 1+ threes + Darryn Peterson 10+ pts,0.6761,-208.73726458783577
+401909974,GS @ HOU,2026-11-12T02:30Z,9:30 PM ET,night,HOU,GS,vs,0.59147,,,,0,2026-11-10 02:10,Kevin Durant 10+ pts + Stephen Curry 2+ ast + Stephen Curry 2+ threes + Stephen Curry 15+ pts,0.63099,-170.9953659792418
+401909975,OKC @ POR,2026-11-12T03:00Z,10:00 PM ET,night,POR,OKC,vs,0.52856,,,,0,2026-11-10 02:10,Damian Lillard 1+ threes + Shai Gilgeous-Alexander 1+ threes + Damian Lillard 10+ pts + Shai Gilgeous-Alexander 20+ pts,0.67043,-203.42567588069298

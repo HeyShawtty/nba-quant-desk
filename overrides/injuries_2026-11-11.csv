@@ -1,0 +1,60 @@
+team,name,status,p_play,note
+# status: OUT, Q (questionable; set p_play 0-1) or AVAIL. Lines starting with # are ignored. Pre-filled from ESPN; edit and re-run.
+BKN,Mikel Brown Jr.,Q,0.6,ESPN: Day-To-Day (Rest Other) est. return 2026-11-11
+BKN,Egor Demin,OUT,0,ESPN: Out (Leg Leg) est. return 2026-11-11
+BKN,Grant Nelson,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-10
+CHI,Zach Collins,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
+CHI,Norman Powell,Q,0.6,ESPN: Day-To-Day (Shoulder Arm) est. return 2026-11-11
+DEN,Julian Strawther,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-29
+GS,Moses Moody,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-01
+GS,Gary Payton II,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-11
+GS,Kristaps Porzingis,OUT,0,ESPN: Out (Illness Other) est. return 2027-01-02
+GS,Will Richard,OUT,0,ESPN: Out (Thumb Arm) est. return 2026-11-16
+GS,Brandon Williams,Q,0.6,ESPN: Day-To-Day (Hamstring Leg) est. return 2026-11-11
+HOU,Steven Adams,OUT,0,ESPN: Out (Calf Leg) est. return 2026-11-15
+HOU,Clint Capela,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-15
+HOU,Oscar Tshiebwe,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
+IND,Johnny Furphy,OUT,0,ESPN: Out (Knee Leg) est. return 2027-01-02
+IND,Tyrese Haliburton,OUT,0,ESPN: Out (Hamstring Leg) est. return 2026-11-13
+IND,Ben Sheppard,OUT,0,ESPN: Out (Knee Leg) est. return 2027-01-02
+LAL,Quentin Grimes,Q,0.6,ESPN: Day-To-Day (Finger Arm) est. return 2026-11-11
+LAL,Austin Reaves,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
+MEM,Scotty Pippen Jr.,OUT,0,ESPN: Out (Back Torso) est. return 2026-11-11
+MEM,Quinten Post,Q,0.6,ESPN: Day-To-Day (Head Head) est. return 2026-11-11
+MEM,Richie Saunders,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-01
+MEM,Isaiah Stewart,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-11
+MIL,Tyler Herro,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-10
+NO,Yves Missi,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-16
+NO,Trey Murphy III,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-11
+NO,Trendon Watford,Q,0.6,ESPN: Day-To-Day (Ankle Leg) est. return 2026-11-11
+NO,Zion Williamson,Q,0.6,ESPN: Day-To-Day (Rest Other) est. return 2026-11-11
+OKC,Chet Holmgren,OUT,0,ESPN: Out (Knee Leg) est. return 2027-01-02
+OKC,Thomas Sorber,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-13
+OKC,Cason Wallace,OUT,0,ESPN: Out (Shoulder Arm) est. return 2027-03-02
+OKC,Jalen Williams,OUT,0,ESPN: Out (Leg Leg) est. return 2027-03-02
+OKC,Jaylin Williams,OUT,0,ESPN: Out (Back Torso) est. return 2026-11-11
+ORL,Paolo Banchero,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-22
+ORL,Jonathan Isaac,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-11
+ORL,Izaiyah Nelson,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-18
+ORL,Noah Penda,OUT,0,ESPN: Out (Hamstring Leg) est. return 2026-11-18
+ORL,Jalen Suggs,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-16
+POR,Vit Krejci,OUT,0,ESPN: Out (Ankle Leg) est. return 2027-01-02
+POR,Ja Morant,OUT,0,ESPN: Out (Hamstring Leg) est. return 2026-12-01
+POR,Shaedon Sharpe,OUT,0,ESPN: Out (Knee Leg) est. return 2027-03-02
+SA,Tobias Harris,OUT,0,ESPN: Out (Calf Leg) est. return 2026-11-11
+SA,Jayden Quaintance,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-03
+SA,Devin Vassell,Q,0.6,ESPN: Day-To-Day (Groin Groin) est. return 2026-11-11
+TOR,Scottie Barnes,Q,0.6,ESPN: Day-To-Day (Groin Groin) est. return 2026-11-11
+TOR,Nate Bittle,OUT,0,ESPN: Out (Foot Leg) est. return 2026-11-15
+TOR,Kawhi Leonard,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-23
+TOR,Collin Murray-Boyles,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
+TOR,Immanuel Quickley,Q,0.6,ESPN: Day-To-Day (Hamstring Leg) est. return 2026-11-11
+UTAH,Keyonte George,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-11
+UTAH,Jaren Jackson Jr.,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-14
+UTAH,Lauri Markkanen,Q,0.6,ESPN: Day-To-Day (Wrist Arm) est. return 2026-11-10
+UTAH,Jusuf Nurkic,OUT,0,ESPN: Out (Foot Leg) est. return 2026-11-20
+WSH,Reece Beekman,OUT,0,ESPN: Out (Shoulder Arm) est. return 2026-12-03
+WSH,Justin Champagnie,OUT,0,ESPN: Out (Foot Leg) est. return 2027-02-25
+WSH,Bilal Coulibaly,Q,0.6,ESPN: Day-To-Day (Hand Arm) est. return 2026-11-11
+WSH,Tristan Vukcevic,OUT,0,ESPN: Out (Hip Torso) est. return 2026-11-16
+WSH,Jamir Watkins,OUT,0,ESPN: Out (Knee Leg) est. return 2027-04-02
