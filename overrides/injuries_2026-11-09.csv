@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/09/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/09/26 8:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CLE,Jarrett Allen,AVAIL,1,Official: Available (Injury/Illness - Right Knee Contusion)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
@@ -57,12 +57,12 @@ DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
 DAL,Morez Johnson Jr.,OUT,0,Official: Out
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
-DEN,Christian Braun,Q,0.9,Official: Probable
-DEN,DeMar DeRozan,Q,0.9,Official: Probable (Injury/Illness - Low Back Spasms)
-DEN,Aaron Gordon,Q,0.9,Official: Probable
-DEN,Cameron Johnson,Q,0.9,Official: Probable (Injury/Illness - Right Ankle Sprain)
-DEN,Nikola Jokic,Q,0.9,Official: Probable (Injury/Illness - Right Elbow Sprain)
-DEN,Jamal Murray,Q,0.9,Official: Probable
+DEN,Christian Braun,AVAIL,1,Official: Available
+DEN,DeMar DeRozan,AVAIL,1,Official: Available (Injury/Illness - Low Back Spasms)
+DEN,Aaron Gordon,AVAIL,1,Official: Available
+DEN,Cameron Johnson,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
+DEN,Nikola Jokic,AVAIL,1,Official: Available (Injury/Illness - Right Elbow Sprain)
+DEN,Jamal Murray,AVAIL,1,Official: Available
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 HOU,Steven Adams,OUT,0,Official: Out (Injury/Illness - Right Soleus Strain)
 HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
@@ -74,7 +74,8 @@ SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 SA,Devin Vassell,OUT,0,Official: Out
-PHX,Jordan Goodwin,Q,0.5,Official: Questionable
+PHX,Jordan Goodwin,OUT,0,Official: Out
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Yves Missi,OUT,0,Official: Out
@@ -82,7 +83,7 @@ NO,Trey Murphy III,OUT,0,Official: Out
 NO,Jaron Pierre Jr.,OUT,0,Official: Out (G League - Two-Way)
 NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 NO,Zion Williamson,OUT,0,Official: Out (Rest)
-GS,Jimmy Butler III,OUT,0,Official: Out
+GS,Jimmy Butler III,OUT,0,Official: Out (Injury/Illness - Right ACL Repair /)
 GS,Moses Moody,OUT,0,Official: Out
 GS,Gary Payton II,Q,0.5,Official: Questionable
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
