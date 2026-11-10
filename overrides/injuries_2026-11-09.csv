@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/09/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/09/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CLE,Jarrett Allen,AVAIL,1,Official: Available (Injury/Illness - Right Knee Contusion)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
@@ -37,6 +37,7 @@ DET,Isaiah Joe,OUT,0,Official: Out (Injury/Illness - Right Hip Contusion)
 DET,Isaac Jones,AVAIL,1,Official: Available (G League - Two-Way)
 DET,Ugonna Onyenso,OUT,0,Official: Out (G League - Two-Way)
 MEM,Karim Lopez,OUT,0,Official: Out (G League - On Assignment)
+MEM,Jahmai Mashack,OUT,0,Official: Out (G League - Two-Way)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 MEM,Isaiah Stewart,OUT,0,Official: Out
@@ -49,11 +50,11 @@ TOR,Immanuel Quickley,OUT,0,Official: Out
 TOR,Malachi Smith,AVAIL,1,Official: Available (G League - Two-Way)
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-IND,T.J. McConnell,Q,0.5,Official: Questionable (Injury/Illness - Right Hamstring Strain)
+IND,T.J. McConnell,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
-DAL,Morez Johnson Jr.,Q,0.5,Official: Questionable
+DAL,Morez Johnson Jr.,OUT,0,Official: Out
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
 DEN,Christian Braun,Q,0.9,Official: Probable
