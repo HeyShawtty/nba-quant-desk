@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/11/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/11/26 6:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Paul George,OUT,0,Official: Out (Injury/Illness - Illness)
@@ -15,7 +15,7 @@ TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Sam Merrill,OUT,0,Official: Out
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
-CLE,Jaylon Tyson,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
+CLE,Jaylon Tyson,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
 NY,Josh Hart,AVAIL,1,Official: Available (Injury/Illness - Illness)
 NY,Karl-Anthony Towns,AVAIL,1,Official: Available (Injury/Illness - Left Sore Calf)
@@ -55,7 +55,7 @@ SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
 SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-SA,Devin Vassell,Q,0.5,Official: Questionable
+SA,Devin Vassell,OUT,0,Official: Out
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Low Back Tightness)
 CHI,Zach Collins,Q,0.5,Official: Questionable (Injury/Illness - Respiratory Illness)
 CHI,Norman Powell,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
