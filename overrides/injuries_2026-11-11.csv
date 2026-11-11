@@ -1,60 +1,97 @@
 team,name,status,p_play,note
-# status: OUT, Q (questionable; set p_play 0-1) or AVAIL. Lines starting with # are ignored. Pre-filled from ESPN; edit and re-run.
-BKN,Mikel Brown Jr.,Q,0.6,ESPN: Day-To-Day (Rest Other) est. return 2026-11-11
-BKN,Egor Demin,OUT,0,ESPN: Out (Leg Leg) est. return 2026-11-11
-BKN,Grant Nelson,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-10
-CHI,Zach Collins,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
-CHI,Norman Powell,Q,0.6,ESPN: Day-To-Day (Shoulder Arm) est. return 2026-11-11
-DEN,Julian Strawther,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-29
-GS,Moses Moody,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-01
-GS,Gary Payton II,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-11
-GS,Kristaps Porzingis,OUT,0,ESPN: Out (Illness Other) est. return 2027-01-02
-GS,Will Richard,OUT,0,ESPN: Out (Thumb Arm) est. return 2026-11-16
-GS,Brandon Williams,Q,0.6,ESPN: Day-To-Day (Hamstring Leg) est. return 2026-11-11
-HOU,Steven Adams,OUT,0,ESPN: Out (Calf Leg) est. return 2026-11-15
-HOU,Clint Capela,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-15
-HOU,Oscar Tshiebwe,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
-IND,Johnny Furphy,OUT,0,ESPN: Out (Knee Leg) est. return 2027-01-02
-IND,Tyrese Haliburton,OUT,0,ESPN: Out (Hamstring Leg) est. return 2026-11-13
-IND,Ben Sheppard,OUT,0,ESPN: Out (Knee Leg) est. return 2027-01-02
-LAL,Quentin Grimes,Q,0.6,ESPN: Day-To-Day (Finger Arm) est. return 2026-11-11
-LAL,Austin Reaves,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
-MEM,Scotty Pippen Jr.,OUT,0,ESPN: Out (Back Torso) est. return 2026-11-11
-MEM,Quinten Post,Q,0.6,ESPN: Day-To-Day (Head Head) est. return 2026-11-11
-MEM,Richie Saunders,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-01
-MEM,Isaiah Stewart,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-11
-MIL,Tyler Herro,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-10
-NO,Yves Missi,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-16
-NO,Trey Murphy III,Q,0.6,ESPN: Day-To-Day (Knee Leg) est. return 2026-11-11
-NO,Trendon Watford,Q,0.6,ESPN: Day-To-Day (Ankle Leg) est. return 2026-11-11
-NO,Zion Williamson,Q,0.6,ESPN: Day-To-Day (Rest Other) est. return 2026-11-11
-OKC,Chet Holmgren,OUT,0,ESPN: Out (Knee Leg) est. return 2027-01-02
-OKC,Thomas Sorber,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-13
-OKC,Cason Wallace,OUT,0,ESPN: Out (Shoulder Arm) est. return 2027-03-02
-OKC,Jalen Williams,OUT,0,ESPN: Out (Leg Leg) est. return 2027-03-02
-OKC,Jaylin Williams,OUT,0,ESPN: Out (Back Torso) est. return 2026-11-11
-ORL,Paolo Banchero,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-22
-ORL,Jonathan Isaac,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-11
-ORL,Izaiyah Nelson,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-18
-ORL,Noah Penda,OUT,0,ESPN: Out (Hamstring Leg) est. return 2026-11-18
-ORL,Jalen Suggs,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-16
-POR,Vit Krejci,OUT,0,ESPN: Out (Ankle Leg) est. return 2027-01-02
-POR,Ja Morant,OUT,0,ESPN: Out (Hamstring Leg) est. return 2026-12-01
-POR,Shaedon Sharpe,OUT,0,ESPN: Out (Knee Leg) est. return 2027-03-02
-SA,Tobias Harris,OUT,0,ESPN: Out (Calf Leg) est. return 2026-11-11
-SA,Jayden Quaintance,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-03
-SA,Devin Vassell,Q,0.6,ESPN: Day-To-Day (Groin Groin) est. return 2026-11-11
-TOR,Scottie Barnes,Q,0.6,ESPN: Day-To-Day (Groin Groin) est. return 2026-11-11
-TOR,Nate Bittle,OUT,0,ESPN: Out (Foot Leg) est. return 2026-11-15
-TOR,Kawhi Leonard,OUT,0,ESPN: Out (Knee Leg) est. return 2026-11-23
-TOR,Collin Murray-Boyles,Q,0.6,ESPN: Day-To-Day (Illness Other) est. return 2026-11-11
-TOR,Immanuel Quickley,Q,0.6,ESPN: Day-To-Day (Hamstring Leg) est. return 2026-11-11
-UTAH,Keyonte George,OUT,0,ESPN: Out (Ankle Leg) est. return 2026-11-11
-UTAH,Jaren Jackson Jr.,OUT,0,ESPN: Out (Knee Leg) est. return 2026-12-14
-UTAH,Lauri Markkanen,Q,0.6,ESPN: Day-To-Day (Wrist Arm) est. return 2026-11-10
-UTAH,Jusuf Nurkic,OUT,0,ESPN: Out (Foot Leg) est. return 2026-11-20
-WSH,Reece Beekman,OUT,0,ESPN: Out (Shoulder Arm) est. return 2026-12-03
-WSH,Justin Champagnie,OUT,0,ESPN: Out (Foot Leg) est. return 2027-02-25
-WSH,Bilal Coulibaly,Q,0.6,ESPN: Day-To-Day (Hand Arm) est. return 2026-11-11
-WSH,Tristan Vukcevic,OUT,0,ESPN: Out (Hip Torso) est. return 2026-11-16
-WSH,Jamir Watkins,OUT,0,ESPN: Out (Knee Leg) est. return 2027-04-02
+# Source: NBA official injury report 11/11/26 6:15 PM ET (read automatically). All listed teams submitted.
+# status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
+BOS,Paul George,OUT,0,Official: Out (Injury/Illness - Illness)
+BOS,Amari Williams,OUT,0,Official: Out (G League - Two-Way)
+TOR,Scottie Barnes,OUT,0,Official: Out (Injury/Illness - Left Groin Strain)
+TOR,Nate Bittle,OUT,0,Official: Out
+TOR,Trayce Jackson-Davis,OUT,0,Official: Out (Injury/Illness - Illness)
+TOR,Kawhi Leonard,OUT,0,Official: Out
+TOR,Kevin McCullar Jr.,OUT,0,Official: Out (G League - Two-Way)
+TOR,Collin Murray-Boyles,AVAIL,1,Official: Available (Injury/Illness - Illness)
+TOR,Immanuel Quickley,AVAIL,1,Official: Available
+TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
+CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
+CLE,Sam Merrill,OUT,0,Official: Out
+CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
+CLE,Jaylon Tyson,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
+CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
+NY,Josh Hart,AVAIL,1,Official: Available (Injury/Illness - Illness)
+NY,Karl-Anthony Towns,AVAIL,1,Official: Available (Injury/Illness - Left Sore Calf)
+WSH,Reece Beekman,OUT,0,Official: Out (Injury/Illness - Right AC Joint Injury)
+WSH,Justin Champagnie,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
+WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
+WSH,Jamir Watkins,OUT,0,Official: Out
+IND,Johnny Furphy,OUT,0,Official: Out
+IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+IND,T.J. McConnell,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
+IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
+BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
+BKN,Mikel Brown Jr.,OUT,0,Official: Out (Injury/Illness - Illness)
+BKN,Egor Demin,AVAIL,1,Official: Available (Injury/Illness - Right Bone Bruise)
+BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
+BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
+BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
+BKN,Nolan Traore,OUT,0,Official: Out
+NO,Malik Dia,Q,0.25,Official: Doubtful (G League - Two-Way)
+NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Right Thumb Sprain)
+NO,Yves Missi,OUT,0,Official: Out
+NO,Trey Murphy III,Q,0.25,Official: Doubtful
+NO,Jaron Pierre Jr.,Q,0.9,Official: Probable (G League - Two-Way)
+NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
+MEM,Karim Lopez,AVAIL,1,Official: Available (G League - On Assignment)
+MEM,Jahmai Mashack,AVAIL,1,Official: Available (G League - Two-Way)
+MEM,Scotty Pippen Jr.,OUT,0,Official: Out
+MEM,Quinten Post,OUT,0,Official: Out (Injury/Illness - Concussion Protocol)
+MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+MEM,Isaiah Stewart,Q,0.5,Official: Questionable
+LAL,Quentin Grimes,OUT,0,Official: Out (Injury/Illness - Right Finger Sprain)
+LAL,Walker Kessler,AVAIL,1,Official: Available (Injury/Illness - Left Finger Splint)
+MIL,Tyler Herro,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Contusion)
+MIL,Myles Turner,OUT,0,Official: Out (Rest)
+SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
+SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
+SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+SA,Devin Vassell,Q,0.5,Official: Questionable
+CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Low Back Tightness)
+CHI,Zach Collins,Q,0.5,Official: Questionable (Injury/Illness - Respiratory Illness)
+CHI,Norman Powell,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
+CHI,Jaylin Sellers,OUT,0,Official: Out (G League - On Assignment)
+CHI,Dailyn Swain,Q,0.5,Official: Questionable (Injury/Illness - Right Disc Irritation)
+CHI,Caleb Wilson,Q,0.5,Official: Questionable
+ORL,Paolo Banchero,OUT,0,Official: Out
+ORL,Jamal Cain,Q,0.5,Official: Questionable
+ORL,Tristan da Silva,Q,0.5,Official: Questionable (Injury/Illness - Left Calf Strain)
+ORL,Jonathan Isaac,OUT,0,Official: Out (Injury/Illness - Left Knee Injury)
+ORL,Izaiyah Nelson,OUT,0,Official: Out
+ORL,Noah Penda,OUT,0,Official: Out
+ORL,Jalen Suggs,OUT,0,Official: Out
+UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
+UTAH,Keyonte George,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
+UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
+UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
+UTAH,Jusuf Nurkic,OUT,0,Official: Out
+GS,Jimmy Butler III,OUT,0,Official: Out
+GS,Moses Moody,OUT,0,Official: Out
+GS,Gary Payton II,OUT,0,Official: Out
+GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
+GS,Will Richard,Q,0.9,Official: Probable (Injury/Illness - Left Thumb UCL Tear)
+GS,Brandon Williams,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+HOU,Steven Adams,OUT,0,Official: Out (Injury/Illness - Right Soleus Strain)
+HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
+HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
+OKC,Chet Holmgren,OUT,0,Official: Out
+OKC,Ajay Mitchell,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
+OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+OKC,Nikola Topic,OUT,0,Official: Out (G League - On Assignment)
+OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
+OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
+OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
+POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
+POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+POR,Shaedon Sharpe,OUT,0,Official: Out
+POR,Chris Youngblood,OUT,0,Official: Out (Injury/Illness - Right Bone Bruise)
