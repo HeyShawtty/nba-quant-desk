@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/10/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/10/26 8:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIL,Tyler Herro,OUT,0,Official: Out (Injury/Illness - Right Knee Contusion)
 MIL,Kel'el Ware,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
@@ -12,22 +12,25 @@ PHI,Dominick Barlow,OUT,0,Official: Out
 PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
 PHI,Ariel Hukporti,OUT,0,Official: Out
 LAC,Bradley Beal,OUT,0,Official: Out
-LAC,Cam Christie,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
+LAC,Cam Christie,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
 LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
 LAC,Jordan Miller,OUT,0,Official: Out
 LAC,Yanic Konan Niederhauser,OUT,0,Official: Out (Injury/Illness - Right Lisfranc Surgery)
+PHX,Duop Reath,OUT,0,Official: Out (G League - Two-Way)
+PHX,Pat Spencer,OUT,0,Official: Out (G League - Two-Way)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
-MIA,Giannis Antetokounmpo,Q,0.5,Official: Questionable (Injury/Illness - Right Wrist Sprain)
+MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
-UTAH,Kobe Bufkin,Q,0.5,Official: Questionable (G League - Two-Way)
+UTAH,Kobe Bufkin,AVAIL,1,Official: Available (G League - Two-Way)
 UTAH,Keyonte George,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
-UTAH,Harrison Ingram,Q,0.5,Official: Questionable (G League - Two-Way)
+UTAH,Harrison Ingram,AVAIL,1,Official: Available (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Wrist Sprain)
 UTAH,Jusuf Nurkic,OUT,0,Official: Out
 ORL,Paolo Banchero,OUT,0,Official: Out
-ORL,Tristan da Silva,Q,0.5,Official: Questionable (Injury/Illness - Left Calf Strain)
+ORL,Tristan da Silva,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
 ORL,Noah Penda,OUT,0,Official: Out
