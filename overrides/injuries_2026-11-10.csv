@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/10/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/10/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIL,Tyler Herro,OUT,0,Official: Out (Injury/Illness - Right Knee Contusion)
 MIL,Kel'el Ware,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
@@ -18,7 +18,7 @@ LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
 LAC,Jordan Miller,OUT,0,Official: Out
 LAC,Yanic Konan Niederhauser,OUT,0,Official: Out (Injury/Illness - Right Lisfranc Surgery)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
-MIA,Giannis Antetokounmpo,Q,0.9,Official: Probable (Injury/Illness - Right Wrist Sprain)
+MIA,Giannis Antetokounmpo,Q,0.5,Official: Questionable (Injury/Illness - Right Wrist Sprain)
 UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Kobe Bufkin,Q,0.5,Official: Questionable (G League - Two-Way)
 UTAH,Keyonte George,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
