@@ -32,7 +32,26 @@ nbaquant-cli site 2026-10-29                  # website data only (site\data.js)
 nbaquant-cli ban CLE: unreliable              # banned list: the team's games are never simulated or priced
 nbaquant-cli unban CLE                        # bring a team back
 nbaquant-cli banned                           # watch report for banned teams (also ledger\banned_watch.csv)
+nbaquant-cli trends                           # season trends study (also ledger\trends.txt)
 ```
+
+## Favorites, trend learning and the season study
+
+**Favorite lines.** For every player and stat the model names one favorite: the highest rung of a DraftKings-style ladder (points 5/10/15..., rebounds and assists in twos, threes in ones) that he clears in at least 60% of the simulations he plays in (`FavMin`). It is not the safest line and not the single most common value; it is the boldest line the simulations still back. The website shows the projection (the average across simulations, so player lines add up to the team score), the favorite under it, and the full ladder on demand. Every favorite is saved as a `FAV` prediction and graded, so its record builds from day one.
+
+**Trend learning.** After each game the projection is compared with what the player did, and the gap is carried into his next projection:
+
+| Setting | What it does |
+|---|---|
+| `MinTrend` | closes this share of the gap between his projected minutes and his last-three-game average |
+| `LearnPtsK` | scales his scoring rate by (actual + K) / (expected at the minutes he played + K) over his graded games |
+| `LearnAstK` | the same for assists |
+
+Rates are judged at the minutes he actually played, so a blowout or foul trouble does not read as a slump. Each rule is off until the walk-forward backtest shows it helps both halves of the season, and Recalibrate re-tests each one every morning.
+
+**Season trends** (`trends`, and the Trends tab): team trajectories (last five against the games before), players who are moving, with/without splits for every regular who has missed games, records that are still perfect and how often perfect records held up the next game, how much of a recent stretch carried over, and referee tendencies. It is information only and feeds nothing into the simulation.
+
+**Last night** (the Last night tab): the latest graded slate, game by game: the pick and the result, comebacks and quarter swings, three-point shooting against each team's season norm, free throws and fouls, technicals, flagrants and ejections, players whose minutes were cut short, and which player calls and tickets hit.
 
 Banned teams (`overrides\banned_teams.csv`) are left out of every simulation: slates, four-leg and custom tickets, stress tests, live re-sims and the walk-forward backtests behind recalibration. Their games against everyone are skipped, since a game can't be simulated without both teams. Their information is still collected (scores, box scores, DraftKings lines, injury reports, the data bank), and the website and the `banned` report track their record, cover rate and margin against the DraftKings spread, so a trend shows before a team is brought back. In the cloud, run the `ban` or `unban` task with the team (for example `CLE: reason`). Every change is logged in `ledger\ban_log.csv`.
 
