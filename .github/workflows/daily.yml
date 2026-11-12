@@ -15,7 +15,7 @@ on:
       task:
         description: 'What to run'
         type: choice
-        options: [slate, learn, test, stress, ticket, ban, unban]
+        options: [slate, learn, test, stress, ticket, ban, unban, preview]
         default: slate
       date:
         description: 'Slate date yyyy-MM-dd (blank = today ET, or yesterday for learn)'
@@ -87,8 +87,17 @@ jobs:
             ledger/backtest_latest.csv
           key: nbaq-${{ github.run_id }}
 
+      - name: Upload preview data
+        if: env.TASK == 'preview'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-data
+          path: |
+            site/data.js
+            ledger/trends.txt
+
       - name: Commit results
-        if: env.TASK != 'test'
+        if: env.TASK != 'test' && env.TASK != 'preview'
         shell: pwsh
         run: |
           git config user.name "github-actions[bot]"
@@ -111,14 +120,14 @@ jobs:
           exit 0
 
       - name: Upload website
-        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
+        if: env.TASK != 'test' && env.TASK != 'preview' && hashFiles('_pages/index.html') != ''
         uses: actions/upload-pages-artifact@v3
         with:
           path: _pages
 
       - name: Website ready?
         id: site
-        if: env.TASK != 'test' && hashFiles('_pages/index.html') != ''
+        if: env.TASK != 'test' && env.TASK != 'preview' && hashFiles('_pages/index.html') != ''
         shell: pwsh
         run: '"ready=yes" >> $env:GITHUB_OUTPUT'
 

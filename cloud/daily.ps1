@@ -32,6 +32,11 @@ switch ($Task) {
     Step 'Season trends (teams, players, absences, perfect records, referees)' { & $cli trends }
   }
   'ban'   { Step "Ban $Team" { & $cli ban $Team }; Step 'Banned teams watch (information only)' { & $cli banned } }
+  'preview' {
+    # website data and the season trends study for a date, uploaded as a run artifact; nothing is committed or published
+    Step "Website data for $Date" { & $cli site $Date }
+    Step 'Season trends' { & $cli trends }
+  }
   'unban' { Step "Unban $Team" { & $cli unban $Team } }
   'slate' {
     # team form compares each team with the model's own pre-game margins; the walk-forward backtest writes them (learn does daily)
