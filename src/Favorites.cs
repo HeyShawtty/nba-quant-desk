@@ -58,11 +58,15 @@ namespace NbaQuant
             return res;
         }
 
-        // the short list shown for a game: bold favorites of healthy rotation players, strongest first, two per player at most
+        // The short list shown for a game: the lines that matter, not the easiest ones. Healthy players projected for 20+
+        // minutes, lines of real size (10+ pts, 6+ reb, 4+ ast, 2+ threes), ranked by chance x size of the line (a 30-point
+        // line counts twice a 15-point line; 6 rebounds, 4 assists and 2 threes count like 15 points), two per player at most.
+        static readonly Dictionary<string, double> Size = new Dictionary<string, double> { { "PTS", 15 }, { "REB", 6 }, { "AST", 4 }, { "3PM", 2 } };
+        static readonly Dictionary<string, int> MinLine = new Dictionary<string, int> { { "PTS", 10 }, { "REB", 6 }, { "AST", 4 }, { "3PM", 2 } };
         public static List<Fav> Top(GameCtx g, int take = 8)
         {
             var res = new List<Fav>(); var per = new Dictionary<string, int>();
-            foreach (var f in ForGame(g).Where(f => f.Bold && f.Ps.MeanMin >= 15 && f.Ps.PPlays >= 0.9 && f.Ps.P.Status != "Q").OrderByDescending(f => f.P))
+            foreach (var f in ForGame(g).Where(f => f.Ps.MeanMin >= 20 && f.Ps.PPlays >= 0.9 && f.Ps.P.Status != "Q" && f.Line >= MinLine[f.Stat]).OrderByDescending(f => f.P * f.Line / Size[f.Stat]))
             {
                 int c; per.TryGetValue(f.Ps.P.Pid, out c); if (c >= 2) continue;
                 per[f.Ps.P.Pid] = c + 1; res.Add(f); if (res.Count >= take) break;

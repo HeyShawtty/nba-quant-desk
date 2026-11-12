@@ -167,12 +167,13 @@ svg text { fill: var(--muted); font-family: var(--mono); font-size: 11px }
 .fav .meter { width: 100% }
 
 /* model box score */
-.boxes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px }
+.boxes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px }
 .boxes > * { min-width: 0 }
 .team-cap { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 4px }
 .team-cap .ab { font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: .05em }
-td.pl { text-align: left; font-family: var(--body); white-space: normal; min-width: 150px }
-.pbtn { all: unset; cursor: pointer; font-weight: 600; display: inline-flex; align-items: baseline; gap: 6px }
+td.pl { text-align: left; font-family: var(--body); white-space: normal; min-width: 190px }
+.pbtn { all: unset; cursor: pointer; font-weight: 600; white-space: nowrap }
+.pbtn::after { margin-left: 6px }
 .pbtn::after { content: "+"; font-family: var(--mono); color: var(--faint) }
 .pbtn[aria-expanded="true"]::after { content: "−"; color: var(--accent) }
 .pbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px }
@@ -184,7 +185,7 @@ td .fv b { color: var(--accent); font-weight: 600 }
 tr.x td { background: var(--raise); white-space: normal; text-align: left; font-family: var(--body) }
 .ladders { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 18px }
 .lad { display: grid; gap: 3px; align-content: start; min-width: 0 }
-.lad h4 { display: flex; justify-content: space-between; align-items: baseline; gap: 6px }
+.lad h4 { display: grid; gap: 1px }
 .lad h4 span { font-family: var(--mono); font-size: 11.5px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--muted) }
 .rung { display: grid; grid-template-columns: 34px minmax(0, 1fr) 38px; gap: 6px; align-items: center; font-family: var(--mono); font-size: 12px; color: var(--muted) }
 .rung .b { height: 8px; border-radius: 2px; background: var(--panel); overflow: hidden }
@@ -585,8 +586,8 @@ select { background: var(--panel); border: 1px solid var(--line); border-radius:
         </dl>
         <p class="small muted" style="max-width:none"><b style="color:var(--ink)">Out:</b> ${esc(g.away + ": " + outA + "; " + g.home + ": " + outH)}${q.length ? ` · <b style="color:var(--ink)">Questionable:</b> ${esc(q.join(", "))}` : ""}</p>
       </div>
-      ${favs.length ? `<div class="panel stack"><div><span class="eyebrow">The model's favorite lines</span><h3>${esc(g.away)} @ ${esc(g.home)}: the boldest lines the simulations still back</h3>
-        <p class="small muted" style="margin-top:4px">A favorite is the highest line a player clears in at least ${pct((D.favRecord && D.favRecord.min) || .6, 0)} of the games he plays. These sit at 80% or more of his own season average, so none is a gimme.</p></div>
+      ${favs.length ? `<div class="panel stack"><div><span class="eyebrow">The model's favorite lines</span><h3>${esc(g.away)} @ ${esc(g.home)}: the biggest lines the simulations still back</h3>
+        <p class="small muted" style="margin-top:4px">A favorite is the highest line a player clears in at least ${pct((D.favRecord && D.favRecord.min) || .6, 0)} of the games he plays: not his safest line and not a single most-likely number. These are the largest ones among tonight's main players. Every player's favorite for each stat is in the box score below.</p></div>
         <div class="favs">${favs.map(f => `<div class="fav"><span class="nm" title="${esc(f.name)}">${esc(f.name)} <span class="muted">${esc(f.team)}</span></span><span class="ln">${f.line}+ ${esc(f.unit)} <span>${pct(f.p, 0)}</span></span><span class="meter call"><i style="width:${(100 * f.p).toFixed(0)}%"></i></span>
           <span class="tiny muted">Season ${f.hit} of ${f.gp} · last ${f.l5n}: ${f.l5hit} · averages ${f1(f.avg)}</span><span class="tiny muted">${f.reach > 0 ? "Next rung " + f.reach + "+ at " + pct(f.pReach, 0) : "Top rung"} · projected ${f1(f.mean)}</span></div>`).join("")}</div></div>` : ""}
       <div class="panel stack"><div><span class="eyebrow">Model box score</span><h3>Projection and favorite line for every stat</h3>
@@ -715,7 +716,7 @@ select { background: var(--panel); border: 1px solid var(--line); border-radius:
       `<tr><td class="l"><b>${esc(p.name)}</b> <span class="muted">${esc(p.team)}</span>${p.active ? "" : ' <span class="chip">not playing</span>'}</td><td>${p.gp}</td><td>${d(p.min, p.l5min)}</td><td>${d(p.pts, p.l5pts)}</td><td class="${p.z >= 1.5 ? "good" : p.z <= -1.5 ? "bad" : ""}">${sgn(p.z)}</td><td>${d(p.reb, p.l5reb)}</td><td>${d(p.ast, p.l5ast)}</td><td>${d(p.tpm, p.l5tpm)}</td><td class="l">${spark(p.ptsLog)}</td><td class="l">${spark(p.minLog)}</td><td class="l">${trajChip(p.traj)}${p.role ? ` <span class="chip ${p.role === "minutes up" ? "up" : "down"}">${esc(p.role)}</span>` : ""}</td><td class="l small muted" style="min-width:160px">${esc(p.notes.join("; "))}</td></tr>`).join("") || '<tr><td class="l muted" colspan="12">No player fits this filter.</td></tr>'}</tbody></table></div>`;
   }
   function absence(a) {
-    return `<div class="panel abs"><div class="abs-h"><span class="nm">${esc(a.player)} <span class="muted" style="font-size:16px">${esc(a.team)} · ${f1(a.min)} min · ${f1(a.pts)} pts</span></span>
+    return `<div class="panel abs"><div class="abs-h"><span class="nm">${esc(a.player)} <span class="muted" style="font-size:16px">${esc(a.team)} · plays ${f1(a.min)} minutes · scores ${f1(a.pts)}</span></span>
         <span>${a.outTonight ? '<span class="chip call">Out tonight</span> ' : ""}${a.outRun > 0 ? `<span class="chip warn">Out the last ${a.outRun}</span> ` : ""}<span class="chip">Missed ${a.missed} of ${a.played + a.missed}</span></span></div>
       <p class="small" style="max-width:none">Team with him <b>${esc(a.teamWith.rec)}</b> (${sgn(a.teamWith.margin)} per game, scoring ${f1(a.teamWith.ppg)}) · without him <b>${esc(a.teamWo.rec)}</b> (${sgn(a.teamWo.margin)}, scoring ${f1(a.teamWo.ppg)}) ${verdictChip(a.teamVerdict)} <span class="muted">Missed ${esc(a.missedDates.join(", "))}.</span></p>
       <div class="tscroll"><table><thead><tr><th class="l">Teammate</th><th title="With him → without him">PTS</th><th>Change</th><th>MIN</th><th title="Field-goal attempts plus trips to the line">Shots</th><th>AST</th><th>REB</th><th>3PM</th><th title="Games with him / without him">Games</th><th class="l">Worth noticing?</th></tr></thead><tbody>${a.mates.map(m =>
@@ -737,7 +738,7 @@ select { background: var(--panel); border: 1px solid var(--line); border-radius:
       <div class="split"><div class="panel"><span class="eyebrow">Is a hot stretch real?</span><h3>How much of the last five games carried into the next one</h3>
           <p class="small muted" style="margin:4px 0 12px">Measured on every player with 9+ games: 0% means the stretch was noise and his season average was the better guide, 100% means the last five were his new normal.</p>
           <div class="bars">${T.carry.map(c => `<div class="bar-row"><span>${esc(STATNAME[c.stat] || c.stat)} <span class="muted tiny">${c.n.toLocaleString()} games</span></span><span class="track"><span class="fill" style="width:${Math.max(0, Math.min(100, 100 * c.b)).toFixed(0)}%;background:var(--accent)"></span></span><span class="num" style="text-align:right">${pct(c.b, 0)}</span></div>`).join("")}</div>
-          <p class="small muted" style="margin-top:12px">Minutes changes stick, which is why the model leans a player's minutes toward his last three games. Scoring streaks mostly fade back toward the season average.</p></div>
+          <p class="small muted" style="margin-top:12px">Minutes changes stick${D.learn && D.learn.minTrend > 0 ? ", which is why the model leans a player's minutes toward his last three games" : "; a rule that leans a player's minutes toward his last three games is tested every morning"}. Scoring and shooting streaks mostly fade back toward the season average, so a hot week is not a reason to raise a line.</p></div>
         <div class="panel"><span class="eyebrow">Week by week</span><h3>Scoring against the line</h3>
           <div class="tscroll" style="margin-top:8px"><table><thead><tr><th class="l">Week</th><th>Games</th><th>Avg total</th><th>DK line</th><th>Home won</th><th>20+ games</th></tr></thead><tbody>${L.weeks.map(w => `<tr><td class="l">Week ${w.week}</td><td>${w.games}</td><td>${f1(w.total)}</td><td>${w.dk ? f1(w.dk) : "–"}</td><td>${pct(w.homeWin, 0)}</td><td>${w.blowouts}</td></tr>`).join("")}</tbody></table></div></div></div>
       <div class="stack"><div class="win-h"><h3>Teams: where each one is heading</h3><div class="filters" role="group" aria-label="Filter teams">${[["all", "All 30"], ["tonight", "Tonight"], ["rising", "Rising"], ["falling", "Falling"]].map(f => `<button class="fbtn" type="button" id="tf-${f[0]}" data-tf="${f[0]}" aria-pressed="${tFilter === f[0]}">${f[1]}</button>`).join("")}</div></div>
