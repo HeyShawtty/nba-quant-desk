@@ -1,0 +1,41 @@
+team,name,status,p_play,note
+# Source: NBA official injury report 11/12/26 4:00 PM ET (read automatically). All listed teams submitted.
+# status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+DET,Elijah Harkless,AVAIL,1,Official: Available (G League - Two-Way)
+DET,Isaiah Joe,OUT,0,Official: Out (Injury/Illness - Right Hip Contusion)
+DET,Isaac Jones,AVAIL,1,Official: Available (G League - Two-Way)
+DET,Chaz Lanier,OUT,0,Official: Out (G League - On Assignment)
+DET,Ebuka Okorie,OUT,0,Official: Out (G League - On Assignment)
+DET,Ugonna Onyenso,OUT,0,Official: Out (G League - Two-Way)
+WSH,Reece Beekman,OUT,0,Official: Out (Injury/Illness - Right AC Joint Injury)
+WSH,Justin Champagnie,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
+WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
+WSH,Jamir Watkins,OUT,0,Official: Out
+TOR,Scottie Barnes,OUT,0,Official: Out (Injury/Illness - Left Groin Strain)
+TOR,Nate Bittle,OUT,0,Official: Out
+TOR,Trayce Jackson-Davis,OUT,0,Official: Out (Injury/Illness - Illness)
+TOR,Kawhi Leonard,OUT,0,Official: Out
+TOR,Kevin McCullar Jr.,OUT,0,Official: Out (G League - Two-Way)
+PHI,Dominick Barlow,OUT,0,Official: Out
+PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
+PHI,Joel Embiid,Q,0.5,Official: Questionable
+PHI,Ariel Hukporti,OUT,0,Official: Out
+PHI,LeBron James,OUT,0,Official: Out
+DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
+DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
+DAL,Morez Johnson Jr.,Q,0.9,Official: Probable
+DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
+DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
+MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
+MIN,Donte DiVincenzo,OUT,0,Official: Out
+MIN,Anthony Edwards,OUT,0,Official: Out
+CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
+CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
+CHA,Moussa Diabate,AVAIL,1,Official: Available
+CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+CHA,Brandon Miller,OUT,0,Official: Out (Injury/Illness - Right Hip Strain)
+CHA,Dennis Schroder,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+CHA,Hannes Steinbach,OUT,0,Official: Out (G League - On Assignment)
+CHA,Grant Williams,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
+PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
