@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/11/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/11/26 8:45 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Paul George,OUT,0,Official: Out (Injury/Illness - Illness)
@@ -63,14 +63,14 @@ CHI,Jaylin Sellers,AVAIL,1,Official: Available (-)
 CHI,Dailyn Swain,OUT,0,Official: Out (Injury/Illness - Right Disc Irritation)
 CHI,Caleb Wilson,AVAIL,1,Official: Available (-)
 ORL,Paolo Banchero,OUT,0,Official: Out
-ORL,Jamal Cain,Q,0.5,Official: Questionable
-ORL,Tristan da Silva,Q,0.5,Official: Questionable (Injury/Illness - Left Calf Strain)
+ORL,Jamal Cain,OUT,0,Official: Out
+ORL,Tristan da Silva,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
 ORL,Noah Penda,OUT,0,Official: Out
 ORL,Jalen Suggs,OUT,0,Official: Out
 UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
-UTAH,Keyonte George,Q,0.5,Official: Questionable (Injury/Illness - Right Ankle Sprain)
+UTAH,Keyonte George,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
 UTAH,Jusuf Nurkic,OUT,0,Official: Out
@@ -78,7 +78,7 @@ GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Moses Moody,OUT,0,Official: Out
 GS,Gary Payton II,OUT,0,Official: Out
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
-GS,Will Richard,Q,0.9,Official: Probable (Injury/Illness - Left Thumb UCL Tear)
+GS,Will Richard,AVAIL,1,Official: Available (Injury/Illness - Left Thumb UCL Tear)
 GS,Brandon Williams,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 HOU,Steven Adams,OUT,0,Official: Out (Injury/Illness - Right Soleus Strain)
 HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
