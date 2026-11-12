@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/11/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/11/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Paul George,OUT,0,Official: Out (Injury/Illness - Illness)
@@ -34,11 +34,11 @@ BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
 BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
 BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
 BKN,Nolan Traore,OUT,0,Official: Out
-NO,Malik Dia,Q,0.25,Official: Doubtful (G League - Two-Way)
+NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Right Thumb Sprain)
 NO,Yves Missi,OUT,0,Official: Out
-NO,Trey Murphy III,Q,0.25,Official: Doubtful
-NO,Jaron Pierre Jr.,Q,0.9,Official: Probable (G League - Two-Way)
+NO,Trey Murphy III,OUT,0,Official: Out
+NO,Jaron Pierre Jr.,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 MEM,Karim Lopez,AVAIL,1,Official: Available (G League - On Assignment)
@@ -46,10 +46,10 @@ MEM,Jahmai Mashack,AVAIL,1,Official: Available (G League - Two-Way)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Quinten Post,OUT,0,Official: Out (Injury/Illness - Concussion Protocol)
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-MEM,Isaiah Stewart,Q,0.5,Official: Questionable
+MEM,Isaiah Stewart,AVAIL,1,Official: Available
 LAL,Quentin Grimes,OUT,0,Official: Out (Injury/Illness - Right Finger Sprain)
 LAL,Walker Kessler,AVAIL,1,Official: Available (Injury/Illness - Left Finger Splint)
-MIL,Tyler Herro,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Contusion)
+MIL,Tyler Herro,AVAIL,1,Official: Available (Injury/Illness - Right Knee Contusion)
 MIL,Myles Turner,OUT,0,Official: Out (Rest)
 SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
 SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
@@ -57,15 +57,15 @@ SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 SA,Devin Vassell,OUT,0,Official: Out
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Low Back Tightness)
-CHI,Zach Collins,Q,0.5,Official: Questionable (Injury/Illness - Respiratory Illness)
-CHI,Norman Powell,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
-CHI,Jaylin Sellers,OUT,0,Official: Out (G League - On Assignment)
-CHI,Dailyn Swain,Q,0.5,Official: Questionable (Injury/Illness - Right Disc Irritation)
-CHI,Caleb Wilson,Q,0.5,Official: Questionable
+CHI,Zach Collins,AVAIL,1,Official: Available (-)
+CHI,Norman Powell,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
+CHI,Jaylin Sellers,AVAIL,1,Official: Available (-)
+CHI,Dailyn Swain,OUT,0,Official: Out (Injury/Illness - Right Disc Irritation)
+CHI,Caleb Wilson,AVAIL,1,Official: Available (-)
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,Q,0.5,Official: Questionable
 ORL,Tristan da Silva,Q,0.5,Official: Questionable (Injury/Illness - Left Calf Strain)
-ORL,Jonathan Isaac,OUT,0,Official: Out (Injury/Illness - Left Knee Injury)
+ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
 ORL,Noah Penda,OUT,0,Official: Out
 ORL,Jalen Suggs,OUT,0,Official: Out
