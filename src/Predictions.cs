@@ -90,13 +90,22 @@ namespace NbaQuant
                 res.Add(mk("Q3ALL", 0, p.Q3All, topQ.Contains(p) ? "top5_q3all" : ""));
                 res.Add(mk("FFG", 0, p.FirstFG, topF.Contains(p) ? "top5_ffg" : ""));
                 foreach (var s in new[] { Tuple.Create("PTS", p.Pts.Mean), Tuple.Create("REB", p.Reb.Mean), Tuple.Create("AST", p.Ast.Mean), Tuple.Create("3PM", p.Tpm.Mean), Tuple.Create("MIN", p.MeanMin) })
-                    res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "MEAN", Stat = s.Item1, Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Mean = s.Item2, Line = p.P.Usage, Selection = p.P.Name + " mean " + s.Item1 });
+                {
+                    // PMarket on a projection row = the trend-learning factor it was made with (Learner divides it back out)
+                    double lf = s.Item1 == "PTS" ? p.P.LearnPts : s.Item1 == "AST" ? p.P.LearnAst : 1;
+                    res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "MEAN", Stat = s.Item1, Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Mean = s.Item2, Line = p.P.Usage, PMarket = Math.Abs(lf - 1) > 1e-9 ? lf : double.NaN, Selection = p.P.Name + " mean " + s.Item1 });
+                }
             }
             // erupt (scores eruption line or more) and dud (half his season scoring or less), graded like any prop
             foreach (var p in Analysis.EruptList())
                 res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTS", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.EruptLine, P = p.PErupt, Mean = p.SeasonPpg, Tag = "erupt", Selection = p.P.Name + " erupts: " + p.EruptLine + "+ pts [" + Report.BankCheck(p, true) + "]" });
             foreach (var p in Analysis.DudList())
                 res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "PLAYER", Stat = "PTSU", Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Line = p.DudLine, P = p.PDud, Mean = p.SeasonPpg, Tag = "dud", Selection = p.P.Name + " dud: " + p.DudLine + " pts or fewer [" + Report.BankCheck(p, false) + "]" });
+            // the model's favorite lines (highest ladder rung at FavMin or better), graded like any prop. Kind FAV keeps them
+            // out of the calibration statistics, which already count every threshold once. Mean = his season average.
+            foreach (var g in Program.Games)
+                foreach (var f in Favorites.ForGame(g))
+                    res.Add(new Pred { Date = date, GameId = g.Def.EspnId, Game = gl(g), Kind = "FAV", Stat = f.Stat, Team = f.Ps.P.Team, Pid = f.Ps.P.Pid, Player = f.Ps.P.Name, Line = f.Line, P = f.P, Mean = f.SeasonAvg, Tag = f.Bold ? "fav_bold" : "fav", Selection = f.Desc });
             var best = Notes.BestSgp();
             foreach (var g in Program.Games)
             {
@@ -154,7 +163,7 @@ namespace NbaQuant
             }
             var b = g.Box.FirstOrDefault(x => x.Pid == pid);
             if (b == null || !b.Played) return double.NaN;
-            string st = kind == "PLAYER" ? stat : kind;
+            string st = kind == "PLAYER" || kind == "FAV" ? stat : kind;
             switch (st)
             {
                 case "DD": return DdCount(b) >= 2 ? 1 : 0;
@@ -196,7 +205,7 @@ namespace NbaQuant
                 }
                 double res = Resolve(p.Kind, p.Stat, p.Team, p.Pid, p.Line, g);
                 if (double.IsNaN(res)) p.Void = true; else p.Y = res;
-                if (p.Kind == "PLAYER") { var b = g.Box.FirstOrDefault(x => x.Pid == p.Pid); if (b != null && b.Played) p.Actual = p.Stat == "Q3ALL" ? b.QPts.Min() : p.Stat == "FFG" ? (g.FirstFgPid == p.Pid ? 1 : 0) : p.Stat == "DD" || p.Stat == "TD" ? DdCount(b) : Stat(b, p.Stat); }
+                if (p.Kind == "PLAYER" || p.Kind == "FAV") { var b = g.Box.FirstOrDefault(x => x.Pid == p.Pid); if (b != null && b.Played) p.Actual = p.Stat == "Q3ALL" ? b.QPts.Min() : p.Stat == "FFG" ? (g.FirstFgPid == p.Pid ? 1 : 0) : p.Stat == "DD" || p.Stat == "TD" ? DdCount(b) : Stat(b, p.Stat); }
             }
             // slate leaders: dead-heat share among all players/teams on the slate
             var leaders = preds.Where(p => p.Kind == "LEADER").ToList();

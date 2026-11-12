@@ -31,6 +31,11 @@ namespace NbaQuant
         public double TeamFormPrior = 6;     // games of zero residual mixed in before trusting a team's form
         public string TeamFormSource = "model"; // residual vs the model's own pre-game margins ("model") or vs DraftKings spreads ("market")
         public double HotStartWeight = 1.0;  // extra multiplier on CsWeight for players outscoring last season's rate (1 = off)
+        // trend learning (2026-11-12): what the model keeps missing on a player is carried into his next projection
+        public double MinTrend = 0;          // share of the gap between his last-3-game minutes and his projection that is closed (0 = off)
+        public double LearnPtsK = 0;         // scoring rate x (actual + K) / (expected at the minutes he played + K), K in points (0 = off)
+        public double LearnAstK = 0;         // assist rate, same rule with K in assists (0 = off)
+        public double FavMin = 0.60;         // a favorite line is the highest ladder rung the model clears at least this often
         public string PropCal = "";          // per-stat logit maps for player thresholds, "PTS:shift:slope;..." (fitted out of sample)
         public string LastRecalibration = "";
 

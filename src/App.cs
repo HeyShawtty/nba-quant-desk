@@ -403,6 +403,8 @@ namespace NbaQuant
                     case "ban": Console.WriteLine(Ban.Add(string.Join(" ", args.Skip(1)))); break;
                     case "unban": Console.WriteLine(Ban.Remove(string.Join(" ", args.Skip(1)))); break;
                     case "banned": Console.WriteLine(Ban.Watch()); break;
+                    // season trends study: teams, players, absences, perfect records, referees (information only)
+                    case "trends": Console.WriteLine(Trends.Text()); break;
                     default: Console.WriteLine("usage: nbaquant-cli run [yyyy-MM-dd|next] [--sims N] | grade [yyyy-MM-dd] | recalibrate | next | ban TEAM[: reason] | unban TEAM | banned"); return 1;
                 }
                 return 0;

@@ -16,81 +16,35 @@ namespace NbaQuant
         static double R3(double v) { return double.IsNaN(v) || double.IsInfinity(v) ? 0 : Math.Round(v, 3); }
         static Dictionary<string, object> O(params object[] kv) { var d = new Dictionary<string, object>(); for (int i = 0; i + 1 < kv.Length; i += 2) d[(string)kv[i]] = kv[i + 1]; return d; }
 
-        static int ModeIdx(int[] h) { int b = 0; for (int v = 1; v < h.Length; v++) if (h[v] > h[b]) b = v; return b; }
-        // most common value after pooling +/-w neighbours: team scores, margins and totals are spread thin (2-3% per exact value)
-        static int SmoothIdx(int[] h, int w = 2)
-        {
-            int b = 0; long bs = -1;
-            for (int v = 0; v < h.Length; v++)
-            {
-                long s = 0; for (int k = Math.Max(0, v - w); k <= Math.Min(h.Length - 1, v + w); k++) s += h[k];
-                if (s > bs || (s == bs && h[v] > h[b])) { bs = s; b = v; }
-            }
-            return b;
-        }
 
-        // Most common outcomes from the recorded simulations: each team's final score, margin, total and team stat line,
-        // the most common exact final score (smoothed over +/-2 points per team so one noisy cell cannot win), and one real
-        // simulated game with that score whose box score sits closest to every player's most common line.
-        static object ModeJson(GameCtx g, List<PStat> ps)
+        // The model's favorite line per stat (Favorites.cs), as a compact row:
+        // [line, chance, season hits, season games, last-5 hits, last-5 games, reach line, reach chance, floor line, floor chance, bold]
+        static object FavJson(PStat p)
         {
-            var r = g.Res; int N = r.N, nh = r.NH, np = nh + r.NA;
-            if (r.HomePts == null || r.Pts == null) return null;
-            int[] hH = new int[400], hA = new int[400], hM = new int[401], hT = new int[700];
-            int[][] team = new int[6][]; for (int k = 0; k < 6; k++) team[k] = new int[256]; // reb, ast, 3pm for home then away
-            var pair = new Dictionary<int, int>();
-            for (int s = 0; s < N; s++)
+            var d = new Dictionary<string, object>();
+            foreach (var st in Favorites.Stats)
             {
-                int h = Math.Min(399, (int)r.HomePts[s]), a = Math.Min(399, (int)r.AwayPts[s]);
-                hH[h]++; hA[a]++; hM[Math.Max(0, Math.Min(400, h - a + 200))]++; hT[Math.Min(699, h + a)]++;
-                int key = h * 1000 + a; int c; pair.TryGetValue(key, out c); pair[key] = c + 1;
-                int rb0 = 0, as0 = 0, tp0 = 0, rb1 = 0, as1 = 0, tp1 = 0;
-                for (int i = 0; i < np; i++)
-                {
-                    if (i < nh) { rb0 += r.Reb[i][s]; as0 += r.Ast[i][s]; tp0 += r.Tpm[i][s]; }
-                    else { rb1 += r.Reb[i][s]; as1 += r.Ast[i][s]; tp1 += r.Tpm[i][s]; }
-                }
-                team[0][Math.Min(255, rb0)]++; team[1][Math.Min(255, as0)]++; team[2][Math.Min(255, tp0)]++;
-                team[3][Math.Min(255, rb1)]++; team[4][Math.Min(255, as1)]++; team[5][Math.Min(255, tp1)]++;
+                var f = Favorites.Of(p, st); if (f == null) continue;
+                d[st] = new object[] { f.Line, R3(f.P), f.Hit, f.Gp, f.L5Hit, f.L5N, f.Reach, R3(f.PReach), f.Floor, R3(f.PFloor), f.Bold ? 1 : 0 };
             }
-            int bestKey = -1; long bestSm = -1; int bestRaw = -1;
-            foreach (var kv in pair)
+            return d;
+        }
+        // chance of clearing each rung of the ladder (rungs under 2% are left off)
+        static object LadderJson(PStat p)
+        {
+            var d = new Dictionary<string, object>();
+            foreach (var st in Favorites.Stats)
             {
-                int h = kv.Key / 1000, a = kv.Key % 1000; long sm = 0;
-                for (int dh = -2; dh <= 2; dh++) for (int da = -2; da <= 2; da++) { int c; if (pair.TryGetValue((h + dh) * 1000 + (a + da), out c)) sm += c; }
-                if (sm > bestSm || (sm == bestSm && kv.Value > bestRaw)) { bestSm = sm; bestRaw = kv.Value; bestKey = kv.Key; }
+                var dist = Favorites.DistOf(p, st); var l = new List<object>();
+                foreach (int r in Favorites.Ladder[st]) { double pr = dist.PAtLeast(r); if (pr < 0.02) break; l.Add(new object[] { r, R3(pr) }); }
+                d[st] = l;
             }
-            int ph = bestKey / 1000, pa = bestKey % 1000;
-            // representative game: exact modal score, closest to each regular's most common line
-            var regs = ps.Where(p => p.PPlays * p.MeanMin >= 10).Select(p => new { P = p, Pts = ModeIdx(p.Pts.Hist), Reb = ModeIdx(p.Reb.Hist), Ast = ModeIdx(p.Ast.Hist), Tpm = ModeIdx(p.Tpm.Hist) }).ToList();
-            int rep = -1; double repD = double.MaxValue;
-            for (int s = 0; s < N; s++)
-            {
-                if (r.HomePts[s] != ph || r.AwayPts[s] != pa) continue;
-                double dist = 0;
-                foreach (var x in regs)
-                {
-                    int i = x.P.Gi;
-                    if (r.Played != null && !r.Played[i][s]) { dist += 10; continue; }
-                    dist += Math.Abs(r.Pts[i][s] - x.Pts) + 0.8 * Math.Abs(r.Reb[i][s] - x.Reb) + 0.8 * Math.Abs(r.Ast[i][s] - x.Ast) + 0.5 * Math.Abs(r.Tpm[i][s] - x.Tpm);
-                }
-                if (dist < repD) { repD = dist; rep = s; }
-            }
-            object repJson = null;
-            if (rep >= 0)
-            {
-                Func<bool, object> side = home => ps.Where(p => p.Home == home && p.PPlays * p.MeanMin >= 3).OrderByDescending(p => p.PPlays * p.MeanMin)
-                    .Select(p => { int i = p.Gi; bool pl = r.Played == null || r.Played[i][rep]; return (object)O("name", p.P.Name, "played", pl, "pts", (int)r.Pts[i][rep], "reb", (int)r.Reb[i][rep], "ast", (int)r.Ast[i][rep], "tpm", (int)r.Tpm[i][rep]); })
-                    .Where(o => true).ToList();
-                int hq = r.HomeQ123 != null ? r.HomeQ123[rep] : 0, aq = r.AwayQ123 != null ? r.AwayQ123[rep] : 0;
-                repJson = O("count", bestRaw, "share", R3((double)bestRaw / N), "ot", r.OT != null ? (int)r.OT[rep] : 0, "homeQ123", hq, "awayQ123", aq, "home", side(true), "away", side(false));
-            }
-            int mm = SmoothIdx(hM), mt = SmoothIdx(hT), mh = SmoothIdx(hH), ma = SmoothIdx(hA);
-            return O("home", mh, "homeShare", R3((double)hH[mh] / N), "away", ma, "awayShare", R3((double)hA[ma] / N),
-                "pairHome", ph, "pairAway", pa, "pairShare", R3((double)bestRaw / N), "pairNear", R3((double)bestSm / N),
-                "margin", mm - 200, "marginShare", R3((double)hM[mm] / N), "total", mt, "totalShare", R3((double)hT[mt] / N),
-                "teamHome", O("reb", ModeIdx(team[0]), "ast", ModeIdx(team[1]), "tpm", ModeIdx(team[2])), "teamAway", O("reb", ModeIdx(team[3]), "ast", ModeIdx(team[4]), "tpm", ModeIdx(team[5])),
-                "rep", repJson);
+            return d;
+        }
+        static object FavRow(Fav f)
+        {
+            return O("name", f.Ps.P.Name, "team", f.Ps.P.Team, "stat", f.Stat, "unit", f.Unit, "line", f.Line, "p", R3(f.P), "hit", f.Hit, "gp", f.Gp, "l5hit", f.L5Hit, "l5n", f.L5N,
+                "avg", R1(f.SeasonAvg), "mean", R1(Favorites.DistOf(f.Ps, f.Stat).Mean), "reach", f.Reach, "pReach", R3(f.PReach));
         }
 
         static object ComboJson(Combo c)
@@ -122,10 +76,13 @@ namespace NbaQuant
                         k++; var f = FormOf(p); RotRow rr; rot.TryGetValue(p, out rr); var bp = Bank.Player(p.P.Pid);
                         return (object)O("name", p.P.Name, "starter", k <= 5, "status", p.P.Status, "play", R3(p.PPlays), "min", R1(p.MeanMin),
                             "pts", R1(p.Pts.Mean), "reb", R1(p.Reb.Mean), "ast", R1(p.Ast.Mean), "tpm", R1(p.Tpm.Mean), "ptsLo", p.Pts.P10, "ptsHi", p.Pts.P90,
-                            // most common value of each stat (when he plays) and how often it came up
-                            "mPts", ModeIdx(p.Pts.Hist), "mReb", ModeIdx(p.Reb.Hist), "mAst", ModeIdx(p.Ast.Hist), "mTpm", ModeIdx(p.Tpm.Hist), "mPra", ModeIdx(p.Pra.Hist),
-                            "sPts", R3((double)p.Pts.Hist[ModeIdx(p.Pts.Hist)] / p.Pts.N), "sReb", R3((double)p.Reb.Hist[ModeIdx(p.Reb.Hist)] / p.Reb.N),
-                            "sAst", R3((double)p.Ast.Hist[ModeIdx(p.Ast.Hist)] / p.Ast.N), "sTpm", R3((double)p.Tpm.Hist[ModeIdx(p.Tpm.Hist)] / p.Tpm.N), "med", p.Pts.P50,
+                            // the model's favorite line per stat, the full ladder, and the trend learning behind this projection
+                            "fav", FavJson(p), "lad", LadderJson(p), "pra", R1(p.Pra.Mean), "med", p.Pts.P50,
+                            "rebLo", p.Reb.P10, "rebHi", p.Reb.P90, "astLo", p.Ast.P10, "astHi", p.Ast.P90,
+                            "learnPts", R3(p.P.LearnPts), "learnAst", R3(p.P.LearnAst), "minTrend", R1(p.P.MinTrendShift),
+                            "l5", p.P.CsBox.Count >= 3 ? O("n", Math.Min(5, p.P.CsBox.Count), "min", R1(p.P.CsBox.Skip(Math.Max(0, p.P.CsBox.Count - 5)).Average(b => b.Min)), "pts", R1(p.P.CsBox.Skip(Math.Max(0, p.P.CsBox.Count - 5)).Average(b => (double)b.Pts)),
+                                "reb", R1(p.P.CsBox.Skip(Math.Max(0, p.P.CsBox.Count - 5)).Average(b => (double)b.Reb)), "ast", R1(p.P.CsBox.Skip(Math.Max(0, p.P.CsBox.Count - 5)).Average(b => (double)b.Ast)), "tpm", R1(p.P.CsBox.Skip(Math.Max(0, p.P.CsBox.Count - 5)).Average(b => (double)b.Tpm))) : null,
+                            "log", p.P.CsBox.Skip(Math.Max(0, p.P.CsBox.Count - 12)).Select(b => (object)new object[] { Math.Round(b.Min), b.Pts, b.Reb, b.Ast, b.Tpm }).ToList(),
                             "p10", R3(p.Pts.PAtLeast(10)), "p20", R3(p.Pts.PAtLeast(20)), "p25", R3(p.Pts.PAtLeast(25)), "dd", R3(p.DD), "p3", R3(p.Tpm.PAtLeast(3)),
                             "season", f == null ? null : O("gp", f.Gp, "prior", f.FromPrior, "min", R1(f.Mpg), "pts", R1(f.Ppg), "reb", R1(f.Rpg), "ast", R1(f.Apg), "tpm", R1(f.Tpm)),
                             "bias", bp != null && bp.ModelN > 0 ? (object)R1(bp.ModelPtsBias) : null, "biasN", bp != null ? bp.ModelN : 0,
@@ -146,7 +103,7 @@ namespace NbaQuant
                     "b2bHome", g.Def.HomeB2B, "b2bAway", g.Def.AwayB2B,
                     "q3", O("home", O("mean", R1(tqH.Mean), "p100", R3(tqH.P100)), "away", O("mean", R1(tqA.Mean), "p100", R3(tqA.P100))),
                     "boxAway", box(false), "boxHome", box(true),
-                    "mode", ModeJson(g, Analysis.Players.Where(p => p.G == g).ToList()),
+                    "favs", Favorites.Top(g, 8).Select(FavRow).ToList(), "sdMargin", R1(g.SdMargin), "sdTotal", R1(g.SdTotal), "margin", R1(g.MeanMargin),
                     "teamAway", O("pts", R1(r.SumPtsA / n), "ast", R1(r.SumAstA / n)), "teamHome", O("pts", R1(r.SumPtsH / n), "ast", R1(r.SumAstH / n)),
                     "outAway", outs(g.Def.Away), "outHome", outs(g.Def.Home), "qAway", qs(g.Def.Away), "qHome", qs(g.Def.Home),
                     "boost", Analysis.BoostSgp[g].Take(3).Select(ComboJson).ToList(),
@@ -158,7 +115,7 @@ namespace NbaQuant
             Func<PStat, bool, object> ed = (p, erupt) =>
             {
                 RotRow rr; rot.TryGetValue(p, out rr); var fm = FormOf(p);
-                return O("name", p.P.Name, "team", p.P.Team, "opp", p.Opp, "season", R1(p.SeasonPpg), "proj", R1(p.Pts.Mean), "mode", ModeIdx(p.Pts.Hist),
+                return O("name", p.P.Name, "team", p.P.Team, "opp", p.Opp, "season", R1(p.SeasonPpg), "proj", R1(p.Pts.Mean), "fav", Favorites.Of(p, "PTS") != null ? (object)Favorites.Of(p, "PTS").Line : null, "favP", Favorites.Of(p, "PTS") != null ? R3(Favorites.Of(p, "PTS").P) : 0,
                     "line", erupt ? p.EruptLine : p.DudLine, "p", R3(TrackAdjust.Adj(erupt ? "erupt" : "dud", erupt ? p.PErupt : p.PDud)), "check", BankCheck(p, erupt),
                     "seasonMin", fm == null ? 0 : R1(fm.Mpg), "min", R1(p.MeanMin), "flags", rr != null ? rr.Flags : new List<string>(), "bias", Bank.Player(p.P.Pid) != null && Bank.Player(p.P.Pid).ModelN > 0 ? (object)R1(Bank.Player(p.P.Pid).ModelPtsBias) : null, "biasN", Bank.Player(p.P.Pid) != null ? Bank.Player(p.P.Pid).ModelN : 0);
             };
@@ -233,6 +190,28 @@ namespace NbaQuant
                     "edges", O("n", edges.Count, "won", (int)edges.Sum(x => x.Y), "exp", R1(edges.Sum(x => x.P)), "units", R1(edges.Sum(x => x.Y >= 1 ? pay(x.Odds) : -1))));
             }
 
+            // season trends, the last graded slate and the favorites' record: information panels that must never stop a slate run
+            object trends = null, review = null, favRecord = null;
+            try
+            {
+                var outTonight = new HashSet<string>(Program.TeamPlayers.Values.SelectMany(l => l).Where(x => x.Status == "OUT").Select(x => x.Pid));
+                var tonightP = new Dictionary<string, double>();
+                foreach (var p in Analysis.Players.Where(x => x.MeanMin >= 10))
+                    foreach (var st in Favorites.Stats) foreach (int rung in Favorites.Ladder[st]) tonightP[p.P.Pid + "|" + st + "|" + rung] = Favorites.DistOf(p, st).PAtLeast(rung);
+                trends = Trends.Json(outTonight, tonightP);
+            }
+            catch (Exception e) { Program.Warnings.Add("Season trends not exported: " + e.Message); }
+            try { review = ReviewJson(); } catch (Exception e) { Program.Warnings.Add("Last-slate review not exported: " + e.Message); }
+            try
+            {
+                Func<List<Pred>, object> rec = l => O("n", l.Count, "hit", l.Count(x => x.Y >= 1), "pred", l.Count > 0 ? R3(l.Average(x => x.P)) : 0);
+                var lf = live.Where(p => p.Kind == "FAV" && !p.Void && !double.IsNaN(p.Y)).ToList();
+                var bf = File.Exists(btPath) ? Pred.Load(btPath).Where(p => p.Kind == "FAV" && !p.Void && !double.IsNaN(p.Y)).ToList() : new List<Pred>();
+                favRecord = O("live", rec(lf), "liveBold", rec(lf.Where(p => p.Tag == "fav_bold").ToList()), "backtest", rec(bf), "backtestBold", rec(bf.Where(p => p.Tag == "fav_bold").ToList()),
+                    "byStat", Favorites.Stats.Select(st => (object)O("stat", st, "live", rec(lf.Where(p => p.Stat == st).ToList()), "backtest", rec(bf.Where(p => p.Stat == st).ToList()))).ToList(), "min", S.FavMin);
+            }
+            catch (Exception e) { Program.Warnings.Add("Favorites record not exported: " + e.Message); }
+
             string injuryReport = InjuryReportUsed(d);
             var data = O(
                 "meta", O("slate", d.ToString("yyyy-MM-dd"), "slateLabel", d.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), "built", DateTime.Now.ToString("ddd MMM d, h:mm tt", CultureInfo.InvariantCulture),
@@ -245,7 +224,9 @@ namespace NbaQuant
                 "erupt", eruptJson, "dud", dudJson,
                 "bank", O("teams", bankTeams, "players", bankPlayers),
                 "record", O("tags", tagRec, "slates", slates, "mlBrier", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.P - p.Y) * (p.P - p.Y))) : null, "mlBrierMkt", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.PMarket - p.Y) * (p.PMarket - p.Y))) : null),
-                "audit", audit, "tiers", tiers, "safest", Safest.Json(), "banned", Ban.Json());
+                "audit", audit, "tiers", tiers, "safest", Safest.Json(), "banned", Ban.Json(),
+                "trends", trends, "review", review, "favRecord", favRecord,
+                "learn", O("minTrend", S.MinTrend, "ptsK", S.LearnPtsK, "astK", S.LearnAstK, "players", Learner.Count, "through", Learner.Through, "hotStart", S.HotStartWeight, "teamForm", S.TeamFormWeight));
             var ser = new JavaScriptSerializer { MaxJsonLength = int.MaxValue };
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             File.WriteAllText(path, "window.NBA = " + ser.Serialize(data) + ";\n", new UTF8Encoding(false));

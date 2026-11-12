@@ -90,6 +90,7 @@ namespace NbaQuant
         {
             var all = new List<Pred>(); GameRecs = new List<GameRec>();
             lock (Program.BaseMargins) Program.BaseMargins.Clear();   // rebuilt date by date, so team form only sees earlier games
+            Learner.Reset();                                          // trend learning also starts empty and only sees earlier dates
             for (var d = from.Date; d <= to.Date; d = d.AddDays(1))
             {
                 Program.BuildSlate(d, false, true);
@@ -100,6 +101,7 @@ namespace NbaQuant
                 var preds = Predictions.Collect(ds);
                 var byId = Program.Games.ToDictionary(g => g.Def.EspnId, g => g.Info);
                 Grader.Grade(preds, id => { GameData g; return id != null && byId.TryGetValue(id, out g) ? g : null; });
+                Learner.Add(preds);
                 all.AddRange(preds);
                 foreach (var g in Program.Games.Where(x => x.HasMarket))
                     GameRecs.Add(new GameRec
@@ -303,7 +305,9 @@ namespace NbaQuant
                 // season-trend switches from the data bank: each alternative must beat the current setting on both halves
                 var cur = halves(Run(from, to, S.BacktestSims, log));
                 foreach (var alt in new[] { Tuple.Create("HotStartWeight", S.HotStartWeight > 1 ? 1.0 : 3.0), Tuple.Create("MinRecency", S.MinRecency > 0 ? 0.0 : 0.25),
-                    Tuple.Create("RatePriorMin", S.RatePriorMin > 150 ? 150.0 : 300.0), Tuple.Create("GammaOverride", S.GammaOverride > 0 ? 0.0 : 1.0) })
+                    Tuple.Create("RatePriorMin", S.RatePriorMin > 150 ? 150.0 : 300.0), Tuple.Create("GammaOverride", S.GammaOverride > 0 ? 0.0 : 1.0),
+                    // trend learning (2026-11-12): last-3-game minutes, and scoring / assist rates learned from the model's own misses
+                    Tuple.Create("MinTrend", S.MinTrend > 0 ? 0.0 : 0.25), Tuple.Create("LearnPtsK", S.LearnPtsK > 0 ? 0.0 : 300.0), Tuple.Create("LearnAstK", S.LearnAstK > 0 ? 0.0 : 50.0) })
                 {
                     var fld = typeof(Settings).GetField(alt.Item1); double keepV = (double)fld.GetValue(S);
                     fld.SetValue(S, alt.Item2);

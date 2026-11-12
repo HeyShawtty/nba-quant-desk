@@ -32,6 +32,7 @@ namespace NbaQuant
         public double BaseMin, PRot, ExpMin;
         public double R2a, R3a, RTrip, RTov, ROreb, RDreb, RAst, P2, P3, Pft, Usage, PickW, Obpm, Dbpm;
         public double StartRate;
+        public double LearnPts = 1, LearnAst = 1, MinTrendShift;   // trend learning applied to this projection (Learner)
         public int Confidence;
         public double CsMpg { get { return Gp > 0 ? CsMin / Gp : 0; } }
         public double PsMpg { get { return HasPs && Ps.G > 0 ? Ps.MP / Ps.G : 0; } }

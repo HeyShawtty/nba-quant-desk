@@ -164,6 +164,7 @@ namespace NbaQuant
 
             Completed = Store.CompletedBefore(d, S.SeasonStart);
             if (live) LoadBaseMargins();   // backtests build their own, date by date (Walk.Run)
+            if (live) Learner.LoadLive(d); // trend learning from every graded game before this slate (backtests feed it date by date)
             Environment(quiet);
             CalibrateGamma();
             DefenseProfiles();
@@ -410,6 +411,16 @@ namespace NbaQuant
             p.R2a = rateS(p.Cs2a, ps2a, g.R2a); p.R3a = rateS(p.Cs3a, ps3a, g.R3a);
             double rFta = rateS(p.CsFta, psFta, g.RFta);
             p.RTov = rate(p.CsTov, psTov, g.RTov); p.ROreb = rate(p.CsOreb, psOrb, g.ROreb); p.RDreb = rate(p.CsDreb, psDrb, g.RDreb); p.RAst = rate(p.CsAst, psAst, g.RAst);
+            // trend learning: scoring and assist rates lean toward what he has actually done against the model's own
+            // projections this season (three graded games minimum; strength tested out of sample by Recalibrate)
+            p.LearnPts = 1; p.LearnAst = 1;
+            var lr = Learner.Of(p.Pid);
+            if (lr != null && lr.N >= 3)
+            {
+                p.LearnPts = Learner.Factor(lr.ActPts, lr.ExpPts, S.LearnPtsK, 0.8, 1.25);
+                p.LearnAst = Learner.Factor(lr.ActAst, lr.ExpAst, S.LearnAstK, 0.75, 1.35);
+                p.R2a *= p.LearnPts; p.R3a *= p.LearnPts; rFta *= p.LearnPts; p.RAst *= p.LearnAst;
+            }
             p.P2 = (p.Cs2m * csS + ps2m * psW + g.P2 * 80) / (p.Cs2a * csS + ps2a * psW + 80);
             p.P3 = (p.Cs3m * csS + ps3m * psW + g.P3 * 120) / (p.Cs3a * csS + ps3a * psW + 120);
             p.Pft = (p.CsFtm * csS + psFtm * psW + g.Pft * 40) / (p.CsFta * csS + psFta * psW + 40);
@@ -441,6 +452,16 @@ namespace NbaQuant
             if (p.ExpMin >= 12) p.ExpMin = Math.Max(0, Math.Min(42, p.ExpMin + S.MinUsageSlope * (p.Usage - 0.45)));
             // the audit found heavy-minute projections running ~2.5 min high; shrink the part above 28 (strength tested out of sample)
             if (p.ExpMin > 28) p.ExpMin -= S.MinTopShrink * (p.ExpMin - 28);
+            // minutes trend: close part of the gap to what he has played in his last three games (role changes, returns
+            // from injury and shortened rotations show up here before the season average catches them)
+            p.MinTrendShift = 0;
+            if (S.MinTrend > 0 && p.CsMinList.Count >= 3 && p.ExpMin > 0)
+            {
+                int c = p.CsMinList.Count; double l3 = (p.CsMinList[c - 1] + p.CsMinList[c - 2] + p.CsMinList[c - 3]) / 3;
+                double before = p.ExpMin;
+                p.ExpMin = Math.Max(0, Math.Min(42, p.ExpMin + S.MinTrend * (l3 * p.PRot - p.ExpMin)));
+                p.MinTrendShift = p.ExpMin - before;
+            }
             p.StartRate = p.Gp > 0 ? (double)p.Starts / p.Gp : (p.HasPs && p.Ps.G > 0 ? p.Ps.GS / p.Ps.G : 0);
         }
 

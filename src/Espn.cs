@@ -47,6 +47,9 @@ namespace NbaQuant
 
     class InjuryLine { public string Team, Pid, Name, Status, Detail, ReturnDate; }
 
+    // something in the play-by-play that changes a game beyond shooting: an ejection, a flagrant or a technical foul
+    class GameEvent { public string Type, Clock, Text, Pid, Team; public int Period, ScoreH, ScoreA; }
+
     class GameData
     {
         public string Id, Date, Home, Away, HomeId, AwayId, HomeName, AwayName, StartUtc, StatusText;
@@ -57,6 +60,9 @@ namespace NbaQuant
         public string FirstFgPid, FirstFgTeam, TipTeam;
         public string DkDetails; public double DkTotal = double.NaN, DkMlH = double.NaN, DkMlA = double.NaN, DkSprH = double.NaN;
         public List<InjuryLine> Injuries = new List<InjuryLine>();
+        public List<string> Officials = new List<string>();
+        public List<GameEvent> Events = new List<GameEvent>();   // ejections, flagrant and technical fouls (play-by-play)
+        public int HomeLead, AwayLead, HomeTech, AwayTech;        // largest lead each side held; technical fouls charged
         public int HomeQ123 { get { return HomeQ[0] + HomeQ[1] + HomeQ[2]; } }
         public int AwayQ123 { get { return AwayQ[0] + AwayQ[1] + AwayQ[2]; } }
     }
@@ -111,9 +117,32 @@ namespace NbaQuant
                     g.Box.Add(b); byPid[b.Pid] = b;
                 }
             }
+            foreach (var o in J.A(root, "gameInfo.officials")) { string on = J.S(o, "displayName"); if (on != "") g.Officials.Add(on); }
+            foreach (var bt in J.A(root, "boxscore.teams"))
+            {
+                bool home = J.S(bt, "team.abbreviation") == g.Home;
+                foreach (var st in J.A(bt, "statistics"))
+                {
+                    string nm = J.S(st, "name"); int v = (int)J.D(st, "displayValue", 0);
+                    if (nm == "largestLead") { if (home) g.HomeLead = v; else g.AwayLead = v; }
+                    else if (nm == "technicalFouls") { if (home) g.HomeTech = v; else g.AwayTech = v; }
+                }
+            }
             bool tipDone = false;
             foreach (var pl in J.A(root, "plays"))
             {
+                string ptxt = J.S(pl, "text"); string plow = ptxt.ToLowerInvariant();
+                if (plow.Contains("eject") || (plow.Contains("foul") && (plow.Contains("flagrant") || plow.Contains("technical")) && !plow.Contains("free throw") && !plow.Contains("3-second")))
+                {
+                    string epid = J.S(pl, "participants.0.athlete.id"); BoxLine eb; byPid.TryGetValue(epid, out eb);
+                    string etid = J.S(pl, "team.id");
+                    g.Events.Add(new GameEvent
+                    {
+                        Type = plow.Contains("eject") ? "ejection" : plow.Contains("flagrant") ? "flagrant" : "technical",
+                        Period = (int)J.D(pl, "period.number", 0), Clock = J.S(pl, "clock.displayValue"), Text = ptxt.Trim(), Pid = epid,
+                        Team = eb != null ? eb.Team : (teamById.ContainsKey(etid) ? teamById[etid] : ""), ScoreH = (int)J.D(pl, "homeScore", 0), ScoreA = (int)J.D(pl, "awayScore", 0)
+                    });
+                }
                 if (!tipDone && J.S(pl, "type.text") == "Jumpball")
                 {
                     tipDone = true;

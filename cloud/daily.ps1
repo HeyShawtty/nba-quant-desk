@@ -29,6 +29,7 @@ switch ($Task) {
     Step 'Audit' { & $cli audit }
     Step 'Data bank' { & $cli bank }
     if (Test-Path 'overrides\banned_teams.csv') { Step 'Banned teams watch (information only)' { & $cli banned } }
+    Step 'Season trends (teams, players, absences, perfect records, referees)' { & $cli trends }
   }
   'ban'   { Step "Ban $Team" { & $cli ban $Team }; Step 'Banned teams watch (information only)' { & $cli banned } }
   'unban' { Step "Unban $Team" { & $cli unban $Team } }
