@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/12/26 4:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/12/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 DET,Elijah Harkless,AVAIL,1,Official: Available (G League - Two-Way)
@@ -10,6 +10,7 @@ DET,Ebuka Okorie,OUT,0,Official: Out (G League - On Assignment)
 DET,Ugonna Onyenso,OUT,0,Official: Out (G League - Two-Way)
 WSH,Reece Beekman,OUT,0,Official: Out (Injury/Illness - Right AC Joint Injury)
 WSH,Justin Champagnie,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
+WSH,Felix Okpara,OUT,0,Official: Out (G League - Two-Way)
 WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
 WSH,Jamir Watkins,OUT,0,Official: Out
 TOR,Scottie Barnes,OUT,0,Official: Out (Injury/Illness - Left Groin Strain)
