@@ -93,7 +93,10 @@ namespace NbaQuant
                 {
                     // PMarket on a projection row = the trend-learning factor it was made with (Learner divides it back out)
                     double lf = s.Item1 == "PTS" ? p.P.LearnPts : s.Item1 == "AST" ? p.P.LearnAst : 1;
-                    res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "MEAN", Stat = s.Item1, Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Mean = s.Item2, Line = p.P.Usage, PMarket = Math.Abs(lf - 1) > 1e-9 ? lf : double.NaN, Selection = p.P.Name + " mean " + s.Item1 });
+                    // the MIN row records his injury designation and rotation chance at prediction time ("q0.50|r0.92"), so the
+                    // audit can later split errors by injury uncertainty (the injury file is overwritten by later reports)
+                    string inj = s.Item1 == "MIN" ? (p.P.Status == "Q" ? "q" + p.P.PPlay.ToString("0.00", U.IC) : "a") + "|r" + p.PPlays.ToString("0.00", U.IC) : "";
+                    res.Add(new Pred { Date = date, GameId = p.G.Def.EspnId, Game = gl(p.G), Kind = "MEAN", Stat = s.Item1, Team = p.P.Team, Pid = p.P.Pid, Player = p.P.Name, Mean = s.Item2, Line = p.P.Usage, PMarket = Math.Abs(lf - 1) > 1e-9 ? lf : double.NaN, Tag = inj, Selection = p.P.Name + " mean " + s.Item1 });
                 }
             }
             // erupt (scores eruption line or more) and dud (half his season scoring or less), graded like any prop
