@@ -1,28 +1,28 @@
 Walk-forward backtest 2026-10-20 to 2026-11-12: 162 games, 20,000 sims per game. Player data, minutes and rates use only games before each date; availability uses who actually dressed; market = DraftKings closing line (ESPN).
-  player shooting-night SD 0.00, minutes SD 0.20: player-prop Brier 0.07473
-  player shooting-night SD 0.00, minutes SD 0.28: player-prop Brier 0.07448
-  player shooting-night SD 0.00, minutes SD 0.36: player-prop Brier 0.07429  <- selected
-  player shooting-night SD 0.10, minutes SD 0.20: player-prop Brier 0.07475
-  player shooting-night SD 0.10, minutes SD 0.28: player-prop Brier 0.07447
-  player shooting-night SD 0.10, minutes SD 0.36: player-prop Brier 0.07440
-Selected vs previous setting: Brier 0.07429 vs 0.07429 (+0.0% change).
-Moneyline Brier: simulation 0.1751; DraftKings closing no-vig 0.1765 (n=162). Mean margin error: market 11.1, model-only 11.4 pts. Mean total error vs closing total -1.8 pts.
-Market weight check (log loss, normal approximation): w=0.00: 0.5414; w=0.25: 0.5375; w=0.50: 0.5351; w=0.75: 0.5344; w=0.90: 0.5348; w=1.00: 0.5354. Market weight stays 0.00: the model runs on its own numbers and DraftKings is only a comparison.
-Projected PTS: mean 11.56 vs actual 11.40 (bias +0.16, MAE 4.70, n=3081); high-usage players bias -0.29 (n=390)
-Projected REB: mean 4.35 vs actual 4.31 (bias +0.04, MAE 1.88, n=3081); high-usage players bias +0.13 (n=390)
-Projected AST: mean 2.75 vs actual 2.62 (bias +0.12, MAE 1.42, n=3081); high-usage players bias -0.39 (n=390)
-Projected 3PM: mean 1.31 vs actual 1.33 (bias -0.02, MAE 0.94, n=3081); high-usage players bias +0.05 (n=390)
-Projected MIN: mean 24.03 vs actual 23.93 (bias +0.10, MAE 4.74, n=3081); high-usage players bias +0.46 (n=390)
-Minutes-usage slope: residual slope 0.0 on 1558 player-games before 2026-11-02; half-strength change +0.0 tested on 1369 later player-games: minutes MSE 34.93 -> 34.94. Not adopted: slope stays 8.9.
-HotStartWeight 3 vs 1: prop Brier earlier half 0.07597 vs 0.07600, later half 0.07280 vs 0.07289. Using 3.
-MinRecency 0 vs 0.25: prop Brier earlier half 0.07597 vs 0.07608, later half 0.07280 vs 0.07283. Using 0.
-RatePriorMin 150 vs 300: prop Brier earlier half 0.07597 vs 0.07643, later half 0.07280 vs 0.07308. Using 150.
-GammaOverride 0 vs 1: prop Brier earlier half 0.07597 vs 0.07604, later half 0.07280 vs 0.07299. Using 0.
-MinTrend 0 vs 0.25: prop Brier earlier half 0.07597 vs 0.07604, later half 0.07280 vs 0.07297. Using 0.
-LearnPtsK 0 vs 300: prop Brier earlier half 0.07597 vs 0.07602, later half 0.07280 vs 0.07273. Using 0.
-LearnAstK 0 vs 50: prop Brier earlier half 0.07590 vs 0.07590, later half 0.07269 vs 0.07269. Using 50.
+  player shooting-night SD 0.00, minutes SD 0.20: player-prop Brier 0.07465
+  player shooting-night SD 0.00, minutes SD 0.28: player-prop Brier 0.07438
+  player shooting-night SD 0.00, minutes SD 0.36: player-prop Brier 0.07420  <- selected
+  player shooting-night SD 0.10, minutes SD 0.20: player-prop Brier 0.07463
+  player shooting-night SD 0.10, minutes SD 0.28: player-prop Brier 0.07438
+  player shooting-night SD 0.10, minutes SD 0.36: player-prop Brier 0.07428
+Selected vs previous setting: Brier 0.07420 vs 0.07420 (+0.0% change).
+Moneyline Brier: simulation 0.1749; DraftKings closing no-vig 0.1765 (n=162). Mean margin error: market 11.1, model-only 11.4 pts. Mean total error vs closing total -1.8 pts.
+Market weight check (log loss, normal approximation): w=0.00: 0.5416; w=0.25: 0.5376; w=0.50: 0.5352; w=0.75: 0.5345; w=0.90: 0.5348; w=1.00: 0.5354. Market weight stays 0.00: the model runs on its own numbers and DraftKings is only a comparison.
+Projected PTS: mean 11.56 vs actual 11.41 (bias +0.16, MAE 4.71, n=3080); high-usage players bias -0.29 (n=390)
+Projected REB: mean 4.35 vs actual 4.31 (bias +0.04, MAE 1.88, n=3080); high-usage players bias +0.13 (n=390)
+Projected AST: mean 2.75 vs actual 2.63 (bias +0.13, MAE 1.42, n=3080); high-usage players bias -0.26 (n=390)
+Projected 3PM: mean 1.31 vs actual 1.33 (bias -0.02, MAE 0.94, n=3080); high-usage players bias +0.05 (n=390)
+Projected MIN: mean 24.03 vs actual 23.94 (bias +0.10, MAE 4.74, n=3080); high-usage players bias +0.46 (n=390)
+Minutes-usage slope: residual slope 0.0 on 1558 player-games before 2026-11-02; half-strength change +0.0 tested on 1366 later player-games: minutes MSE 34.98 -> 34.98. Not adopted: slope stays 8.9.
+HotStartWeight 3 vs 1: prop Brier earlier half 0.075896 vs 0.075979, later half 0.072689 vs 0.072785. Using 3.
+MinRecency 0 vs 0.25: prop Brier earlier half 0.075896 vs 0.076014, later half 0.072689 vs 0.072718. Using 0.
+RatePriorMin 150 vs 300: prop Brier earlier half 0.075896 vs 0.076364, later half 0.072689 vs 0.072928. Using 150.
+GammaOverride 0 vs 1: prop Brier earlier half 0.075896 vs 0.076037, later half 0.072689 vs 0.072796. Using 0.
+MinTrend 0 vs 0.25: prop Brier earlier half 0.075896 vs 0.075949, later half 0.072689 vs 0.072821. Using 0.
+LearnPtsK 0 vs 300: prop Brier earlier half 0.075896 vs 0.075968, later half 0.072689 vs 0.072563. Using 0.
+LearnAstK 50 vs 0: prop Brier earlier half 0.075896 vs 0.075975, later half 0.072689 vs 0.072802. Using 50.
 Team form vs the model's own margins, moneyline Brier earlier / later half: 0.5: 0.19717 / 0.15528; 0: 0.19918 / 0.16530 (props 0.07592 / 0.07267); 1: 0.20005 / 0.15529 (props 0.07599 / 0.07272). Using 0.5.
-Double-double calibration: fitted shift -0.2, slope 0.9 on 1638 player-games; held-out Brier raw 0.05387, current 0.05413, fitted 0.05441. Kept current.
-Player-threshold calibration (fit before 2026-11-02, tested after): PTS: shift +0.00 slope 1.05, held-out Brier 0.07750 -> 0.07736 not adopted; REB: shift -0.05 slope 1.00, held-out Brier 0.07295 -> 0.07297 not adopted; AST: shift -0.10 slope 1.00, held-out Brier 0.07250 -> 0.07258 not adopted; 3PM: shift -0.05 slope 0.95, held-out Brier 0.10734 -> 0.10748 not adopted; PRA: shift -0.05 slope 1.05, held-out Brier 0.06912 -> 0.06892 adopted.
-Matchup strength (player-prop Brier): 0.0: 0.07429 (current); 0.5: 0.07443; 1.0: 0.07463. Using 0.0.
-Player-threshold reliability (predicted -> observed): 0.00-0.10: 0.019->0.019 (n=71529); 0.10-0.20: 0.144->0.136 (n=10535); 0.20-0.30: 0.247->0.234 (n=6369); 0.30-0.40: 0.348->0.338 (n=4764); 0.40-0.50: 0.449->0.450 (n=3699); 0.50-0.60: 0.549->0.563 (n=3095); 0.60-0.70: 0.648->0.667 (n=2643); 0.70-0.80: 0.749->0.756 (n=2398); 0.80-0.90: 0.847->0.861 (n=1992); 0.90-1.00: 0.941->0.960 (n=1187)
+Double-double calibration: fitted shift -0.3, slope 0.8 on 1638 player-games; held-out Brier raw 0.05366, current 0.05393, fitted 0.05464. Kept current.
+Player-threshold calibration (fit before 2026-11-02, tested after): PTS: shift +0.00 slope 1.05, held-out Brier 0.07766 -> 0.07751 not adopted; REB: shift -0.05 slope 1.00, held-out Brier 0.07292 -> 0.07295 not adopted; AST: shift -0.10 slope 1.00, held-out Brier 0.07242 -> 0.07237 not adopted; 3PM: shift -0.05 slope 0.95, held-out Brier 0.10754 -> 0.10768 not adopted; PRA: shift -0.05 slope 1.05, held-out Brier 0.06914 -> 0.06893 adopted.
+Matchup strength (player-prop Brier): 0.0: 0.07420 (current); 0.5: 0.07429; 1.0: 0.07446. Using 0.0.
+Player-threshold reliability (predicted -> observed): 0.00-0.10: 0.019->0.019 (n=71490); 0.10-0.20: 0.144->0.136 (n=10502); 0.20-0.30: 0.247->0.234 (n=6368); 0.30-0.40: 0.348->0.338 (n=4721); 0.40-0.50: 0.448->0.446 (n=3748); 0.50-0.60: 0.549->0.564 (n=3037); 0.60-0.70: 0.648->0.661 (n=2665); 0.70-0.80: 0.749->0.755 (n=2392); 0.80-0.90: 0.847->0.862 (n=2020); 0.90-1.00: 0.940->0.956 (n=1233)
