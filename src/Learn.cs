@@ -373,8 +373,9 @@ namespace NbaQuant
                     log(string.Format(U.IC, "Backtest with {0} = {1} ...", alt.Item1, alt.Item2));
                     var res = halves(Run(from, to, S.BacktestSims, log));
                     bool sw = res.Item1 < cur.Item1 && res.Item2 < cur.Item2;
+                    var before = cur;   // printed below as the old score (it used to print the new score twice after a switch)
                     if (sw) cur = res; else fld.SetValue(S, keepV);
-                    slopeNote += string.Format(U.IC, "\n{0} {1} vs {2}: prop Brier earlier half {3:0.00000} vs {4:0.00000}, later half {5:0.00000} vs {6:0.00000}. Using {7}.", alt.Item1, keepV, alt.Item2, sw ? res.Item1 : cur.Item1, res.Item1, sw ? res.Item2 : cur.Item2, res.Item2, fld.GetValue(S));
+                    slopeNote += string.Format(U.IC, "\n{0} {1} vs {2}: prop Brier earlier half {3:0.000000} vs {4:0.000000}, later half {5:0.000000} vs {6:0.000000}. Using {7}.", alt.Item1, keepV, alt.Item2, before.Item1, res.Item1, before.Item2, res.Item2, fld.GetValue(S));
                 }
 
                 // team form vs the model's own pre-game margins (how far each team has beaten what the model expected so far):
