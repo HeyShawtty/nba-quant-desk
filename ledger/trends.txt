@@ -1,0 +1,561 @@
+SEASON TRENDS through 2026-11-12: 174 games. Home teams 89-85. DraftKings favorites won 128 of 174 and covered 96. Overs 80, unders 94 (average total 226.8 vs DraftKings 228.5). 44 games decided by 20+, 34 by 5 or fewer, 18 comebacks from 15+ down. Back-to-backs 28-31.
+
+TEAMS (record | last 5 | margin season / last 5 / before | ATS | O-U | trajectory | notes)
+  ATL   7-5 | L5 4-1 | +2.1 / +3.8 / +0.9 | ATS 4-8 | O-U 7-5 | steady
+  BKN   3-8 | L5 2-3 | -5.1 / -1.8 / -7.8 | ATS 7-4 | O-U 6-5 | steady
+  BOS   10-2 | L5 5-0 | +11.2 / +18.6 / +5.9 | ATS 7-5 | O-U 3-9 | steady | won 5 straight; covered 4 straight; 1st quarters +4.8 per game
+  CHA   4-8 | L5 1-4 | -11.0 / -15.0 / -8.1 | ATS 5-7 | O-U 4-8 | steady | 4th quarters -7.0 per game
+  CHI   1-9 | L5 0-5 | -15.5 / -14.8 / -16.2 | ATS 5-5 | O-U 5-5 | steady | lost 8 straight; 1st quarters -8.6 per game
+  CLE   6-6 | L5 2-3 | +2.1 / +0.0 / +3.6 | ATS 4-8 | O-U 6-6 | steady [banned]
+  DAL   7-5 | L5 3-2 | +1.0 / +2.4 / +0.0 | ATS 7-5 | O-U 4-8 | steady
+  DEN   6-4 | L5 3-2 | +1.2 / +3.6 / -1.2 | ATS 5-5 | O-U 5-5 | steady
+  DET   8-3 | L5 3-2 | +7.7 / +7.4 / +8.0 | ATS 7-4 | O-U 6-5 | steady
+  GS    8-4 | L5 4-1 | +7.8 / +14.8 / +2.9 | ATS 8-4 | O-U 7-5 | steady
+  HOU   9-3 | L5 3-2 | +8.9 / +4.0 / +12.4 | ATS 9-3 | O-U 7-5 | steady
+  IND   4-8 | L5 2-3 | -2.4 / -0.4 / -3.9 | ATS 7-5 | O-U 4-8 | steady
+  LAC   2-8 | L5 1-4 | -5.9 / -5.4 / -6.4 | ATS 5-5 | O-U 6-4 | steady
+  LAL   11-2 | L5 5-0 | +7.9 / +9.0 / +7.2 | ATS 9-4 | O-U 9-4 | steady | won 7 straight; over 4 straight; 4th quarters -4.6 per game; 1st quarters +4.4 per game
+  MEM   7-4 | L5 1-4 | +6.0 / -5.0 / +15.2 | ATS 7-4 | O-U 5-6 | falling | last 5 margin -5.0 vs +15.2 before
+  MIA   5-6 | L5 3-2 | -4.3 / -5.6 / -3.2 | ATS 2-9 | O-U 4-7 | steady | failed to cover 5 straight; under 4 straight
+  MIL   1-11 | L5 0-5 | -14.6 / -16.8 / -13.0 | ATS 4-8 | O-U 6-6 | steady | lost 8 straight; 4th quarters -3.8 per game
+  MIN   9-3 | L5 5-0 | +13.4 / +16.4 / +11.3 | ATS 11-1 | O-U 6-6 | steady | won 5 straight; covered 7 straight; 4th quarters +3.8 per game; 1st quarters +3.8 per game
+  NO    4-8 | L5 1-4 | -7.3 / -20.0 / +1.7 | ATS 6-6 | O-U 8-4 | falling | lost 4 straight; failed to cover 4 straight; last 5 margin -20.0 vs +1.7 before; 4th quarters -5.2 per game
+  NY    6-5 | L5 4-1 | +6.8 / +15.8 / -0.7 | ATS 4-7 | O-U 3-8 | rising | last 5 margin +15.8 vs -0.7 before
+  OKC   8-4 | L5 3-2 | +4.2 / +9.6 / +0.3 | ATS 7-5 | O-U 4-8 | steady
+  ORL   4-7 | L5 2-3 | -5.5 / -1.4 / -9.0 | ATS 5-6 | O-U 5-6 | steady
+  PHI   10-3 | L5 3-2 | +1.8 / -4.6 / +5.8 | ATS 7-6 | O-U 5-8 | steady
+  PHX   5-6 | L5 4-1 | -4.4 / +3.6 / -11.0 | ATS 3-8 | O-U 6-5 | rising | last 5 margin +3.6 vs -11.0 before
+  POR   8-3 | L5 3-2 | +7.3 / +3.0 / +10.8 | ATS 7-4 | O-U 5-6 | steady
+  SA    10-2 | L5 5-0 | +11.2 / +13.8 / +9.3 | ATS 5-7 | O-U 4-8 | steady | won 10 straight
+  SAC   1-10 | L5 1-4 | -12.7 / -5.2 / -19.0 | ATS 4-7 | O-U 6-5 | rising | lost 4 straight; last 5 margin -5.2 vs -19.0 before
+  TOR   5-7 | L5 1-4 | +1.4 / -7.4 / +7.7 | ATS 5-7 | O-U 6-6 | falling | last 5 margin -7.4 vs +7.7 before; 4th quarters +4.8 per game
+  UTAH  1-11 | L5 0-5 | -11.5 / -11.0 / -11.9 | ATS 2-10 | O-U 4-8 | steady | lost 10 straight
+  WSH   4-9 | L5 0-5 | -5.8 / -14.8 / -0.1 | ATS 6-7 | O-U 4-9 | falling | lost 6 straight; last 5 margin -14.8 vs -0.1 before
+
+PLAYERS MOVING (last 5 vs the games before; z = how far outside his usual game-to-game swing)
+  Bobby Portis             MIA   falling  pts 10 -> 3 (z -2.8), min 22.8 -> 17.4 minutes down
+  Sion James               CHA   rising   pts 3.7 -> 9.2 (z +2.5), min 25.1 -> 27.6 
+  Gui Santos               GS    falling  pts 9.2 -> 2.4 (z -2.3), min 24 -> 14 minutes down
+  LaMelo Ball              MIN   rising   pts 14.4 -> 24.4 (z +2.3), min 25.3 -> 30.8 minutes up | 20+ pts in 5 straight; 3+ threes in 5 straight
+  Josh Hart                NY    falling  pts 12.3 -> 5.8 (z -2.3), min 33.7 -> 29.4 minutes down
+  Obi Toppin               IND   falling  pts 15.8 -> 10.4 (z -2.2), min 23.2 -> 19.6 
+  Tyrese Maxey             PHI   falling  pts 29.1 -> 22.8 (z -2.1), min 37.5 -> 34.2 
+  Max Christie             DAL   falling  pts 8.3 -> 1.6 (z -2.1), min 26.5 -> 9.2 minutes down
+  Bennett Stirtz           OKC   rising   pts 5.3 -> 11.6 (z +2.1), min 15 -> 23.6 minutes up
+  Kevin Huerter            DET   rising   pts 5.8 -> 12.8 (z +2.0), min 20.5 -> 26.4 minutes up
+  Caleb Martin             DAL   falling  pts 7.7 -> 1.8 (z -2.0), min 20 -> 18 
+  Aday Mara                OKC   rising   pts 6.4 -> 11.4 (z +2.0), min 18.3 -> 25.6 minutes up
+  Nolan Traore             BKN   rising   pts 9.4 -> 16.4 (z +1.9), min 19.2 -> 25 minutes up
+  Ayo Dosunmu              MIN   rising   pts 15.3 -> 22 (z +1.9), min 29.3 -> 33.4 minutes up
+  Josh Giddey              CHI   rising   pts 7.6 -> 12.8 (z +1.8), min 26.8 -> 28.6 
+  Georges Niang            GS    rising   pts 6.4 -> 10.2 (z +1.8), min 19.6 -> 21.4 
+  Jakob Poeltl             TOR   rising   pts 4.6 -> 12 (z +1.8), min 20.2 -> 27.6 minutes up
+  Darryn Peterson          UTAH  rising   pts 13.4 -> 20.2 (z +1.8), min 30.3 -> 31.8  | 20+ pts in 4 straight
+  Collin Murray-Boyles     TOR   rising   pts 7.7 -> 13.8 (z +1.8), min 19.2 -> 27.4 minutes up
+  Franz Wagner             ORL   rising   pts 19.7 -> 28 (z +1.8), min 35.3 -> 38.6  | 30+ pts in 3 straight
+  Matisse Thybulle         LAL   falling  pts 8.6 -> 4.6 (z -1.7), min 24.4 -> 24.2 
+  Miles Bridges            PHX   falling  pts 17.3 -> 11.4 (z -1.7), min 32.8 -> 26.2 minutes down
+  Dejounte Murray          NO    falling  pts 17.8 -> 10 (z -1.6), min 32.2 -> 30.8 
+  Keaton Wagler            LAC   falling  pts 14.4 -> 10 (z -1.6), min 26.4 -> 20 minutes down
+  Evan Mobley              CLE   falling  pts 19.1 -> 13.8 (z -1.6), min 32.9 -> 31 
+  Victor Wembanyama        SA    rising   pts 25.7 -> 36.6 (z +1.6), min 31.3 -> 28.2  | 20+ pts in 5 straight
+  De'Aaron Fox             SA    falling  pts 15.9 -> 11.8 (z -1.6), min 30.6 -> 28.2 
+  DeMar DeRozan            DEN   falling  pts 13 -> 7.6 (z -1.6), min 26.8 -> 21 minutes down
+  Andrew Wiggins           MIA   falling  pts 10.8 -> 6.2 (z -1.6), min 27.3 -> 23.8 
+  Klay Thompson            MIA   rising   pts 10.7 -> 18.8 (z +1.5), min 20.8 -> 29.4 minutes up
+  Jeremiah Fears           NO    rising   pts 12.9 -> 18.6 (z +1.5), min 27.1 -> 31.2 minutes up
+  Marcus Smart             HOU   steady   pts 11.8 -> 5.6 (z -1.5), min 25 -> 18.4 minutes down
+  Brandon Miller           CHA   steady   pts 25.6 -> 15.6 (z -1.4), min 33.8 -> 28.2 minutes down
+  Josh Green               UTAH  steady   pts 2.2 -> 5 (z +1.4), min 13.8 -> 26.2 minutes up
+  Domantas Sabonis         SAC   steady   pts 17 -> 10.6 (z -1.4), min 37 -> 31.8 minutes down
+  Precious Achiuwa         SAC   steady   pts 12.5 -> 7.8 (z -1.4), min 29 -> 23.2 minutes down
+  Dennis Schroder          CHA   steady   pts 14 -> 7.2 (z -1.4), min 32.3 -> 28.2 minutes down
+  Trevon Brazile           DEN   steady   pts 8.8 -> 5.4 (z -1.3), min 22.8 -> 16.4 minutes down
+  Kobe Sanders             LAC   steady   pts 7 -> 12.6 (z +1.3), min 21.8 -> 26.8 minutes up
+  Landry Shamet            NY    steady   pts 7.7 -> 12 (z +1.3), min 24 -> 28.2 minutes up
+  Anthony Black            ORL   steady   pts 14.3 -> 19.8 (z +1.2), min 26.3 -> 34.8 minutes up
+  Scottie Barnes           TOR   steady   pts 17 -> 27.4 (z +1.2), min 30.3 -> 35.2 minutes up
+  Chaney Johnson           BKN   steady   pts 6.2 -> 3 (z -1.2), min 22 -> 15 minutes down
+  Kingston Flemings        ATL   steady   pts 6.3 -> 11 (z +1.2), min 19.5 -> 24.8 minutes up
+  Ausar Thompson           DET   steady   pts 8.8 -> 11.4 (z +1.1), min 26.4 -> 31 minutes up
+  Jamison Battle           TOR   steady   pts 8.3 -> 11.6 (z +1.0), min 16.1 -> 23.8 minutes up
+  AJ Green                 MIL   steady   pts 7.6 -> 5 (z -1.0), min 19.9 -> 15.6 minutes down
+  Caleb Wilson             CHI   steady   pts 20.8 -> 17 (z -0.9), min 34.6 -> 26.8 minutes down
+  Daniss Jenkins           DET   steady   pts 11.2 -> 16.2 (z +0.9), min 24.5 -> 30.8 minutes up
+  Keon Ellis               BKN   steady   pts 6 -> 4 (z -0.9), min 25 -> 20.6 minutes down
+
+CARRY-OVER (share of a last-5 swing that showed up in the next game; 0 = noise, 1 = new normal)
+  PTS          -0.07  (n=725)
+  MIN          0.44  (n=725)
+  REB          0.07  (n=725)
+  AST          -0.10  (n=725)
+  3PM          -0.31  (n=725)
+  TEAM MARGIN  -0.01  (n=108)
+
+ABSENCES: with vs without a regular (t = size of the change against normal game-to-game swing)
+  OKC Chet Holmgren (30 min, 12 pts): played 3, missed 9, out the last 9. Team 3-0 (+10.3) with, 5-4 (+2.1) without: noise so far.
+      Bennett Stirtz           pts 0.7 -> 10.3 (+9.7), min 4.7 -> 23.2, shots 1.3 -> 7.9, ast 0 -> 1.7 | games 3/9 | t +2.8 | worth noticing
+      Aday Mara                pts 3.7 -> 10.1 (+6.4), min 13 -> 24.1, shots 3.6 -> 8, ast 0.7 -> 1.7 | games 3/9 | t +2.3 | worth noticing
+      Kenrich Williams         pts 3 -> 8.1 (+5.1), min 6.7 -> 23.2, shots 1.3 -> 7.3, ast 0.3 -> 1.4 | games 3/9 | t +1.9 | leaning
+      Ajay Mitchell            pts 11.3 -> 21.1 (+9.8), min 24.7 -> 28.2, shots 11.4 -> 17.2, ast 3.3 -> 3.2 | games 3/8 | t +1.4 | leaning
+      Jared McCain             pts 9 -> 13.9 (+4.9), min 20.3 -> 28.1, shots 8 -> 13.6, ast 1 -> 2.2 | games 3/9 | t +1.1 | noise so far
+      Alex Caruso              pts 9.3 -> 6.7 (-2.7), min 22.3 -> 18.3, shots 6.6 -> 4.6, ast 4 -> 2.3 | games 3/6 | t -0.9 | noise so far
+  OKC Jalen Williams (31.7 min, 13.7 pts): played 3, missed 9, out the last 9. Team 3-0 (+10.3) with, 5-4 (+2.1) without: noise so far.
+      Bennett Stirtz           pts 0.7 -> 10.3 (+9.7), min 4.7 -> 23.2, shots 1.3 -> 7.9, ast 0 -> 1.7 | games 3/9 | t +2.8 | worth noticing
+      Aday Mara                pts 3.7 -> 10.1 (+6.4), min 13 -> 24.1, shots 3.6 -> 8, ast 0.7 -> 1.7 | games 3/9 | t +2.3 | worth noticing
+      Kenrich Williams         pts 3 -> 8.1 (+5.1), min 6.7 -> 23.2, shots 1.3 -> 7.3, ast 0.3 -> 1.4 | games 3/9 | t +1.9 | leaning
+      Ajay Mitchell            pts 11.3 -> 21.1 (+9.8), min 24.7 -> 28.2, shots 11.4 -> 17.2, ast 3.3 -> 3.2 | games 3/8 | t +1.4 | leaning
+      Jared McCain             pts 9 -> 13.9 (+4.9), min 20.3 -> 28.1, shots 8 -> 13.6, ast 1 -> 2.2 | games 3/9 | t +1.1 | noise so far
+      Alex Caruso              pts 9.3 -> 6.7 (-2.7), min 22.3 -> 18.3, shots 6.6 -> 4.6, ast 4 -> 2.3 | games 3/6 | t -0.9 | noise so far
+  MIN Anthony Edwards (33.8 min, 33.2 pts): played 4, missed 8, out the last 8. Team 3-1 (+17.0) with, 6-2 (+11.6) without: noise so far.
+      Ayo Dosunmu              pts 12 -> 21.1 (+9.1), min 26.2 -> 33.4, shots 10.9 -> 16.3, ast 4 -> 3.6 | games 4/8 | t +2.4 | worth noticing
+      Jaylen Clark             pts 1.3 -> 6.2 (+4.9), min 3.7 -> 18.6, shots 1.9 -> 5.3, ast 0.7 -> 0.9 | games 3/8 | t +2.1 | worth noticing
+      Trey Lyles               pts 4 -> 7 (+3.0), min 14 -> 20.2, shots 3.3 -> 5.8, ast 1.2 -> 0.6 | games 4/8 | t +1.4 | leaning
+      Jaden McDaniels          pts 15 -> 17.9 (+2.9), min 31.8 -> 33.9, shots 11.2 -> 15.9, ast 2.8 -> 4 | games 4/8 | t +1.4 | leaning
+      LaMelo Ball              pts 14.8 -> 20.5 (+5.8), min 25 -> 28.9, shots 13.2 -> 16.4, ast 6.2 -> 6.2 | games 4/8 | t +1.2 | noise so far
+      Terrence Shannon Jr.     pts 13 -> 8.6 (-4.4), min 22.2 -> 20.8, shots 9.5 -> 10.1, ast 2.5 -> 3 | games 4/5 | t -1.2 | noise so far
+  IND Tyrese Haliburton (33 min, 21.8 pts): played 4, missed 8, out the last 8. Team 2-2 (+1.5) with, 2-6 (-4.4) without: noise so far.
+      Obi Toppin               pts 15.8 -> 10.4 (-5.4), min 23.2 -> 19.6, shots 11.7 -> 9.1, ast 1.5 -> 1.6 | games 4/5 | t -2.2 | worth noticing
+      Larry Nance Jr.          pts 2 -> 6.1 (+4.1), min 11.8 -> 16.1, shots 2.6 -> 4.5, ast 0.5 -> 0.6 | games 4/7 | t +1.6 | leaning
+      Quenton Jackson          pts 5.8 -> 11.4 (+5.6), min 19.5 -> 22.8, shots 5.5 -> 9.1, ast 2.5 -> 2.6 | games 4/8 | t +1.4 | leaning
+      Kelly Oubre Jr.          pts 7.5 -> 11 (+3.5), min 22.8 -> 24.2, shots 8.4 -> 9.8, ast 2 -> 1 | games 4/6 | t +1.1 | noise so far
+      Jarace Walker            pts 5.2 -> 7.6 (+2.4), min 21 -> 21.1, shots 7.2 -> 7.5, ast 1.5 -> 1.8 | games 4/8 | t +0.8 | noise so far
+      Jalen Slawson            pts 2.3 -> 4.1 (+1.8), min 9 -> 17, shots 1.6 -> 3.8, ast 0.7 -> 1.3 | games 3/7 | t +0.8 | noise so far
+  ORL Jalen Suggs (33.3 min, 8 pts): played 3, missed 8, out the last 8. Team 1-2 (-6.7) with, 3-5 (-5.1) without: noise so far.
+      Jamal Cain               pts 1.7 -> 9.3 (+7.6), min 13.3 -> 22.1, shots 3 -> 7.8, ast 0 -> 0.6 | games 3/7 | t +2.0 | leaning
+      Desmond Bane             pts 15 -> 19.3 (+4.3), min 31.7 -> 35.9, shots 15.2 -> 16.6, ast 1.3 -> 2.9 | games 3/7 | t +1.0 | noise so far
+      Jase Richardson          pts 4.7 -> 6.4 (+1.7), min 15 -> 24.1, shots 5.3 -> 8.2, ast 2 -> 2.6 | games 3/8 | t +0.9 | noise so far
+      Wendell Carter Jr.       pts 17 -> 12.4 (-4.6), min 31 -> 33.6, shots 9.8 -> 9.6, ast 1 -> 1.2 | games 3/8 | t -0.8 | noise so far
+      Tristan da Silva         pts 12.7 -> 16.3 (+3.7), min 28 -> 31.7, shots 11 -> 13.5, ast 2 -> 1.5 | games 3/6 | t +0.8 | noise so far
+      Franz Wagner             pts 21 -> 24.4 (+3.4), min 33 -> 38.2, shots 21.2 -> 21.4, ast 6.3 -> 8.5 | games 3/8 | t +0.6 | noise so far
+  UTAH Jaren Jackson Jr. (26 min, 16.2 pts): played 4, missed 8, out the last 8. Team 1-3 (-8.2) with, 0-8 (-13.1) without: noise so far.
+      Darryn Peterson          pts 11.5 -> 18.6 (+7.1), min 29.2 -> 31.8, shots 13.3 -> 16.6, ast 2.5 -> 4.8 | games 4/8 | t +1.8 | leaning
+      Josh Okogie              pts 0.7 -> 5.2 (+4.6), min 13 -> 20.5, shots 2.3 -> 4.9, ast 0.7 -> 1.2 | games 3/8 | t +1.6 | leaning
+      Lauri Markkanen          pts 16 -> 20 (+4.0), min 28.5 -> 33.2, shots 14 -> 17.8, ast 1.8 -> 2.2 | games 4/4 | t +0.7 | noise so far
+      Jaxson Hayes             pts 10.3 -> 7.9 (-2.5), min 23.7 -> 25.5, shots 6.7 -> 6.4, ast 2 -> 1.5 | games 3/8 | t -0.7 | noise so far
+      Keyonte George           pts 22.8 -> 19 (-3.8), min 31.8 -> 32.4, shots 17 -> 18.8, ast 7.8 -> 5.7 | games 4/7 | t -0.6 | noise so far
+      Josh Green               pts 3 -> 3.8 (+0.8), min 14 -> 21.5, shots 2.2 -> 4.3, ast 1 -> 1.1 | games 2/8 | t +0.3 | noise so far
+  POR Ja Morant (26 min, 15.8 pts): played 4, missed 7, out the last 7. Team 3-1 (+8.8) with, 5-2 (+6.4) without: noise so far.
+      Toumani Camara           pts 15.5 -> 11.7 (-3.8), min 25 -> 30.4, shots 9.2 -> 10, ast 1.5 -> 1.4 | games 4/7 | t -1.4 | leaning
+      Robert Williams III      pts 9.7 -> 6.5 (-3.2), min 18 -> 15.5, shots 6.3 -> 4.9, ast 0.7 -> 1 | games 3/6 | t -1.0 | noise so far
+      Jrue Holiday             pts 12 -> 14.1 (+2.1), min 25.2 -> 26.7, shots 10.1 -> 9.6, ast 4 -> 3.9 | games 4/7 | t +0.7 | noise so far
+      Damian Lillard           pts 18.5 -> 20.6 (+2.1), min 29.5 -> 29, shots 16.3 -> 16.4, ast 3.5 -> 4.6 | games 4/7 | t +0.6 | noise so far
+      Sidy Cissoko             pts 7 -> 9 (+2.0), min 22.5 -> 23.1, shots 6 -> 6.8, ast 2.5 -> 1.7 | games 4/7 | t +0.5 | noise so far
+      Scoot Henderson          pts 7.5 -> 8.9 (+1.4), min 19 -> 24, shots 8.7 -> 9.8, ast 1.5 -> 1.6 | games 4/7 | t +0.5 | noise so far
+  UTAH Lauri Markkanen (30.9 min, 18 pts): played 8, missed 4, out the last 3. Team 1-7 (-12.0) with, 0-4 (-10.5) without: noise so far.
+      Darryn Peterson          pts 13 -> 22.8 (+9.8), min 30.8 -> 31.2, shots 13.4 -> 19.6, ast 4 -> 4 | games 8/4 | t +2.5 | worth noticing
+      Ace Bailey               pts 11.6 -> 16.8 (+5.1), min 29.2 -> 34.5, shots 11.1 -> 15.2, ast 2 -> 1.8 | games 8/4 | t +1.5 | leaning
+      Mo Bamba                 pts 8.8 -> 5.8 (-3.0), min 18.2 -> 17, shots 5.8 -> 4.1, ast 0.5 -> 0.8 | games 4/4 | t -1.3 | leaning
+      Isaiah Collier           pts 6.1 -> 9.2 (+3.1), min 14.5 -> 19, shots 6.4 -> 7.8, ast 4.1 -> 3.8 | games 8/4 | t +1.3 | noise so far
+      Brice Sensabaugh         pts 6.9 -> 10.5 (+3.6), min 13.9 -> 17, shots 6.4 -> 9.3, ast 1.1 -> 1.5 | games 8/4 | t +1.0 | noise so far
+      Josh Green               pts 3.2 -> 4.2 (+1.1), min 15.3 -> 27, shots 3.1 -> 5, ast 0.5 -> 2 | games 6/4 | t +0.5 | noise so far
+  BKN Mikel Brown Jr. (23.3 min, 12.9 pts): played 7, missed 4, out the last 2. Team 1-6 (-4.9) with, 2-2 (-5.5) without: noise so far.
+      Day'Ron Sharpe           pts 6.3 -> 11.8 (+5.5), min 25 -> 20.2, shots 6.3 -> 7.5, ast 4.1 -> 4 | games 7/4 | t +2.0 | worth noticing
+      Julius Randle            pts 22.4 -> 15 (-7.4), min 34.7 -> 30, shots 19 -> 15.1, ast 4.7 -> 5.5 | games 7/4 | t -1.9 | leaning
+      Moritz Wagner            pts 9.3 -> 13.8 (+4.5), min 18.7 -> 17.8, shots 7.5 -> 8.4, ast 1.1 -> 1.5 | games 7/4 | t +1.7 | leaning
+      Noah Clowney             pts 4.4 -> 8.8 (+4.3), min 20.9 -> 17.8, shots 4.2 -> 7.5, ast 0.9 -> 0.2 | games 7/4 | t +1.6 | leaning
+      Michael Porter Jr.       pts 23.3 -> 18.5 (-4.8), min 34.9 -> 28.5, shots 18.1 -> 17, ast 1.1 -> 1.5 | games 7/4 | t -1.3 | noise so far
+      Danny Wolf               pts 10.7 -> 8.7 (-2.0), min 20.7 -> 26.7, shots 7.9 -> 7.8, ast 2 -> 2.3 | games 3/3 | t -1.0 | noise so far
+  TOR Scottie Barnes (33.4 min, 23.5 pts): played 8, missed 4, out the last 4. Team 4-4 (+4.4) with, 1-3 (-4.5) without: noise so far.
+      Jakob Poeltl             pts 5.2 -> 13 (+7.8), min 20 -> 29.8, shots 4.3 -> 10, ast 1 -> 1.8 | games 6/4 | t +1.9 | leaning
+      Jamal Shead              pts 5.5 -> 9.5 (+4.0), min 21.5 -> 28.5, shots 5.6 -> 10.9, ast 5.4 -> 9.5 | games 8/4 | t +1.2 | noise so far
+      Jamison Battle           pts 8.4 -> 12.2 (+3.9), min 16.5 -> 25, shots 6.2 -> 9.2, ast 0.4 -> 0.8 | games 8/4 | t +1.2 | noise so far
+      Collin Murray-Boyles     pts 9.6 -> 12.7 (+3.0), min 20.8 -> 28.7, shots 8.4 -> 11.9, ast 1.2 -> 3 | games 8/3 | t +0.8 | noise so far
+      RJ Barrett               pts 20.9 -> 22.2 (+1.4), min 32.5 -> 35.2, shots 18.9 -> 22.1, ast 3.9 -> 4.8 | games 8/4 | t +0.4 | noise so far
+      Ja'Kobe Walter           pts 11.4 -> 10.5 (-0.9), min 29.1 -> 32.5, shots 9.7 -> 12, ast 2.5 -> 0.8 | games 8/4 | t -0.3 | noise so far
+  CLE Sam Merrill (23.1 min, 7.7 pts): played 9, missed 3, out the last 3. Team 5-4 (+4.6) with, 1-2 (-5.3) without: noise so far.
+      Evan Mobley              pts 19.1 -> 10.3 (-8.8), min 32.8 -> 30, shots 14.4 -> 9.2, ast 3.6 -> 3.7 | games 9/3 | t -2.3 | worth noticing
+      Mario Hezonja            pts 9.3 -> 3.3 (-6.0), min 20.6 -> 14.3, shots 8.4 -> 6, ast 1.9 -> 0.3 | games 9/3 | t -1.9 | leaning
+      Tyrese Proctor           pts 5.9 -> 9.3 (+3.5), min 15 -> 23, shots 4.5 -> 7.7, ast 2 -> 2.7 | games 8/3 | t +1.2 | noise so far
+      Meleek Thomas            pts 12.8 -> 13.7 (+0.8), min 22.2 -> 24.3, shots 10.5 -> 11, ast 1.2 -> 1.3 | games 6/3 | t +0.3 | noise so far
+      Jarrett Allen            pts 13.2 -> 11.5 (-1.8), min 25.1 -> 25.5, shots 10 -> 7.1, ast 1.2 -> 2 | games 8/2 | t -0.3 | noise so far
+      Donovan Mitchell         pts 22.6 -> 23.7 (+1.1), min 33.1 -> 32, shots 18.7 -> 18.6, ast 5.8 -> 4.7 | games 9/3 | t +0.2 | noise so far
+  LAL Quentin Grimes (26.1 min, 8 pts): played 11, missed 2, out the last 2. Team 9-2 (+7.5) with, 2-0 (+10.5) without: noise so far.
+      Sandro Mamukelashvili    pts 8.6 -> 23 (+14.4), min 22.7 -> 29, shots 7.5 -> 14.9, ast 1.5 -> 2.5 | games 11/2 | t +2.8 | leaning
+      Jake LaRavia             pts 6.3 -> 2 (-4.3), min 24.1 -> 26.5, shots 4.6 -> 5, ast 1.7 -> 4.5 | games 10/2 | t -1.6 | leaning
+      Luka Doncic              pts 40.1 -> 32 (-8.1), min 35.9 -> 35.5, shots 29.5 -> 27.2, ast 7.7 -> 7.5 | games 9/2 | t -1.1 | noise so far
+      Collin Sexton            pts 9.5 -> 14 (+4.5), min 17.3 -> 20, shots 9.2 -> 11.3, ast 2.2 -> 4.5 | games 10/2 | t +0.9 | noise so far
+      Ziaire Williams          pts 11.1 -> 10.5 (-0.6), min 24.1 -> 24, shots 7.7 -> 7.5, ast 1.6 -> 3.5 | games 8/2 | t -0.3 | noise so far
+      Walker Kessler           pts 14.4 -> 15.5 (+1.1), min 31 -> 29.5, shots 10.4 -> 12.3, ast 1.5 -> 3.5 | games 11/2 | t +0.2 | noise so far
+  PHI LeBron James (32.5 min, 15.1 pts): played 10, missed 3, out the last 1. Team 7-3 (-0.4) with, 3-0 (+9.0) without: noise so far.
+      Kentavious Caldwell-Pope pts 4.8 -> 8.7 (+3.9), min 21.2 -> 24.3, shots 4 -> 5.7, ast 1.5 -> 2.3 | games 10/3 | t +1.7 | leaning
+      Joel Embiid              pts 16.6 -> 24 (+7.4), min 31.3 -> 32, shots 16.9 -> 23.1, ast 3.1 -> 6.5 | games 9/2 | t +1.4 | leaning
+      Tyrese Maxey             pts 25.6 -> 30.3 (+4.7), min 36.2 -> 36.3, shots 20.7 -> 23, ast 5.6 -> 5.3 | games 10/3 | t +1.4 | leaning
+      Dean Wade                pts 3.2 -> 5.7 (+2.4), min 23.5 -> 30.7, shots 3 -> 5.1, ast 0.9 -> 4 | games 8/3 | t +1.0 | noise so far
+      Anfernee Simons          pts 9.3 -> 13.3 (+4.0), min 21.4 -> 22.7, shots 8.3 -> 9.9, ast 1 -> 2 | games 10/3 | t +0.8 | noise so far
+      Adem Bona                pts 2.4 -> 1 (-1.4), min 13.7 -> 16, shots 2.6 -> 2.9, ast 0.4 -> 2 | games 7/2 | t -0.7 | noise so far
+  CHA Dennis Schroder (30 min, 10.2 pts): played 9, missed 3, out the last 3. Team 3-6 (-11.1) with, 1-2 (-10.7) without: noise so far.
+      Royce O'Neale            pts 4.4 -> 8 (+3.6), min 18 -> 23.7, shots 4.7 -> 6.6, ast 0.6 -> 1 | games 9/3 | t +1.4 | leaning
+      Tidjane Salaun           pts 5.2 -> 9.7 (+4.4), min 13.9 -> 19, shots 4.3 -> 8, ast 0.1 -> 0 | games 8/3 | t +1.4 | leaning
+      Sion James               pts 5.2 -> 8.3 (+3.1), min 25.3 -> 28.7, shots 6.4 -> 7.6, ast 2.8 -> 3.3 | games 9/3 | t +1.2 | noise so far
+      Coby White               pts 5.5 -> 12.7 (+7.2), min 17 -> 18.7, shots 9 -> 13.8, ast 2.5 -> 4.3 | games 2/3 | t +1.2 | noise so far
+      Naz Reid                 pts 16.9 -> 18.3 (+1.4), min 29.7 -> 30.7, shots 16.3 -> 21.4, ast 1.9 -> 3 | games 9/3 | t +0.4 | noise so far
+      Grayson Allen            pts 15.7 -> 13.7 (-2.0), min 26.4 -> 30, shots 11 -> 10.9, ast 2.7 -> 5 | games 9/3 | t -0.3 | noise so far
+  ORL Tristan da Silva (30.4 min, 15.1 pts): played 9, missed 2, out the last 2. Team 2-7 (-9.2) with, 2-0 (+11.0) without: leaning.
+      Franz Wagner             pts 20.8 -> 35.5 (+14.7), min 36.4 -> 38.5, shots 20 -> 27.4, ast 8.8 -> 4 | games 9/2 | t +2.4 | leaning
+      Anthony Black            pts 15.7 -> 24 (+8.3), min 30.2 -> 36, shots 13.1 -> 18.4, ast 5.2 -> 6.5 | games 6/2 | t +1.6 | leaning
+      Wendell Carter Jr.       pts 14.8 -> 8.5 (-6.3), min 33.4 -> 30.5, shots 10.1 -> 7.7, ast 1 -> 2 | games 9/2 | t -1.0 | noise so far
+      Desmond Bane             pts 17.5 -> 20 (+2.5), min 34.5 -> 35, shots 15.7 -> 17.9, ast 2.2 -> 3 | games 8/2 | t +0.5 | noise so far
+      Jevon Carter             pts 4 -> 5.5 (+1.5), min 14.2 -> 16, shots 4.4 -> 6.5, ast 1.6 -> 2 | games 5/2 | t +0.4 | noise so far
+      Jase Richardson          pts 5.9 -> 6 (+0.1), min 22.6 -> 17.5, shots 7.6 -> 6.7, ast 2.7 -> 1.5 | games 9/2 | t +0.1 | noise so far
+  NO Trey Murphy III (32.8 min, 15.6 pts): played 9, missed 3, out the last 2. Team 3-6 (-1.1) with, 1-2 (-26.0) without: worth noticing.
+      Zion Williamson          pts 20.8 -> 26 (+5.2), min 32.6 -> 34, shots 14.8 -> 19.9, ast 2.8 -> 2 | games 9/2 | t +1.4 | leaning
+      Karlo Matkovic           pts 10.1 -> 4.3 (-5.8), min 18.4 -> 20, shots 6.7 -> 4.3, ast 1 -> 1.7 | games 8/3 | t -1.2 | noise so far
+      Derik Queen              pts 11.2 -> 15 (+3.8), min 21.9 -> 20.7, shots 9.1 -> 13.3, ast 2.4 -> 2 | games 9/3 | t +1.2 | noise so far
+      Jordan Poole             pts 6 -> 10.5 (+4.5), min 16 -> 27.5, shots 6.8 -> 8.3, ast 3 -> 1.5 | games 4/2 | t +1.1 | noise so far
+      Bennedict Mathurin       pts 6.4 -> 4 (-2.4), min 14.9 -> 19.5, shots 5.9 -> 8.4, ast 1.4 -> 0.5 | games 9/2 | t -1.0 | noise so far
+      Herbert Jones            pts 6 -> 4.7 (-1.3), min 21 -> 28.7, shots 6.1 -> 7.3, ast 0.9 -> 1.7 | games 9/3 | t -0.4 | noise so far
+  CHI Norman Powell (28.9 min, 19.2 pts): played 8, missed 2, out the last 2. Team 1-7 (-18.0) with, 0-2 (-5.5) without: noise so far.
+      Jalen Smith              pts 11 -> 20 (+9.0), min 22.4 -> 30, shots 9.7 -> 10.9, ast 1.8 -> 2.5 | games 8/2 | t +1.9 | leaning
+      Josh Giddey              pts 9.2 -> 14 (+4.8), min 27.2 -> 29.5, shots 9.8 -> 11.6, ast 7.6 -> 11 | games 8/2 | t +1.3 | leaning
+      Matas Buzelis            pts 12.9 -> 16 (+3.1), min 25.1 -> 31, shots 11.6 -> 11.9, ast 2 -> 2 | games 8/2 | t +0.7 | noise so far
+      Tre Jones                pts 10.9 -> 9.5 (-1.4), min 18.1 -> 21, shots 8.9 -> 9.9, ast 3.1 -> 2 | games 8/2 | t -0.7 | noise so far
+      Caleb Wilson             pts 19.5 -> 16.5 (-3.0), min 32.5 -> 23.5, shots 19.1 -> 13.6, ast 2.4 -> 0 | games 8/2 | t -0.6 | noise so far
+      Isaac Okoro              pts 5 -> 6 (+1.0), min 17.9 -> 24, shots 5.1 -> 4.6, ast 1.1 -> 2.5 | games 8/2 | t +0.3 | noise so far
+  BOS Paul George (30.1 min, 22 pts): played 10, missed 2, out the last 1. Team 9-1 (+14.5) with, 1-1 (-5.5) without: leaning.
+      Baylor Scheierman        pts 5.3 -> 10 (+4.7), min 19.2 -> 28, shots 4.6 -> 7, ast 1.2 -> 2.5 | games 10/2 | t +1.8 | leaning
+      Neemias Queta            pts 8.3 -> 13.5 (+5.2), min 21.3 -> 28.5, shots 7.4 -> 8.1, ast 1.8 -> 2 | games 10/2 | t +1.5 | leaning
+      Sam Hauser               pts 8.7 -> 5 (-3.7), min 20.9 -> 21.5, shots 6.2 -> 6.4, ast 1.2 -> 0.5 | games 10/2 | t -1.4 | leaning
+      Mitchell Robinson        pts 6.2 -> 3 (-3.2), min 18.9 -> 13, shots 5.4 -> 1.5, ast 0.9 -> 0 | games 9/2 | t -1.2 | noise so far
+      Jayson Tatum             pts 27.3 -> 21.5 (-5.8), min 33.8 -> 35, shots 23.5 -> 22.9, ast 7.2 -> 8.5 | games 9/2 | t -0.9 | noise so far
+      Payton Pritchard         pts 14.2 -> 9 (-5.2), min 26.6 -> 30.5, shots 11.9 -> 11.8, ast 4 -> 2 | games 10/2 | t -0.8 | noise so far
+  CHA Brandon Miller (31 min, 20.6 pts): played 10, missed 2, out the last 2. Team 3-7 (-13.9) with, 1-1 (+3.5) without: leaning.
+      Coby White               pts 6 -> 15.5 (+9.5), min 16.7 -> 20, shots 9.3 -> 15.8, ast 2 -> 6 | games 3/2 | t +1.6 | leaning
+      Royce O'Neale            pts 4.7 -> 8.5 (+3.8), min 18.8 -> 22.5, shots 4.9 -> 6.7, ast 0.7 -> 0.5 | games 10/2 | t +1.3 | leaning
+      Grayson Allen            pts 14.1 -> 20.5 (+6.4), min 26 -> 34, shots 10.4 -> 13.8, ast 2.7 -> 6 | games 10/2 | t +1.0 | noise so far
+      Naz Reid                 pts 16.6 -> 20.5 (+3.9), min 29.3 -> 33, shots 16.4 -> 23.5, ast 1.9 -> 3.5 | games 10/2 | t +0.8 | noise so far
+      Tidjane Salaun           pts 6.1 -> 8 (+1.9), min 14.9 -> 17, shots 5.4 -> 5.2, ast 0.1 -> 0 | games 9/2 | t +0.5 | noise so far
+      Sion James               pts 5.8 -> 7 (+1.2), min 24.9 -> 32.5, shots 6.6 -> 7.4, ast 2.5 -> 5 | games 10/2 | t +0.4 | noise so far
+  SA Devin Vassell (30.2 min, 11.9 pts): played 10, missed 2, out the last 2. Team 8-2 (+10.3) with, 2-0 (+15.5) without: noise so far.
+      Stephon Castle           pts 15.3 -> 7.5 (-7.8), min 28.9 -> 29.5, shots 15.1 -> 11.9, ast 5 -> 5 | games 10/2 | t -1.5 | leaning
+      Victor Wembanyama        pts 29.1 -> 36 (+6.9), min 30.3 -> 28.5, shots 24.3 -> 21.8, ast 3 -> 2 | games 10/2 | t +0.7 | noise so far
+      De'Aaron Fox             pts 13.8 -> 16 (+2.2), min 29.5 -> 30, shots 10.7 -> 13.6, ast 5.9 -> 7.5 | games 10/2 | t +0.6 | noise so far
+      Luke Kornet              pts 3.2 -> 4.5 (+1.3), min 15.2 -> 13.5, shots 3 -> 4.4, ast 1 -> 1 | games 10/2 | t +0.6 | noise so far
+      Keldon Johnson           pts 8.2 -> 7 (-1.2), min 23.4 -> 27, shots 8.2 -> 6.9, ast 2 -> 3.5 | games 10/2 | t -0.4 | noise so far
+      Julian Champagnie        pts 10 -> 11.5 (+1.5), min 25.5 -> 31, shots 7.4 -> 9.2, ast 1.3 -> 2 | games 10/2 | t +0.3 | noise so far
+  SAC Keegan Murray (25.2 min, 8.8 pts): played 4, missed 7. Team 0-4 (-11.5) with, 1-6 (-13.4) without: noise so far.
+      Jonathan Mogbo           pts 0 -> 5 (+5.0), min 5 -> 20.3, shots 0 -> 6, ast 0 -> 1.3 | games 2/3 | t +1.7 | leaning
+      Malik Monk               pts 3.3 -> 9.7 (+6.4), min 12 -> 17, shots 5.7 -> 8.9, ast 1.7 -> 4.1 | games 3/7 | t +1.3 | noise so far
+      De'Andre Hunter          pts 9.8 -> 15.7 (+5.9), min 27.5 -> 34.2, shots 8.8 -> 13.9, ast 1.2 -> 1.3 | games 4/6 | t +1.2 | noise so far
+      Dylan Cardwell           pts 2.5 -> 6.5 (+4.0), min 23.5 -> 14, shots 3.2 -> 6, ast 2 -> 1.5 | games 2/2 | t +1.2 | noise so far
+      Leaky Black              pts 3 -> 7.2 (+4.2), min 19 -> 23.8, shots 4 -> 5.5, ast 1.5 -> 2 | games 2/4 | t +0.9 | noise so far
+      Zach LaVine              pts 24 -> 21.3 (-2.7), min 32.8 -> 32.7, shots 17.4 -> 16.8, ast 2.2 -> 2.7 | games 4/7 | t -0.6 | noise so far
+  BKN Egor Demin (22 min, 10.6 pts): played 5, missed 6. Team 1-4 (-1.0) with, 2-4 (-8.5) without: noise so far.
+      Keon Ellis               pts 7 -> 3 (-4.0), min 26 -> 19.6, shots 5.9 -> 4.6, ast 3 -> 1.2 | games 5/5 | t -1.8 | leaning
+      Noah Clowney             pts 8.2 -> 4.2 (-4.0), min 21 -> 18.7, shots 6.1 -> 4.9, ast 0.6 -> 0.7 | games 5/6 | t -1.5 | leaning
+      Nolan Traore             pts 9.5 -> 15.2 (+5.7), min 17.5 -> 25.2, shots 7.9 -> 11.9, ast 2 -> 3 | games 4/6 | t +1.5 | leaning
+      Chaney Johnson           pts 6.6 -> 3.2 (-3.4), min 19.4 -> 18.3, shots 6.2 -> 3.9, ast 1.4 -> 0.8 | games 5/6 | t -1.3 | noise so far
+      Mikel Brown Jr.          pts 10.3 -> 14.8 (+4.4), min 22.7 -> 23.8, shots 12.3 -> 13.8, ast 4.3 -> 3.5 | games 3/4 | t +1.2 | noise so far
+      Danny Wolf               pts 8 -> 10.5 (+2.5), min 22 -> 24.5, shots 6.9 -> 8.3, ast 2.5 -> 2 | games 2/4 | t +1.2 | noise so far
+  IND Ivica Zubac (23.1 min, 10.6 pts): played 7, missed 5. Team 4-3 (+2.3) with, 0-5 (-9.0) without: leaning.
+      Jarace Walker            pts 4.3 -> 10.4 (+6.1), min 15.6 -> 28.8, shots 5.2 -> 10.3, ast 1 -> 2.6 | games 7/5 | t +2.3 | worth noticing
+      Pascal Siakam            pts 24.9 -> 19 (-5.9), min 31.3 -> 34, shots 19.3 -> 18.3, ast 4.3 -> 4.5 | games 7/4 | t -1.8 | leaning
+      Andrew Nembhard          pts 15.4 -> 21 (+5.6), min 33.3 -> 33.3, shots 11.8 -> 19.2, ast 7.4 -> 9 | games 7/3 | t +1.8 | leaning
+      Kobe Brown               pts 0 -> 9.3 (+9.3), min 4 -> 24.3, shots 1 -> 7.5, ast 0 -> 2 | games 2/3 | t +1.5 | leaning
+      Quenton Jackson          pts 7.4 -> 12.4 (+5.0), min 19.4 -> 24.8, shots 6.1 -> 10.3, ast 2.1 -> 3.2 | games 7/5 | t +1.3 | noise so far
+      Jalen Slawson            pts 2.6 -> 4.6 (+2.0), min 10.8 -> 18.4, shots 2.3 -> 4, ast 1.2 -> 1 | games 5/5 | t +1.0 | noise so far
+  NO Dejounte Murray (31.4 min, 13.4 pts): played 9, missed 3. Team 1-8 (-13.7) with, 3-0 (+11.7) without: worth noticing.
+      Herbert Jones            pts 3.6 -> 12 (+8.4), min 21.1 -> 28.3, shots 5.1 -> 10.4, ast 0.8 -> 2 | games 9/3 | t +2.7 | worth noticing
+      Karlo Matkovic           pts 6.1 -> 15 (+8.9), min 16.5 -> 25, shots 4.9 -> 9.2, ast 1.2 -> 1 | games 8/3 | t +1.9 | leaning
+      Saddiq Bey               pts 14.7 -> 17.7 (+3.0), min 26.2 -> 28.7, shots 12.6 -> 13.4, ast 2.6 -> 1.7 | games 9/3 | t +0.9 | noise so far
+      Jeremiah Fears           pts 14.3 -> 18 (+3.7), min 27.6 -> 32.7, shots 14 -> 16, ast 3.6 -> 9 | games 9/3 | t +0.9 | noise so far
+      Trendon Watford          pts 8 -> 6.3 (-1.7), min 18.7 -> 17, shots 5.5 -> 4.9, ast 1 -> 1 | games 3/3 | t -0.7 | noise so far
+      Bennedict Mathurin       pts 5.6 -> 7 (+1.4), min 15.2 -> 17, shots 6.7 -> 5.6, ast 1.2 -> 1.3 | games 8/3 | t +0.7 | noise so far
+  DEN Cameron Johnson (28.4 min, 12.1 pts): played 7, missed 3. Team 4-3 (+1.9) with, 2-1 (-0.3) without: noise so far.
+      Trevon Brazile           pts 5.3 -> 11.3 (+6.0), min 17 -> 25.7, shots 4.5 -> 8.1, ast 0.7 -> 0 | games 7/3 | t +2.2 | worth noticing
+      DeMar DeRozan            pts 8.5 -> 13 (+4.5), min 22.2 -> 26.3, shots 9.2 -> 12.2, ast 2.8 -> 3.3 | games 6/3 | t +1.2 | noise so far
+      Aaron Gordon             pts 11.6 -> 9.7 (-1.9), min 28.1 -> 31, shots 10.3 -> 11.9, ast 1.7 -> 3 | games 7/3 | t -0.5 | noise so far
+      Nikola Jokic             pts 22.9 -> 25 (+2.1), min 35.7 -> 37.7, shots 20.5 -> 20.3, ast 8.4 -> 10.3 | games 7/3 | t +0.4 | noise so far
+      Jamal Murray             pts 25.4 -> 28 (+2.6), min 35.1 -> 39, shots 19.1 -> 20.9, ast 5.6 -> 6.7 | games 7/3 | t +0.3 | noise so far
+      Christian Braun          pts 12.1 -> 13 (+0.9), min 33.3 -> 36.7, shots 10.3 -> 11.3, ast 2.3 -> 2.7 | games 7/3 | t +0.2 | noise so far
+  ATL Jalen Johnson (33.7 min, 19.2 pts): played 9, missed 3. Team 4-5 (-0.1) with, 3-0 (+8.7) without: noise so far.
+      Nickeil Alexander-Walker pts 19.4 -> 29.3 (+9.9), min 30.6 -> 32, shots 17.4 -> 23.6, ast 2.6 -> 2.7 | games 9/3 | t +2.1 | worth noticing
+      Luguentz Dort            pts 7.4 -> 15 (+7.6), min 22.7 -> 31.3, shots 8.3 -> 12.1, ast 1.6 -> 2.3 | games 9/3 | t +2.0 | leaning
+      CJ McCollum              pts 14.6 -> 10.7 (-3.9), min 25.2 -> 26.7, shots 12.3 -> 15.1, ast 2.9 -> 7 | games 9/3 | t -1.1 | noise so far
+      Kingston Flemings        pts 7.6 -> 12.5 (+4.9), min 21.4 -> 24, shots 6.6 -> 9, ast 4.2 -> 5 | games 9/2 | t +1.0 | noise so far
+      Onyeka Okongwu           pts 12.8 -> 16.3 (+3.6), min 28.7 -> 32.3, shots 11.5 -> 11.8, ast 2.9 -> 2.7 | games 9/3 | t +0.8 | noise so far
+      Aaron Wiggins            pts 15.3 -> 13.7 (-1.7), min 25.6 -> 27.3, shots 12.6 -> 12.8, ast 2.4 -> 2.3 | games 9/3 | t -0.6 | noise so far
+  DAL Naji Marshall (24.6 min, 11.3 pts): played 9, missed 3. Team 4-5 (-2.3) with, 3-0 (+11.0) without: leaning.
+      Caleb Martin             pts 2.3 -> 9 (+6.7), min 18.5 -> 19.5, shots 2.6 -> 5.5, ast 2.3 -> 0 | games 6/2 | t +2.0 | leaning
+      Max Christie             pts 4.2 -> 8 (+3.8), min 17.4 -> 22, shots 5.6 -> 6.6, ast 1 -> 1.7 | games 8/3 | t +1.1 | noise so far
+      Cooper Flagg             pts 22.9 -> 29.3 (+6.5), min 32.1 -> 37.3, shots 19 -> 24.2, ast 5.9 -> 8.3 | games 8/3 | t +1.0 | noise so far
+      Marcus Sasser            pts 6.6 -> 3.3 (-3.2), min 17.1 -> 12.3, shots 5.2 -> 4.8, ast 1.7 -> 1.7 | games 7/3 | t -0.8 | noise so far
+      Zaccharie Risacher       pts 7.7 -> 10.3 (+2.7), min 22.8 -> 29, shots 7.6 -> 10.2, ast 1.4 -> 1.7 | games 9/3 | t +0.6 | noise so far
+      Daniel Gafford           pts 8.4 -> 11 (+2.6), min 19.7 -> 27.3, shots 6.1 -> 6.7, ast 1.8 -> 2.3 | games 9/3 | t +0.6 | noise so far
+  LAL Ziaire Williams (24.1 min, 11 pts): played 10, missed 3. Team 9-1 (+9.8) with, 2-1 (+1.7) without: noise so far.
+      Austin Reaves            pts 26.7 -> 18.7 (-8.0), min 35.1 -> 35.7, shots 18.8 -> 18.8, ast 5.1 -> 3.3 | games 9/3 | t -1.7 | leaning
+      Matisse Thybulle         pts 6.1 -> 10.3 (+4.2), min 23.5 -> 27, shots 5.4 -> 7, ast 1.1 -> 1 | games 10/3 | t +1.6 | leaning
+      Quentin Grimes           pts 6.9 -> 11 (+4.1), min 24.6 -> 30, shots 6.3 -> 9.8, ast 2.2 -> 3.3 | games 8/3 | t +1.0 | noise so far
+      Walker Kessler           pts 15.2 -> 12.3 (-2.9), min 31.2 -> 29.3, shots 11.4 -> 8.4, ast 1.9 -> 1.3 | games 10/3 | t -0.7 | noise so far
+      Jake LaRavia             pts 5.2 -> 6.7 (+1.4), min 22.9 -> 29.3, shots 4.4 -> 5.6, ast 2.4 -> 1.3 | games 9/3 | t +0.6 | noise so far
+      Sandro Mamukelashvili    pts 11.3 -> 9.3 (-2.0), min 23.4 -> 24.7, shots 8.4 -> 9.6, ast 1.7 -> 1.3 | games 10/3 | t -0.4 | noise so far
+  TOR Immanuel Quickley (31 min, 17.6 pts): played 10, missed 2. Team 4-6 (+1.9) with, 1-1 (-1.0) without: noise so far.
+      Jakob Poeltl             pts 5.8 -> 18.5 (+12.8), min 22.1 -> 31, shots 5 -> 13.2, ast 1.2 -> 1.5 | games 8/2 | t +2.5 | leaning
+      Jamal Shead              pts 5.2 -> 15 (+9.8), min 21.6 -> 35, shots 5.8 -> 14.8, ast 5.4 -> 13.5 | games 10/2 | t +2.4 | leaning
+      Jamison Battle           pts 9.2 -> 12 (+2.8), min 18.2 -> 25, shots 6.7 -> 9.9, ast 0.4 -> 1 | games 10/2 | t +0.6 | noise so far
+      Ja'Kobe Walter           pts 11.4 -> 9.5 (-1.9), min 30 -> 31.5, shots 9.8 -> 13.6, ast 2.1 -> 1 | games 10/2 | t -0.5 | noise so far
+      RJ Barrett               pts 21 -> 23 (+2.0), min 32.8 -> 36.5, shots 18.9 -> 25.4, ast 4.3 -> 3.5 | games 10/2 | t +0.4 | noise so far
+  GS Draymond Green (26.9 min, 3.2 pts): played 10, missed 2. Team 7-3 (+9.1) with, 1-1 (+1.5) without: noise so far.
+      De'Anthony Melton        pts 7.5 -> 23 (+15.5), min 21.4 -> 27.5, shots 7.5 -> 13, ast 2 -> 4 | games 10/2 | t +2.5 | leaning
+      Brandon Williams         pts 8.4 -> 18.5 (+10.1), min 14.1 -> 24.5, shots 8.6 -> 13.4, ast 1.9 -> 4 | games 8/2 | t +2.4 | leaning
+      Georges Niang            pts 8.9 -> 3.5 (-5.4), min 20 -> 22, shots 6.9 -> 8, ast 1.4 -> 2 | games 10/2 | t -2.0 | leaning
+      Yaxel Lendeborg          pts 19.7 -> 31.5 (+11.8), min 31.5 -> 35, shots 16.1 -> 21, ast 3.3 -> 5.5 | games 10/2 | t +1.8 | leaning
+      Will Richard             pts 5.1 -> 7 (+1.9), min 15.2 -> 26.5, shots 4.1 -> 6, ast 0.7 -> 2 | games 9/2 | t +0.6 | noise so far
+      Gui Santos               pts 5.4 -> 5.5 (+0.1), min 19.1 -> 16, shots 5.2 -> 5.8, ast 1.3 -> 2 | games 7/2 | t +0.0 | noise so far
+  GS Stephen Curry (26.5 min, 27.8 pts): played 10, missed 2. Team 7-3 (+9.1) with, 1-1 (+1.5) without: noise so far.
+      De'Anthony Melton        pts 7.5 -> 23 (+15.5), min 21.4 -> 27.5, shots 7.5 -> 13, ast 2 -> 4 | games 10/2 | t +2.5 | leaning
+      Brandon Williams         pts 8.4 -> 18.5 (+10.1), min 14.1 -> 24.5, shots 8.6 -> 13.4, ast 1.9 -> 4 | games 8/2 | t +2.4 | leaning
+      Georges Niang            pts 8.9 -> 3.5 (-5.4), min 20 -> 22, shots 6.9 -> 8, ast 1.4 -> 2 | games 10/2 | t -2.0 | leaning
+      Yaxel Lendeborg          pts 19.7 -> 31.5 (+11.8), min 31.5 -> 35, shots 16.1 -> 21, ast 3.3 -> 5.5 | games 10/2 | t +1.8 | leaning
+      Will Richard             pts 5.1 -> 7 (+1.9), min 15.2 -> 26.5, shots 4.1 -> 6, ast 0.7 -> 2 | games 9/2 | t +0.6 | noise so far
+      Gui Santos               pts 5.4 -> 5.5 (+0.1), min 19.1 -> 16, shots 5.2 -> 5.8, ast 1.3 -> 2 | games 7/2 | t +0.0 | noise so far
+  CHA Moussa Diabate (29.1 min, 8.7 pts): played 10, missed 2. Team 3-7 (-10.5) with, 1-1 (-13.5) without: noise so far.
+      Tidjane Salaun           pts 4.9 -> 13.5 (+8.6), min 14.1 -> 20.5, shots 4.2 -> 10.5, ast 0.1 -> 0 | games 9/2 | t +2.4 | leaning
+      Sion James               pts 5 -> 11 (+6.0), min 26 -> 27, shots 6.4 -> 8.5, ast 3.1 -> 2 | games 10/2 | t +2.0 | leaning
+      Royce O'Neale            pts 4.7 -> 8.5 (+3.8), min 18.4 -> 24.5, shots 4.8 -> 7.2, ast 0.5 -> 1.5 | games 10/2 | t +1.3 | leaning
+      Ryan Kalkbrenner         pts 4.3 -> 6 (+1.7), min 16.7 -> 28, shots 2.7 -> 4.4, ast 1.5 -> 1.5 | games 10/2 | t +0.9 | noise so far
+      Naz Reid                 pts 16.8 -> 19.5 (+2.7), min 30.1 -> 29, shots 16.7 -> 21.9, ast 2 -> 3 | games 10/2 | t +0.6 | noise so far
+      Coby White               pts 10.7 -> 8.5 (-2.2), min 18 -> 18, shots 11.8 -> 12, ast 2.7 -> 5 | games 3/2 | t -0.3 | noise so far
+  BKN Danny Wolf (23.7 min, 9.7 pts): played 6, missed 3. Team 2-4 (-6.5) with, 1-2 (-2.0) without: noise so far.
+      Keon Ellis               pts 6 -> 2.3 (-3.7), min 20.4 -> 23.3, shots 4 -> 6, ast 2.2 -> 1.7 | games 5/3 | t -1.4 | leaning
+      Julius Randle            pts 16 -> 21.7 (+5.7), min 28.8 -> 39, shots 14.8 -> 21.8, ast 5.2 -> 4 | games 6/3 | t +1.3 | noise so far
+      Chaney Johnson           pts 3.5 -> 7 (+3.5), min 14.5 -> 29.3, shots 3.8 -> 6.2, ast 0.8 -> 1.3 | games 6/3 | t +1.1 | noise so far
+      Michael Porter Jr.       pts 19.2 -> 22.7 (+3.5), min 29.7 -> 37.7, shots 16.7 -> 17.6, ast 0.8 -> 2.3 | games 6/3 | t +0.8 | noise so far
+      Noah Clowney             pts 6.7 -> 4.3 (-2.3), min 17.8 -> 22.7, shots 6.1 -> 4.1, ast 0.5 -> 1 | games 6/3 | t -0.7 | noise so far
+      Day'Ron Sharpe           pts 8.8 -> 7.7 (-1.2), min 23 -> 21.7, shots 6.6 -> 6.4, ast 5.7 -> 2.3 | games 6/3 | t -0.3 | noise so far
+  LAL Luka Doncic (35.8 min, 38.6 pts): played 11, missed 2. Team 9-2 (+7.5) with, 2-0 (+10.5) without: noise so far.
+      Quentin Grimes           pts 5.9 -> 17.5 (+11.6), min 24.1 -> 35, shots 5.2 -> 16.8, ast 2.1 -> 4.5 | games 9/2 | t +2.4 | leaning
+      Collin Sexton            pts 8.5 -> 19 (+10.5), min 16.8 -> 22.5, shots 8.7 -> 14, ast 2.7 -> 2 | games 10/2 | t +2.0 | leaning
+      Austin Reaves            pts 23.7 -> 29.5 (+5.8), min 35.5 -> 34, shots 17.5 -> 24.8, ast 5.1 -> 2.5 | games 10/2 | t +1.1 | noise so far
+      Matisse Thybulle         pts 6.6 -> 9.5 (+2.9), min 23.6 -> 28, shots 5.7 -> 5.9, ast 1.3 -> 0 | games 11/2 | t +0.9 | noise so far
+      Jake LaRavia             pts 6 -> 3.5 (-2.5), min 23 -> 32, shots 4.9 -> 3.4, ast 2.4 -> 1 | games 10/2 | t -0.9 | noise so far
+      Walker Kessler           pts 15.1 -> 11.5 (-3.6), min 31.4 -> 27.5, shots 10.8 -> 10.3, ast 1.6 -> 2.5 | games 11/2 | t -0.8 | noise so far
+  IND Kelly Oubre Jr. (23.6 min, 9.6 pts): played 10, missed 2. Team 3-7 (-2.9) with, 1-1 (+0.0) without: noise so far.
+      Braden Smith             pts 0.2 -> 14.5 (+14.3), min 8 -> 33, shots 1.6 -> 11.4, ast 0.8 -> 7.5 | games 5/2 | t +2.3 | leaning
+      Jalen Slawson            pts 2.8 -> 7 (+4.2), min 12.4 -> 23.5, shots 2 -> 7.8, ast 0.9 -> 2 | games 8/2 | t +1.7 | leaning
+      Quenton Jackson          pts 8.1 -> 16.5 (+8.4), min 20.3 -> 28.5, shots 6.6 -> 14, ast 2.6 -> 2.5 | games 10/2 | t +1.6 | leaning
+      Jay Huff                 pts 5.2 -> 14 (+8.8), min 15.2 -> 27, shots 4.5 -> 10.5, ast 0.8 -> 1.5 | games 8/2 | t +1.5 | leaning
+      Kobe Brown               pts 4 -> 8 (+4.0), min 12 -> 22.5, shots 3.6 -> 6.9, ast 1.7 -> 0.5 | games 3/2 | t +0.6 | noise so far
+      Jarace Walker            pts 6.5 -> 8.5 (+2.0), min 19.1 -> 31, shots 6.8 -> 10.2, ast 1.6 -> 2 | games 10/2 | t +0.6 | noise so far
+  PHI Joel Embiid (31.5 min, 17.9 pts): played 11, missed 2. Team 9-2 (+2.8) with, 1-1 (-4.0) without: noise so far.
+      Tyrese Maxey             pts 25.5 -> 33.5 (+8.0), min 36.3 -> 36, shots 20.2 -> 27, ast 5.8 -> 4 | games 11/2 | t +2.0 | leaning
+      Jaylen Brown             pts 22.2 -> 16 (-6.2), min 34.3 -> 39, shots 18.4 -> 20.8, ast 3.6 -> 4 | games 10/2 | t -1.5 | leaning
+      Adem Bona                pts 1.6 -> 4 (+2.4), min 11.6 -> 23.5, shots 2.2 -> 4.4, ast 0.4 -> 2 | games 7/2 | t +1.2 | noise so far
+      Dean Wade                pts 3.6 -> 5.5 (+1.9), min 23.7 -> 33.5, shots 3.2 -> 4.9, ast 0.9 -> 5.5 | games 9/2 | t +0.7 | noise so far
+      Anfernee Simons          pts 9.9 -> 12 (+2.1), min 20.9 -> 26, shots 8.2 -> 11.4, ast 1 -> 2.5 | games 11/2 | t +0.3 | noise so far
+      Kentavious Caldwell-Pope pts 5.8 -> 5 (-0.8), min 21.5 -> 24.5, shots 4.2 -> 5, ast 1.6 -> 2 | games 11/2 | t -0.3 | noise so far
+  NY Josh Hart (31 min, 8.2 pts): played 8, missed 3. Team 3-5 (+0.1) with, 3-0 (+24.7) without: worth noticing.
+      Jalen Brunson            pts 24.9 -> 29 (+4.1), min 34.8 -> 30, shots 24.1 -> 23.2, ast 5.2 -> 5 | games 8/3 | t +1.0 | noise so far
+      Karl-Anthony Towns       pts 20.4 -> 22.3 (+2.0), min 32.4 -> 28.7, shots 15.4 -> 17.1, ast 4 -> 2.3 | games 8/3 | t +0.6 | noise so far
+      Miles McBride            pts 8.4 -> 6.7 (-1.7), min 19.5 -> 17.3, shots 6.8 -> 4.8, ast 1.1 -> 1.3 | games 8/3 | t -0.4 | noise so far
+      Mikal Bridges            pts 5.6 -> 6.7 (+1.0), min 24.8 -> 23.3, shots 7.1 -> 8, ast 1.8 -> 3 | games 8/3 | t +0.4 | noise so far
+      OG Anunoby               pts 16.1 -> 17.3 (+1.2), min 34.2 -> 29, shots 14.3 -> 14.3, ast 2.5 -> 2 | games 8/3 | t +0.4 | noise so far
+      Landry Shamet            pts 10 -> 8.7 (-1.3), min 25.4 -> 27.3, shots 7.7 -> 7.6, ast 2.2 -> 1.7 | games 8/3 | t -0.3 | noise so far
+  HOU Alperen Sengun (35 min, 21.1 pts): played 10, missed 2. Team 8-2 (+8.0) with, 1-1 (+13.5) without: noise so far.
+      Clint Capela             pts 1 -> 7.5 (+6.5), min 8.2 -> 26, shots 0.5 -> 6.4, ast 0.8 -> 3.5 | games 4/2 | t +2.0 | leaning
+      Fred VanVleet            pts 12.1 -> 20 (+7.9), min 29.9 -> 31, shots 10.1 -> 17.3, ast 5.6 -> 5.5 | games 8/2 | t +1.7 | leaning
+      Amen Thompson            pts 14.5 -> 19 (+4.5), min 32.4 -> 36, shots 12.5 -> 17.3, ast 2.8 -> 4.5 | games 10/2 | t +1.3 | noise so far
+      Kevin Durant             pts 20.5 -> 23 (+2.5), min 34.4 -> 34, shots 16.1 -> 18.9, ast 3.8 -> 2.5 | games 10/2 | t +0.6 | noise so far
+      Tari Eason               pts 9.6 -> 8 (-1.6), min 22.8 -> 28.5, shots 9.4 -> 9.7, ast 1.2 -> 1.5 | games 10/2 | t -0.4 | noise so far
+      Jabari Smith Jr.         pts 16.5 -> 18 (+1.5), min 35.8 -> 32.5, shots 12.8 -> 15.3, ast 2.2 -> 2 | games 10/2 | t +0.3 | noise so far
+  IND Andrew Nembhard (33.3 min, 17.1 pts): played 10, missed 2. Team 4-6 (-1.7) with, 0-2 (-6.0) without: noise so far.
+      Jarace Walker            pts 5.7 -> 12.5 (+6.8), min 17.9 -> 37, shots 5.8 -> 15, ast 1.5 -> 2.5 | games 10/2 | t +1.9 | leaning
+      Jalen Slawson            pts 2.8 -> 7 (+4.2), min 12.8 -> 22, shots 2.2 -> 6.9, ast 1 -> 1.5 | games 8/2 | t +1.7 | leaning
+      Jay Huff                 pts 5.2 -> 14 (+8.8), min 14.1 -> 31.5, shots 4 -> 12.5, ast 0.8 -> 1.5 | games 8/2 | t +1.5 | leaning
+      Quenton Jackson          pts 9 -> 12 (+3.0), min 19.8 -> 31, shots 7.2 -> 11, ast 2.4 -> 3.5 | games 10/2 | t +0.6 | noise so far
+  SAC Leaky Black (22.2 min, 5.8 pts): played 6, missed 2. Team 1-5 (-8.8) with, 0-2 (-21.5) without: noise so far.
+      Emanuel Sharp            pts 5.5 -> 1 (-4.5), min 18.7 -> 21, shots 4.1 -> 4.5, ast 0.8 -> 0.5 | games 6/2 | t -1.8 | leaning
+      Darius Acuff Jr.         pts 24.8 -> 36 (+11.2), min 37.3 -> 39, shots 22.9 -> 27.7, ast 7.8 -> 9.5 | games 6/2 | t +1.8 | leaning
+      Precious Achiuwa         pts 7.2 -> 15 (+7.8), min 21.7 -> 33, shots 6.8 -> 12.6, ast 1 -> 1.5 | games 6/2 | t +1.7 | leaning
+      De'Andre Hunter          pts 14.6 -> 21.5 (+6.9), min 34.4 -> 34.5, shots 13 -> 17.5, ast 1.8 -> 0.5 | games 5/2 | t +1.1 | noise so far
+      Malik Monk               pts 10.3 -> 5 (-5.3), min 18.2 -> 11, shots 9.5 -> 4.3, ast 4.3 -> 2 | games 6/2 | t -0.9 | noise so far
+      Zach LaVine              pts 21 -> 16 (-5.0), min 31.2 -> 30, shots 14.7 -> 15, ast 2 -> 3 | games 6/2 | t -0.8 | noise so far
+
+PERFECT SO FAR: lines reached in every game (8+ games)
+  Karl-Anthony Towns       NY    10+ reb in all 11 (average 13.5, lowest 10)
+  Luka Doncic              LAL   20+ pts in all 11 (average 38.6, lowest 23)
+  Tyrese Maxey             PHI   15+ pts in all 13 (average 26.7, lowest 17)
+  Walker Kessler           LAL   6+ reb in all 13 (average 10.8, lowest 7)
+  Victor Wembanyama        SA    6+ reb in all 12 (average 11.7, lowest 7)
+  Shai Gilgeous-Alexander  OKC   15+ pts in all 12 (average 29.7, lowest 17)
+  Austin Reaves            LAL   15+ pts in all 12 (average 24.7, lowest 16)
+  Duncan Robinson          DET   2+ threes in all 11 (average 4.1, lowest 2)
+  Jalen Brunson            NY    15+ pts in all 11 (average 26, lowest 19)
+  Giannis Antetokounmpo    MIA   6+ reb in all 11 (average 12.6, lowest 6)
+  Bam Adebayo              MIA   6+ reb in all 11 (average 8.4, lowest 6)
+  Luka Doncic              LAL   2+ threes in all 11 (average 5.5, lowest 2)
+  Wendell Carter Jr.       ORL   6+ reb in all 11 (average 9.5, lowest 7)
+  Cameron Boozer           MEM   6+ reb in all 11 (average 9.8, lowest 6)
+  Deni Avdija              POR   15+ pts in all 11 (average 23, lowest 15)
+  Tyrese Maxey             PHI   4+ ast in all 13 (average 5.5, lowest 4)
+  Tyrese Maxey             PHI   1+ threes in all 13 (average 2.5, lowest 1)
+  Cedric Coward            MEM   6+ reb in all 10 (average 8.7, lowest 6)
+  Alperen Sengun           HOU   15+ pts in all 10 (average 21.1, lowest 15)
+  Alperen Sengun           HOU   6+ reb in all 10 (average 9.5, lowest 6)
+  Nikola Jokic             DEN   6+ reb in all 10 (average 10.8, lowest 7)
+  Derrick White            BOS   1+ threes in all 12 (average 1.8, lowest 1)
+  Jaylen Brown             PHI   10+ pts in all 12 (average 21.2, lowest 13)
+  Victor Wembanyama        SA    10+ pts in all 12 (average 30.2, lowest 12)
+  Dylan Harper             SA    10+ pts in all 12 (average 18, lowest 13)
+  Keldon Johnson           SA    4+ reb in all 12 (average 5.7, lowest 4)
+  Jaden McDaniels          MIN   10+ pts in all 12 (average 16.9, lowest 13)
+  Austin Reaves            LAL   1+ threes in all 12 (average 2.2, lowest 1)
+  Yaxel Lendeborg          GS    1+ threes in all 12 (average 2.4, lowest 1)
+  Jalen Johnson            ATL   6+ reb in all 9 (average 8.6, lowest 7)
+  Nickeil Alexander-Walker ATL   10+ pts in all 12 (average 21.9, lowest 12)
+  Aaron Wiggins            ATL   1+ threes in all 12 (average 3, lowest 1)
+  Naz Reid                 CHA   4+ reb in all 12 (average 8.5, lowest 5)
+  Saddiq Bey               NO    1+ threes in all 12 (average 1.8, lowest 1)
+  Kevin Durant             HOU   10+ pts in all 12 (average 20.9, lowest 12)
+  Jabari Smith Jr.         HOU   1+ threes in all 12 (average 2.7, lowest 1)
+  James Harden             CLE   1+ threes in all 12 (average 2.7, lowest 1)
+  Donovan Mitchell         CLE   10+ pts in all 12 (average 22.8, lowest 11)
+  Donovan Mitchell         CLE   1+ threes in all 12 (average 2.7, lowest 1)
+  Duncan Robinson          DET   10+ pts in all 11 (average 18.1, lowest 12)
+  Cade Cunningham          DET   10+ pts in all 11 (average 25, lowest 14)
+  Cade Cunningham          DET   4+ ast in all 11 (average 7.9, lowest 4)
+  Paul Reed                DET   4+ reb in all 11 (average 7.7, lowest 4)
+  Jayson Tatum             BOS   10+ pts in all 11 (average 26.3, lowest 13)
+  Jayson Tatum             BOS   4+ reb in all 11 (average 6.1, lowest 4)
+  Jayson Tatum             BOS   4+ ast in all 11 (average 7.5, lowest 4)
+  OG Anunoby               NY    1+ threes in all 11 (average 2.2, lowest 1)
+  Karl-Anthony Towns       NY    10+ pts in all 11 (average 20.9, lowest 11)
+  Joel Embiid              PHI   4+ reb in all 11 (average 8.8, lowest 4)
+  Giannis Antetokounmpo    MIA   10+ pts in all 11 (average 27.7, lowest 14)
+  Klay Thompson            MIA   1+ threes in all 11 (average 3.8, lowest 1)
+  Davion Mitchell          MIA   10+ pts in all 11 (average 16.5, lowest 10)
+  Rudy Gobert              MIN   4+ reb in all 11 (average 11.5, lowest 4)
+  Luka Doncic              LAL   4+ reb in all 11 (average 7.5, lowest 5)
+  Luka Doncic              LAL   4+ ast in all 11 (average 7.6, lowest 5)
+  Franz Wagner             ORL   10+ pts in all 11 (average 23.5, lowest 14)
+  Anthony Davis            WSH   4+ reb in all 11 (average 10.5, lowest 5)
+  Tyler Herro              MIL   10+ pts in all 11 (average 21.9, lowest 13)
+  Tyler Herro              MIL   1+ threes in all 11 (average 3, lowest 1)
+  Julius Randle            BKN   10+ pts in all 11 (average 19.7, lowest 10)
+  Michael Porter Jr.       BKN   10+ pts in all 11 (average 21.5, lowest 10)
+  Day'Ron Sharpe           BKN   4+ reb in all 11 (average 6.8, lowest 4)
+  Cam Spencer              MEM   1+ threes in all 11 (average 1.8, lowest 1)
+  Zion Williamson          NO    10+ pts in all 11 (average 21.7, lowest 13)
+  Pascal Siakam            IND   10+ pts in all 11 (average 22.7, lowest 13)
+  Cooper Flagg             DAL   10+ pts in all 11 (average 24.6, lowest 12)
+  Cooper Flagg             DAL   4+ reb in all 11 (average 6.9, lowest 4)
+  Donovan Clingan          POR   4+ reb in all 11 (average 10.5, lowest 5)
+  Damian Lillard           POR   1+ threes in all 11 (average 2.8, lowest 1)
+  Miles Bridges            PHX   4+ reb in all 11 (average 7.3, lowest 4)
+  Zach LaVine              SAC   10+ pts in all 11 (average 22.3, lowest 11)
+  Darius Acuff Jr.         SAC   10+ pts in all 11 (average 26.2, lowest 12)
+  Paul George              BOS   1+ threes in all 10 (average 3.7, lowest 1)
+  Ziaire Williams          LAL   1+ threes in all 10 (average 2, lowest 1)
+  Stephen Curry            GS    1+ threes in all 10 (average 4.3, lowest 1)
+  Desmond Bane             ORL   1+ threes in all 10 (average 3.9, lowest 1)
+  Moussa Diabate           CHA   4+ reb in all 10 (average 9.5, lowest 5)
+  Immanuel Quickley        TOR   10+ pts in all 10 (average 17.6, lowest 11)
+  Caleb Wilson             CHI   4+ reb in all 10 (average 6.2, lowest 4)
+  Caleb Wilson             CHI   1+ threes in all 10 (average 2.3, lowest 1)
+How perfect lines did in the next game, all season: 3PM 83/95 (87.4%); AST 24/28 (85.7%); PTS 108/120 (90.0%); REB 83/94 (88.3%)
+
+PERFECT TEAM RECORDS
+  BKN: 0-3 on a back-to-back
+  BOS: 5-0 at home
+  BOS: won 5 straight
+  CHI: 0-4 at home
+  CHI: lost 8 straight
+  IND: under in all 6 home games
+  LAC: 0-5 on the road
+  LAL: 3-0 on a back-to-back
+  LAL: won 7 straight
+  MEM: 5-0 on the road
+  MIA: failed to cover in 5 straight
+  MIL: 0-5 on the road
+  MIL: lost 8 straight
+  MIN: won 5 straight
+  MIN: covered the spread in 7 straight
+  OKC: 5-0 at home
+  ORL: 0-4 at home
+  PHX: 4-0 as the DraftKings favorite
+  SA: 6-0 on the road
+  SA: 3-0 on a back-to-back
+  SA: won 10 straight
+  SAC: 0-6 at home
+  TOR: 0-6 as the DraftKings underdog
+  UTAH: 0-5 on the road
+  UTAH: 0-11 as the DraftKings underdog
+  UTAH: lost 10 straight
+  WSH: lost 6 straight
+
+THE MODEL'S PERFECT AND WINLESS RECORDS (live slates)
+  BOS: won all 8 times the model picked them
+  BOS: the model called the winner in all 9 of their games
+  CHI: the model called the winner in all 6 of their games
+  GS: won all 5 times the model picked them
+  MIA: won all 4 times the model picked them
+  MIL: the model called the winner in all 8 of their games
+  SA: won all 9 times the model picked them
+  SA: the model called the winner in all 9 of their games
+  UTAH: the model called the winner in all 8 of their games
+  model favorites at 80% to 90% won all 20
+
+REFEREES (5+ games, most fouls first)
+  Courtney Kirkland      6 games: 52.5 fouls, 63.3 FTA, total 227.2, O-U 3-3, home 5-1, techs 7, ejections 1
+  Sean Wright            8 games: 49.5 fouls, 51.9 FTA, total 229.2, O-U 5-3, home 6-2, techs 14, ejections 1
+  J.T. Orr               6 games: 48.8 fouls, 54 FTA, total 228.2, O-U 4-2, home 2-4, techs 18, ejections 2
+  John Goble             7 games: 48 fouls, 52.9 FTA, total 233.6, O-U 4-3, home 4-3, techs 6, ejections 0
+  J.B. DeRosa            8 games: 47.9 fouls, 57.6 FTA, total 244.4, O-U 7-1, home 4-4, techs 4, ejections 0
+  Scott Twardoski        5 games: 47.8 fouls, 61.4 FTA, total 228.2, O-U 2-3, home 4-1, techs 10, ejections 0
+  Zach Zarba             8 games: 47.6 fouls, 51.5 FTA, total 216.4, O-U 3-5, home 4-4, techs 11, ejections 0
+  Scott Foster           9 games: 47.6 fouls, 54.7 FTA, total 228.1, O-U 2-7, home 3-6, techs 15, ejections 1
+  Eric Dalen             9 games: 47.2 fouls, 51.4 FTA, total 228.3, O-U 5-4, home 8-1, techs 5, ejections 1
+  Jacyn Goble            7 games: 47.1 fouls, 57 FTA, total 232.1, O-U 4-3, home 4-3, techs 7, ejections 0
+  Curtis Blair           7 games: 46.9 fouls, 54 FTA, total 224.9, O-U 2-5, home 4-3, techs 4, ejections 0
+  Nate Green             7 games: 46.6 fouls, 56.4 FTA, total 228.7, O-U 2-5, home 3-4, techs 18, ejections 0
+  Jonathan Sterling      6 games: 46.5 fouls, 47.8 FTA, total 228.2, O-U 3-3, home 2-4, techs 10, ejections 0
+  Robert Hussey          8 games: 46.5 fouls, 55.8 FTA, total 222.1, O-U 5-3, home 5-3, techs 8, ejections 0
+  Intae Hwang            5 games: 46.2 fouls, 53.8 FTA, total 237.4, O-U 4-1, home 2-3, techs 4, ejections 0
+  Marc Davis             8 games: 45.9 fouls, 51.1 FTA, total 223.9, O-U 2-6, home 2-6, techs 8, ejections 0
+  Brett Nansel           7 games: 45.9 fouls, 50 FTA, total 226.9, O-U 3-4, home 4-3, techs 10, ejections 0
+  Sean Corbin            9 games: 45.8 fouls, 52.7 FTA, total 224.8, O-U 5-4, home 6-3, techs 9, ejections 0
+  CJ Washington          6 games: 45.7 fouls, 54 FTA, total 224.7, O-U 3-3, home 5-1, techs 7, ejections 0
+  Chelisa Painter        6 games: 45.2 fouls, 56 FTA, total 231.8, O-U 3-3, home 2-4, techs 7, ejections 0
+  Eric Lewis             9 games: 45 fouls, 51 FTA, total 233.3, O-U 6-3, home 6-3, techs 13, ejections 1
+  Jason Goldenberg       10 games: 45 fouls, 52.8 FTA, total 221.2, O-U 3-7, home 4-6, techs 5, ejections 0
+  Sha'Rae Mitchell       7 games: 44.9 fouls, 52.6 FTA, total 218.3, O-U 1-6, home 5-2, techs 11, ejections 0
+  Kevin Cutler           8 games: 44.6 fouls, 54.6 FTA, total 228.5, O-U 4-4, home 3-5, techs 15, ejections 1
+  JD Ralls               5 games: 44.6 fouls, 47.4 FTA, total 233.4, O-U 4-1, home 2-3, techs 11, ejections 0
+  Dedric Taylor          7 games: 44.6 fouls, 48.7 FTA, total 220.3, O-U 1-6, home 5-2, techs 8, ejections 0
+  Brent Haskill          7 games: 44.6 fouls, 52.4 FTA, total 216.4, O-U 3-4, home 3-4, techs 5, ejections 0
+  Josh Tiven             5 games: 44.4 fouls, 53.8 FTA, total 226.2, O-U 2-3, home 1-4, techs 4, ejections 0
+  Natalie Sago           7 games: 44.3 fouls, 51.6 FTA, total 227, O-U 3-4, home 4-3, techs 8, ejections 1
+  Tre Maddox             7 games: 44.3 fouls, 50.4 FTA, total 223.3, O-U 2-5, home 1-6, techs 6, ejections 1
+  Aaron Smith            8 games: 44.2 fouls, 53.1 FTA, total 231.8, O-U 3-5, home 5-3, techs 9, ejections 0
+  Brent Barnaky          8 games: 44.2 fouls, 51.1 FTA, total 230.1, O-U 4-4, home 4-4, techs 6, ejections 0
+  Ashley Moyer-Gleich    7 games: 44 fouls, 48.3 FTA, total 219, O-U 2-5, home 2-5, techs 0, ejections 0
+  Mark Lindsay           9 games: 44 fouls, 49 FTA, total 228, O-U 3-6, home 6-3, techs 10, ejections 0
+  Dannica Baroody        5 games: 44 fouls, 52.6 FTA, total 230.2, O-U 2-3, home 3-2, techs 8, ejections 1
+  Andy Nagy              6 games: 43.8 fouls, 48 FTA, total 224.2, O-U 3-3, home 1-5, techs 9, ejections 0
+  Nick Buchert           9 games: 43.7 fouls, 48.3 FTA, total 225.9, O-U 4-5, home 6-3, techs 14, ejections 0
+  Jenna Schroeder        5 games: 43.4 fouls, 46 FTA, total 221.2, O-U 1-4, home 1-4, techs 6, ejections 0
+  Ed Malloy              9 games: 43.2 fouls, 49.3 FTA, total 228.2, O-U 5-4, home 3-6, techs 3, ejections 0
+  Mousa Dagher           8 games: 43.1 fouls, 50.2 FTA, total 233.8, O-U 4-4, home 3-5, techs 10, ejections 1
+  Tony Brothers          8 games: 43.1 fouls, 49.4 FTA, total 231.1, O-U 5-3, home 3-5, techs 16, ejections 0
+  Bill Kennedy           8 games: 43.1 fouls, 46.8 FTA, total 214.2, O-U 2-6, home 5-3, techs 12, ejections 0
+  John Butler            10 games: 42.9 fouls, 49.8 FTA, total 234.2, O-U 5-5, home 7-3, techs 18, ejections 0
+  Brandon Adair          6 games: 42.8 fouls, 47.2 FTA, total 226.8, O-U 2-4, home 2-4, techs 2, ejections 1
+  Mitchell Ervin         9 games: 42.8 fouls, 47.7 FTA, total 229.4, O-U 5-4, home 7-2, techs 16, ejections 1
+  Che Flores             7 games: 42.6 fouls, 48.4 FTA, total 230.7, O-U 4-3, home 2-5, techs 14, ejections 0
+  Brandon Schwab         7 games: 42.4 fouls, 47.3 FTA, total 217.6, O-U 1-6, home 5-2, techs 9, ejections 0
+  Matt Kallio            5 games: 42.4 fouls, 48.2 FTA, total 227.2, O-U 1-4, home 3-2, techs 6, ejections 0
+  James Capers           10 games: 42.2 fouls, 44.4 FTA, total 217.9, O-U 5-5, home 8-2, techs 7, ejections 0
+  Ray Acosta             10 games: 42.1 fouls, 52.3 FTA, total 236.8, O-U 8-2, home 9-1, techs 9, ejections 0
+  Justin Van Duyne       9 games: 41.4 fouls, 46.6 FTA, total 218.2, O-U 3-6, home 2-7, techs 9, ejections 0
+  Simone Jelks           5 games: 41.4 fouls, 49.4 FTA, total 219, O-U 0-5, home 4-1, techs 6, ejections 0
+  Tyler Ford             9 games: 41.1 fouls, 49.4 FTA, total 235.2, O-U 6-3, home 4-5, techs 14, ejections 1
+  Brian Forte            10 games: 40.9 fouls, 45.6 FTA, total 234.7, O-U 7-3, home 3-7, techs 21, ejections 1
+  Ben Taylor             9 games: 40.8 fouls, 42.4 FTA, total 223.2, O-U 4-5, home 4-5, techs 18, ejections 0
+  Matt Myers             5 games: 40.6 fouls, 47.6 FTA, total 209.2, O-U 1-4, home 1-4, techs 6, ejections 0
+  Evan Scott             5 games: 40.6 fouls, 47.2 FTA, total 235.4, O-U 4-1, home 2-3, techs 3, ejections 1
+  James Williams         7 games: 40.6 fouls, 44.7 FTA, total 225.6, O-U 3-4, home 3-4, techs 9, ejections 1
+  Pat O'Connell          5 games: 40 fouls, 44.2 FTA, total 222.2, O-U 2-3, home 2-3, techs 5, ejections 0
+  Gediminas Petraitis    9 games: 39.9 fouls, 42.9 FTA, total 222, O-U 3-6, home 3-6, techs 8, ejections 1
+  Marat Kogut            9 games: 38.3 fouls, 39.2 FTA, total 227.3, O-U 6-3, home 3-6, techs 12, ejections 1
+  Karl Lane              8 games: 38.2 fouls, 40.2 FTA, total 218.6, O-U 3-5, home 3-5, techs 3, ejections 0
+  Kevin Scott            8 games: 38.1 fouls, 40.1 FTA, total 217.4, O-U 2-6, home 4-4, techs 8, ejections 0
