@@ -224,10 +224,10 @@ namespace NbaQuant
                 double bsum = 0; for (int i = 0; i < m; i++) if (!starterNow[t][i]) bsum += mq[i];
                 if (bsum > 0) for (int i = 0; i < m; i++) if (!starterNow[t][i]) mq[i] -= add * mq[i] / bsum;
             }
-            for (int it = 0; it < 4; it++)
+            for (int it = 0; it < 60; it++)   // until the quarter holds exactly 60 player-minutes (4 passes left it short when stars hit the 12-minute cap)
             {
                 double s = 0; for (int i = 0; i < m; i++) s += mq[i];
-                if (s <= 0) break;
+                if (s <= 0 || Math.Abs(s - 60) < 1e-6) break;
                 double f = 60.0 / s;
                 for (int i = 0; i < m; i++) mq[i] = Math.Min(12, Math.Max(0, mq[i] * f));
             }
@@ -237,9 +237,10 @@ namespace NbaQuant
         {
             var mq = minQ[t][4]; int m = mq.Length;
             for (int i = 0; i < m; i++) mq[i] = minNow[t][i] * minNow[t][i];
-            for (int it = 0; it < 4; it++)
+            for (int it = 0; it < 60; it++)
             {
                 double s = 0; for (int i = 0; i < m; i++) s += mq[i];
+                if (s <= 0 || Math.Abs(s - 60) < 1e-6) break;
                 double f = 60.0 / s;
                 for (int i = 0; i < m; i++) mq[i] = Math.Min(12, mq[i] * f);
             }
