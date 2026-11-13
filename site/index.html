@@ -919,21 +919,24 @@ table.legt td { padding: 6px 4px; border-bottom: 1px dashed var(--line) }
       <div class="stack"><h2>What was tested</h2><p class="muted">Each idea is replayed over the whole season with earlier games only${D.audit ? " (" + D.audit.games + " games)" : ""}. It goes in only if it helps both halves of the season.</p>
         <div class="panel tscroll"><table><thead><tr><th class="l">Change</th><th>Result</th><th class="l">Evidence</th></tr></thead><tbody>${tests.map(t => `<tr><td class="l">${esc(t[0])}</td><td><span class="vt ${t[1]}">${esc(t[2])}</span></td><td class="l muted">${esc(t[3])}</td></tr>`).join("")}</tbody></table></div></div>`;
   }
-  // player-line Brier score unless noted; lower is better
+  // Nov 13 backtests: 162 games, each date priced with earlier games only. Periods: early (before Oct 29), late (Oct 29 to Nov 7),
+  // final = untouched confirmation (Nov 8 on). Scores are player-line and win-probability Brier (lower is better).
   const TESTS = [
-    ["Lean minutes toward the last three games", "ctx", "Tested daily", "Minutes forecast error fell on both halves of the season in a first check; the full backtest decides whether it stays on"],
-    ["Learn each player's scoring rate from the model's own misses", "ctx", "Tested daily", "Helps the later half, where players have 8+ graded games; needs both halves"],
-    ["Learn each player's assist rate the same way", "ctx", "Tested daily", "Improved assist error on both halves of the live slates"],
-    ["Lean harder on hot starts", "yes", "Adopted Nov 11", "0.07584 vs 0.07586 early, 0.07338 vs 0.07352 late"],
-    ["Team form against the model's own margins", "yes", "Adopted", "Winner accuracy 0.1949 / 0.1690 with it, 0.1962 / 0.1785 without"],
+    ["Learn each player's assist rate from the model's own misses", "yes", "Adopted Nov 13", "Switching it off is worse on both halves (player lines 0.075975 vs 0.075896 early, 0.072802 vs 0.072689 late). Final period mixed: lines slightly better, assist error slightly worse"],
+    ["Lean harder on hot starts", "yes", "Kept", "Better on both halves (0.075896 vs 0.075979, 0.072689 vs 0.072785). The final period slightly favors switching it off, so it is watched"],
+    ["Lean minutes toward the last three games", "no", "Rejected", "Minutes error better late and final (4.50 vs 4.57, 4.55 vs 4.62) but player-line accuracy worse on both halves (0.075949 vs 0.075896, 0.072821 vs 0.072689)"],
+    ["Learn each player's scoring rate from the model's misses", "ctx", "Inconclusive", "Worse early (0.075968 vs 0.075896), better late (0.072563 vs 0.072689) and in the final period. Off; retested every morning"],
+    ["Minutes trend plus scoring learning together", "ctx", "Inconclusive", "Player lines better on both halves (0.07672 vs 0.07673, 0.07742 vs 0.07746) but worse in the untouched final period (0.07360 vs 0.07357); win accuracy worse late. Differences are noise-sized. Off"],
+    ["Minutes balancing fix (bug)", "yes", "Fixed Nov 13", "Quarters stopped balancing after 4 passes; simulated minutes were 240.47 per team-game against 240.66. Now 240.65 against 240.65"],
+    ["Smaller shooting penalty for the leading team (0.25 → 0.15, 0.05, 0)", "no", "Rejected", "It does compress blowouts: 20-point games predicted 23.3% at 0.25, 26.0% at 0.15, 30.5% at 0, against 25.9% actual. But win accuracy got worse in every period (0.15: 0.1940 vs 0.1927 early, 0.1804 vs 0.1785 late, 0.1364 vs 0.1331 final)"],
+    ["Later fourth-quarter benching (starts at 16 points)", "no", "Rejected", "Player lines worse early (0.07704 vs 0.07670), better late and final; win accuracy worse on both halves"],
+    ["Earlier fourth-quarter benching (starts at 8 points)", "no", "Rejected", "Win accuracy better late and final but player lines worse in all three periods (final 0.07405 vs 0.07353)"],
+    ["Team form against the model's own margins", "yes", "Kept", "Win accuracy 0.1972 / 0.1553 with it, 0.1992 / 0.1653 without"],
     ["Wider minutes uncertainty (0.20 → 0.36)", "yes", "Adopted", "Better on both halves; fixed overconfidence in the 80–90% band"],
-    ["Recent games count more for season minutes", "no", "Rejected", "0.07602 vs 0.07584 early, 0.07328 vs 0.07338 late"],
-    ["Heavier pull toward position averages", "no", "Rejected", "0.07633 vs 0.07584 early, 0.07373 vs 0.07338 late"],
-    ["Extra 3-point shooting variance", "no", "Rejected", "No gain on threes"],
-    ["Trim heavy-minute projections", "no", "Rejected", "Worse on both halves"],
-    ["Harder fourth-quarter benching", "no", "Rejected", "Worse for player lines and parlays on both halves"],
+    ["Recent games count more for season minutes", "no", "Rejected", "Worse on the earlier half every time it is retested"],
+    ["Heavier pull toward position averages", "no", "Rejected", "Worse on both halves"],
     ["Per-stat chance correction", "ctx", "PRA only", "Only the combined points-rebounds-assists line improved on held-out dates"],
-    ["Opponent defensive matchups", "ctx", "Context only", "0.07464 at half strength, 0.07483 at full, against 0.07448 without"]
+    ["Opponent defensive matchups", "ctx", "Context only", "Worse at half and full strength"]
   ];
 
   // ---------- views ----------
