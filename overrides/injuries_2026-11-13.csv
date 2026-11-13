@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 4:15 AM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 3:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,Q,0.5,Official: Questionable
@@ -20,9 +20,10 @@ ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
 ATL,Jock Landale,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
 ATL,Asa Newell,OUT,0,Official: Out
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
-ATL,Jalen Wilson,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Disc Irritation)
 CHI,Norman Powell,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
+CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
 CHI,Dailyn Swain,Q,0.5,Official: Questionable (Injury/Illness - Right Disc Irritation)
 CHI,Caleb Wilson,OUT,0,Official: Out
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
@@ -30,22 +31,23 @@ CLE,Sam Merrill,OUT,0,Official: Out
 CLE,Evan Mobley,OUT,0,Official: Out (Injury/Illness - Left Great Toe - Sprain)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
-MIA,Giannis Antetokounmpo,Q,0.9,Official: Probable (Injury/Illness - Right Wrist Sprain)
+MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
-MIA,Pelle Larsson,Q,0.5,Official: Questionable (Injury/Illness - Illness)
-MIA,Klay Thompson,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Soreness)
+MIA,Pelle Larsson,Q,0.25,Official: Doubtful (Injury/Illness - Illness)
+MIA,Klay Thompson,Q,0.9,Official: Probable (Injury/Illness - Left Ankle Soreness)
 MEM,Zach Edey,OUT,0,Official: Out
 MEM,Karim Lopez,OUT,0,Official: Out (G League - On Assignment)
 MEM,Jahmai Mashack,OUT,0,Official: Out (G League - Two-Way)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Quinten Post,OUT,0,Official: Out (Injury/Illness - Concussion Protocol)
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-NO,Malik Dia,Q,0.5,Official: Questionable (G League - Two-Way)
-NO,Bennedict Mathurin,Q,0.25,Official: Doubtful (Injury/Illness - Right Thumb Sprain)
-NO,Bryce McGowens,Q,0.25,Official: Doubtful (Injury/Illness - Left Elbow Infection)
-NO,Yves Missi,Q,0.25,Official: Doubtful
-NO,Trey Murphy III,Q,0.25,Official: Doubtful
-NO,Jaron Pierre Jr.,Q,0.5,Official: Questionable (G League - Two-Way)
+NO,Malik Dia,AVAIL,1,Official: Available (G League - Two-Way)
+NO,Bennedict Mathurin,Q,0.5,Official: Questionable (Injury/Illness - Right Thumb Sprain)
+NO,Bryce McGowens,OUT,0,Official: Out (Injury/Illness - Left Elbow Infection)
+NO,Yves Missi,OUT,0,Official: Out
+NO,Trey Murphy III,OUT,0,Official: Out
+NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
+NO,Jaron Pierre Jr.,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 UTAH,Trey Alexander,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Kobe Bufkin,OUT,0,Official: Out (G League - Two-Way)
@@ -81,7 +83,7 @@ SAC,Ben Simmons,OUT,0,Official: Out
 OKC,Chet Holmgren,OUT,0,Official: Out
 OKC,Ajay Mitchell,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
 OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-OKC,Nikola Topic,OUT,0,Official: Out (G League - On Assignment)
+OKC,Nikola Topic,AVAIL,1,Official: Available (-)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
