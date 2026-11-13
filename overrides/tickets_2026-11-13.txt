@@ -1,0 +1,12 @@
+# Sleeper ladders, Nov 13 (each line is priced from one game's simulations; lines in different games multiply)
+MEM@NO | NO points ladder | Jeremiah Fears 10+ pts; Jeremiah Fears 15+ pts; Saddiq Bey 10+ pts; Saddiq Bey 15+ pts
+MEM@NO | Bey threes ladder | Saddiq Bey 1+ threes; Saddiq Bey 2+ threes
+MEM@NO | NO full ladder | Jeremiah Fears 10+ pts; Jeremiah Fears 15+ pts; Saddiq Bey 10+ pts; Saddiq Bey 15+ pts; Saddiq Bey 1+ threes; Saddiq Bey 2+ threes
+MEM@NO | NO points 20 rung | Jeremiah Fears 10+ pts; Jeremiah Fears 15+ pts; Jeremiah Fears 20+ pts; Saddiq Bey 10+ pts; Saddiq Bey 15+ pts
+ATL@CHI | Buzelis points ladder | Matas Buzelis 10+ pts; Matas Buzelis 15+ pts
+ATL@CHI | Buzelis threes ladder | Matas Buzelis 1+ threes; Matas Buzelis 2+ threes
+ATL@CHI | Buzelis full ladder | Matas Buzelis 10+ pts; Matas Buzelis 15+ pts; Matas Buzelis 1+ threes; Matas Buzelis 2+ threes
+POR@SAC | Holiday points ladder | Jrue Holiday 10+ pts; Jrue Holiday 15+ pts
+POR@SAC | Holiday threes ladder | Jrue Holiday 1+ threes; Jrue Holiday 2+ threes
+POR@SAC | Holiday full ladder | Jrue Holiday 10+ pts; Jrue Holiday 15+ pts; Jrue Holiday 1+ threes; Jrue Holiday 2+ threes
+UTAH@HOU | Sheppard threes ladder | Reed Sheppard 1+ threes; Reed Sheppard 2+ threes
