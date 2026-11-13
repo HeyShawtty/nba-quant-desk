@@ -1,13 +1,13 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 3:45 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 5:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
-ORL,Jamal Cain,Q,0.5,Official: Questionable
-ORL,Tristan da Silva,Q,0.5,Official: Questionable (Injury/Illness - Left Calf Strain)
+ORL,Jamal Cain,AVAIL,1,Official: Available
+ORL,Tristan da Silva,AVAIL,1,Official: Available (Injury/Illness - Left Calf Strain)
 ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
 ORL,Noah Penda,OUT,0,Official: Out
-ORL,Jalen Suggs,Q,0.5,Official: Questionable
+ORL,Jalen Suggs,AVAIL,1,Official: Available
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,Q,0.9,Official: Probable (Injury/Illness - Right Hamstring Strain)
@@ -74,7 +74,7 @@ POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 POR,Shaedon Sharpe,OUT,0,Official: Out
 POR,Chris Youngblood,OUT,0,Official: Out (Injury/Illness - Right Bone Bruise)
-SAC,Precious Achiuwa,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Soreness)
+SAC,Precious Achiuwa,OUT,0,Official: Out (Injury/Illness - Left Ankle Soreness)
 SAC,Alex Karaban,OUT,0,Official: Out (G League - On Assignment)
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)

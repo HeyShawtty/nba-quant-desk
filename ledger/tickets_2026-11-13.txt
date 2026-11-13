@@ -1,20 +1,25 @@
-Custom tickets for 2026-11-13, priced 15:53 ET (100,000 simulations)
+Custom tickets for 2026-11-13, priced 17:23 ET (100,000 simulations)
 
-ATL@CHI: ATL win 69.9%, CHI win 30.1% | DraftKings CHI +7.5, total 245.5, ML ATL -277 / CHI +227
-  Buzelis points ladder: 55.4% (fair -124, 1.25x the legs multiplied) = Matas Buzelis 10+ pts [80.1%] + Matas Buzelis 15+ pts [55.4%]
-  Buzelis threes ladder: 60.3% (fair -152, 1.17x the legs multiplied) = Matas Buzelis 1+ threes [85.6%] + Matas Buzelis 2+ threes [60.3%]
-  Buzelis full ladder: 46.4% (fair +115, 2.03x the legs multiplied) = Matas Buzelis 10+ pts [80.1%] + Matas Buzelis 15+ pts [55.4%] + Matas Buzelis 1+ threes [85.6%] + Matas Buzelis 2+ threes [60.3%]
+MIL@ORL: MIL win 28.3%, ORL win 71.7% | DraftKings ORL -9.5, total 224.5, ML MIL +312 / ORL -395
+  Bane 4+ threes: 28.4% (fair +253, 1.00x the legs multiplied) = Desmond Bane 4+ threes [28.4%]
 
-MEM@NO: MEM win 71.7%, NO win 28.3% | DraftKings NO +3.5, total 235.5, ML MEM -162 / NO +136
-  NO points ladder: 42.6% (fair +135, 1.30x the legs multiplied) = Jeremiah Fears 10+ pts [87.6%] + Jeremiah Fears 15+ pts [66.0%] + Saddiq Bey 10+ pts [86.5%] + Saddiq Bey 15+ pts [65.2%]
-  Bey threes ladder: 61.5% (fair -160, 1.16x the legs multiplied) = Saddiq Bey 1+ threes [86.4%] + Saddiq Bey 2+ threes [61.5%]
-  NO full ladder: 33.7% (fair +197, 1.95x the legs multiplied) = Jeremiah Fears 10+ pts [87.6%] + Jeremiah Fears 15+ pts [66.0%] + Saddiq Bey 10+ pts [86.5%] + Saddiq Bey 15+ pts [65.2%] + Saddiq Bey 1+ threes [86.4%] + Saddiq Bey 2+ threes [61.5%]
-  NO points 20 rung: 26.0% (fair +285, 1.97x the legs multiplied) = Jeremiah Fears 10+ pts [87.6%] + Jeremiah Fears 15+ pts [66.0%] + Jeremiah Fears 20+ pts [40.4%] + Saddiq Bey 10+ pts [86.5%] + Saddiq Bey 15+ pts [65.2%]
+ATL@CHI: ATL win 70.1%, CHI win 29.9% | DraftKings CHI +7.5, total 245.5, ML ATL -277 / CHI +227
+  Buzelis points ladder: 55.8% (fair -126, 1.25x the legs multiplied) = Matas Buzelis 10+ pts [80.3%] + Matas Buzelis 15+ pts [55.8%]
+  Buzelis threes ladder: 60.4% (fair -153, 1.17x the legs multiplied) = Matas Buzelis 1+ threes [85.7%] + Matas Buzelis 2+ threes [60.4%]
+  Buzelis full ladder: 46.6% (fair +114, 2.01x the legs multiplied) = Matas Buzelis 10+ pts [80.3%] + Matas Buzelis 15+ pts [55.8%] + Matas Buzelis 1+ threes [85.7%] + Matas Buzelis 2+ threes [60.4%]
+  NAW 4+ threes: 51.0% (fair -104, 1.00x the legs multiplied) = Nickeil Alexander-Walker 4+ threes [51.0%]
 
-UTAH@HOU: UTAH win 8.5%, HOU win 91.5% | DraftKings HOU -15.5, total 221.5, ML UTAH +740 / HOU -1180
-  Sheppard threes ladder: 70.3% (fair -237, 1.11x the legs multiplied) = Reed Sheppard 1+ threes [90.4%] + Reed Sheppard 2+ threes [70.3%]
+MEM@NO: MEM win 71.5%, NO win 28.5% | DraftKings NO +3.5, total 235.5, ML MEM -162 / NO +136
+  NO points ladder: 42.8% (fair +134, 1.30x the legs multiplied) = Jeremiah Fears 10+ pts [87.7%] + Jeremiah Fears 15+ pts [66.4%] + Saddiq Bey 10+ pts [86.6%] + Saddiq Bey 15+ pts [65.3%]
+  Bey threes ladder: 61.7% (fair -161, 1.15x the legs multiplied) = Saddiq Bey 1+ threes [86.7%] + Saddiq Bey 2+ threes [61.7%]
+  NO full ladder: 33.9% (fair +195, 1.93x the legs multiplied) = Jeremiah Fears 10+ pts [87.7%] + Jeremiah Fears 15+ pts [66.4%] + Saddiq Bey 10+ pts [86.6%] + Saddiq Bey 15+ pts [65.3%] + Saddiq Bey 1+ threes [86.7%] + Saddiq Bey 2+ threes [61.7%]
+  NO points 20 rung: 26.1% (fair +284, 1.94x the legs multiplied) = Jeremiah Fears 10+ pts [87.7%] + Jeremiah Fears 15+ pts [66.4%] + Jeremiah Fears 20+ pts [40.8%] + Saddiq Bey 10+ pts [86.6%] + Saddiq Bey 15+ pts [65.3%]
 
-POR@SAC: POR win 85.1%, SAC win 14.9% | DraftKings SAC +10.5, total 229.5, ML POR -468 / SAC +361
-  Holiday points ladder: 52.0% (fair -108, 1.28x the legs multiplied) = Jrue Holiday 10+ pts [78.1%] + Jrue Holiday 15+ pts [52.0%]
-  Holiday threes ladder: 71.2% (fair -247, 1.10x the legs multiplied) = Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.2%]
-  Holiday full ladder: 48.8% (fair +105, 1.86x the legs multiplied) = Jrue Holiday 10+ pts [78.1%] + Jrue Holiday 15+ pts [52.0%] + Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.2%]
+UTAH@HOU: UTAH win 8.5%, HOU win 91.5% | DraftKings HOU -15.5, total 220.5, ML UTAH +740 / HOU -1180
+  Sheppard threes ladder: 70.5% (fair -239, 1.11x the legs multiplied) = Reed Sheppard 1+ threes [90.5%] + Reed Sheppard 2+ threes [70.5%]
+
+POR@SAC: POR win 85.5%, SAC win 14.5% | DraftKings SAC +10.5, total 229.5, ML POR -468 / SAC +361
+  Holiday points ladder: 52.5% (fair -111, 1.27x the legs multiplied) = Jrue Holiday 10+ pts [78.4%] + Jrue Holiday 15+ pts [52.5%]
+  Holiday threes ladder: 71.6% (fair -253, 1.10x the legs multiplied) = Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.6%]
+  Holiday full ladder: 49.4% (fair +102, 1.84x the legs multiplied) = Jrue Holiday 10+ pts [78.4%] + Jrue Holiday 15+ pts [52.5%] + Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.6%]
+  Lillard 4+ threes: 34.9% (fair +187, 1.00x the legs multiplied) = Damian Lillard 4+ threes [34.9%]
