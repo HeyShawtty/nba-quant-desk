@@ -379,7 +379,9 @@ namespace NbaQuant
                             var d = date(1);
                             int oi = Array.IndexOf(args, "--odds"); if (oi >= 0 && oi + 1 < args.Length) Store.OddsFile = Program.P(args[oi + 1]);
                             Console.WriteLine(Bank.Build(d.AddDays(-1)));
-                            Program.BuildSlate(d, true); Program.Simulate(sims, true); Analysis.Run(true);
+                            Program.BuildSlate(d, true);
+                            foreach (var g in Program.Games.Where(x => !string.IsNullOrEmpty(x.Def.AnId))) g.Props = Store.AnProps(g.Def.AnId, Program.P(@"data\cache\an\props_" + g.Def.AnId + ".json"));
+                            Program.Simulate(sims, true); Analysis.Run(true);
                             Console.WriteLine("Website data: " + Report.ExportSite(Program.P(@"site\data.js"), d)); break;
                         }
                     case "bank":

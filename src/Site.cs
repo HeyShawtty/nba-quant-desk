@@ -29,14 +29,22 @@ namespace NbaQuant
             }
             return d;
         }
-        // chance of clearing each rung of the ladder (rungs under 2% are left off)
+        // Every rung of every ladder, straight from the saved simulations (games he plays in):
+        // [rung, chance, season hits, season games, last-5 hits, last-5 games, book over odds or null, book or null].
+        // Book odds: the over on the line half a point under the rung (25+ = over 24.5), DraftKings first.
         static object LadderJson(PStat p)
         {
-            var d = new Dictionary<string, object>();
+            var d = new Dictionary<string, object>(); var box = p.P.CsBox; var l5 = box.Skip(Math.Max(0, box.Count - 5)).ToList();
+            var lines = p.G.Props.Where(x => U.Norm(x.Player) == U.Norm(p.P.Name) && !double.IsNaN(x.OverOdds) && x.OverOdds != 0).ToList();
             foreach (var st in Favorites.Stats)
             {
                 var dist = Favorites.DistOf(p, st); var l = new List<object>();
-                foreach (int r in Favorites.Ladder[st]) { double pr = dist.PAtLeast(r); if (pr < 0.02) break; l.Add(new object[] { r, R3(pr) }); }
+                foreach (int r in Favorites.Ladder[st])
+                {
+                    var bk = lines.Where(x => x.Stat == st && Math.Abs(x.Line - (r - 0.5)) < 1e-6).OrderByDescending(x => x.Book == "DraftKings").FirstOrDefault();
+                    l.Add(new object[] { r, R3(dist.PAtLeast(r)), box.Count(b => Favorites.Val(b, st) >= r), box.Count, l5.Count(b => Favorites.Val(b, st) >= r), l5.Count,
+                        bk != null ? (object)Math.Round(bk.OverOdds) : null, bk != null ? bk.Book : null });
+                }
                 d[st] = l;
             }
             return d;
@@ -74,7 +82,7 @@ namespace NbaQuant
                     return ps.Select(p =>
                     {
                         k++; var f = FormOf(p); RotRow rr; rot.TryGetValue(p, out rr); var bp = Bank.Player(p.P.Pid);
-                        return (object)O("name", p.P.Name, "starter", k <= 5, "status", p.P.Status, "play", R3(p.PPlays), "min", R1(p.MeanMin),
+                        return (object)O("name", p.P.Name, "pid", p.P.Pid, "starter", k <= 5, "status", p.P.Status, "injury", p.P.InjNote ?? "", "play", R3(p.PPlays), "min", R1(p.MeanMin),
                             "pts", R1(p.Pts.Mean), "reb", R1(p.Reb.Mean), "ast", R1(p.Ast.Mean), "tpm", R1(p.Tpm.Mean), "ptsLo", p.Pts.P10, "ptsHi", p.Pts.P90,
                             // the model's favorite line per stat, the full ladder, and the trend learning behind this projection
                             "fav", FavJson(p), "lad", LadderJson(p), "pra", R1(p.Pra.Mean), "med", p.Pts.P50,
@@ -215,7 +223,7 @@ namespace NbaQuant
             string injuryReport = InjuryReportUsed(d);
             var data = O(
                 "meta", O("slate", d.ToString("yyyy-MM-dd"), "slateLabel", d.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), "built", DateTime.Now.ToString("ddd MMM d, h:mm tt", CultureInfo.InvariantCulture),
-                    "injuryReport", injuryReport,
+                    "injuryReport", injuryReport, "propLines", Program.Games.Sum(g => g.Props.Count), "builtIso", DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture),
                     "sims", Program.NSIM, "bankThrough", Bank.BuiltThrough, "bankGames", Bank.Games.Count, "bankPlayers", Bank.Players.Values.Count(p => p.Gp > 0),
                     "recal", S.LastRecalibration, "settings", O("marketWeight", S.MarketWeight, "alpha", S.Alpha, "sigmaEff", S.SigmaEff, "sigmaPace", S.SigmaPace, "sigmaMin", S.SigmaMin,
                         "csWeight", S.CsWeight, "minUsageSlope", S.MinUsageSlope, "matchup", S.MatchupStrength, "gamma", Program.Gamma, "hca", R1(Program.HCA))),

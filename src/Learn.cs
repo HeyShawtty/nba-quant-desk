@@ -80,15 +80,43 @@ namespace NbaQuant
         public static double Adj(string tag, double p) { return Math.Min(0.99, p * Of(tag).Item1); }
     }
 
-    class GameRec { public string Date, Game; public double MktMargin, ModelMargin, MktNoVig, Blend; public int HomeWon; public double Margin, Total, MktTotal; }
+    class GameRec { public string Date, Game; public double MktMargin, ModelMargin, MktNoVig, Blend; public int HomeWon; public double Margin, Total, MktTotal, ModelTotal, PBlow; }
 
     static class Walk
     {
         public static List<GameRec> GameRecs = new List<GameRec>();
 
+        // Accounting checks on every simulated game of a walk: player points must add up to the team score in each simulation,
+        // minutes must come to 240 per team plus 25 per overtime, and no ladder may give a higher rung a better chance.
+        public static long ChkSims, ChkPtsBad, ChkLadderBad; public static double ChkMin, ChkMinExp;
+        static void SelfCheck(GameCtx g)
+        {
+            var r = g.Res; if (r == null || r.Pts == null) return; int np = r.NH + r.NA;
+            for (int s = 0; s < r.N; s++)
+            {
+                int h = 0, a = 0;
+                for (int i = 0; i < r.NH; i++) h += r.Pts[i][s];
+                for (int i = r.NH; i < np; i++) a += r.Pts[i][s];
+                ChkSims++; if (h != r.HomePts[s] || a != r.AwayPts[s]) ChkPtsBad++;
+                ChkMinExp += 2 * (240 + 25 * r.OT[s]);
+            }
+            for (int i = 0; i < np; i++) ChkMin += r.MinSum[i];
+            foreach (var p in Analysis.Players.Where(x => x.G == g))
+                foreach (var st in Favorites.Stats)
+                {
+                    double prev = 2; var d = Favorites.DistOf(p, st);
+                    foreach (int rung in Favorites.Ladder[st]) { double v = d.PAtLeast(rung); if (v > prev + 1e-12) ChkLadderBad++; prev = v; }
+                }
+        }
+        public static string CheckLine()
+        {
+            return string.Format(U.IC, "  CHECK   simulated games {0:N0}: player points differ from the team score in {1:N0}; minutes per team-game {2:0.00} (expected {3:0.00}); ladder order violations {4}",
+                ChkSims, ChkPtsBad, ChkSims > 0 ? ChkMin / (2.0 * ChkSims) : 0, ChkSims > 0 ? ChkMinExp / (2.0 * ChkSims) : 0, ChkLadderBad);
+        }
+
         public static List<Pred> Run(DateTime from, DateTime to, int nsim, Action<string> log, bool sgp = false)
         {
-            var all = new List<Pred>(); GameRecs = new List<GameRec>();
+            var all = new List<Pred>(); GameRecs = new List<GameRec>(); ChkSims = 0; ChkPtsBad = 0; ChkLadderBad = 0; ChkMin = 0; ChkMinExp = 0;
             lock (Program.BaseMargins) Program.BaseMargins.Clear();   // rebuilt date by date, so team form only sees earlier games
             Learner.Reset();                                          // trend learning also starts empty and only sees earlier dates
             for (var d = from.Date; d <= to.Date; d = d.AddDays(1))
@@ -107,8 +135,10 @@ namespace NbaQuant
                     GameRecs.Add(new GameRec
                     {
                         Date = ds, Game = g.Def.Away + "@" + g.Def.Home, MktMargin = -g.Def.DK.SprH, ModelMargin = g.ModelMeanMargin, MktNoVig = Program.NoVigHome(g.Def.DK), Blend = g.WinH,
-                        HomeWon = g.Info.HomePts > g.Info.AwayPts ? 1 : 0, Margin = g.Info.HomePts - g.Info.AwayPts, Total = g.Info.HomePts + g.Info.AwayPts, MktTotal = g.Def.DK.Total
+                        HomeWon = g.Info.HomePts > g.Info.AwayPts ? 1 : 0, Margin = g.Info.HomePts - g.Info.AwayPts, Total = g.Info.HomePts + g.Info.AwayPts, MktTotal = g.Def.DK.Total,
+                        ModelTotal = g.MeanTotal, PBlow = g.PBlowout
                     });
+                foreach (var g in Program.Games) SelfCheck(g);
                 log(string.Format(U.IC, "  {0}: {1} games simulated and graded", ds, Program.Games.Count));
             }
             return all;
@@ -209,7 +239,36 @@ namespace NbaQuant
                 Tuple.Create("TEAMQ3", (Func<Pred, bool>)(p => p.Kind == "TEAMQ3")), Tuple.Create("SGP", (Func<Pred, bool>)(p => p.Kind == "SGP")),
             };
             foreach (var st in new[] { "PTS", "REB", "AST", "3PM", "PRA", "DD", "Q3ALL", "FFG" }) { var s0 = st; groups.Add(Tuple.Create(st, (Func<Pred, bool>)(p => p.Kind == "PLAYER" && p.Stat == s0))); }
-            return string.Join("\n", groups.Select(g => string.Format(U.IC, "  {0,-7} all {1}  early {2}  late {3}", g.Item1, br(preds.Where(g.Item2)), br(preds.Where(p => g.Item2(p) && string.CompareOrdinal(p.Date, cut) < 0)), br(preds.Where(p => g.Item2(p) && string.CompareOrdinal(p.Date, cut) >= 0)))));
+            string brier = string.Join("\n", groups.Select(g => string.Format(U.IC, "  {0,-7} all {1}  early {2}  late {3}", g.Item1, br(preds.Where(g.Item2)), br(preds.Where(p => g.Item2(p) && string.CompareOrdinal(p.Date, cut) < 0)), br(preds.Where(p => g.Item2(p) && string.CompareOrdinal(p.Date, cut) >= 0)))));
+            return brier + "\n" + Scorecard(preds);
+        }
+
+        // Predefined scorecard for comparing a candidate setting with the baseline: three chronological periods. The last 20%
+        // of dates is the untouched confirmation period (FINAL); the first 80% is split into EARLY and LATE halves.
+        // Lower is better on every row except BLOWOUT, where predicted should match actual.
+        public static string Scorecard(List<Pred> preds)
+        {
+            var dates = preds.Select(p => p.Date).Distinct().OrderBy(d => d, StringComparer.Ordinal).ToList(); if (dates.Count < 5) return "";
+            string c2 = dates[(int)(dates.Count * 0.8)], c1 = dates[(int)(dates.Count * 0.4)];
+            Func<string, int> seg = d => string.CompareOrdinal(d, c1) < 0 ? 0 : string.CompareOrdinal(d, c2) < 0 ? 1 : 2;
+            var rows = new List<string>();
+            Action<string, Func<int, double>, string> add = (name, f, fmt) => rows.Add(string.Format(U.IC, "  {0,-9} all {1}  early {2}  late {3}  final {4}", name, f(-1).ToString(fmt, U.IC), f(0).ToString(fmt, U.IC), f(1).ToString(fmt, U.IC), f(2).ToString(fmt, U.IC)));
+            Func<Func<Pred, bool>, Func<int, double>> brier = sel => s => { var l = preds.Where(p => sel(p) && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P) && (s < 0 || seg(p.Date) == s)).ToList(); return l.Count == 0 ? double.NaN : l.Average(x => (x.P - x.Y) * (x.P - x.Y)); };
+            Func<string, Func<int, double>> mae = st => s => { var l = preds.Where(p => p.Kind == "MEAN" && p.Stat == st && !string.IsNullOrEmpty(p.Pid) && !p.Void && !double.IsNaN(p.Actual) && (s < 0 || seg(p.Date) == s)).ToList(); return l.Count == 0 ? double.NaN : l.Average(x => Math.Abs(x.Mean - x.Actual)); };
+            add("S_WIN", brier(p => p.Kind == "ML"), "0.00000");
+            add("S_LADDER", brier(p => p.Kind == "PLAYER" && (p.Stat == "PTS" || p.Stat == "REB" || p.Stat == "AST" || p.Stat == "3PM")), "0.00000");
+            add("S_FAV", brier(p => p.Kind == "FAV"), "0.00000");
+            add("S_MIN", mae("MIN"), "0.000"); add("S_PTS", mae("PTS"), "0.000"); add("S_REB", mae("REB"), "0.000"); add("S_AST", mae("AST"), "0.000"); add("S_3PM", mae("3PM"), "0.000");
+            // per-minute scoring error: points per 36 projected vs actual, players who logged 10+ minutes (separates rate misses from minutes misses)
+            var pm = preds.Where(p => p.Kind == "MEAN" && (p.Stat == "MIN" || p.Stat == "PTS") && !string.IsNullOrEmpty(p.Pid) && !p.Void && !double.IsNaN(p.Actual)).GroupBy(p => p.Date + "|" + p.Pid)
+                .Select(gr => new { D = gr.First().Date, M = gr.FirstOrDefault(x => x.Stat == "MIN"), P = gr.FirstOrDefault(x => x.Stat == "PTS") }).Where(x => x.M != null && x.P != null && x.M.Actual >= 10 && x.M.Mean >= 10).ToList();
+            add("S_PTS36", s => { var l = pm.Where(x => s < 0 || seg(x.D) == s).ToList(); return l.Count == 0 ? double.NaN : l.Average(x => Math.Abs(36 * x.P.Actual / x.M.Actual - 36 * x.P.Mean / x.M.Mean)); }, "0.000");
+            var gr2 = GameRecs;
+            Func<Func<GameRec, double>, Func<int, double>> gavg = f => s => { var l = gr2.Where(r => s < 0 || seg(r.Date) == s).ToList(); return l.Count == 0 ? double.NaN : l.Average(f); };
+            add("S_MARGIN", gavg(r => Math.Abs(r.Margin - r.ModelMargin)), "0.00"); add("S_TOTAL", gavg(r => Math.Abs(r.Total - r.ModelTotal)), "0.00");
+            add("S_BLOWP", gavg(r => r.PBlow), "0.000"); add("S_BLOWA", gavg(r => Math.Abs(r.Margin) >= 20 ? 1.0 : 0.0), "0.000");
+            add("S_GAMES", s => gr2.Count(r => s < 0 || seg(r.Date) == s), "0");
+            return string.Join("\n", rows) + "\n" + CheckLine() + string.Format(U.IC, "\n  PERIODS early before {0}, late before {1}, final from {1}", c1, c2);
         }
 
         public static string Validate(Action<string> log, string outName = "backtest_latest.csv")

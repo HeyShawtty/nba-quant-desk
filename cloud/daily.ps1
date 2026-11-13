@@ -66,10 +66,10 @@ switch ($Task) {
     Step "Stress test $Variants" { & $cli stress $Date $Variants --sims 50000 }
   }
   'test' {
-    Step 'Backtest: current settings' { & $cli validate | Select-String -Pattern '^\s+(PROPS|ML|SPREAD|TOTAL|SGP|PTS|REB|AST|3PM|PRA|DD|Q3ALL)\s|Reliability' }
+    Step 'Backtest: current settings' { & $cli validate | Select-String -Pattern '^\s+(PROPS|ML|SPREAD|TOTAL|SGP|PTS|REB|AST|3PM|PRA|DD|Q3ALL|S_\w+|CHECK|PERIODS)\s|Reliability' }
     foreach ($v in ($Variants -split ';' | Where-Object { $_.Trim() })) {
       $a = @(); foreach ($kv in ($v.Trim() -split '\s+')) { $a += '--set'; $a += $kv }
-      Step "Backtest: $v" { & $cli validate @a | Select-String -Pattern '^\s+(PROPS|ML|SPREAD|TOTAL|SGP|PTS|REB|AST|3PM|PRA|DD|Q3ALL)\s|Reliability' }
+      Step "Backtest: $v" { & $cli validate @a | Select-String -Pattern '^\s+(PROPS|ML|SPREAD|TOTAL|SGP|PTS|REB|AST|3PM|PRA|DD|Q3ALL|S_\w+|CHECK|PERIODS)\s|Reliability' }
     }
   }
 }
