@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 6:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,AVAIL,1,Official: Available
@@ -13,8 +13,8 @@ IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strai
 IND,T.J. McConnell,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
 IND,Aaron Nesmith,AVAIL,1,Official: Available (Injury/Illness - Right Knee Soreness)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
-ATL,RayJ Dennis,Q,0.5,Official: Questionable (G League - Two-Way)
-ATL,Kingston Flemings,Q,0.5,Official: Questionable (Injury/Illness - Lumbar Spasm)
+ATL,RayJ Dennis,AVAIL,1,Official: Available (G League - Two-Way)
+ATL,Kingston Flemings,AVAIL,1,Official: Available (Injury/Illness - Lumbar Spasm)
 ATL,Keshon Gilbert,OUT,0,Official: Out (Inflammation; Non-Surgical)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
 ATL,Jock Landale,AVAIL,1,Official: Available (Injury/Illness - Face Mask)

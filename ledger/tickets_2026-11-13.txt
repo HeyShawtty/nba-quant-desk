@@ -1,13 +1,13 @@
-Custom tickets for 2026-11-13, priced 18:22 ET (100,000 simulations)
+Custom tickets for 2026-11-13, priced 18:41 ET (100,000 simulations)
 
 MIL@ORL: MIL win 28.3%, ORL win 71.7% | DraftKings ORL -9.5, total 224.5, ML MIL +322 / ORL -410
   Bane 4+ threes: 28.4% (fair +253, 1.00x the legs multiplied) = Desmond Bane 4+ threes [28.4%]
 
-ATL@CHI: ATL win 70.1%, CHI win 29.9% | DraftKings CHI +7.5, total 245.5, ML ATL -277 / CHI +227
-  Buzelis points ladder: 55.8% (fair -126, 1.25x the legs multiplied) = Matas Buzelis 10+ pts [80.3%] + Matas Buzelis 15+ pts [55.8%]
-  Buzelis threes ladder: 60.4% (fair -153, 1.17x the legs multiplied) = Matas Buzelis 1+ threes [85.7%] + Matas Buzelis 2+ threes [60.4%]
-  Buzelis full ladder: 46.6% (fair +114, 2.01x the legs multiplied) = Matas Buzelis 10+ pts [80.3%] + Matas Buzelis 15+ pts [55.8%] + Matas Buzelis 1+ threes [85.7%] + Matas Buzelis 2+ threes [60.4%]
-  NAW 4+ threes: 51.0% (fair -104, 1.00x the legs multiplied) = Nickeil Alexander-Walker 4+ threes [51.0%]
+ATL@CHI: ATL win 68.4%, CHI win 31.6% | DraftKings CHI +6.5, total 246.5, ML ATL -277 / CHI +227
+  Buzelis points ladder: 55.6% (fair -125, 1.25x the legs multiplied) = Matas Buzelis 10+ pts [80.3%] + Matas Buzelis 15+ pts [55.6%]
+  Buzelis threes ladder: 60.1% (fair -151, 1.17x the legs multiplied) = Matas Buzelis 1+ threes [85.8%] + Matas Buzelis 2+ threes [60.1%]
+  Buzelis full ladder: 46.3% (fair +116, 2.01x the legs multiplied) = Matas Buzelis 10+ pts [80.3%] + Matas Buzelis 15+ pts [55.6%] + Matas Buzelis 1+ threes [85.8%] + Matas Buzelis 2+ threes [60.1%]
+  NAW 4+ threes: 49.4% (fair +103, 1.00x the legs multiplied) = Nickeil Alexander-Walker 4+ threes [49.4%]
 
 MEM@NO: MEM win 71.5%, NO win 28.5% | DraftKings NO +3.5, total 235.5, ML MEM -162 / NO +136
   NO points ladder: 42.8% (fair +134, 1.30x the legs multiplied) = Jeremiah Fears 10+ pts [87.7%] + Jeremiah Fears 15+ pts [66.4%] + Saddiq Bey 10+ pts [86.6%] + Saddiq Bey 15+ pts [65.3%]
