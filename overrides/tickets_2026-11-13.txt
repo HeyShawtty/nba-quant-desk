@@ -10,3 +10,6 @@ POR@SAC | Holiday points ladder | Jrue Holiday 10+ pts; Jrue Holiday 15+ pts
 POR@SAC | Holiday threes ladder | Jrue Holiday 1+ threes; Jrue Holiday 2+ threes
 POR@SAC | Holiday full ladder | Jrue Holiday 10+ pts; Jrue Holiday 15+ pts; Jrue Holiday 1+ threes; Jrue Holiday 2+ threes
 UTAH@HOU | Sheppard threes ladder | Reed Sheppard 1+ threes; Reed Sheppard 2+ threes
+ATL@CHI | NAW 4+ threes | Nickeil Alexander-Walker 4+ threes
+POR@SAC | Lillard 4+ threes | Damian Lillard 4+ threes
+MIL@ORL | Bane 4+ threes | Desmond Bane 4+ threes
