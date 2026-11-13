@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/12/26 8:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/12/26 9:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 DET,Elijah Harkless,AVAIL,1,Official: Available (G League - Two-Way)
