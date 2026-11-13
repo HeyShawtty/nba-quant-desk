@@ -1,0 +1,20 @@
+Custom tickets for 2026-11-13, priced 15:53 ET (100,000 simulations)
+
+ATL@CHI: ATL win 69.9%, CHI win 30.1% | DraftKings CHI +7.5, total 245.5, ML ATL -277 / CHI +227
+  Buzelis points ladder: 55.4% (fair -124, 1.25x the legs multiplied) = Matas Buzelis 10+ pts [80.1%] + Matas Buzelis 15+ pts [55.4%]
+  Buzelis threes ladder: 60.3% (fair -152, 1.17x the legs multiplied) = Matas Buzelis 1+ threes [85.6%] + Matas Buzelis 2+ threes [60.3%]
+  Buzelis full ladder: 46.4% (fair +115, 2.03x the legs multiplied) = Matas Buzelis 10+ pts [80.1%] + Matas Buzelis 15+ pts [55.4%] + Matas Buzelis 1+ threes [85.6%] + Matas Buzelis 2+ threes [60.3%]
+
+MEM@NO: MEM win 71.7%, NO win 28.3% | DraftKings NO +3.5, total 235.5, ML MEM -162 / NO +136
+  NO points ladder: 42.6% (fair +135, 1.30x the legs multiplied) = Jeremiah Fears 10+ pts [87.6%] + Jeremiah Fears 15+ pts [66.0%] + Saddiq Bey 10+ pts [86.5%] + Saddiq Bey 15+ pts [65.2%]
+  Bey threes ladder: 61.5% (fair -160, 1.16x the legs multiplied) = Saddiq Bey 1+ threes [86.4%] + Saddiq Bey 2+ threes [61.5%]
+  NO full ladder: 33.7% (fair +197, 1.95x the legs multiplied) = Jeremiah Fears 10+ pts [87.6%] + Jeremiah Fears 15+ pts [66.0%] + Saddiq Bey 10+ pts [86.5%] + Saddiq Bey 15+ pts [65.2%] + Saddiq Bey 1+ threes [86.4%] + Saddiq Bey 2+ threes [61.5%]
+  NO points 20 rung: 26.0% (fair +285, 1.97x the legs multiplied) = Jeremiah Fears 10+ pts [87.6%] + Jeremiah Fears 15+ pts [66.0%] + Jeremiah Fears 20+ pts [40.4%] + Saddiq Bey 10+ pts [86.5%] + Saddiq Bey 15+ pts [65.2%]
+
+UTAH@HOU: UTAH win 8.5%, HOU win 91.5% | DraftKings HOU -15.5, total 221.5, ML UTAH +740 / HOU -1180
+  Sheppard threes ladder: 70.3% (fair -237, 1.11x the legs multiplied) = Reed Sheppard 1+ threes [90.4%] + Reed Sheppard 2+ threes [70.3%]
+
+POR@SAC: POR win 85.1%, SAC win 14.9% | DraftKings SAC +10.5, total 229.5, ML POR -468 / SAC +361
+  Holiday points ladder: 52.0% (fair -108, 1.28x the legs multiplied) = Jrue Holiday 10+ pts [78.1%] + Jrue Holiday 15+ pts [52.0%]
+  Holiday threes ladder: 71.2% (fair -247, 1.10x the legs multiplied) = Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.2%]
+  Holiday full ladder: 48.8% (fair +105, 1.86x the legs multiplied) = Jrue Holiday 10+ pts [78.1%] + Jrue Holiday 15+ pts [52.0%] + Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.2%]
