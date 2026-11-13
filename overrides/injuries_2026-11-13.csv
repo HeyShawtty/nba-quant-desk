@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 5:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,AVAIL,1,Official: Available
@@ -10,8 +10,8 @@ ORL,Noah Penda,OUT,0,Official: Out
 ORL,Jalen Suggs,AVAIL,1,Official: Available
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-IND,T.J. McConnell,Q,0.9,Official: Probable (Injury/Illness - Right Hamstring Strain)
-IND,Aaron Nesmith,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Soreness)
+IND,T.J. McConnell,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
+IND,Aaron Nesmith,AVAIL,1,Official: Available (Injury/Illness - Right Knee Soreness)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 ATL,RayJ Dennis,Q,0.5,Official: Questionable (G League - Two-Way)
 ATL,Kingston Flemings,Q,0.5,Official: Questionable (Injury/Illness - Lumbar Spasm)
@@ -33,8 +33,8 @@ CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Wrist Sprain)
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
-MIA,Pelle Larsson,Q,0.25,Official: Doubtful (Injury/Illness - Illness)
-MIA,Klay Thompson,Q,0.9,Official: Probable (Injury/Illness - Left Ankle Soreness)
+MIA,Pelle Larsson,OUT,0,Official: Out (Injury/Illness - Illness)
+MIA,Klay Thompson,OUT,0,Official: Out (Injury/Illness - Left Ankle Soreness)
 MEM,Zach Edey,OUT,0,Official: Out
 MEM,Karim Lopez,OUT,0,Official: Out (G League - On Assignment)
 MEM,Jahmai Mashack,OUT,0,Official: Out (G League - Two-Way)
