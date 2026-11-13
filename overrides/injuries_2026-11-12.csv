@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/12/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/12/26 8:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 DET,Elijah Harkless,AVAIL,1,Official: Available (G League - Two-Way)
@@ -39,4 +39,6 @@ CHA,Brandon Miller,OUT,0,Official: Out (Injury/Illness - Right Hip Strain)
 CHA,Dennis Schroder,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 CHA,Hannes Steinbach,OUT,0,Official: Out (G League - On Assignment)
 CHA,Grant Williams,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
+PHX,Pat Spencer,OUT,0,Official: Out (G League - Two-Way)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
