@@ -1,22 +1,7 @@
-Custom tickets for 2026-11-13, priced 20:11 ET (100,000 simulations)
-
-ATL@CHI: ATL win 66.5%, CHI win 33.5% | DraftKings CHI +6.5, total 246.5, ML ATL -257 / CHI +211
-  Buzelis points ladder: 48.9% (fair +104, 1.32x the legs multiplied) = Matas Buzelis 10+ pts [75.9%] + Matas Buzelis 15+ pts [48.9%]
-  Buzelis threes ladder: 56.1% (fair -128, 1.20x the legs multiplied) = Matas Buzelis 1+ threes [83.5%] + Matas Buzelis 2+ threes [56.1%]
-  Buzelis full ladder: 40.6% (fair +147, 2.33x the legs multiplied) = Matas Buzelis 10+ pts [75.9%] + Matas Buzelis 15+ pts [48.9%] + Matas Buzelis 1+ threes [83.5%] + Matas Buzelis 2+ threes [56.1%]
-  NAW 4+ threes: 49.5% (fair +102, 1.00x the legs multiplied) = Nickeil Alexander-Walker 4+ threes [49.5%]
-
-MEM@NO: MEM win 72.3%, NO win 27.7% | DraftKings NO +3.5, total 235.5, ML MEM -162 / NO +136
-  NO points ladder: 37.2% (fair +169, 1.37x the legs multiplied) = Jeremiah Fears 10+ pts [85.8%] + Jeremiah Fears 15+ pts [62.9%] + Saddiq Bey 10+ pts [83.5%] + Saddiq Bey 15+ pts [60.3%]
-  Bey threes ladder: 58.5% (fair -141, 1.18x the legs multiplied) = Saddiq Bey 1+ threes [84.8%] + Saddiq Bey 2+ threes [58.5%]
-  NO full ladder: 29.2% (fair +242, 2.17x the legs multiplied) = Jeremiah Fears 10+ pts [85.8%] + Jeremiah Fears 15+ pts [62.9%] + Saddiq Bey 10+ pts [83.5%] + Saddiq Bey 15+ pts [60.3%] + Saddiq Bey 1+ threes [84.8%] + Saddiq Bey 2+ threes [58.5%]
-  NO points 20 rung: 21.4% (fair +367, 2.14x the legs multiplied) = Jeremiah Fears 10+ pts [85.8%] + Jeremiah Fears 15+ pts [62.9%] + Jeremiah Fears 20+ pts [36.9%] + Saddiq Bey 10+ pts [83.5%] + Saddiq Bey 15+ pts [60.3%]
-
-UTAH@HOU: UTAH win 8.5%, HOU win 91.5% | DraftKings HOU -15.5, total 221.5, ML UTAH +810 / HOU -1340
-  Sheppard threes ladder: 70.3% (fair -237, 1.11x the legs multiplied) = Reed Sheppard 1+ threes [90.4%] + Reed Sheppard 2+ threes [70.3%]
+Custom tickets for 2026-11-13, priced 21:08 ET (100,000 simulations)
 
 POR@SAC: POR win 85.7%, SAC win 14.3% | DraftKings SAC +10.5, total 229.5, ML POR -468 / SAC +361
-  Holiday points ladder: 52.3% (fair -110, 1.28x the legs multiplied) = Jrue Holiday 10+ pts [78.2%] + Jrue Holiday 15+ pts [52.3%]
-  Holiday threes ladder: 71.5% (fair -251, 1.10x the legs multiplied) = Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.5%]
-  Holiday full ladder: 49.1% (fair +104, 1.84x the legs multiplied) = Jrue Holiday 10+ pts [78.2%] + Jrue Holiday 15+ pts [52.3%] + Jrue Holiday 1+ threes [91.0%] + Jrue Holiday 2+ threes [71.5%]
-  Lillard 4+ threes: 35.2% (fair +184, 1.00x the legs multiplied) = Damian Lillard 4+ threes [35.2%]
+  Holiday points ladder: 52.0% (fair -109, 1.28x the legs multiplied) = Jrue Holiday 10+ pts [78.1%] + Jrue Holiday 15+ pts [52.0%]
+  Holiday threes ladder: 71.2% (fair -247, 1.10x the legs multiplied) = Jrue Holiday 1+ threes [90.9%] + Jrue Holiday 2+ threes [71.2%]
+  Holiday full ladder: 48.8% (fair +105, 1.86x the legs multiplied) = Jrue Holiday 10+ pts [78.1%] + Jrue Holiday 15+ pts [52.0%] + Jrue Holiday 1+ threes [90.9%] + Jrue Holiday 2+ threes [71.2%]
+  Lillard 4+ threes: 35.3% (fair +183, 1.00x the legs multiplied) = Damian Lillard 4+ threes [35.3%]

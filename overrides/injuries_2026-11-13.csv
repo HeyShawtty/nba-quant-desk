@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 8:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 9:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,AVAIL,1,Official: Available
@@ -60,16 +60,16 @@ HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
 HOU,Marcus Smart,OUT,0,Official: Out (League Suspension)
-GS,Charles Bassey,Q,0.9,Official: Probable (Injury/Illness - Left Toe Soreness)
+GS,Charles Bassey,AVAIL,1,Official: Available (Injury/Illness - Left Toe Soreness)
 GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
 GS,Moses Moody,OUT,0,Official: Out
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
 GS,Brandon Williams,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Left Hip Soreness)
+SA,De'Aaron Fox,AVAIL,1,Official: Available (-)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-SA,Devin Vassell,Q,0.5,Official: Questionable
+SA,Devin Vassell,AVAIL,1,Official: Available (-)
 POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 POR,Shaedon Sharpe,OUT,0,Official: Out
