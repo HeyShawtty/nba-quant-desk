@@ -1,0 +1,29 @@
+team,name,status,p_play,note
+# Source: NBA official injury report 11/14/26 12:45 AM ET (read automatically). Not yet submitted: NO, CLE, MEM, CHI, MIA.
+# status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
+DEN,Ryan Nembhard,OUT,0,Official: Out (G League - Two-Way)
+DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
+DEN,Cam Whitmore,OUT,0,Official: Out (G League - Two-Way)
+DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
+DAL,Max Christie,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
+DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
+DAL,Morez Johnson Jr.,Q,0.9,Official: Probable
+DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
+DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
+BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
+BKN,Mikel Brown Jr.,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
+BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
+BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
+BKN,Nolan Traore,Q,0.9,Official: Probable
+MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
+MIN,Donte DiVincenzo,OUT,0,Official: Out
+MIN,Anthony Edwards,OUT,0,Official: Out
+DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+DET,Elijah Harkless,Q,0.5,Official: Questionable (G League - Two-Way)
+DET,Isaiah Joe,OUT,0,Official: Out (Injury/Illness - Right Hip Contusion)
+DET,Isaac Jones,Q,0.5,Official: Questionable (G League - Two-Way)
+DET,Chaz Lanier,OUT,0,Official: Out (G League - On Assignment)
+DET,Ebuka Okorie,OUT,0,Official: Out (G League - On Assignment)
+DET,Ugonna Onyenso,OUT,0,Official: Out (G League - Two-Way)
