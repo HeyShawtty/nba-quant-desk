@@ -36,6 +36,8 @@ namespace NbaQuant
         public double LearnPtsK = 0;         // scoring rate x (actual + K) / (expected at the minutes he played + K), K in points (0 = off)
         public double LearnAstK = 0;         // assist rate, same rule with K in assists (0 = off)
         public double FavMin = 0.60;         // a favorite line is the highest ladder rung the model clears at least this often
+        public double MaxLegP = 0.85;        // parlay legs above this chance (shorter than about -567) are left out: DraftKings
+                                             // either doesn't list them (star 1+ threes, 10+ points) or prices them at almost nothing
         public string PropCal = "";          // per-stat logit maps for player thresholds, "PTS:shift:slope;..." (fitted out of sample)
         public string LastRecalibration = "";
 

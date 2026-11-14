@@ -261,7 +261,8 @@ namespace NbaQuant
                 foreach (int t in new[] { 15, 20, 25, 30, 35, 40, 45 }) { int tt = t; add(nm + " " + t + "+ PRA", "PRA", nm + "|PRA", s => r.Pts[gi][s] + r.Reb[gi][s] + r.Ast[gi][s] >= tt, ps, t); }
                 add(nm + " double-double", "DD", nm + "|DD", s => (r.Pts[gi][s] >= 10 ? 1 : 0) + (r.Reb[gi][s] >= 10 ? 1 : 0) + (r.Ast[gi][s] >= 10 ? 1 : 0) >= 2, ps, 0);
             }
-            return all ? legs : legs.Where(l => l.P >= 0.40 && l.P <= 0.93).ToList();
+            // generated parlays only use placeable legs (MaxLegP); custom tickets (all = true) keep every rung
+            return all ? legs : legs.Where(l => l.P >= 0.40 && l.P <= Math.Min(0.93, Program.S.MaxLegP)).ToList();
         }
 
         // Four-leg tickets for one game, from the joint simulation. Keeps the combinations whose joint probability falls in
@@ -270,7 +271,7 @@ namespace NbaQuant
         {
             int n = g.Res.N;
             // longer-odds bands need coin-flip-ish legs: four 90% legs can never land at 9-14% joint
-            double target = hi < 0.2 ? 0.58 : 0.75, maxP = hi < 0.2 ? 0.75 : 0.93;
+            double target = hi < 0.2 ? 0.58 : 0.72, maxP = hi < 0.2 ? 0.75 : Math.Min(0.93, Program.S.MaxLegP);
             var legs = BuildLegs(g).Where(l => l.P >= 0.45 && l.P <= maxP).ToList();
             var pool = legs.Where(l => l.Ps == null).Concat(legs.Where(l => l.Ps != null).GroupBy(l => l.Key)
                 .SelectMany(grp => grp.OrderBy(l => Math.Abs(l.P - target)).Take(2))).OrderByDescending(l => l.P).Take(44).ToList();
@@ -350,7 +351,7 @@ namespace NbaQuant
                         if (bestHit == null || jp > bestHit.Joint) bestHit = c;
                         // boost window: fair odds about +325..+400 so a DraftKings price (which carries hold) can still clear +300;
                         // legs restricted to mainstream thresholds and to combinations that genuinely move together
-                        if (jp >= 0.20 && jp <= 0.235 && c.Lift >= 1.03 && ls.All(l => l.P >= 0.45 && l.P <= 0.88)) boost.Add(c);
+                        if (jp >= 0.20 && jp <= 0.235 && c.Lift >= 1.03 && ls.All(l => l.P >= 0.45 && l.P <= Math.Min(0.88, Program.S.MaxLegP))) boost.Add(c);
                         if (jp >= 0.15 && (bestLift == null || c.Lift > bestLift.Lift)) bestLift = c;
                     }
                 }
