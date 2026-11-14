@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 9:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,AVAIL,1,Official: Available
@@ -81,7 +81,7 @@ SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
 OKC,Chet Holmgren,OUT,0,Official: Out
-OKC,Ajay Mitchell,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
+OKC,Ajay Mitchell,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 OKC,Nikola Topic,AVAIL,1,Official: Available (-)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
