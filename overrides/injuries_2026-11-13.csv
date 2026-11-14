@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/13/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/13/26 8:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jamal Cain,AVAIL,1,Official: Available
@@ -22,9 +22,9 @@ ATL,Asa Newell,OUT,0,Official: Out
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
 ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Disc Irritation)
-CHI,Norman Powell,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
+CHI,Norman Powell,AVAIL,1,Official: Available (-)
 CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
-CHI,Dailyn Swain,Q,0.5,Official: Questionable (Injury/Illness - Right Disc Irritation)
+CHI,Dailyn Swain,OUT,0,Official: Out (Injury/Illness - Right Disc Irritation)
 CHI,Caleb Wilson,OUT,0,Official: Out
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Sam Merrill,OUT,0,Official: Out
@@ -42,7 +42,7 @@ MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Quinten Post,OUT,0,Official: Out (Injury/Illness - Concussion Protocol)
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 NO,Malik Dia,AVAIL,1,Official: Available (G League - Two-Way)
-NO,Bennedict Mathurin,Q,0.5,Official: Questionable (Injury/Illness - Right Thumb Sprain)
+NO,Bennedict Mathurin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Sprain)
 NO,Bryce McGowens,OUT,0,Official: Out (Injury/Illness - Left Elbow Infection)
 NO,Yves Missi,OUT,0,Official: Out
 NO,Trey Murphy III,OUT,0,Official: Out
