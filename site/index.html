@@ -503,7 +503,7 @@ table.legt td { padding: 6px 4px; border-bottom: 1px dashed var(--line) }
     const rows = games.map((g, i) => {
       const home = g.winHome >= .5, team = home ? g.home : g.away, opp = home ? g.away : g.home, pk = picks[team + "|" + opp];
       return { i, team, opp, at: home ? "vs" : "@", away: g.away, home: g.home, tip: g.tip, p: favP(g), ml: home ? g.dk.mlHome : g.dk.mlAway, mkt: home ? g.marketWinHome : 1 - g.marketWinHome,
-        ev: (home ? g.dk.mlHome : g.dk.mlAway) ? (home ? g.evHome : g.evAway) : null, score: f1(g.ptsAway) + "–" + f1(g.ptsHome), blow: g.pBlowout, status: pk ? pk.status : "provisional", pk: pk || { status: "provisional" } };
+        ev: (home ? g.dk.mlHome : g.dk.mlAway) ? (home ? g.evHome : g.evAway) : null, score: wholeScore(g).join("–"), blow: g.pBlowout, status: pk ? pk.status : "provisional", pk: pk || { status: "provisional" } };
     });
     Object.keys(picks).forEach(k => { const p = picks[k]; if (rows.some(r => r.team === p.team && r.opp === p.opp)) return;
       rows.push({ i: -1, team: p.team, opp: p.opp, at: p.at, away: p.at === "@" ? p.team : p.opp, home: p.at === "@" ? p.opp : p.team, tip: p.tip, p: p.p, ml: p.ml, mkt: null, ev: p.ev, score: null, blow: null, status: p.status || "locked", pk: p }); });
@@ -523,7 +523,7 @@ table.legt td { padding: 6px 4px; border-bottom: 1px dashed var(--line) }
   function featured(rows) {
     const top = rows.slice().sort((a, b) => b.p - a.p).slice(0, 3), val = [];
     games.forEach((g, i) => [{ team: g.away, opp: g.home, p: 1 - g.winHome, ml: g.dk.mlAway, ev: g.evAway, mkt: 1 - g.marketWinHome }, { team: g.home, opp: g.away, p: g.winHome, ml: g.dk.mlHome, ev: g.evHome, mkt: g.marketWinHome }]
-      .forEach(s => { if (s.ml && s.ev >= .05) val.push(Object.assign(s, { i, away: g.away, home: g.home, tip: g.tip, score: f1(g.ptsAway) + "–" + f1(g.ptsHome), pk: (rows.filter(r => r.i === i)[0] || {}).pk })); }));
+      .forEach(s => { if (s.ml && s.ev >= .05) val.push(Object.assign(s, { i, away: g.away, home: g.home, tip: g.tip, score: wholeScore(g).join("–"), pk: (rows.filter(r => r.i === i)[0] || {}).pk })); }));
     val.sort((a, b) => b.ev - a.ev);
     const bt = D.tiers && D.tiers.edges;
     return `<section class="stack" aria-label="Featured picks"><div class="two-h"><div class="stack"><div class="sec-h"><h3>Highest win probabilities</h3><span class="muted small">Who is most likely to win. Not a statement about price.</span></div>${top.length ? top.map(r => featCard(r, "win")).join("") : '<div class="panel muted">No games priced.</div>'}</div>
@@ -630,13 +630,37 @@ table.legt td { padding: 6px 4px; border-bottom: 1px dashed var(--line) }
       <table class="legt"><tbody>${c.legs.map((l, i) => `<tr><td class="l">${esc(l)}</td><td>${pct(c.legP[i], 0)}</td></tr>`).join("")}</tbody></table>
       <dl class="fc-facts"><div><dt>All legs together</dt><dd><b class="acc">${pct(c.joint)}</b></dd></div><div><dt>Fair odds</dt><dd>${am(c.fair)}</dd></div><div><dt>Offered odds</dt><dd>${NA}</dd></div><div><dt>Expected return</dt><dd>${NA}</dd></div></dl></div>`;
   }
+  // whole numbers that still add up: largest-remainder rounding, so a column of whole numbers sums exactly to its target
+  function alloc(vals, total) {
+    const fl = vals.map(v => Math.floor(Math.max(0, v))); let rem = total - fl.reduce((s, v) => s + v, 0);
+    const order = vals.map((v, i) => [v - Math.floor(Math.max(0, v)), i]).sort((a, b) => b[0] - a[0]);
+    for (let k = 0; rem > 0 && order.length; k = (k + 1) % order.length) { fl[order[k][1]]++; rem--; }
+    for (let k = order.length - 1; rem < 0 && k >= 0; k--) { const i = order[k][1]; if (fl[i] > 0) { fl[i]--; rem++; } }
+    return fl;
+  }
+  // projected final as whole numbers; a rounding tie goes to the model's pick
+  function wholeScore(g) {
+    let a = Math.round(g.ptsAway), h = Math.round(g.ptsHome);
+    if (a === h) { if (g.winHome >= .5) h++; else a++; }
+    return [a, h];
+  }
+  // the model's box score in whole numbers: each player's share of the simulated team total (his line times the chance he
+  // plays), rounded so every column adds up to the team total; points add up to the projected final, minutes to 240
+  function wholeBox(g, home) {
+    const all = home ? g.boxHome : g.boxAway, ws = wholeScore(g), tt = home ? g.teamHome : g.teamAway;
+    const col = (f, total) => alloc(all.map(p => p[f] * p.play), total);
+    const sumE = f => Math.round(all.reduce((s, p) => s + p[f] * p.play, 0));
+    const c = { min: col("min", 240), pts: col("pts", home ? ws[1] : ws[0]), reb: col("reb", sumE("reb")), ast: col("ast", Math.round(tt.ast)), tpm: col("tpm", sumE("tpm")) };
+    return all.map((p, i) => ({ p, min: c.min[i], pts: c.pts[i], reb: c.reb[i], ast: c.ast[i], tpm: c.tpm[i] }));
+  }
   function boxTable(g, home) {
-    const all = home ? g.boxHome : g.boxAway, rows = all.filter(p => p.min >= 9.5), team = home ? g.home : g.away, tt = home ? g.teamHome : g.teamAway;
-    const sum = f => all.reduce((s, p) => s + p[f] * p.play, 0), cell = (p, f) => `<td>${f1(p[f])}${p.play < .95 ? `<span class="sub">${f1(p[f] * p.play)} all</span>` : ""}</td>`;
+    const rows = wholeBox(g, home), team = home ? g.home : g.away, shown = rows.filter(r => r.min >= 1);
+    const tot = f => rows.reduce((s, r) => s + r[f], 0);
+    const ifPlays = p => p.play < .95 ? ` title="If he plays: ${Math.round(p.min)} min, ${Math.round(p.pts)} pts, ${Math.round(p.reb)} reb, ${Math.round(p.ast)} ast, ${Math.round(p.tpm)} threes"` : "";
     return `<div><div class="team-cap"><span class="ab">${esc(team)}</span><span class="muted small">${esc(home ? g.homeName : g.awayName)}</span></div>
-      <div class="tscroll"><table><thead><tr><th class="l">Player</th><th>MIN</th><th>PTS</th><th>REB</th><th>AST</th><th>3PM</th><th title="Points in his last games, oldest first. Dashed line = his favorite points line.">Recent pts</th><th></th></tr></thead><tbody>${rows.map(p =>
-        `<tr><td class="l"><b>${esc(p.name)}</b>${p.starter ? ' <span class="muted small">starter</span>' : ""}${p.play < .95 ? ` <span class="chip warn">plays ${pct(p.play, 0)}</span>` : ""}${chips(p)}</td><td>${f1(p.min)}</td>${cell(p, "pts")}${cell(p, "reb")}${cell(p, "ast")}${cell(p, "tpm")}<td>${tape(p.log, 1, p.fav && p.fav.PTS ? p.fav.PTS[0] : 0)}</td><td><button class="btn sm" type="button" data-ladder="${esc(g.away + "|" + team + "|" + p.name)}">Ladder</button></td></tr>`).join("")}
-        <tr class="tot"><td class="l">Team, all simulations</td><td>240</td><td>${f1(tt.pts)}</td><td>${f1(sum("reb"))}</td><td>${f1(tt.ast)}</td><td>${f1(sum("tpm"))}</td><td></td><td></td></tr></tbody></table></div></div>`;
+      <div class="tscroll"><table><thead><tr><th class="l">Player</th><th>MIN</th><th>PTS</th><th>REB</th><th>AST</th><th>3PM</th><th title="Points in his last games, oldest first. Dashed line = his favorite points line.">Recent pts</th><th></th></tr></thead><tbody>${shown.map(r => { const p = r.p;
+        return `<tr${ifPlays(p)}><td class="l"><b>${esc(p.name)}</b>${p.starter ? ' <span class="muted small">starter</span>' : ""}${p.play < .95 ? ` <span class="chip warn">plays ${pct(p.play, 0)}</span>` : ""}${chips(p)}</td><td>${r.min}</td><td><b>${r.pts}</b></td><td>${r.reb}</td><td>${r.ast}</td><td>${r.tpm}</td><td>${tape(p.log, 1, p.fav && p.fav.PTS ? p.fav.PTS[0] : 0)}</td><td><button class="btn sm" type="button" data-ladder="${esc(g.away + "|" + team + "|" + p.name)}">Ladder</button></td></tr>`; }).join("")}
+        <tr class="tot"><td class="l">Team</td><td>${tot("min")}</td><td>${tot("pts")}</td><td>${tot("reb")}</td><td>${tot("ast")}</td><td>${tot("tpm")}</td><td></td><td></td></tr></tbody></table></div></div>`;
   }
   function matchup(g, gi) {
     if (!g) return "";
@@ -647,8 +671,8 @@ table.legt td { padding: 6px 4px; border-bottom: 1px dashed var(--line) }
     const blowNote = blow >= .3 ? `<p class="note warn"><b>Blowout risk ${pct(blow, 0)}.</b> If this gets out of hand, starters sit the fourth quarter and their lines fall short. Their projections already include that chance.</p>` : "";
     let body = "";
     if (msec === "overview") body = `<div class="panel stack">
-        <div class="scorebug"><div class="sb-side${homePick ? "" : " call"}"><span class="sb-abbr">${esc(g.away)}</span><span class="sb-name">${esc(g.awayName)}</span><span class="sb-pts">${f1(g.ptsAway)}</span></div><span class="sb-mid">projected<br>final</span>
-          <div class="sb-side h${homePick ? " call" : ""}"><span class="sb-abbr">${esc(g.home)}</span><span class="sb-name">${esc(g.homeName)}</span><span class="sb-pts">${f1(g.ptsHome)}</span></div></div>
+        <div class="scorebug"><div class="sb-side${homePick ? "" : " call"}"><span class="sb-abbr">${esc(g.away)}</span><span class="sb-name">${esc(g.awayName)}</span><span class="sb-pts">${wholeScore(g)[0]}</span></div><span class="sb-mid" title="Averages: ${esc(g.away)} ${f1(g.ptsAway)}, ${esc(g.home)} ${f1(g.ptsHome)}">projected<br>final</span>
+          <div class="sb-side h${homePick ? " call" : ""}"><span class="sb-abbr">${esc(g.home)}</span><span class="sb-name">${esc(g.homeName)}</span><span class="sb-pts">${wholeScore(g)[1]}</span></div></div>
         <div><div class="wp-labels"><span class="${homePick ? "" : "acc"}">${pct(wa)}</span><span class="muted small">win chance</span><span class="${homePick ? "acc" : ""}">${pct(g.winHome)}</span></div>
           <div class="wp" role="img" aria-label="Win chance: ${esc(g.away)} ${pct(wa)}, ${esc(g.home)} ${pct(g.winHome)}"><i class="${homePick ? "" : "call"}" style="width:${(100 * wa).toFixed(1)}%"></i><i class="${homePick ? "call" : ""}"></i><span class="tick" style="left:${(100 * kA).toFixed(1)}%"></span></div>
           <div class="small muted" style="margin-top:6px">Dashed mark: DraftKings has ${esc(g.marketWinHome >= .5 ? g.home : g.away)} at ${pct(Math.max(g.marketWinHome, kA))}. ${tierChip(favP(g))}</div></div>
@@ -664,7 +688,7 @@ table.legt td { padding: 6px 4px; border-bottom: 1px dashed var(--line) }
       if (!mine.some(e => e.key === pSel)) pSel = mine.length ? mine[0].key : pSel;
       body = `${favs.length ? `<div class="panel stack"><div class="sec-h"><h3>Biggest lines the simulations back</h3><span class="muted small">Highest line each main player clears in 60%+ of the games he plays</span></div><div class="favs">${favs.map(f => `<button class="fav" type="button" data-ladder="${esc(g.away + "|" + f.team + "|" + f.name)}" data-fstat="${esc(f.stat)}"><span class="nm">${esc(f.name)} <span class="muted">${esc(f.team)}</span></span><span class="ln">${f.line}+ ${esc(f.unit)} <b class="acc">${pct(f.p, 0)}</b></span><span class="pbar"><i style="width:${(100 * f.p).toFixed(0)}%"></i></span><span class="small muted">Season ${f.hit}/${f.gp} · last ${f.l5n}: ${f.l5hit}</span></button>`).join("")}</div></div>` : ""}
         ${blowNote}<div class="work"><div class="plist" role="group" aria-label="Players in this game">${mine.sort((a, b) => b.p.min - a.p.min).map(e => `<button class="plb" type="button" data-mkey="${esc(e.key)}" aria-pressed="${e.key === pSel}"><span class="pl-n">${esc(e.p.name)}${e.p.status === "Q" ? ' <span class="chip warn">Q</span>' : ""}</span><span class="muted small">${esc(e.team)} · ${f1(e.p.min)} min</span></button>`).join("")}</div><div>${playerPanel(roster.filter(e => e.key === pSel)[0])}</div></div>`; }
-    else if (msec === "box") body = `<div class="panel stack"><p class="small muted" style="max-width:none">Each number is the player's average in the simulated games he plays. For a player who may sit, the small "all" figure counts the games he misses as zeros; the Team row adds those up, so it matches the projected score.</p>${blowNote}<div class="boxes">${boxTable(g, false)}${boxTable(g, true)}</div></div>`;
+    else if (msec === "box") body = `<div class="panel stack"><p class="small muted" style="max-width:none">The model's box score in whole numbers. Each line is the player's share of the team total across ${D.meta.sims.toLocaleString()} simulated games, rounded so every column adds up: points to the projected final, minutes to 240. A player who may sit counts only as often as he plays; hover his row for his line if he plays. The full chance of each line is on his ladder.</p>${blowNote}<div class="boxes">${boxTable(g, false)}${boxTable(g, true)}</div></div>`;
     else { const qs = roster.filter(e => e.gi === gi && (e.p.status === "Q" || e.p.play < .95));
       body = `<div class="panel stack"><p class="small muted">Injury report used: ${D.meta.injuryReport ? esc(D.meta.injuryReport) : NA}</p>
         <div class="tscroll"><table><thead><tr><th class="l">Player</th><th class="l">Team</th><th class="l">Designation</th><th class="l">Note</th></tr></thead><tbody>
