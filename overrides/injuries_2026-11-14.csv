@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/14/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/14/26 9:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
 DEN,Ryan Nembhard,OUT,0,Official: Out (G League - Two-Way)
@@ -35,7 +35,7 @@ BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
 BKN,Michael Porter Jr.,OUT,0,Official: Out (Personal Reasons)
 BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
 BKN,Nolan Traore,AVAIL,1,Official: Available
-MEM,Zach Edey,Q,0.5,Official: Questionable
+MEM,Zach Edey,OUT,0,Official: Out
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Head Injury)
 MEM,Ty Jerome,OUT,0,Official: Out (Injury/Illness - Right Hip Soreness)
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
