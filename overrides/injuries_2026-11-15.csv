@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/15/26 5:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/15/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -68,22 +68,22 @@ WSH,Reece Beekman,OUT,0,Official: Out (Injury/Illness - Right AC Joint Injury)
 WSH,Bub Carrington,AVAIL,1,Official: Available
 WSH,Justin Champagnie,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 WSH,Tre Johnson,OUT,0,Official: Out (Injury/Illness - Low Back Soreness)
-WSH,Felix Okpara,Q,0.5,Official: Questionable (G League - Two-Way)
+WSH,Felix Okpara,OUT,0,Official: Out (G League - Two-Way)
 WSH,Alex Sarr,AVAIL,1,Official: Available (Injury/Illness - Illness)
 WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
 WSH,Jamir Watkins,OUT,0,Official: Out
 ATL,Kingston Flemings,OUT,0,Official: Out (Injury/Illness - Lumbar Strain)
 ATL,Keshon Gilbert,OUT,0,Official: Out (Inflammation; Non-Surgical)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
-ATL,Jock Landale,Q,0.5,Official: Questionable
+ATL,Jock Landale,OUT,0,Official: Out
 ATL,Asa Newell,OUT,0,Official: Out
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
-ATL,Jalen Wilson,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 MIL,Ousmane Dieng,OUT,0,Official: Out (Injury/Illness - Left Finger Fracture)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
 MIL,Bogoljub Markovic,OUT,0,Official: Out (G League - On Assignment)
 MIL,Pete Nance,OUT,0,Official: Out (G League - Two-Way)
-MIL,Ryan Rollins,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+MIL,Ryan Rollins,OUT,0,Official: Out (Injury/Illness - Illness)
 MIL,Cormac Ryan,OUT,0,Official: Out (G League - Two-Way)
 OKC,Chet Holmgren,OUT,0,Official: Out
 OKC,Ajay Mitchell,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
