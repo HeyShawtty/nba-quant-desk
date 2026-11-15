@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/14/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/14/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
 DEN,Ryan Nembhard,OUT,0,Official: Out (G League - Two-Way)
@@ -29,12 +29,12 @@ CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
 CLE,Peyton Watson,OUT,0,Official: Out
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
-BKN,Mikel Brown Jr.,Q,0.9,Official: Probable (Injury/Illness - Illness)
+BKN,Mikel Brown Jr.,AVAIL,1,Official: Available (Injury/Illness - Illness)
 BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
 BKN,Grant Nelson,OUT,0,Official: Out (G League - Two-Way)
 BKN,Michael Porter Jr.,Q,0.5,Official: Questionable (Personal Reasons)
 BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
-BKN,Nolan Traore,Q,0.9,Official: Probable
+BKN,Nolan Traore,AVAIL,1,Official: Available
 MEM,Zach Edey,Q,0.5,Official: Questionable
 MEM,Jerami Grant,Q,0.5,Official: Questionable (Injury/Illness - Head Injury)
 MEM,Ty Jerome,OUT,0,Official: Out (Injury/Illness - Right Hip Soreness)
@@ -42,10 +42,10 @@ MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Quinten Post,OUT,0,Official: Out (Injury/Illness - Concussion Protocol)
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Disc Irritation)
-CHI,Nic Claxton,Q,0.5,Official: Questionable
-CHI,Norman Powell,Q,0.5,Official: Questionable
+CHI,Nic Claxton,OUT,0,Official: Out
+CHI,Norman Powell,AVAIL,1,Official: Available (-)
 CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
-CHI,Jalen Smith,Q,0.5,Official: Questionable (Injury/Illness - Left Finger Sprain)
+CHI,Jalen Smith,OUT,0,Official: Out (Injury/Illness - Left Finger Sprain)
 CHI,Dailyn Swain,OUT,0,Official: Out (G League - On Assignment)
 CHI,Caleb Wilson,OUT,0,Official: Out
 MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
