@@ -366,7 +366,9 @@ namespace NbaQuant
                 foreach (var alt in new[] { Tuple.Create("HotStartWeight", S.HotStartWeight > 1 ? 1.0 : 3.0), Tuple.Create("MinRecency", S.MinRecency > 0 ? 0.0 : 0.25),
                     Tuple.Create("RatePriorMin", S.RatePriorMin > 150 ? 150.0 : 300.0), Tuple.Create("GammaOverride", S.GammaOverride > 0 ? 0.0 : 1.0),
                     // trend learning (2026-11-12): last-3-game minutes, and scoring / assist rates learned from the model's own misses
-                    Tuple.Create("MinTrend", S.MinTrend > 0 ? 0.0 : 0.25), Tuple.Create("LearnPtsK", S.LearnPtsK > 0 ? 0.0 : 300.0), Tuple.Create("LearnAstK", S.LearnAstK > 0 ? 0.0 : 50.0) })
+                    Tuple.Create("MinTrend", S.MinTrend > 0 ? 0.0 : 0.25), Tuple.Create("LearnPtsK", S.LearnPtsK > 0 ? 0.0 : 300.0), Tuple.Create("LearnAstK", S.LearnAstK > 0 ? 0.0 : 50.0),
+                    // per-player spread (2026-11-14): lost on every period with 10-13 games per player; retested daily as samples grow
+                    Tuple.Create("SpreadK", S.SpreadK > 0 ? 0.0 : 15.0) })
                 {
                     var fld = typeof(Settings).GetField(alt.Item1); double keepV = (double)fld.GetValue(S);
                     fld.SetValue(S, alt.Item2);
