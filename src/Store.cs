@@ -38,6 +38,9 @@ namespace NbaQuant
         public double FavMin = 0.60;         // a favorite line is the highest ladder rung the model clears at least this often
         public double MaxLegP = 0.85;        // parlay legs above this chance (shorter than about -567) are left out: DraftKings
                                              // either doesn't list them (star 1+ threes, 10+ points) or prices them at almost nothing
+        // per-player spread (2026-11-14): steady scorers get narrower simulated ranges, streaky ones wider
+        public double SpreadK = 0;           // his scoring spread this season vs league-typical at his average, mixed with K games of league-typical (0 = off)
+        public double SpreadPow = 2;         // his minutes-noise multiplier = (that mixed ratio) ^ SpreadPow, kept within 0.4 to 1.6
         public string PropCal = "";          // per-stat logit maps for player thresholds, "PTS:shift:slope;..." (fitted out of sample)
         public string LastRecalibration = "";
 

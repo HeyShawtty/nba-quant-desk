@@ -198,7 +198,8 @@ namespace NbaQuant
                 // rotation risk is a yes/no draw (books void props for players who sit), not a minutes haircut
                 double pr = tm.Pl[i].PRot;
                 if (b > 0 && pr < 0.95) b = rng.U01() < pr ? b / Math.Max(0.05, pr) : 0;
-                double m = b <= 0 ? 0 : b * Math.Exp(P.SigmaMin * rng.Normal() - 0.5 * P.SigmaMin * P.SigmaMin);
+                double sm = P.SigmaMin * tm.Pl[i].Spread;   // per-player spread (1 unless SpreadK is on)
+                double m = b <= 0 ? 0 : b * Math.Exp(sm * rng.Normal() - 0.5 * sm * sm);
                 minNow[t][i] = m; sum += m; starterNow[t][i] = scen.Starter[i];
             }
             double f = 240.0 / sum;

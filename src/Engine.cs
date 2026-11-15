@@ -223,6 +223,7 @@ namespace NbaQuant
                 Games.Add(ctx);
             }
             if (live) ApplyOverrides(d);
+            FitSpreadRef();
             foreach (var p in AllPlayers.Values) Project(p, Pri);
             foreach (var g in Games) FinishGame(g, live);
             if (live) SaveBaseMargins();
@@ -463,6 +464,53 @@ namespace NbaQuant
                 p.MinTrendShift = p.ExpMin - before;
             }
             p.StartRate = p.Gp > 0 ? (double)p.Starts / p.Gp : (p.HasPs && p.Ps.G > 0 ? p.Ps.GS / p.Ps.G : 0);
+            // per-player spread: a steady scorer (Jaden McDaniels: 13 to 23 in every game) gets a narrower range than the
+            // league-typical one for his average, a streaky one a wider range (strength tested out of sample; 0 = off)
+            p.Spread = 1;
+            int sn = p.CsPtsList.Count;
+            if (S.SpreadK > 0 && SpreadRefN >= 30 && sn >= 3)
+            {
+                double mu = p.CsPtsList.Average();
+                if (mu >= 3)
+                {
+                    double sd = Math.Sqrt(p.CsPtsList.Sum(x => (x - mu) * (x - mu)) / (sn - 1));
+                    double refSd = SpreadA * Math.Sqrt(mu) + SpreadB * mu;
+                    if (refSd > 0.5)
+                    {
+                        double mixed = (sn * (sd / refSd) + S.SpreadK) / (sn + S.SpreadK);
+                        p.Spread = Math.Max(0.4, Math.Min(1.6, Math.Pow(mixed, S.SpreadPow)));
+                    }
+                }
+            }
+        }
+
+        // league-typical game-to-game scoring spread at a given average, from this season's completed games only:
+        // sd = A*sqrt(avg) + B*avg, least squares over players with 5+ games averaging 3+ points (weighted by games)
+        public static double SpreadA, SpreadB; public static int SpreadRefN;
+        static void FitSpreadRef()
+        {
+            SpreadA = 0; SpreadB = 0; SpreadRefN = 0;
+            var byPid = new Dictionary<string, List<int>>();
+            foreach (var g in Completed)
+                foreach (var b in g.Box)
+                {
+                    if (b.Dnp || b.Min <= 0) continue;
+                    List<int> l; if (!byPid.TryGetValue(b.Pid, out l)) byPid[b.Pid] = l = new List<int>();
+                    l.Add(b.Pts);
+                }
+            double s11 = 0, s12 = 0, s22 = 0, t1 = 0, t2 = 0;
+            foreach (var l in byPid.Values)
+            {
+                int n = l.Count; if (n < 5) continue;
+                double mu = l.Average(); if (mu < 3) continue;
+                double sd = Math.Sqrt(l.Sum(x => (x - mu) * (x - mu)) / (n - 1));
+                double x1 = Math.Sqrt(mu), x2 = mu, w = n;
+                s11 += w * x1 * x1; s12 += w * x1 * x2; s22 += w * x2 * x2; t1 += w * x1 * sd; t2 += w * x2 * sd;
+                SpreadRefN++;
+            }
+            double det = s11 * s22 - s12 * s12;
+            if (SpreadRefN < 30 || Math.Abs(det) < 1e-9) { SpreadRefN = 0; return; }
+            SpreadA = (t1 * s22 - t2 * s12) / det; SpreadB = (s11 * t2 - s12 * t1) / det;
         }
 
         // ------------------------------------------------------------------ teams, ratings, targets
