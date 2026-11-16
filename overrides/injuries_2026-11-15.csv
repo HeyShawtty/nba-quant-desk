@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/15/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/15/26 8:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -86,13 +86,14 @@ MIL,Pete Nance,OUT,0,Official: Out (G League - Two-Way)
 MIL,Ryan Rollins,OUT,0,Official: Out (Injury/Illness - Illness)
 MIL,Cormac Ryan,OUT,0,Official: Out (G League - Two-Way)
 OKC,Chet Holmgren,OUT,0,Official: Out
-OKC,Ajay Mitchell,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
+OKC,Ajay Mitchell,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
 OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
 SAC,Precious Achiuwa,OUT,0,Official: Out (Injury/Illness - Left Ankle Soreness)
-SAC,De'Andre Hunter,Q,0.5,Official: Questionable
+SAC,De'Andre Hunter,OUT,0,Official: Out
+SAC,Zach LaVine,OUT,0,Official: Out (Injury/Illness - Illness)
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Keegan Murray,AVAIL,1,Official: Available (-)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
