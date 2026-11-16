@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/15/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/15/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -91,7 +91,8 @@ OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
-SAC,Precious Achiuwa,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Soreness)
+SAC,Precious Achiuwa,OUT,0,Official: Out (Injury/Illness - Left Ankle Soreness)
+SAC,De'Andre Hunter,Q,0.5,Official: Questionable
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Keegan Murray,AVAIL,1,Official: Available (-)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
