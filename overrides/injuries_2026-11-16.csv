@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/16/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/16/26 8:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Disc Irritation)
 CHI,Orlando Robinson,OUT,0,Official: Out (G League - On Assignment)
@@ -73,7 +73,8 @@ MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
 MIN,Jaylen Clark,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
-PHX,Ryan Dunn,Q,0.5,Official: Questionable (Injury/Illness - Right Thumb Soreness)
+PHX,Ryan Dunn,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Soreness)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
 DEN,Ryan Nembhard,OUT,0,Official: Out (G League - Two-Way)
