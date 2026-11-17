@@ -1,10 +1,10 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/16/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/16/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHI,Tobe Awaka,OUT,0,Official: Out (Injury/Illness - Disc Irritation)
 CHI,Orlando Robinson,OUT,0,Official: Out (G League - On Assignment)
 CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
-CHI,Jalen Smith,Q,0.5,Official: Questionable (Injury/Illness - Left Finger Sprain)
+CHI,Jalen Smith,AVAIL,1,Official: Available (-)
 CHI,Caleb Wilson,OUT,0,Official: Out
 CLE,Khalifa Diop,AVAIL,1,Official: Available (-)
 CLE,Sam Merrill,OUT,0,Official: Out
@@ -36,14 +36,14 @@ HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
 HOU,Marcus Smart,OUT,0,Official: Out (League Suspension)
-HOU,Amen Thompson,Q,0.5,Official: Questionable (Injury/Illness - Left Knee Soreness)
+HOU,Amen Thompson,OUT,0,Official: Out (Injury/Illness - Left Knee Soreness)
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
 MIA,Nikola Jovic,OUT,0,Official: Out (Injury/Illness - Illness)
 MIA,Pelle Larsson,OUT,0,Official: Out (Injury/Illness - Illness)
 MIA,Klay Thompson,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
 PHI,Dominick Barlow,OUT,0,Official: Out
 PHI,Adem Bona,OUT,0,Official: Out (Injury/Illness - Cervical Spine Sprain)
-PHI,Joel Embiid,Q,0.5,Official: Questionable
+PHI,Joel Embiid,AVAIL,1,Official: Available
 PHI,Ariel Hukporti,OUT,0,Official: Out
 PHI,LeBron James,OUT,0,Official: Out
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
