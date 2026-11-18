@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/17/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/17/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 TOR,Scottie Barnes,AVAIL,1,Official: Available (Injury/Illness - Illness)
 TOR,Nate Bittle,OUT,0,Official: Out
@@ -39,7 +39,9 @@ LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
 LAC,Jordan Miller,OUT,0,Official: Out
 LAC,Yanic Konan Niederhauser,OUT,0,Official: Out (Injury/Illness - Right Lisfranc Surgery)
+LAC,Jalen Pickett,OUT,0,Official: Out (G League - Two-Way)
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
+CHA,Grayson Allen,OUT,0,Official: Out
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
 CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 CHA,Dennis Schroder,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
