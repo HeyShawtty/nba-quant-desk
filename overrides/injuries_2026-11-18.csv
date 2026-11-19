@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/18/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/18/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
@@ -76,21 +76,21 @@ OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,AVAIL,1,Official: Available (Injury/Illness - Low Back Spasms)
-DET,Cade Cunningham,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Soreness)
+DET,Cade Cunningham,OUT,0,Official: Out (Injury/Illness - Right Knee Soreness)
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 DET,Ronald Holland II,OUT,0,Official: Out
-DET,Isaiah Joe,Q,0.5,Official: Questionable (Injury/Illness - Right Hip Contusion)
+DET,Isaiah Joe,AVAIL,1,Official: Available (Injury/Illness - Right Hip Contusion)
 DET,Ebuka Okorie,OUT,0,Official: Out (G League - On Assignment)
 DET,Ugonna Onyenso,OUT,0,Official: Out (G League - Two-Way)
 DET,Taurean Prince,OUT,0,Official: Out (Injury/Illness - Right Knee Soreness)
 DET,Duncan Robinson,OUT,0,Official: Out (Injury/Illness - Left Quadriceps Strain)
-NO,Malik Dia,Q,0.9,Official: Probable (G League - Two-Way)
+NO,Malik Dia,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
 NO,Bryce McGowens,OUT,0,Official: Out (Injury/Illness - Left Elbow Infection)
 NO,Trey Murphy III,OUT,0,Official: Out
 NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
-NO,Jaron Pierre Jr.,Q,0.9,Official: Probable (G League - Two-Way)
-NO,Julian Reese,Q,0.9,Official: Probable (G League - Two-Way)
+NO,Jaron Pierre Jr.,AVAIL,1,Official: Available (G League - Two-Way)
+NO,Julian Reese,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
