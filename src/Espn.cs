@@ -80,7 +80,9 @@ namespace NbaQuant
             g.StartUtc = J.S(comp, "date");
             DateTime dt;
             if (DateTime.TryParse(g.StartUtc, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal | DateTimeStyles.AssumeUniversal, out dt))
-                g.Date = dt.AddHours(-4).ToString("yyyy-MM-dd");
+                // Eastern date with daylight saving handled (a fixed -4 h put 11 PM EST tips on the next day after Nov 1,
+                // so a team that played one missed its back-to-back flag the next night)
+                g.Date = TimeZoneInfo.ConvertTimeFromUtc(dt, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")).ToString("yyyy-MM-dd");
             g.Completed = J.B(comp, "status.type.completed");
             g.StatusText = J.S(comp, "status.type.shortDetail");
             g.State = J.S(comp, "status.type.state");
