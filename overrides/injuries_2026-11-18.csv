@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/18/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/18/26 9:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
@@ -114,15 +114,18 @@ DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
 DEN,Ryan Nembhard,OUT,0,Official: Out (G League - Two-Way)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 DEN,Cam Whitmore,OUT,0,Official: Out (G League - Two-Way)
+PHX,Duop Reath,OUT,0,Official: Out (G League - Two-Way)
+PHX,Pat Spencer,OUT,0,Official: Out (G League - Two-Way)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
-SAC,Precious Achiuwa,AVAIL,1,Official: Available (Injury/Illness - Left Lower Leg)
+SAC,Precious Achiuwa,AVAIL,1,Official: Available
 SAC,De'Andre Hunter,AVAIL,1,Official: Available
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
 UTAH,Kobe Bufkin,OUT,0,Official: Out (G League - Two-Way)
-UTAH,Jaxson Hayes,Q,0.5,Official: Questionable (Injury/Illness - Left Knee Strain)
+UTAH,Jaxson Hayes,AVAIL,1,Official: Available (Injury/Illness - Left Knee Strain)
 UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
