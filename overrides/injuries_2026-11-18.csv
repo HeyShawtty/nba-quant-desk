@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/18/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/18/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
@@ -55,7 +55,7 @@ BKN,Drake Powell,OUT,0,Official: Out (G League - On Assignment)
 BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
 WSH,Reece Beekman,OUT,0,Official: Out (Injury/Illness - Right AC Joint Injury)
 WSH,Justin Champagnie,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
-WSH,Felix Okpara,Q,0.5,Official: Questionable (G League - Two-Way)
+WSH,Felix Okpara,OUT,0,Official: Out (G League - Two-Way)
 WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
 WSH,Jamir Watkins,OUT,0,Official: Out
 TOR,Scottie Barnes,OUT,0,Official: Out
@@ -75,7 +75,7 @@ OKC,Chet Holmgren,OUT,0,Official: Out
 OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
-OKC,Jaylin Williams,Q,0.5,Official: Questionable (Injury/Illness - Low Back Spasms)
+OKC,Jaylin Williams,AVAIL,1,Official: Available (Injury/Illness - Low Back Spasms)
 DET,Cade Cunningham,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Soreness)
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 DET,Ronald Holland II,OUT,0,Official: Out
@@ -99,12 +99,13 @@ GS,Al Horford,OUT,0,Official: Out
 GS,Moses Moody,OUT,0,Official: Out (Injury/Illness - Left Patellar Tendon)
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
 GS,Brandon Williams,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-DAL,Santi Aldama,Q,0.9,Official: Probable (Injury/Illness - Left Ankle Sprain)
+DAL,Santi Aldama,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
-DAL,Max Christie,Q,0.5,Official: Questionable (Injury/Illness - Left Ankle Sprain)
-DAL,Walter Clayton Jr.,Q,0.9,Official: Probable (Injury/Illness - Right Ankle Sprain)
+DAL,Max Christie,AVAIL,1,Official: Available (Injury/Illness - Left Ankle Sprain)
+DAL,Walter Clayton Jr.,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
-DAL,Tobi Lawal,Q,0.25,Official: Doubtful (Injury/Illness - Right Groin Tightness)
+DAL,Jett Howard,OUT,0,Official: Out (G League - Two-Way)
+DAL,Tobi Lawal,OUT,0,Official: Out (Injury/Illness - Right Groin Tightness)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
 BOS,Dillon Mitchell,OUT,0,Official: Out (G League - Two-Way)
@@ -114,7 +115,7 @@ DEN,Ryan Nembhard,OUT,0,Official: Out (G League - Two-Way)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 DEN,Cam Whitmore,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
-SAC,Precious Achiuwa,AVAIL,1,Official: Available
+SAC,Precious Achiuwa,AVAIL,1,Official: Available (Injury/Illness - Left Lower Leg)
 SAC,De'Andre Hunter,AVAIL,1,Official: Available
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
