@@ -1,0 +1,81 @@
+SLATE 2026-11-19: 4 games | model favorite won 3/4 | 2 overs, 2 unders vs DK | total MAE model 10.0 vs DK 9.3 | margin MAE model 8.4 vs DK 7.0 | headline picks & parlays 36/98 | players projected 15+ min: 62 | pts MAE 4.5, within 5 pts 67.7% | causes: on track 34, minutes surplus 10, minutes short 9, hot shooting 7, cold shooting 2
+=== LAC @ SA: LAC 112-124 SA | fav SA 90.4% RIGHT | margin model +18.7 DK +15.5 actual +12 | total model 224.9 DK 224.5 actual 236 | Q1-3 88/92 | picks 13/23
+  RIGHT: SA won as the model's favorite (90.4%); 13 of 23 picks/parlays hit
+  WRONG: 4 of 9 main players within 4 pts of projection; Brook Lopez 23 pts vs 11.0 (hot shooting (8-10 FG, 5-7 3PT)); Max Strus 18 pts vs 7.9 (minutes surplus (32 vs 21)); Julian Champagnie 20 pts vs 10.3 (hot shooting (8-14 FG, 4-9 3PT))
+  [sgp4_bigger_payout] Devin Vassell 10+ pts + Devin Vassell 2+ threes + Brook Lopez 10+ pts + Rui Hachimura 10+ pts (13.9%) MISS 3/4 legs; missed: Devin Vassell 2+ threes
+  [sgp4_bigger_payout] Devin Vassell 10+ pts + Devin Vassell 2+ threes + Stephon Castle 6+ ast + Keldon Johnson 6+ reb (13.6%) MISS 2/4 legs; missed: Devin Vassell 2+ threes, Keldon Johnson 6+ reb
+  [sgp4_bigger_payout] Keldon Johnson 10+ pts + Keldon Johnson 1+ threes + Devin Vassell 2+ threes + Devin Vassell 4+ reb (13.8%) MISS 2/4 legs; missed: Keldon Johnson 1+ threes, Devin Vassell 2+ threes
+  [sgp4_boost_range] Julian Champagnie 4+ reb + Julian Champagnie 2+ threes + Darius Garland 15+ pts + Darius Garland 2+ threes (25.9%) HIT 4/4 legs
+  [sgp4_boost_range] Victor Wembanyama 10+ reb + Victor Wembanyama double-double + Luke Kornet 4+ reb + Devin Vassell 10+ pts (25.8%) MISS 3/4 legs; missed: Luke Kornet 4+ reb
+  [sgp4_boost_range] De'Aaron Fox 1+ threes + Darius Garland 15+ pts + Darius Garland 2+ threes + Victor Wembanyama 45+ PRA (26.0%) MISS 3/4 legs; missed: De'Aaron Fox 1+ threes
+  [sgp4_safest] Victor Wembanyama 2+ ast + Victor Wembanyama 25+ pts + Victor Wembanyama 10+ reb + Victor Wembanyama double-double (50.6%) HIT 4/4 legs
+  [sgp4_safest] Stephon Castle 10+ pts + Stephon Castle 1+ threes + Victor Wembanyama 10+ reb + Victor Wembanyama double-double (50.1%) HIT 4/4 legs
+  [sgp4_safest] Kris Dunn 2+ ast + Darius Garland 4+ ast + Victor Wembanyama 10+ reb + Victor Wembanyama double-double (48.0%) HIT 4/4 legs
+  [top3_ml] SA ML (90.4%) HIT 
+  [top3_q3] SA 100+ thru Q3 (23.9%) MISS 
+  [top5_25pts] Victor Wembanyama PTS 25+ (78.0%) HIT actual 32
+  [top5_dd] Victor Wembanyama DD (68.7%) HIT actual 2
+  [top5_ffg] Victor Wembanyama FFG (19.1%) MISS actual 0
+  [top5_q3all] Victor Wembanyama Q3ALL (58.8%) HIT actual 5
+=== POR @ MIL: POR 124-114 MIL | fav POR 74.6% RIGHT | margin model -9.7 DK -10.5 actual -10 | total model 232.0 DK 228.5 actual 238 | Q1-3 96/92 | picks 13/27
+  RIGHT: POR won as the model's favorite (74.6%); margin within 5; 5 of 9 main players within 4 pts of projection; 13 of 27 picks/parlays hit
+  WRONG: Scoot Henderson 27 pts vs 14.7 (hot shooting (8-12 FG, 5-6 3PT)); Nate Ament 18 pts vs 7.4 (minutes surplus (35 vs 18)); Kasparas Jakucionis 18 pts vs 8.6 (hot shooting (6-11 FG, 3-6 3PT)); AJ Green projected 18 min but did not play; Cormac Ryan projected 18 min but did not play
+  [sgp4_bigger_payout] Damian Lillard 4+ threes + Ryan Rollins 4+ ast + Toumani Camara 2+ ast + Over 228.5 (13.8%) HIT 4/4 legs
+  [sgp4_bigger_payout] Tyler Herro 4+ ast + Damian Lillard 4+ threes + Nate Ament 1+ threes + Over 228.5 (13.9%) MISS 3/4 legs; missed: Tyler Herro 4+ ast
+  [sgp4_bigger_payout] Damian Lillard 35+ PRA + Nate Ament 1+ threes + Toumani Camara 2+ ast + Over 228.5 (14.0%) HIT 4/4 legs
+  [sgp4_boost_range] Donovan Clingan 1+ threes + Donovan Clingan 12+ reb + Donovan Clingan 2+ ast + Tyler Herro 25+ PRA (25.7%) MISS 3/4 legs; missed: Donovan Clingan 1+ threes
+  [sgp4_boost_range] POR moneyline + Donovan Clingan 2+ ast + Jrue Holiday 15+ pts + Toumani Camara 20+ PRA (25.9%) HIT 4/4 legs
+  [sgp4_boost_range] Brayden Burries 4+ reb + Tyler Herro 2+ threes + Brayden Burries 2+ ast + Toumani Camara 20+ PRA (25.8%) MISS 3/4 legs; missed: Brayden Burries 4+ reb
+  [sgp4_safest] Toumani Camara 2+ threes + Toumani Camara 10+ pts + Damian Lillard 20+ pts + Damian Lillard 3+ threes (50.4%) HIT 4/4 legs
+  [sgp4_safest] Scoot Henderson 1+ threes + Toumani Camara 2+ threes + Toumani Camara 10+ pts + Scoot Henderson 10+ pts (50.5%) HIT 4/4 legs
+  [sgp4_safest] Toumani Camara 2+ threes + Toumani Camara 10+ pts + Jaime Jaquez Jr. 10+ pts + Jaime Jaquez Jr. 1+ threes (49.0%) MISS 3/4 legs; missed: Jaime Jaquez Jr. 10+ pts
+  [top3_ml] POR ML (74.6%) HIT 
+  [top3_q3] POR 100+ thru Q3 (21.5%) MISS 
+  [top5_25pts] Tyler Herro PTS 25+ (29.2%) MISS actual 19
+  [top5_25pts] Damian Lillard PTS 25+ (60.1%) HIT actual 33
+  [top5_3pm] Damian Lillard 3PM 3+ (76.4%) HIT actual 5
+  [top5_3pm] Toumani Camara 3PM 3+ (59.8%) HIT actual 4
+  [top5_3pm] Jrue Holiday 3PM 3+ (60.0%) MISS actual 2
+  [top5_dd] Donovan Clingan DD (65.0%) MISS actual 1
+  [top5_ffg] Damian Lillard FFG (12.4%) HIT actual 1
+  [top5_q3all] Tyler Herro Q3ALL (27.5%) HIT actual 3
+  [top5_q3all] Damian Lillard Q3ALL (48.7%) HIT actual 5
+=== GS @ MEM: GS 98-126 MEM | fav MEM 65.6% RIGHT | margin model +5.8 DK +5.5 actual +28 | total model 226.1 DK 224.5 actual 224 | Q1-3 73/92 | picks 2/24
+  RIGHT: MEM won as the model's favorite (65.6%); total within 2 pts; 6 of 9 main players within 4 pts of projection; 2 of 24 picks/parlays hit
+  WRONG: margin +28 vs +5.8 projected (blowout); Yaxel Lendeborg 11 pts vs 23.7 (cold shooting (3-11 FG, 1-4 3PT)); Jerami Grant 3 pts vs 14.2 (minutes short (5 vs 27): blowout); Jaylen Wells 22 pts vs 12.2 (hot shooting (8-10 FG, 4-5 3PT)); Olivier-Maxence Prosper played 24 min unprojected (16 pts); Jahmai Mashack played 26 min unprojected (0 pts)
+  [best_sgp] Javon Small 10+ pts + Javon Small 2+ threes + Brandin Podziemski 15+ pts (23.5%) HIT 3/3 legs
+  [sgp4_bigger_payout] Cam Spencer 2+ threes + Isaiah Stewart 10+ pts + Isaiah Stewart 1+ threes + Cam Spencer 6+ ast (13.9%) MISS 1/4 legs; missed: Cam Spencer 2+ threes, Isaiah Stewart 10+ pts, Isaiah Stewart 1+ threes
+  [sgp4_bigger_payout] Isaiah Stewart 10+ pts + Cedric Coward 15+ pts + Cedric Coward 8+ reb + Isaiah Stewart 1+ threes (13.2%) MISS 1/4 legs; missed: Isaiah Stewart 10+ pts, Cedric Coward 8+ reb, Isaiah Stewart 1+ threes
+  [sgp4_bigger_payout] Cedric Coward 2+ threes + Cedric Coward 15+ pts + Isaiah Stewart 1+ threes + Cam Spencer 6+ ast (13.7%) MISS 3/4 legs; missed: Isaiah Stewart 1+ threes
+  [sgp4_boost_range] Cedric Coward 10+ pts + MEM moneyline + Jerami Grant 2+ ast + Cedric Coward 2+ threes (26.0%) MISS 3/4 legs; missed: Jerami Grant 2+ ast
+  [sgp4_boost_range] Cameron Boozer 15+ pts + MEM moneyline + Cameron Boozer 2+ threes + Jerami Grant 2+ ast (25.2%) MISS 2/4 legs; missed: Cameron Boozer 2+ threes, Jerami Grant 2+ ast
+  [sgp4_boost_range] Jerami Grant 10+ pts + Yaxel Lendeborg 2+ threes + Yaxel Lendeborg 20+ pts + Jerami Grant 2+ ast (25.8%) MISS 0/4 legs; missed: Jerami Grant 10+ pts, Yaxel Lendeborg 2+ threes, Yaxel Lendeborg 20+ pts, Jerami Grant 2+ ast
+  [sgp4_safest] Yaxel Lendeborg 2+ ast + Yaxel Lendeborg 15+ pts + Brandin Podziemski 10+ pts + Brandin Podziemski 2+ threes (49.0%) MISS 2/4 legs; missed: Yaxel Lendeborg 15+ pts, Brandin Podziemski 2+ threes
+  [sgp4_safest] Jerami Grant 1+ threes + Brandin Podziemski 10+ pts + Jerami Grant 10+ pts + Brandin Podziemski 2+ threes (44.9%) MISS 2/4 legs; missed: Jerami Grant 10+ pts, Brandin Podziemski 2+ threes
+  [sgp4_safest] Yaxel Lendeborg 2+ ast + Yaxel Lendeborg 15+ pts + Jerami Grant 1+ threes + Jerami Grant 10+ pts (49.5%) MISS 2/4 legs; missed: Yaxel Lendeborg 15+ pts, Jerami Grant 10+ pts
+  [top3_ml] MEM ML (65.6%) HIT 
+  [top3_q3] MEM 100+ thru Q3 (12.7%) MISS 
+  [top5_25pts] Yaxel Lendeborg PTS 25+ (44.6%) MISS actual 11
+  [top5_dd] Cameron Boozer DD (50.5%) MISS actual 1
+  [top5_dd] Cedric Coward DD (29.6%) MISS actual 1
+  [top5_ffg] Yaxel Lendeborg FFG (11.9%) MISS actual 0
+  [top5_q3all] Yaxel Lendeborg Q3ALL (39.8%) MISS actual 0
+=== NY @ MIN: NY 102-99 MIN | fav MIN 53.2% WRONG | margin model +1.3 DK -1.5 actual -3 | total model 221.7 DK 216.5 actual 201 | Q1-3 90/78 | picks 8/24
+  RIGHT: margin within 5; 6 of 9 main players within 4 pts of projection; 8 of 24 picks/parlays hit
+  WRONG: MIN lost at 53.2%; total 201 vs 222 projected (-21); Ayo Dosunmu 6 pts vs 17.8 (cold shooting (2-9 FG, 2-5 3PT)); Jonathan Kuminga 23 pts vs 12.3 (hot shooting (7-13 FG, 2-4 3PT))
+  [sgp4_bigger_payout] Mikal Bridges 2+ ast + Over 216.5 + Jalen Brunson 25+ pts + Ayo Dosunmu 25+ PRA (13.9%) MISS 1/4 legs; missed: Over 216.5, Jalen Brunson 25+ pts, Ayo Dosunmu 25+ PRA
+  [sgp4_bigger_payout] Ayo Dosunmu 15+ pts + Ayo Dosunmu 2+ threes + Jonathan Kuminga 20+ PRA + Rudy Gobert 2+ ast (13.8%) MISS 2/4 legs; missed: Ayo Dosunmu 15+ pts, Rudy Gobert 2+ ast
+  [sgp4_bigger_payout] Jaden McDaniels 1+ threes + Jaden McDaniels 15+ pts + Landry Shamet 2+ threes + Rudy Gobert 2+ ast (14.0%) MISS 3/4 legs; missed: Rudy Gobert 2+ ast
+  [sgp4_boost_range] Joan Beringer 4+ reb + LaMelo Ball 15+ pts + LaMelo Ball 3+ threes + Mikal Bridges 2+ ast (25.8%) MISS 3/4 legs; missed: Joan Beringer 4+ reb
+  [sgp4_boost_range] LaMelo Ball 15+ pts + OG Anunoby 4+ reb + LaMelo Ball 3+ threes + Josh Hart 1+ threes (25.3%) HIT 4/4 legs
+  [sgp4_boost_range] Jalen Brunson 30+ PRA + LaMelo Ball 15+ pts + LaMelo Ball 3+ threes + Terrence Shannon Jr. 15+ PRA (25.8%) HIT 4/4 legs
+  [sgp4_safest] Karl-Anthony Towns 8+ reb + Karl-Anthony Towns 2+ ast + Karl-Anthony Towns 1+ threes + Karl-Anthony Towns 15+ pts (49.5%) HIT 4/4 legs
+  [sgp4_safest] OG Anunoby 1+ threes + OG Anunoby 10+ pts + LaMelo Ball 15+ pts + LaMelo Ball 3+ threes (42.5%) HIT 4/4 legs
+  [sgp4_safest] Jaden McDaniels 2+ ast + LaMelo Ball 4+ ast + LaMelo Ball 15+ pts + LaMelo Ball 3+ threes (42.6%) MISS 3/4 legs; missed: Jaden McDaniels 2+ ast
+  [top5_25pts] Jalen Brunson PTS 25+ (54.5%) MISS actual 21
+  [top5_3pm] LaMelo Ball 3PM 3+ (66.4%) HIT actual 3
+  [top5_3pm] Jalen Brunson 3PM 3+ (50.0%) HIT actual 4
+  [top5_dd] Karl-Anthony Towns DD (61.9%) HIT actual 2
+  [top5_ffg] LaMelo Ball FFG (10.2%) MISS actual 0
+  [top5_ffg] Jalen Brunson FFG (12.5%) MISS actual 0
+  [top5_q3all] Jalen Brunson Q3ALL (46.7%) MISS actual 0
