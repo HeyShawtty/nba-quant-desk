@@ -1,8 +1,8 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/19/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/19/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 GS,Jimmy Butler III,OUT,0,Official: Out
-GS,LJ Cryer,Q,0.5,Official: Questionable
+GS,LJ Cryer,AVAIL,1,Official: Available
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
 GS,Draymond Green,OUT,0,Official: Out
 GS,Moses Moody,OUT,0,Official: Out
@@ -13,7 +13,7 @@ MEM,GG Jackson,OUT,0,Official: Out
 MEM,Ty Jerome,OUT,0,Official: Out
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-MEM,Isaiah Stewart,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+MEM,Isaiah Stewart,AVAIL,1,Official: Available (Injury/Illness - Illness)
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
 LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
@@ -27,10 +27,10 @@ MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
 MIN,Jaylen Clark,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
-MIN,Jonathan Kuminga,Q,0.5,Official: Questionable
+MIN,Jonathan Kuminga,AVAIL,1,Official: Available
 MIN,Zyon Pullin,AVAIL,1,Official: Available (Injury/Illness - Right Quadriceps)
-POR,Deni Avdija,Q,0.5,Official: Questionable
-POR,Toumani Camara,Q,0.5,Official: Questionable (Injury/Illness - Abdominal Soreness)
+POR,Deni Avdija,OUT,0,Official: Out
+POR,Toumani Camara,AVAIL,1,Official: Available (Injury/Illness - Abdominal Soreness)
 POR,Branden Carlson,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
 POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
