@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/21/26 3:15 PM ET (read automatically). Not yet submitted: SAC.
+# Source: NBA official injury report 11/21/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIL,Ousmane Dieng,OUT,0,Official: Out (Injury/Illness - Left Finger Fracture)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
@@ -10,15 +10,15 @@ PHI,Jaylen Brown,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 PHI,Ariel Hukporti,OUT,0,Official: Out
 PHI,Tyrese Maxey,AVAIL,1,Official: Available (Injury/Illness - Right Foot Sprain)
 PHI,Dean Wade,OUT,0,Official: Out
-POR,Deni Avdija,Q,0.5,Official: Questionable (Injury/Illness - Left Foot Contusion)
+POR,Deni Avdija,AVAIL,1,Official: Available (Injury/Illness - Left Foot Contusion)
 POR,Branden Carlson,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
 POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 POR,Shaedon Sharpe,OUT,0,Official: Out
 POR,Chris Youngblood,OUT,0,Official: Out (Injury/Illness - Right Heel Contusion /)
-NY,OG Anunoby,Q,0.25,Official: Doubtful (Injury/Illness - Left Calf Tightness)
+NY,OG Anunoby,OUT,0,Official: Out (Injury/Illness - Left Calf Tightness)
 NY,Jordan Clarkson,OUT,0,Official: Out (Injury/Illness - Right Plantar Fasciitis)
-NY,Karl-Anthony Towns,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+NY,Karl-Anthony Towns,OUT,0,Official: Out (Injury/Illness - Illness)
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Brandon Ingram,OUT,0,Official: Out (Injury/Illness - Right Heel Surgery)
 LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
@@ -43,7 +43,7 @@ MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
 MIN,Jaylen Clark,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 MIN,Donte DiVincenzo,OUT,0,Official: Out
 MIN,Anthony Edwards,OUT,0,Official: Out
-MIN,Isaiah Evans,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+MIN,Isaiah Evans,AVAIL,1,Official: Available (Injury/Illness - Illness)
 MIN,Rocco Zikarsky,OUT,0,Official: Out (G League - Two-Way)
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
@@ -58,6 +58,12 @@ SA,Dylan Harper,OUT,0,Official: Out
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 BOS,Dillon Mitchell,OUT,0,Official: Out (G League - Two-Way)
-BOS,Jayson Tatum,Q,0.5,Official: Questionable (Rest)
-BOS,Derrick White,Q,0.5,Official: Questionable
+BOS,Mitchell Robinson,OUT,0,Official: Out (Injury/Illness - Illness)
+BOS,Jayson Tatum,OUT,0,Official: Out (Rest)
+BOS,Derrick White,OUT,0,Official: Out
 BOS,Amari Williams,OUT,0,Official: Out (G League - Two-Way)
+SAC,Precious Achiuwa,Q,0.5,Official: Questionable
+SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
+SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
+SAC,Maxime Raynaud,OUT,0,Official: Out
+SAC,Ben Simmons,OUT,0,Official: Out
