@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/20/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/20/26 9:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Grayson Allen,OUT,0,Official: Out (Concussion Protocol)
@@ -73,6 +73,8 @@ CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
 CHI,Jalen Smith,OUT,0,Official: Out (Injury/Illness - Gastrointestinal Illness)
 CHI,Dailyn Swain,OUT,0,Official: Out (G League - On Assignment)
 CHI,Caleb Wilson,OUT,0,Official: Out
+PHX,Duop Reath,OUT,0,Official: Out (G League - Two-Way)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 UTAH,Jonas Aidoo,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Kobe Bufkin,OUT,0,Official: Out (G League - Two-Way)
@@ -80,18 +82,18 @@ UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
 UTAH,Jusuf Nurkic,OUT,0,Official: Out
-HOU,Steven Adams,Q,0.5,Official: Questionable
+HOU,Steven Adams,AVAIL,1,Official: Available
 HOU,Clint Capela,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
-HOU,Alperen Sengun,Q,0.5,Official: Questionable
+HOU,Alperen Sengun,AVAIL,1,Official: Available (Injury/Illness - Left Eye Corneal)
 HOU,Bruce Thornton,OUT,0,Official: Out (G League - On Assignment)
 DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
 DEN,Bryce Hopkins,OUT,0,Official: Out (G League - Two-Way)
 DEN,Julian Strawther,OUT,0,Official: Out (Injury/Illness - Left Knee Sprain)
 DEN,Cam Whitmore,OUT,0,Official: Out (G League - Two-Way)
 SAC,Precious Achiuwa,OUT,0,Official: Out
-SAC,De'Andre Hunter,Q,0.5,Official: Questionable
+SAC,De'Andre Hunter,AVAIL,1,Official: Available (-)
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
