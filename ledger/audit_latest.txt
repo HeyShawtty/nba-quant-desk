@@ -1,274 +1,275 @@
-VERDICT: Walk-forward backtest: 210 games, 124,100 graded player-prop thresholds. Overall skill vs base rates 30.3% (predicted 15.7%, observed 15.7%).
-VERDICT: Strongest slices (highest skill): Projected minutes / Under 15 min 47.9% (n=17174); Role / Bench, under 15 projected min 47.9% (n=17174); Projected minutes / 32+ min 40.3% (n=20460); Stat / PRA 38.1% (n=27965); Pre-game spread / Team favored by 9+ 37.2% (n=15540)
-VERDICT: Weakest slices (lowest skill): Usage (shot volume per minute) / Middle third 16.3% (n=35567); Stat / 3PM 20.1% (n=23970); Pre-game spread / Team underdog by 9+ 20.9% (n=15837); Projected minutes / 24-32 min 22.7% (n=43079); Role / Bench, 15+ projected min 24.3% (n=41870)
-VERDICT: Calibration gaps (observed minus predicted): Minutes outcome (hindsight) / Played 6+ more than projected +9.4 pts (n=17840); Minutes outcome (hindsight) / Played 6+ fewer than projected -9.2 pts (n=19489); Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start) +2.5 pts (n=5518); Final margin (hindsight) / Blowout: 20+ pts -1.7 pts (n=33254)
-VERDICT: Confident props (80%+): 4,392 calls, hit 89.5%. 46.0% of the misses came with the player logging 6+ fewer minutes than projected, vs 12.2% of the hits: minutes are the main failure mode, not the shooting model.
-[Backtest] Moneyline Brier model 0.1861 vs DK no-vig 0.1894 (209 games)
-[Backtest] ML sides where model >= market + 2pp: n=159 model 56.1% market 50.2% won 54.7% profit +4.73u
-[Backtest] ML sides where model >= market + 4pp: n=113 model 57.0% market 49.8% won 58.4% profit +15.50u
-[Backtest] Spread sides model >= 53%: n=138 model 57.6% hit 58.7% profit +16.64u
-[Backtest] Spread sides model >= 56%: n=85 model 59.6% hit 56.5% profit +6.64u
-[Backtest] Total sides model >= 53%: n=153 model 60.3% hit 51.0% profit -4.09u
-[Backtest] Total sides model >= 56%: n=112 model 62.5% hit 49.1% profit -7.00u
-[Backtest] Margin MAE model 11.4 vs DK 11.4; total MAE model 14.8 vs DK 14.0; total bias model +1.1 DK +0.9; 20+ blowouts 25.7%
-[Backtest] Q1-Q3 90+: n=420 pred 36.5% obs 36.4% skill 0.094
-[Backtest] Q1-Q3 95+: n=420 pred 21.4% obs 20.2% skill 0.067
-[Backtest] Q1-Q3 100+: n=420 pred 10.8% obs 11.9% skill 0.036
-[Backtest] Q1-Q3 105+: n=420 pred 4.6% obs 4.0% skill 0.018
-[Live] Moneyline Brier model 0.1884 vs DK no-vig 0.1886 (168 games)
-[Live] ML sides where model >= market + 2pp: n=109 model 57.6% market 51.6% won 50.5% profit -13.08u
-[Live] ML sides where model >= market + 4pp: n=65 model 60.7% market 52.8% won 56.9% profit +2.93u
-[Live] Spread sides model >= 53%: n=95 model 57.8% hit 47.4% profit -9.04u
-[Live] Spread sides model >= 56%: n=56 model 60.1% hit 51.8% profit -0.41u
-[Live] Total sides model >= 53%: n=100 model 58.9% hit 52.0% profit -0.92u
+VERDICT: Walk-forward backtest: 218 games, 128,698 graded player-prop thresholds. Overall skill vs base rates 30.3% (predicted 15.7%, observed 15.8%).
+VERDICT: Strongest slices (highest skill): Projected minutes / Under 15 min 48.3% (n=17639); Role / Bench, under 15 projected min 48.3% (n=17639); Projected minutes / 32+ min 40.2% (n=21082); Stat / PRA 38.0% (n=29001); Pre-game spread / Team favored by 9+ 36.9% (n=16130)
+VERDICT: Weakest slices (lowest skill): Usage (shot volume per minute) / Middle third 16.3% (n=36910); Stat / 3PM 20.1% (n=24858); Pre-game spread / Team underdog by 9+ 21.5% (n=16364); Projected minutes / 24-32 min 22.7% (n=44570); Role / Bench, 15+ projected min 24.4% (n=43516)
+VERDICT: Calibration gaps (observed minus predicted): Minutes outcome (hindsight) / Played 6+ more than projected +9.4 pts (n=18647); Minutes outcome (hindsight) / Played 6+ fewer than projected -9.1 pts (n=20081); Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start) +2.4 pts (n=5456); Final margin (hindsight) / Blowout: 20+ pts -1.7 pts (n=33224)
+VERDICT: Confident props (80%+): 4,564 calls, hit 89.5%. 44.9% of the misses came with the player logging 6+ fewer minutes than projected, vs 11.3% of the hits: minutes are the main failure mode, not the shooting model.
+[Backtest] Moneyline Brier model 0.1865 vs DK no-vig 0.1890 (217 games)
+[Backtest] ML sides where model >= market + 2pp: n=164 model 56.2% market 50.2% won 53.7% profit -0.25u
+[Backtest] ML sides where model >= market + 4pp: n=113 model 57.0% market 49.7% won 58.4% profit +16.84u
+[Backtest] Spread sides model >= 53%: n=147 model 57.5% hit 57.1% profit +13.36u
+[Backtest] Spread sides model >= 56%: n=90 model 59.5% hit 55.6% profit +5.45u
+[Backtest] Total sides model >= 53%: n=156 model 60.3% hit 50.0% profit -7.09u
+[Backtest] Total sides model >= 56%: n=116 model 62.3% hit 48.3% profit -9.09u
+[Backtest] Margin MAE model 11.3 vs DK 11.3; total MAE model 14.9 vs DK 14.1; total bias model +1.3 DK +1.1; 20+ blowouts 24.8%
+[Backtest] Q1-Q3 90+: n=436 pred 36.4% obs 36.2% skill 0.091
+[Backtest] Q1-Q3 95+: n=436 pred 21.3% obs 20.2% skill 0.059
+[Backtest] Q1-Q3 100+: n=436 pred 10.7% obs 11.7% skill 0.033
+[Backtest] Q1-Q3 105+: n=436 pred 4.6% obs 3.9% skill 0.016
+[Live] Moneyline Brier model 0.1890 vs DK no-vig 0.1883 (176 games)
+[Live] ML sides where model >= market + 2pp: n=114 model 57.8% market 51.8% won 50.0% profit -15.61u
+[Live] ML sides where model >= market + 4pp: n=70 model 60.8% market 53.0% won 55.7% profit +0.40u
+[Live] Spread sides model >= 53%: n=101 model 57.7% hit 46.5% profit -11.23u
+[Live] Spread sides model >= 56%: n=59 model 60.1% hit 50.8% profit -1.49u
+[Live] Total sides model >= 53%: n=102 model 58.8% hit 51.0% profit -2.92u
 [Live] Total sides model >= 56%: n=67 model 61.1% hit 47.8% profit -6.02u
-[Live] Margin MAE model 11.6 vs DK 11.4; total MAE model 14.3 vs DK 13.9; total bias model +2.1 DK +0.2; 20+ blowouts 26.2%
-[Live] Q1-Q3 90+: n=336 pred 37.0% obs 34.5% skill 0.123
-[Live] Q1-Q3 95+: n=336 pred 21.8% obs 17.6% skill 0.047
-[Live] Q1-Q3 100+: n=336 pred 11.1% obs 10.4% skill 0.046
-[Live] Q1-Q3 105+: n=336 pred 4.8% obs 4.8% skill 0.049
-[Backtest] seg Overall / All player thresholds (pts/reb/ast/3pm/pra): n=124100 pred 15.7% obs 15.7% Brier 0.0743 skill 0.303
-[Backtest] seg Stat / PTS: n=28220 pred 16.4% obs 16.4% Brier 0.0714 skill 0.326
-[Backtest] seg Stat / REB: n=19975 pred 13.7% obs 13.5% Brier 0.0700 skill 0.278
-[Backtest] seg Stat / AST: n=23970 pred 11.8% obs 11.6% Brier 0.0621 skill 0.329
-[Backtest] seg Stat / 3PM: n=23970 pred 21.7% obs 22.2% Brier 0.1027 skill 0.201
-[Backtest] seg Stat / PRA: n=27965 pred 14.6% obs 14.8% Brier 0.0665 skill 0.381
-[Backtest] seg Projected minutes / 32+ min: n=20460 pred 33.9% obs 32.9% Brier 0.1167 skill 0.403
-[Backtest] seg Projected minutes / 24-32 min: n=43079 pred 19.3% obs 19.8% Brier 0.0939 skill 0.227
-[Backtest] seg Projected minutes / 15-24 min: n=43387 pred 8.3% obs 8.2% Brier 0.0527 skill 0.245
-[Backtest] seg Projected minutes / Under 15 min: n=17174 pred 3.5% obs 4.1% Brier 0.0297 skill 0.479
-[Backtest] seg Role / Projected starter (top 5 minutes): n=65056 pred 23.5% obs 23.8% Brier 0.1007 skill 0.303
-[Backtest] seg Role / Bench, 15+ projected min: n=41870 pred 8.5% obs 8.0% Brier 0.0517 skill 0.243
-[Backtest] seg Role / Bench, under 15 projected min: n=17174 pred 3.5% obs 4.1% Brier 0.0297 skill 0.479
-[Backtest] seg Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start): n=5518 pred 22.1% obs 24.6% Brier 0.0969 skill 0.353
-[Backtest] seg Projection vs season scoring (2+ games) / Within 3 pts of season avg: n=89259 pred 14.9% obs 15.2% Brier 0.0725 skill 0.306
-[Backtest] seg Projection vs season scoring (2+ games) / Projected 3+ pts ABOVE season avg (expecting a jump): n=10103 pred 19.8% obs 19.1% Brier 0.0863 skill 0.282
-[Backtest] seg Usage (shot volume per minute) / Top third: primary scorers: n=36231 pred 28.3% obs 28.7% Brier 0.1095 skill 0.362
-[Backtest] seg Usage (shot volume per minute) / Middle third: n=35567 pred 15.2% obs 14.7% Brier 0.0794 skill 0.163
-[Backtest] seg Usage (shot volume per minute) / Bottom third: role players: n=35128 pred 9.2% obs 9.2% Brier 0.0548 skill 0.277
-[Backtest] seg Final margin (hindsight) / Blowout: 20+ pts: n=33254 pred 15.4% obs 13.6% Brier 0.0707 skill 0.252
-[Backtest] seg Final margin (hindsight) / 10-19 pts: n=38480 pred 16.0% obs 15.7% Brier 0.0737 skill 0.303
-[Backtest] seg Final margin (hindsight) / Close: under 10: n=52366 pred 15.7% obs 17.2% Brier 0.0771 skill 0.330
-[Backtest] seg Pre-game spread / Team favored by 9+: n=15540 pred 17.4% obs 17.7% Brier 0.0748 skill 0.372
-[Backtest] seg Pre-game spread / Team underdog by 9+: n=15837 pred 13.8% obs 13.6% Brier 0.0735 skill 0.209
-[Backtest] seg Pre-game spread / Within 8.5: n=92723 pred 15.7% obs 15.8% Brier 0.0744 skill 0.304
-[Backtest] seg Teammates / A 24+ mpg teammate was out: n=52061 pred 16.0% obs 16.2% Brier 0.0759 skill 0.302
-[Backtest] seg Teammates / Full rotation available: n=72039 pred 15.5% obs 15.4% Brier 0.0732 skill 0.303
-[Backtest] seg Rest / Team on a back-to-back: n=21134 pred 16.4% obs 16.3% Brier 0.0797 skill 0.259
-[Backtest] seg Rest / Team rested: n=102966 pred 15.5% obs 15.6% Brier 0.0733 skill 0.312
-[Backtest] seg Venue / Home: n=62309 pred 15.7% obs 15.6% Brier 0.0747 skill 0.297
-[Backtest] seg Venue / Away: n=61791 pred 15.7% obs 15.9% Brier 0.0739 skill 0.308
+[Live] Margin MAE model 11.5 vs DK 11.3; total MAE model 14.5 vs DK 14.1; total bias model +2.4 DK +0.5; 20+ blowouts 25.0%
+[Live] Q1-Q3 90+: n=352 pred 37.0% obs 34.4% skill 0.114
+[Live] Q1-Q3 95+: n=352 pred 21.8% obs 17.6% skill 0.034
+[Live] Q1-Q3 100+: n=352 pred 11.0% obs 10.2% skill 0.041
+[Live] Q1-Q3 105+: n=352 pred 4.8% obs 4.5% skill 0.047
+[Backtest] seg Overall / All player thresholds (pts/reb/ast/3pm/pra): n=128698 pred 15.7% obs 15.8% Brier 0.0744 skill 0.303
+[Backtest] seg Stat / PTS: n=29266 pred 16.4% obs 16.4% Brier 0.0715 skill 0.326
+[Backtest] seg Stat / REB: n=20715 pred 13.7% obs 13.5% Brier 0.0700 skill 0.278
+[Backtest] seg Stat / AST: n=24858 pred 11.8% obs 11.6% Brier 0.0621 skill 0.330
+[Backtest] seg Stat / 3PM: n=24858 pred 21.7% obs 22.2% Brier 0.1027 skill 0.201
+[Backtest] seg Stat / PRA: n=29001 pred 14.6% obs 14.8% Brier 0.0668 skill 0.380
+[Backtest] seg Projected minutes / 32+ min: n=21082 pred 34.0% obs 33.0% Brier 0.1171 skill 0.402
+[Backtest] seg Projected minutes / 24-32 min: n=44570 pred 19.4% obs 19.9% Brier 0.0940 skill 0.227
+[Backtest] seg Projected minutes / 15-24 min: n=45407 pred 8.3% obs 8.2% Brier 0.0528 skill 0.246
+[Backtest] seg Projected minutes / Under 15 min: n=17639 pred 3.5% obs 4.0% Brier 0.0294 skill 0.483
+[Backtest] seg Role / Projected starter (top 5 minutes): n=67543 pred 23.5% obs 23.9% Brier 0.1009 skill 0.302
+[Backtest] seg Role / Bench, 15+ projected min: n=43516 pred 8.5% obs 7.9% Brier 0.0515 skill 0.244
+[Backtest] seg Role / Bench, under 15 projected min: n=17639 pred 3.5% obs 4.0% Brier 0.0294 skill 0.483
+[Backtest] seg Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start): n=5456 pred 21.9% obs 24.4% Brier 0.0961 skill 0.355
+[Backtest] seg Projection vs season scoring (2+ games) / Within 3 pts of season avg: n=93729 pred 15.0% obs 15.3% Brier 0.0727 skill 0.306
+[Backtest] seg Projection vs season scoring (2+ games) / Projected 3+ pts ABOVE season avg (expecting a jump): n=10293 pred 19.8% obs 18.9% Brier 0.0862 skill 0.279
+[Backtest] seg Usage (shot volume per minute) / Top third: primary scorers: n=37658 pred 28.3% obs 28.6% Brier 0.1094 skill 0.361
+[Backtest] seg Usage (shot volume per minute) / Middle third: n=36910 pred 15.2% obs 14.8% Brier 0.0799 skill 0.163
+[Backtest] seg Usage (shot volume per minute) / Bottom third: role players: n=36491 pred 9.1% obs 9.2% Brier 0.0544 skill 0.281
+[Backtest] seg Final margin (hindsight) / Blowout: 20+ pts: n=33224 pred 15.4% obs 13.6% Brier 0.0707 skill 0.253
+[Backtest] seg Final margin (hindsight) / 10-19 pts: n=39599 pred 16.0% obs 15.7% Brier 0.0737 skill 0.303
+[Backtest] seg Final margin (hindsight) / Close: under 10: n=55875 pred 15.7% obs 17.1% Brier 0.0771 skill 0.328
+[Backtest] seg Pre-game spread / Team favored by 9+: n=16130 pred 17.3% obs 17.7% Brier 0.0751 skill 0.369
+[Backtest] seg Pre-game spread / Team underdog by 9+: n=16364 pred 13.9% obs 13.8% Brier 0.0738 skill 0.215
+[Backtest] seg Pre-game spread / Within 8.5: n=96204 pred 15.7% obs 15.8% Brier 0.0744 skill 0.304
+[Backtest] seg Teammates / A 24+ mpg teammate was out: n=55170 pred 16.0% obs 16.1% Brier 0.0760 skill 0.302
+[Backtest] seg Teammates / Full rotation available: n=73528 pred 15.5% obs 15.5% Brier 0.0732 skill 0.304
+[Backtest] seg Rest / Team on a back-to-back: n=21104 pred 16.4% obs 16.3% Brier 0.0797 skill 0.259
+[Backtest] seg Rest / Team rested: n=107594 pred 15.6% obs 15.7% Brier 0.0734 skill 0.311
+[Backtest] seg Venue / Home: n=64581 pred 15.7% obs 15.6% Brier 0.0750 skill 0.295
+[Backtest] seg Venue / Away: n=64117 pred 15.7% obs 15.9% Brier 0.0738 skill 0.311
 [Backtest] seg Season sample before the game / 0-1 games played: n=19220 pred 15.3% obs 13.8% Brier 0.0702 skill 0.280
-[Backtest] seg Season sample before the game / 2-4 games played: n=28934 pred 14.7% obs 15.5% Brier 0.0746 skill 0.295
-[Backtest] seg Season sample before the game / 5+ games played: n=75946 pred 16.2% obs 16.3% Brier 0.0753 skill 0.311
-[Backtest] seg Minutes outcome (hindsight) / Within 5 of projection: n=76705 pred 16.5% obs 16.7% Brier 0.0700 skill 0.366
-[Backtest] seg Minutes outcome (hindsight) / Played 6+ fewer than projected: n=19489 pred 15.5% obs 6.4% Brier 0.0589 skill 0.131
-[Backtest] seg Minutes outcome (hindsight) / Played 6+ more than projected: n=17840 pred 12.6% obs 22.0% Brier 0.1092 skill 0.185
-[Live] seg Overall / All player thresholds (pts/reb/ast/3pm/pra): n=97642 pred 15.6% obs 16.0% Brier 0.0752 skill 0.304
-[Live] seg Stat / PTS: n=22401 pred 16.4% obs 16.5% Brier 0.0726 skill 0.322
-[Live] seg Stat / REB: n=15710 pred 13.5% obs 13.7% Brier 0.0696 skill 0.289
-[Live] seg Stat / AST: n=18852 pred 11.7% obs 11.9% Brier 0.0638 skill 0.323
-[Live] seg Stat / 3PM: n=18685 pred 21.4% obs 22.6% Brier 0.1045 skill 0.201
-[Live] seg Stat / PRA: n=21994 pred 14.7% obs 15.0% Brier 0.0667 skill 0.386
-[Live] seg Projected minutes / 32+ min: n=16889 pred 33.9% obs 34.0% Brier 0.1185 skill 0.410
-[Live] seg Projected minutes / 24-32 min: n=32325 pred 19.0% obs 19.4% Brier 0.0932 skill 0.218
-[Live] seg Projected minutes / 15-24 min: n=34436 pred 8.3% obs 8.6% Brier 0.0548 skill 0.236
-[Live] seg Projected minutes / Under 15 min: n=13992 pred 3.5% obs 4.3% Brier 0.0313 skill 0.470
-[Live] seg Role / Projected starter (top 5 minutes): n=52171 pred 23.3% obs 23.7% Brier 0.1002 skill 0.303
-[Live] seg Role / Bench, 15+ projected min: n=31479 pred 8.2% obs 8.4% Brier 0.0532 skill 0.245
-[Live] seg Role / Bench, under 15 projected min: n=13992 pred 3.5% obs 4.3% Brier 0.0313 skill 0.470
+[Backtest] seg Season sample before the game / 2-4 games played: n=29057 pred 14.7% obs 15.5% Brier 0.0743 skill 0.296
+[Backtest] seg Season sample before the game / 5+ games played: n=80421 pred 16.2% obs 16.3% Brier 0.0754 skill 0.310
+[Backtest] seg Minutes outcome (hindsight) / Within 5 of projection: n=79316 pred 16.6% obs 16.7% Brier 0.0700 skill 0.366
+[Backtest] seg Minutes outcome (hindsight) / Played 6+ fewer than projected: n=20081 pred 15.2% obs 6.1% Brier 0.0582 skill 0.129
+[Backtest] seg Minutes outcome (hindsight) / Played 6+ more than projected: n=18647 pred 12.6% obs 22.1% Brier 0.1092 skill 0.184
+[Live] seg Overall / All player thresholds (pts/reb/ast/3pm/pra): n=102278 pred 15.6% obs 16.0% Brier 0.0752 skill 0.303
+[Live] seg Stat / PTS: n=23461 pred 16.5% obs 16.5% Brier 0.0726 skill 0.322
+[Live] seg Stat / REB: n=16455 pred 13.5% obs 13.7% Brier 0.0696 skill 0.288
+[Live] seg Stat / AST: n=19746 pred 11.7% obs 11.9% Brier 0.0637 skill 0.326
+[Live] seg Stat / 3PM: n=19579 pred 21.4% obs 22.5% Brier 0.1043 skill 0.200
+[Live] seg Stat / PRA: n=23037 pred 14.7% obs 15.0% Brier 0.0670 skill 0.384
+[Live] seg Projected minutes / 32+ min: n=17666 pred 34.0% obs 34.0% Brier 0.1187 skill 0.409
+[Live] seg Projected minutes / 24-32 min: n=33822 pred 19.0% obs 19.5% Brier 0.0936 skill 0.215
+[Live] seg Projected minutes / 15-24 min: n=36271 pred 8.3% obs 8.6% Brier 0.0547 skill 0.239
+[Live] seg Projected minutes / Under 15 min: n=14519 pred 3.5% obs 4.2% Brier 0.0308 skill 0.476
+[Live] seg Role / Projected starter (top 5 minutes): n=54664 pred 23.3% obs 23.8% Brier 0.1006 skill 0.301
+[Live] seg Role / Bench, 15+ projected min: n=33095 pred 8.2% obs 8.3% Brier 0.0528 skill 0.248
+[Live] seg Role / Bench, under 15 projected min: n=14519 pred 3.5% obs 4.2% Brier 0.0308 skill 0.476
 [Live] seg Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start): n=5867 pred 21.6% obs 25.3% Brier 0.0962 skill 0.378
-[Live] seg Projection vs season scoring (2+ games) / Within 3 pts of season avg: n=80763 pred 14.8% obs 15.1% Brier 0.0729 skill 0.297
-[Live] seg Projection vs season scoring (2+ games) / Projected 3+ pts ABOVE season avg (expecting a jump): n=9558 pred 20.5% obs 19.1% Brier 0.0871 skill 0.285
-[Live] seg Usage (shot volume per minute) / Top third: primary scorers: n=28203 pred 28.3% obs 28.9% Brier 0.1102 skill 0.363
-[Live] seg Usage (shot volume per minute) / Middle third: n=27830 pred 15.2% obs 15.4% Brier 0.0823 skill 0.158
-[Live] seg Usage (shot volume per minute) / Bottom third: role players: n=27617 pred 9.1% obs 9.3% Brier 0.0545 skill 0.289
+[Live] seg Projection vs season scoring (2+ games) / Within 3 pts of season avg: n=85241 pred 14.8% obs 15.2% Brier 0.0731 skill 0.298
+[Live] seg Projection vs season scoring (2+ games) / Projected 3+ pts ABOVE season avg (expecting a jump): n=9716 pred 20.5% obs 18.9% Brier 0.0871 skill 0.281
+[Live] seg Usage (shot volume per minute) / Top third: primary scorers: n=29608 pred 28.3% obs 28.8% Brier 0.1101 skill 0.362
+[Live] seg Usage (shot volume per minute) / Middle third: n=29167 pred 15.2% obs 15.5% Brier 0.0826 skill 0.156
+[Live] seg Usage (shot volume per minute) / Bottom third: role players: n=28984 pred 9.1% obs 9.2% Brier 0.0545 skill 0.291
 [Live] seg Final margin (hindsight) / Blowout: 20+ pts: n=26518 pred 15.1% obs 14.1% Brier 0.0726 skill 0.249
-[Live] seg Final margin (hindsight) / 10-19 pts: n=32427 pred 15.7% obs 15.7% Brier 0.0731 skill 0.316
-[Live] seg Final margin (hindsight) / Close: under 10: n=38697 pred 15.9% obs 17.5% Brier 0.0787 skill 0.326
-[Live] seg Pre-game spread / Team favored by 9+: n=12879 pred 17.5% obs 17.7% Brier 0.0753 skill 0.369
-[Live] seg Pre-game spread / Team underdog by 9+: n=13075 pred 13.8% obs 13.7% Brier 0.0737 skill 0.212
-[Live] seg Pre-game spread / Within 8.5: n=71688 pred 15.6% obs 16.1% Brier 0.0754 skill 0.305
-[Live] seg Teammates / A 24+ mpg teammate was out: n=50052 pred 15.9% obs 16.2% Brier 0.0762 skill 0.302
-[Live] seg Teammates / Full rotation available: n=47590 pred 15.2% obs 15.7% Brier 0.0741 skill 0.305
+[Live] seg Final margin (hindsight) / 10-19 pts: n=33581 pred 15.7% obs 15.7% Brier 0.0731 skill 0.315
+[Live] seg Final margin (hindsight) / Close: under 10: n=42179 pred 15.8% obs 17.3% Brier 0.0785 skill 0.324
+[Live] seg Pre-game spread / Team favored by 9+: n=13470 pred 17.5% obs 17.7% Brier 0.0757 skill 0.365
+[Live] seg Pre-game spread / Team underdog by 9+: n=13665 pred 13.8% obs 13.9% Brier 0.0739 skill 0.217
+[Live] seg Pre-game spread / Within 8.5: n=75143 pred 15.6% obs 16.1% Brier 0.0754 skill 0.305
+[Live] seg Teammates / A 24+ mpg teammate was out: n=53197 pred 16.0% obs 16.2% Brier 0.0762 skill 0.302
+[Live] seg Teammates / Full rotation available: n=49081 pred 15.2% obs 15.7% Brier 0.0742 skill 0.306
 [Live] seg Rest / Team on a back-to-back: n=16953 pred 16.7% obs 16.4% Brier 0.0799 skill 0.265
-[Live] seg Rest / Team rested: n=80689 pred 15.4% obs 15.9% Brier 0.0742 skill 0.312
-[Live] seg Venue / Home: n=49206 pred 15.4% obs 15.8% Brier 0.0760 skill 0.291
-[Live] seg Venue / Away: n=48436 pred 15.8% obs 16.1% Brier 0.0744 skill 0.317
+[Live] seg Rest / Team rested: n=85325 pred 15.4% obs 15.9% Brier 0.0743 skill 0.311
+[Live] seg Venue / Home: n=51512 pred 15.5% obs 15.8% Brier 0.0762 skill 0.288
+[Live] seg Venue / Away: n=50766 pred 15.8% obs 16.2% Brier 0.0742 skill 0.319
 [Live] seg Season sample before the game / 0-1 games played: n=1454 pred 6.3% obs 4.7% Brier 0.0370 skill 0.391
-[Live] seg Season sample before the game / 2-4 games played: n=17908 pred 13.6% obs 14.7% Brier 0.0723 skill 0.298
-[Live] seg Season sample before the game / 5+ games played: n=78280 pred 16.2% obs 16.5% Brier 0.0766 skill 0.304
-[Live] seg Minutes outcome (hindsight) / Within 5 of projection: n=61099 pred 16.5% obs 16.9% Brier 0.0703 skill 0.374
-[Live] seg Minutes outcome (hindsight) / Played 6+ fewer than projected: n=13798 pred 16.2% obs 6.8% Brier 0.0626 skill 0.089
-[Live] seg Minutes outcome (hindsight) / Played 6+ more than projected: n=14884 pred 11.8% obs 20.5% Brier 0.1051 skill 0.165
-[Backtest] line 3PM 1+: n=3995 pred 62.8% obs 61.5% skill 0.263
-[Backtest] line 3PM 2+: n=3995 pred 35.3% obs 36.9% skill 0.214
-[Backtest] line 3PM 3+: n=3995 pred 18.0% obs 19.5% skill 0.166
-[Backtest] line 3PM 4+: n=3995 pred 8.5% obs 9.8% skill 0.130
-[Backtest] line 3PM 5+: n=3995 pred 3.8% obs 4.2% skill 0.113
-[Backtest] line 3PM 6+: n=3995 pred 1.6% obs 1.6% skill 0.060
-[Backtest] line AST 4+: n=3995 pred 29.9% obs 28.7% skill 0.358
-[Backtest] line AST 5+: n=3995 pred 20.0% obs 19.2% skill 0.365
-[Backtest] line AST 6+: n=3995 pred 13.1% obs 12.8% skill 0.334
-[Backtest] line AST 8+: n=3995 pred 5.3% obs 5.7% skill 0.238
-[Backtest] line AST 10+: n=3995 pred 1.9% obs 2.4% skill 0.119
-[Backtest] line AST 12+: n=3995 pred 0.6% obs 0.7% skill 0.005
-[Backtest] line DD yes: n=3995 pred 8.2% obs 7.8% skill 0.227
-[Backtest] line FFG yes: n=3995 pred 5.1% obs 5.2% skill 0.041
-[Backtest] line PRA 20+: n=3995 pred 39.7% obs 40.3% skill 0.407
-[Backtest] line PRA 25+: n=3995 pred 26.3% obs 27.3% skill 0.427
-[Backtest] line PRA 30+: n=3995 pred 16.6% obs 17.5% skill 0.384
-[Backtest] line PRA 35+: n=3995 pred 9.9% obs 9.6% skill 0.332
-[Backtest] line PRA 40+: n=3995 pred 5.5% obs 4.8% skill 0.292
-[Backtest] line PRA 45+: n=3995 pred 2.8% obs 2.5% skill 0.211
-[Backtest] line PRA 50+: n=3995 pred 1.3% obs 1.3% skill 0.137
-[Backtest] line PTS 10+: n=3995 pred 50.9% obs 51.7% skill 0.329
-[Backtest] line PTS 12+: n=7 pred 30.9% obs 42.9% skill -0.093
-[Backtest] line PTS 13+: n=25 pred 37.8% obs 28.0% skill 0.083
-[Backtest] line PTS 14+: n=30 pred 36.0% obs 43.3% skill -0.026
-[Backtest] line PTS 15+: n=4025 pred 30.3% obs 30.6% skill 0.379
-[Backtest] line PTS 16+: n=30 pred 31.4% obs 36.7% skill 0.079
-[Backtest] line PTS 17+: n=27 pred 32.7% obs 33.3% skill 0.068
-[Backtest] line PTS 18+: n=27 pred 34.3% obs 40.7% skill 0.107
-[Backtest] line PTS 19+: n=14 pred 27.1% obs 35.7% skill -0.008
-[Backtest] line PTS 20+: n=4011 pred 17.0% obs 17.5% skill 0.345
-[Backtest] line PTS 21+: n=5 pred 30.7% obs 20.0% skill 0.195
-[Backtest] line PTS 22+: n=7 pred 37.8% obs 28.6% skill -0.074
-[Backtest] line PTS 23+: n=7 pred 32.4% obs 14.3% skill -0.096
-[Backtest] line PTS 24+: n=5 pred 27.8% obs 40.0% skill -0.081
-[Backtest] line PTS 25+: n=4000 pred 8.9% obs 8.1% skill 0.292
-[Backtest] line PTS 26+: n=5 pred 29.4% obs 0.0% skill NaN
-[Backtest] line PTS 27+: n=6 pred 26.9% obs 16.7% skill -0.092
-[Backtest] line PTS 28+: n=2 pred 31.2% obs 50.0% skill 0.179
-[Backtest] line PTS 29+: n=1 pred 29.2% obs 0.0% skill NaN
-[Backtest] line PTS 30+: n=3998 pred 4.3% obs 3.5% skill 0.196
-[Backtest] line PTS 31+: n=2 pred 25.1% obs 50.0% skill 0.129
-[Backtest] line PTS 33+: n=1 pred 25.1% obs 0.0% skill NaN
-[Backtest] line PTS 35+: n=3995 pred 1.9% obs 1.4% skill 0.097
-[Backtest] line PTS 40+: n=3995 pred 0.8% obs 0.7% skill 0.098
-[Backtest] line PTSU 5+: n=101 pred 28.0% obs 22.8% skill 0.048
-[Backtest] line PTSU 6+: n=64 pred 26.1% obs 26.6% skill 0.056
-[Backtest] line PTSU 7+: n=42 pred 26.6% obs 14.3% skill -0.152
+[Live] seg Season sample before the game / 2-4 games played: n=18032 pred 13.6% obs 14.6% Brier 0.0719 skill 0.299
+[Live] seg Season sample before the game / 5+ games played: n=82792 pred 16.2% obs 16.5% Brier 0.0766 skill 0.303
+[Live] seg Minutes outcome (hindsight) / Within 5 of projection: n=64056 pred 16.6% obs 16.9% Brier 0.0704 skill 0.374
+[Live] seg Minutes outcome (hindsight) / Played 6+ fewer than projected: n=14328 pred 16.0% obs 6.6% Brier 0.0618 skill 0.095
+[Live] seg Minutes outcome (hindsight) / Played 6+ more than projected: n=15598 pred 11.9% obs 20.6% Brier 0.1055 skill 0.162
+[Backtest] line 3PM 1+: n=4143 pred 62.7% obs 61.3% skill 0.264
+[Backtest] line 3PM 2+: n=4143 pred 35.3% obs 36.8% skill 0.216
+[Backtest] line 3PM 3+: n=4143 pred 18.0% obs 19.5% skill 0.163
+[Backtest] line 3PM 4+: n=4143 pred 8.5% obs 9.8% skill 0.125
+[Backtest] line 3PM 5+: n=4143 pred 3.8% obs 4.2% skill 0.109
+[Backtest] line 3PM 6+: n=4143 pred 1.6% obs 1.6% skill 0.055
+[Backtest] line AST 4+: n=4143 pred 29.9% obs 28.6% skill 0.359
+[Backtest] line AST 5+: n=4143 pred 20.0% obs 19.2% skill 0.369
+[Backtest] line AST 6+: n=4143 pred 13.1% obs 12.9% skill 0.337
+[Backtest] line AST 8+: n=4143 pred 5.3% obs 5.8% skill 0.237
+[Backtest] line AST 10+: n=4143 pred 1.9% obs 2.4% skill 0.120
+[Backtest] line AST 12+: n=4143 pred 0.6% obs 0.7% skill 0.002
+[Backtest] line DD yes: n=4143 pred 8.2% obs 7.9% skill 0.224
+[Backtest] line FFG yes: n=4143 pred 5.1% obs 5.2% skill 0.042
+[Backtest] line PRA 20+: n=4143 pred 39.7% obs 40.5% skill 0.410
+[Backtest] line PRA 25+: n=4143 pred 26.4% obs 27.4% skill 0.421
+[Backtest] line PRA 30+: n=4143 pred 16.6% obs 17.5% skill 0.380
+[Backtest] line PRA 35+: n=4143 pred 9.9% obs 9.7% skill 0.333
+[Backtest] line PRA 40+: n=4143 pred 5.5% obs 4.8% skill 0.288
+[Backtest] line PRA 45+: n=4143 pred 2.8% obs 2.5% skill 0.208
+[Backtest] line PRA 50+: n=4143 pred 1.3% obs 1.3% skill 0.132
+[Backtest] line PTS 10+: n=4143 pred 50.9% obs 51.7% skill 0.332
+[Backtest] line PTS 12+: n=7 pred 30.6% obs 42.9% skill -0.086
+[Backtest] line PTS 13+: n=25 pred 37.9% obs 28.0% skill 0.084
+[Backtest] line PTS 14+: n=31 pred 35.5% obs 38.7% skill 0.025
+[Backtest] line PTS 15+: n=4173 pred 30.3% obs 30.8% skill 0.377
+[Backtest] line PTS 16+: n=32 pred 31.0% obs 34.4% skill 0.098
+[Backtest] line PTS 17+: n=32 pred 31.8% obs 31.3% skill 0.059
+[Backtest] line PTS 18+: n=27 pred 34.3% obs 40.7% skill 0.104
+[Backtest] line PTS 19+: n=13 pred 26.9% obs 30.8% skill 0.002
+[Backtest] line PTS 20+: n=4160 pred 17.0% obs 17.5% skill 0.340
+[Backtest] line PTS 21+: n=6 pred 29.6% obs 16.7% skill 0.134
+[Backtest] line PTS 22+: n=7 pred 37.6% obs 28.6% skill -0.074
+[Backtest] line PTS 23+: n=8 pred 31.7% obs 12.5% skill -0.152
+[Backtest] line PTS 24+: n=5 pred 27.7% obs 40.0% skill -0.100
+[Backtest] line PTS 25+: n=4148 pred 8.9% obs 8.1% skill 0.291
+[Backtest] line PTS 26+: n=4 pred 29.4% obs 0.0% skill NaN
+[Backtest] line PTS 27+: n=6 pred 26.7% obs 16.7% skill -0.088
+[Backtest] line PTS 28+: n=2 pred 31.0% obs 50.0% skill 0.194
+[Backtest] line PTS 29+: n=1 pred 29.3% obs 0.0% skill NaN
+[Backtest] line PTS 30+: n=4146 pred 4.3% obs 3.5% skill 0.191
+[Backtest] line PTS 31+: n=2 pred 24.8% obs 50.0% skill 0.123
+[Backtest] line PTS 32+: n=1 pred 25.1% obs 0.0% skill NaN
+[Backtest] line PTS 33+: n=1 pred 24.8% obs 0.0% skill NaN
+[Backtest] line PTS 35+: n=4143 pred 1.9% obs 1.4% skill 0.101
+[Backtest] line PTS 40+: n=4143 pred 0.8% obs 0.7% skill 0.102
+[Backtest] line PTSU 5+: n=106 pred 27.7% obs 22.6% skill 0.035
+[Backtest] line PTSU 6+: n=68 pred 26.0% obs 23.5% skill 0.079
+[Backtest] line PTSU 7+: n=43 pred 26.7% obs 16.3% skill -0.114
 [Backtest] line PTSU 8+: n=28 pred 26.6% obs 14.3% skill -0.201
-[Backtest] line PTSU 9+: n=15 pred 29.2% obs 33.3% skill -0.160
-[Backtest] line PTSU 10+: n=2 pred 37.0% obs 50.0% skill 0.295
-[Backtest] line PTSU 11+: n=1 pred 23.7% obs 0.0% skill NaN
-[Backtest] line PTSU 12+: n=1 pred 38.2% obs 100.0% skill NaN
-[Backtest] line PTSU 13+: n=2 pred 20.3% obs 50.0% skill -0.327
-[Backtest] line PTSU 14+: n=3 pred 26.7% obs 66.7% skill -0.872
-[Backtest] line PTSU 18+: n=1 pred 33.9% obs 0.0% skill NaN
-[Backtest] line Q3ALL yes: n=3995 pred 9.8% obs 9.1% skill 0.170
-[Backtest] line REB 5+: n=3995 pred 39.9% obs 39.8% skill 0.285
-[Backtest] line REB 8+: n=3995 pred 15.7% obs 15.1% skill 0.293
-[Backtest] line REB 10+: n=3995 pred 7.9% obs 7.6% skill 0.272
-[Backtest] line REB 12+: n=3995 pred 3.8% obs 3.8% skill 0.240
-[Backtest] line REB 15+: n=3995 pred 1.2% obs 1.0% skill 0.120
-[Backtest] line TD yes: n=3995 pred 0.3% obs 0.4% skill 0.064
-[Backtest] reliability 0-10%: PTS 1.6%->1.5%; REB 1.8%->1.6%; AST 1.7%->1.7%; 3PM 2.3%->2.8%; PRA 1.6%->1.8%; DD 2.6%->2.1%
-[Backtest] reliability 10-20%: PTS 14.5%->13.1%; REB 14.5%->13.5%; AST 14.4%->12.9%; 3PM 14.5%->16.2%; PRA 14.5%->13.5%; DD 14.1%->15.0%
-[Backtest] reliability 20-30%: PTS 24.9%->23.4%; REB 24.8%->24.3%; AST 24.6%->23.1%; 3PM 24.7%->25.0%; PRA 24.6%->25.0%; DD 24.3%->20.7%
-[Backtest] reliability 30-40%: PTS 34.7%->33.7%; REB 34.7%->35.2%; AST 34.8%->33.0%; 3PM 34.8%->35.9%; PRA 34.8%->32.6%; DD 34.6%->33.6%
-[Backtest] reliability 40-50%: PTS 44.9%->45.3%; REB 44.8%->42.3%; AST 44.7%->45.4%; 3PM 45.2%->46.8%; PRA 44.9%->44.1%; DD 44.0%->34.4%
-[Backtest] reliability 50-60%: PTS 54.8%->54.9%; REB 54.8%->57.9%; AST 55.0%->55.3%; 3PM 55.0%->55.4%; PRA 55.0%->57.1%; DD 54.6%->66.7%
-[Backtest] reliability 60-70%: PTS 64.9%->70.0%; REB 64.9%->66.7%; AST 64.8%->63.5%; 3PM 65.0%->64.5%; PRA 64.9%->67.0%; DD 64.7%->82.1%
-[Backtest] reliability 70-80%: PTS 74.9%->76.3%; REB 74.5%->76.7%; AST 74.9%->77.2%; 3PM 75.1%->74.0%; PRA 74.9%->75.2%
-[Backtest] reliability 80-90%: PTS 85.0%->87.6%; REB 84.6%->80.4%; AST 84.6%->84.6%; 3PM 84.8%->84.8%; PRA 84.8%->87.8%
-[Backtest] reliability 90-100%: PTS 94.6%->95.8%; REB 94.3%->95.4%; AST 93.0%->91.9%; 3PM 93.3%->93.1%; PRA 94.5%->96.3%
-[Backtest] Double-double: n=3995 pred 8.2% obs 7.8% Brier 0.0555 base 0.0718 skill 0.227
-[Backtest] Triple-double: n=3995 pred 0.3% obs 0.4% Brier 0.0035 base 0.0037 skill 0.064
-[Backtest] 3+ points every quarter: n=3995 pred 9.8% obs 9.1% Brier 0.0684 base 0.0824 skill 0.170
-[Backtest] First field goal: n=3995 pred 5.1% obs 5.2% Brier 0.0475 base 0.0496 skill 0.041
-[Backtest] means Overall / All projected players: n=3995 pts bias +0.10 MAE 4.69; min bias +0.08 MAE 4.75
-[Backtest] means Projected minutes / 32+ min: n=658 pts bias +0.45 MAE 5.78; min bias +1.55 MAE 4.16
-[Backtest] means Projected minutes / 24-32 min: n=1385 pts bias -0.17 MAE 5.18; min bias -0.15 MAE 4.59
-[Backtest] means Projected minutes / 15-24 min: n=1398 pts bias +0.24 MAE 4.18; min bias +0.02 MAE 4.96
-[Backtest] means Projected minutes / Under 15 min: n=554 pts bias +0.01 MAE 3.43; min bias -0.91 MAE 5.32
-[Backtest] means Role / Projected starter (top 5 minutes): n=2092 pts bias -0.05 MAE 5.34; min bias +0.25 MAE 4.43
-[Backtest] means Role / Bench, 15+ projected min: n=1349 pts bias +0.38 MAE 4.18; min bias +0.23 MAE 5.01
-[Backtest] means Role / Bench, under 15 projected min: n=554 pts bias +0.01 MAE 3.43; min bias -0.91 MAE 5.32
-[Backtest] means Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start): n=178 pts bias -0.98 MAE 5.38; min bias -1.47 MAE 4.47
-[Backtest] means Projection vs season scoring (2+ games) / Within 3 pts of season avg: n=2876 pts bias +0.02 MAE 4.56; min bias -0.25 MAE 4.60
-[Backtest] means Projection vs season scoring (2+ games) / Projected 3+ pts ABOVE season avg (expecting a jump): n=321 pts bias +0.23 MAE 5.05; min bias +1.39 MAE 4.85
-[Backtest] means Usage (shot volume per minute) / Top third: primary scorers: n=1165 pts bias -0.03 MAE 5.73; min bias +0.32 MAE 4.20
-[Backtest] means Usage (shot volume per minute) / Middle third: n=1144 pts bias +0.30 MAE 4.80; min bias +0.13 MAE 4.81
-[Backtest] means Usage (shot volume per minute) / Bottom third: role players: n=1132 pts bias +0.08 MAE 4.11; min bias +0.28 MAE 4.98
-[Backtest] means Final margin (hindsight) / Blowout: 20+ pts: n=1071 pts bias +0.74 MAE 4.66; min bias +1.92 MAE 4.93
-[Backtest] means Final margin (hindsight) / 10-19 pts: n=1238 pts bias +0.17 MAE 4.61; min bias +0.07 MAE 4.46
-[Backtest] means Final margin (hindsight) / Close: under 10: n=1686 pts bias -0.36 MAE 4.76; min bias -1.07 MAE 4.86
-[Backtest] means Pre-game spread / Team favored by 9+: n=500 pts bias -0.04 MAE 4.69; min bias -0.06 MAE 4.47
-[Backtest] means Pre-game spread / Team underdog by 9+: n=510 pts bias +0.03 MAE 4.80; min bias +0.12 MAE 5.74
-[Backtest] means Pre-game spread / Within 8.5: n=2985 pts bias +0.14 MAE 4.67; min bias +0.10 MAE 4.63
-[Backtest] means Teammates / A 24+ mpg teammate was out: n=1673 pts bias +0.02 MAE 4.68; min bias +0.07 MAE 4.85
-[Backtest] means Teammates / Full rotation available: n=2322 pts bias +0.16 MAE 4.69; min bias +0.10 MAE 4.68
-[Backtest] means Rest / Team on a back-to-back: n=679 pts bias -0.01 MAE 4.76; min bias -0.03 MAE 5.35
-[Backtest] means Rest / Team rested: n=3316 pts bias +0.12 MAE 4.67; min bias +0.11 MAE 4.63
-[Backtest] means Venue / Home: n=2006 pts bias +0.11 MAE 4.70; min bias +0.05 MAE 4.79
-[Backtest] means Venue / Away: n=1989 pts bias +0.09 MAE 4.67; min bias +0.11 MAE 4.71
-[Backtest] means Season sample before the game / 0-1 games played: n=620 pts bias +0.72 MAE 4.88; min bias +1.40 MAE 5.47
-[Backtest] means Season sample before the game / 2-4 games played: n=931 pts bias -0.10 MAE 4.60; min bias -0.48 MAE 4.80
-[Backtest] means Season sample before the game / 5+ games played: n=2444 pts bias +0.02 MAE 4.67; min bias -0.03 MAE 4.55
-[Backtest] means Minutes outcome (hindsight) / Within 5 of projection: n=2469 pts bias -0.05 MAE 4.10; min bias -0.16 MAE 2.35
-[Backtest] means Minutes outcome (hindsight) / Played 6+ fewer than projected: n=627 pts bias +5.23 MAE 5.80; min bias +9.63 MAE 9.63
-[Backtest] means Minutes outcome (hindsight) / Played 6+ more than projected: n=575 pts bias -4.65 MAE 6.04; min bias -9.30 MAE 9.30
-[Backtest] tag best_sgp: n=28 pred 23.5% obs 25.0% hits 7/6.6 expected z=+0.19
-[Backtest] tag boost_candidate: n=943 pred 23.1% obs 26.1% hits 246/218.2 expected z=+2.15
-[Backtest] tag dud: n=260 pred 27.3% obs 23.1% hits 60/70.9 expected z=-1.54
-[Backtest] tag erupt: n=255 pred 32.6% obs 33.3% hits 85/83.2 expected z=+0.25
-[Backtest] tag fav: n=8070 pred 75.9% obs 75.3% hits 6080/6125.9 expected z=-1.21
-[Backtest] tag fav_bold: n=3126 pred 68.2% obs 67.4% hits 2106/2132.9 expected z=-1.04
-[Backtest] tag sgp_4leg: n=173 pred 13.9% obs 13.9% hits 24/24.0 expected z=-0.01
-[Backtest] tag sgp_best_hit: n=195 pred 61.2% obs 66.2% hits 129/119.3 expected z=+1.43
-[Backtest] tag sgp_most_correlated: n=196 pred 23.9% obs 23.5% hits 46/46.9 expected z=-0.15
-[Backtest] tag top3_ml: n=89 pred 75.8% obs 84.3% hits 75/67.5 expected z=+1.94
-[Backtest] tag top3_q3: n=89 pred 21.3% obs 22.5% hits 20/19.0 expected z=+0.28
-[Backtest] tag top5_25pts: n=150 pred 57.7% obs 56.7% hits 85/86.5 expected z=-0.26
-[Backtest] tag top5_3pm: n=150 pred 62.1% obs 65.3% hits 98/93.2 expected z=+0.84
-[Backtest] tag top5_dd: n=150 pred 49.8% obs 55.3% hits 83/74.7 expected z=+1.40
-[Backtest] tag top5_ffg: n=150 pred 13.4% obs 15.3% hits 23/20.1 expected z=+0.69
-[Backtest] tag top5_q3all: n=149 pred 48.0% obs 45.0% hits 67/71.5 expected z=-0.75
-[Backtest] SGP All SGPs: n=1535 joint 27.0% indep 19.9% obs 29.4%; Brier joint 0.1870 indep 0.1968
-[Backtest] SGP best_sgp: n=28 joint 23.5% indep 14.8% obs 25.0%; Brier joint 0.1878 indep 0.1989
-[Backtest] SGP boost_candidate: n=943 joint 23.1% indep 15.4% obs 26.1%; Brier joint 0.1938 indep 0.2040
-[Backtest] SGP sgp_4leg: n=173 joint 13.9% indep 14.1% obs 13.9%; Brier joint 0.1195 indep 0.1193
-[Backtest] SGP sgp_best_hit: n=195 joint 61.2% indep 56.4% obs 66.2%; Brier joint 0.2267 indep 0.2338
-[Backtest] SGP sgp_most_correlated: n=196 joint 23.9% indep 10.8% obs 23.5%; Brier joint 0.1741 indep 0.1935
-[Live] tag best_sgp: n=40 pred 23.4% obs 32.5% hits 13/9.4 expected z=+1.35
-[Live] tag boost_candidate: n=792 pred 23.1% obs 22.7% hits 180/182.8 expected z=-0.24
-[Live] tag dud: n=363 pred 22.5% obs 18.2% hits 66/81.8 expected z=-2.01
-[Live] tag erupt: n=407 pred 26.4% obs 21.9% hits 89/107.6 expected z=-2.15
-[Live] tag fav: n=1716 pred 76.9% obs 78.7% hits 1350/1320.4 expected z=+1.72
-[Live] tag fav_bold: n=953 pred 67.7% obs 65.7% hits 626/645.6 expected z=-1.37
-[Live] tag safe3_evening: n=11 pred 67.9% obs 81.8% hits 9/7.5 expected z=+1.00
-[Live] tag safe3_night: n=13 pred 64.3% obs 69.2% hits 9/8.4 expected z=+0.38
-[Live] tag sgp_4leg: n=135 pred 13.9% obs 12.6% hits 17/18.8 expected z=-0.44
-[Live] tag sgp_best_hit: n=167 pred 74.1% obs 80.2% hits 134/123.8 expected z=+1.83
-[Live] tag sgp_most_correlated: n=168 pred 23.4% obs 25.6% hits 43/39.3 expected z=+0.67
-[Live] tag sgp4_bigger_payout: n=441 pred 13.8% obs 15.9% hits 70/61.1 expected z=+1.23
-[Live] tag sgp4_boost_range: n=391 pred 25.8% obs 28.1% hits 110/100.7 expected z=+1.07
-[Live] tag sgp4_safest: n=445 pred 61.5% obs 66.7% hits 297/273.6 expected z=+2.33
+[Backtest] line PTSU 9+: n=15 pred 29.0% obs 33.3% skill -0.163
+[Backtest] line PTSU 10+: n=2 pred 36.9% obs 50.0% skill 0.278
+[Backtest] line PTSU 11+: n=1 pred 24.0% obs 0.0% skill NaN
+[Backtest] line PTSU 12+: n=1 pred 39.0% obs 100.0% skill NaN
+[Backtest] line PTSU 13+: n=2 pred 20.8% obs 50.0% skill -0.306
+[Backtest] line PTSU 14+: n=3 pred 26.5% obs 66.7% skill -0.869
+[Backtest] line PTSU 18+: n=1 pred 33.8% obs 0.0% skill NaN
+[Backtest] line Q3ALL yes: n=4143 pred 9.8% obs 9.3% skill 0.167
+[Backtest] line REB 5+: n=4143 pred 39.9% obs 39.9% skill 0.288
+[Backtest] line REB 8+: n=4143 pred 15.7% obs 15.1% skill 0.291
+[Backtest] line REB 10+: n=4143 pred 7.9% obs 7.6% skill 0.268
+[Backtest] line REB 12+: n=4143 pred 3.8% obs 3.8% skill 0.237
+[Backtest] line REB 15+: n=4143 pred 1.2% obs 1.0% skill 0.124
+[Backtest] line TD yes: n=4143 pred 0.3% obs 0.4% skill 0.059
+[Backtest] reliability 0-10%: PTS 1.6%->1.5%; REB 1.8%->1.6%; AST 1.7%->1.7%; 3PM 2.3%->2.8%; PRA 1.6%->1.8%; DD 2.6%->2.0%
+[Backtest] reliability 10-20%: PTS 14.5%->13.0%; REB 14.6%->13.7%; AST 14.4%->13.0%; 3PM 14.5%->16.2%; PRA 14.5%->13.7%; DD 14.2%->15.8%
+[Backtest] reliability 20-30%: PTS 24.9%->23.5%; REB 24.8%->23.8%; AST 24.7%->23.1%; 3PM 24.7%->25.0%; PRA 24.6%->24.7%; DD 24.4%->21.7%
+[Backtest] reliability 30-40%: PTS 34.7%->32.8%; REB 34.7%->34.8%; AST 34.9%->32.9%; 3PM 34.9%->35.7%; PRA 34.8%->33.4%; DD 34.4%->32.2%
+[Backtest] reliability 40-50%: PTS 44.9%->46.3%; REB 44.8%->42.7%; AST 44.7%->46.0%; 3PM 45.2%->46.1%; PRA 44.8%->44.3%; DD 44.2%->37.1%
+[Backtest] reliability 50-60%: PTS 54.8%->54.4%; REB 54.8%->57.7%; AST 55.0%->54.7%; 3PM 55.0%->55.7%; PRA 55.0%->57.1%; DD 54.7%->68.4%
+[Backtest] reliability 60-70%: PTS 65.0%->69.7%; REB 64.9%->67.0%; AST 64.8%->64.2%; 3PM 65.0%->65.0%; PRA 65.0%->66.5%; DD 64.4%->77.5%
+[Backtest] reliability 70-80%: PTS 75.0%->76.7%; REB 74.6%->76.2%; AST 74.9%->77.1%; 3PM 75.1%->73.6%; PRA 74.8%->75.0%
+[Backtest] reliability 80-90%: PTS 85.0%->87.9%; REB 84.7%->80.8%; AST 84.7%->84.0%; 3PM 84.8%->84.2%; PRA 84.8%->88.0%
+[Backtest] reliability 90-100%: PTS 94.7%->95.7%; REB 94.2%->95.6%; AST 93.1%->93.0%; 3PM 93.3%->93.9%; PRA 94.6%->96.4%
+[Backtest] Double-double: n=4143 pred 8.2% obs 7.9% Brier 0.0562 base 0.0725 skill 0.224
+[Backtest] Triple-double: n=4143 pred 0.3% obs 0.4% Brier 0.0036 base 0.0038 skill 0.059
+[Backtest] 3+ points every quarter: n=4143 pred 9.8% obs 9.3% Brier 0.0702 base 0.0843 skill 0.167
+[Backtest] First field goal: n=4143 pred 5.1% obs 5.2% Brier 0.0475 base 0.0496 skill 0.042
+[Backtest] means Overall / All projected players: n=4143 pts bias +0.10 MAE 4.69; min bias +0.05 MAE 4.74
+[Backtest] means Projected minutes / 32+ min: n=678 pts bias +0.48 MAE 5.79; min bias +1.49 MAE 4.07
+[Backtest] means Projected minutes / 24-32 min: n=1433 pts bias -0.18 MAE 5.20; min bias -0.21 MAE 4.60
+[Backtest] means Projected minutes / 15-24 min: n=1463 pts bias +0.23 MAE 4.18; min bias +0.01 MAE 4.98
+[Backtest] means Projected minutes / Under 15 min: n=569 pts bias +0.00 MAE 3.41; min bias -0.89 MAE 5.24
+[Backtest] means Role / Projected starter (top 5 minutes): n=2172 pts bias -0.07 MAE 5.35; min bias +0.18 MAE 4.42
+[Backtest] means Role / Bench, 15+ projected min: n=1402 pts bias +0.41 MAE 4.18; min bias +0.23 MAE 5.02
+[Backtest] means Role / Bench, under 15 projected min: n=569 pts bias +0.00 MAE 3.41; min bias -0.89 MAE 5.24
+[Backtest] means Projection vs season scoring (2+ games) / Projected 3+ pts BELOW season avg (fading a hot start): n=176 pts bias -0.99 MAE 5.33; min bias -1.48 MAE 4.46
+[Backtest] means Projection vs season scoring (2+ games) / Within 3 pts of season avg: n=3020 pts bias +0.01 MAE 4.57; min bias -0.29 MAE 4.59
+[Backtest] means Projection vs season scoring (2+ games) / Projected 3+ pts ABOVE season avg (expecting a jump): n=327 pts bias +0.32 MAE 5.07; min bias +1.42 MAE 4.83
+[Backtest] means Usage (shot volume per minute) / Top third: primary scorers: n=1211 pts bias -0.01 MAE 5.73; min bias +0.23 MAE 4.17
+[Backtest] means Usage (shot volume per minute) / Middle third: n=1187 pts bias +0.24 MAE 4.82; min bias +0.09 MAE 4.83
+[Backtest] means Usage (shot volume per minute) / Bottom third: role players: n=1176 pts bias +0.11 MAE 4.11; min bias +0.28 MAE 4.97
+[Backtest] means Final margin (hindsight) / Blowout: 20+ pts: n=1070 pts bias +0.75 MAE 4.66; min bias +1.92 MAE 4.92
+[Backtest] means Final margin (hindsight) / 10-19 pts: n=1274 pts bias +0.18 MAE 4.60; min bias +0.05 MAE 4.43
+[Backtest] means Final margin (hindsight) / Close: under 10: n=1799 pts bias -0.35 MAE 4.77; min bias -1.07 MAE 4.84
+[Backtest] means Pre-game spread / Team favored by 9+: n=519 pts bias -0.04 MAE 4.70; min bias -0.10 MAE 4.45
+[Backtest] means Pre-game spread / Team underdog by 9+: n=527 pts bias +0.01 MAE 4.81; min bias +0.07 MAE 5.80
+[Backtest] means Pre-game spread / Within 8.5: n=3097 pts bias +0.14 MAE 4.67; min bias +0.07 MAE 4.60
+[Backtest] means Teammates / A 24+ mpg teammate was out: n=1773 pts bias +0.04 MAE 4.67; min bias +0.00 MAE 4.83
+[Backtest] means Teammates / Full rotation available: n=2370 pts bias +0.15 MAE 4.70; min bias +0.08 MAE 4.67
+[Backtest] means Rest / Team on a back-to-back: n=678 pts bias -0.01 MAE 4.76; min bias -0.04 MAE 5.35
+[Backtest] means Rest / Team rested: n=3465 pts bias +0.12 MAE 4.67; min bias +0.07 MAE 4.61
+[Backtest] means Venue / Home: n=2079 pts bias +0.11 MAE 4.70; min bias +0.01 MAE 4.76
+[Backtest] means Venue / Away: n=2064 pts bias +0.09 MAE 4.67; min bias +0.09 MAE 4.71
+[Backtest] means Season sample before the game / 0-1 games played: n=620 pts bias +0.72 MAE 4.88; min bias +1.39 MAE 5.47
+[Backtest] means Season sample before the game / 2-4 games played: n=935 pts bias -0.09 MAE 4.59; min bias -0.48 MAE 4.78
+[Backtest] means Season sample before the game / 5+ games played: n=2588 pts bias +0.02 MAE 4.68; min bias -0.08 MAE 4.54
+[Backtest] means Minutes outcome (hindsight) / Within 5 of projection: n=2553 pts bias -0.04 MAE 4.11; min bias -0.17 MAE 2.34
+[Backtest] means Minutes outcome (hindsight) / Played 6+ fewer than projected: n=646 pts bias +5.26 MAE 5.81; min bias +9.60 MAE 9.60
+[Backtest] means Minutes outcome (hindsight) / Played 6+ more than projected: n=601 pts bias -4.61 MAE 6.03; min bias -9.25 MAE 9.25
+[Backtest] tag best_sgp: n=29 pred 23.5% obs 17.2% hits 5/6.8 expected z=-0.79
+[Backtest] tag boost_candidate: n=985 pred 23.1% obs 25.2% hits 248/227.6 expected z=+1.54
+[Backtest] tag dud: n=270 pred 27.1% obs 22.6% hits 61/73.3 expected z=-1.71
+[Backtest] tag erupt: n=265 pred 32.4% obs 31.7% hits 84/85.9 expected z=-0.25
+[Backtest] tag fav: n=8330 pred 76.0% obs 75.5% hits 6290/6328.6 expected z=-1.01
+[Backtest] tag fav_bold: n=3282 pred 68.2% obs 67.2% hits 2206/2237.5 expected z=-1.19
+[Backtest] tag sgp_4leg: n=178 pred 13.9% obs 15.2% hits 27/24.7 expected z=+0.50
+[Backtest] tag sgp_best_hit: n=203 pred 61.1% obs 67.0% hits 136/124.1 expected z=+1.72
+[Backtest] tag sgp_most_correlated: n=204 pred 24.0% obs 26.5% hits 54/49.0 expected z=+0.83
+[Backtest] tag top3_ml: n=92 pred 75.9% obs 83.7% hits 77/69.9 expected z=+1.81
+[Backtest] tag top3_q3: n=92 pred 21.3% obs 21.7% hits 20/19.6 expected z=+0.10
+[Backtest] tag top5_25pts: n=155 pred 57.8% obs 57.4% hits 89/89.5 expected z=-0.09
+[Backtest] tag top5_3pm: n=155 pred 62.2% obs 63.9% hits 99/96.4 expected z=+0.44
+[Backtest] tag top5_dd: n=155 pred 49.9% obs 54.2% hits 84/77.3 expected z=+1.11
+[Backtest] tag top5_ffg: n=155 pred 13.5% obs 16.8% hits 26/20.9 expected z=+1.21
+[Backtest] tag top5_q3all: n=154 pred 48.0% obs 46.1% hits 71/74.0 expected z=-0.49
+[Backtest] SGP All SGPs: n=1599 joint 27.0% indep 19.8% obs 29.4%; Brier joint 0.1856 indep 0.1957
+[Backtest] SGP best_sgp: n=29 joint 23.5% indep 14.5% obs 17.2%; Brier joint 0.1464 indep 0.1407
+[Backtest] SGP boost_candidate: n=985 joint 23.1% indep 15.4% obs 25.2%; Brier joint 0.1889 indep 0.1979
+[Backtest] SGP sgp_4leg: n=178 joint 13.9% indep 14.0% obs 15.2%; Brier joint 0.1288 indep 0.1302
+[Backtest] SGP sgp_best_hit: n=203 joint 61.1% indep 56.3% obs 67.0%; Brier joint 0.2220 indep 0.2301
+[Backtest] SGP sgp_most_correlated: n=204 joint 24.0% indep 10.8% obs 26.5%; Brier joint 0.1884 indep 0.2158
+[Live] tag best_sgp: n=42 pred 23.4% obs 31.0% hits 13/9.8 expected z=+1.15
+[Live] tag boost_candidate: n=830 pred 23.1% obs 23.1% hits 192/191.6 expected z=+0.03
+[Live] tag dud: n=380 pred 22.5% obs 18.2% hits 69/85.6 expected z=-2.08
+[Live] tag erupt: n=424 pred 26.4% obs 21.5% hits 91/111.8 expected z=-2.36
+[Live] tag fav: n=1977 pred 77.0% obs 79.1% hits 1564/1522.2 expected z=+2.27
+[Live] tag fav_bold: n=1095 pred 67.7% obs 64.6% hits 707/741.3 expected z=-2.23
+[Live] tag safe3_evening: n=12 pred 68.2% obs 75.0% hits 9/8.2 expected z=+0.51
+[Live] tag safe3_night: n=15 pred 63.0% obs 66.7% hits 10/9.4 expected z=+0.30
+[Live] tag sgp_4leg: n=143 pred 13.9% obs 13.3% hits 19/19.9 expected z=-0.21
+[Live] tag sgp_best_hit: n=175 pred 73.5% obs 78.9% hits 138/128.6 expected z=+1.63
+[Live] tag sgp_most_correlated: n=176 pred 23.4% obs 25.6% hits 45/41.2 expected z=+0.68
+[Live] tag sgp4_bigger_payout: n=465 pred 13.8% obs 15.9% hits 74/64.4 expected z=+1.29
+[Live] tag sgp4_boost_range: n=415 pred 25.8% obs 28.0% hits 116/106.9 expected z=+1.02
+[Live] tag sgp4_safest: n=469 pred 60.7% obs 65.5% hits 307/284.6 expected z=+2.16
 [Live] tag ticket: n=26 pred 33.3% obs 23.1% hits 6/8.7 expected z=-1.20
-[Live] tag top3_ml: n=83 pred 74.1% obs 84.3% hits 70/61.5 expected z=+2.24
-[Live] tag top3_q3: n=118 pred 17.6% obs 18.6% hits 22/20.8 expected z=+0.30
-[Live] tag top5_25pts: n=213 pred 47.1% obs 48.8% hits 104/100.3 expected z=+0.54
-[Live] tag top5_3pm: n=203 pred 54.5% obs 57.1% hits 116/110.7 expected z=+0.78
-[Live] tag top5_dd: n=202 pred 38.8% obs 42.1% hits 85/78.5 expected z=+1.01
-[Live] tag top5_ffg: n=212 pred 12.2% obs 13.7% hits 29/25.9 expected z=+0.64
-[Live] tag top5_q3all: n=215 pred 40.6% obs 37.7% hits 81/87.4 expected z=-0.92
-[Live] SGP All SGPs: n=2605 joint 31.4% indep 25.7% obs 33.4%; Brier joint 0.1776 indep 0.1846
-[Live] SGP best_sgp: n=40 joint 23.4% indep 14.9% obs 32.5%; Brier joint 0.2277 indep 0.2492
-[Live] SGP boost_candidate: n=792 joint 23.1% indep 15.5% obs 22.7%; Brier joint 0.1757 indep 0.1808
-[Live] SGP sgp_4leg: n=135 joint 13.9% indep 13.8% obs 12.6%; Brier joint 0.1102 indep 0.1105
-[Live] SGP sgp_best_hit: n=167 joint 74.1% indep 71.5% obs 80.2%; Brier joint 0.1594 indep 0.1611
-[Live] SGP sgp_most_correlated: n=168 joint 23.4% indep 10.6% obs 25.6%; Brier joint 0.1898 indep 0.2120
-[Live] SGP sgp4_bigger_payout: n=441 joint 13.8% indep 10.6% obs 15.9%; Brier joint 0.1340 indep 0.1369
-[Live] SGP sgp4_boost_range: n=391 joint 25.8% indep 22.8% obs 28.1%; Brier joint 0.2027 indep 0.2054
-[Live] SGP sgp4_safest: n=445 joint 61.5% indep 54.5% obs 66.7%; Brier joint 0.2199 indep 0.2362
+[Live] tag top3_ml: n=86 pred 74.3% obs 84.9% hits 73/63.9 expected z=+2.34
+[Live] tag top3_q3: n=123 pred 17.7% obs 18.7% hits 23/21.7 expected z=+0.31
+[Live] tag top5_25pts: n=221 pred 47.6% obs 48.4% hits 107/105.1 expected z=+0.27
+[Live] tag top5_3pm: n=212 pred 54.7% obs 55.7% hits 118/116.1 expected z=+0.28
+[Live] tag top5_dd: n=210 pred 39.1% obs 42.4% hits 89/82.1 expected z=+1.04
+[Live] tag top5_ffg: n=221 pred 12.3% obs 14.0% hits 31/27.2 expected z=+0.79
+[Live] tag top5_q3all: n=224 pred 40.9% obs 37.5% hits 84/91.7 expected z=-1.08
+[Live] SGP All SGPs: n=2741 joint 31.2% indep 25.5% obs 33.2%; Brier joint 0.1787 indep 0.1857
+[Live] SGP best_sgp: n=42 joint 23.4% indep 14.9% obs 31.0%; Brier joint 0.2194 indep 0.2384
+[Live] SGP boost_candidate: n=830 joint 23.1% indep 15.5% obs 23.1%; Brier joint 0.1779 indep 0.1837
+[Live] SGP sgp_4leg: n=143 joint 13.9% indep 13.8% obs 13.3%; Brier joint 0.1152 indep 0.1155
+[Live] SGP sgp_best_hit: n=175 joint 73.5% indep 70.8% obs 78.9%; Brier joint 0.1639 indep 0.1653
+[Live] SGP sgp_most_correlated: n=176 joint 23.4% indep 10.6% obs 25.6%; Brier joint 0.1882 indep 0.2117
+[Live] SGP sgp4_bigger_payout: n=465 joint 13.8% indep 10.6% obs 15.9%; Brier joint 0.1343 indep 0.1371
+[Live] SGP sgp4_boost_range: n=415 joint 25.8% indep 22.6% obs 28.0%; Brier joint 0.2018 indep 0.2046
+[Live] SGP sgp4_safest: n=469 joint 60.7% indep 53.6% obs 65.5%; Brier joint 0.2208 indep 0.2360
 [Live] SGP ticket: n=26 joint 33.3% indep 26.4% obs 23.1%; Brier joint 0.1878 indep 0.1756
-[Backtest] 80%+ props, cause minutes short: misses 213 (46.0%) hits 479 (12.2%); miss rate 30.8%
-[Backtest] 80%+ props, cause minutes surplus: misses 7 (1.5%) hits 353 (9.0%); miss rate 1.9%
-[Backtest] 80%+ props, cause blowout: misses 62 (13.4%) hits 679 (17.3%); miss rate 8.4%
-[Backtest] 80%+ props, cause normal minutes: misses 181 (39.1%) hits 2418 (61.5%); miss rate 7.0%
-[Live] 80%+ props, cause minutes short: misses 169 (48.0%) hits 349 (11.4%); miss rate 32.6%
-[Live] 80%+ props, cause minutes surplus: misses 10 (2.8%) hits 271 (8.8%); miss rate 3.6%
-[Live] 80%+ props, cause blowout: misses 45 (12.8%) hits 523 (17.0%); miss rate 7.9%
-[Live] 80%+ props, cause normal minutes: misses 128 (36.4%) hits 1931 (62.8%); miss rate 6.2%
+[Backtest] 80%+ props, cause minutes short: misses 215 (44.9%) hits 463 (11.3%); miss rate 31.7%
+[Backtest] 80%+ props, cause minutes surplus: misses 7 (1.5%) hits 371 (9.1%); miss rate 1.9%
+[Backtest] 80%+ props, cause blowout: misses 57 (11.9%) hits 687 (16.8%); miss rate 7.7%
+[Backtest] 80%+ props, cause normal minutes: misses 200 (41.8%) hits 2564 (62.8%); miss rate 7.2%
+[Live] 80%+ props, cause minutes short: misses 173 (46.4%) hits 354 (10.9%); miss rate 32.8%
+[Live] 80%+ props, cause minutes surplus: misses 10 (2.7%) hits 281 (8.7%); miss rate 3.4%
+[Live] 80%+ props, cause blowout: misses 45 (12.1%) hits 523 (16.2%); miss rate 7.9%
+[Live] 80%+ props, cause normal minutes: misses 145 (38.9%) hits 2080 (64.2%); miss rate 6.5%
