@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/20/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/20/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Grayson Allen,OUT,0,Official: Out (Concussion Protocol)
@@ -18,16 +18,17 @@ ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
 ATL,Jalen Wilson,AVAIL,1,Official: Available (G League - Two-Way)
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-IND,T.J. McConnell,Q,0.9,Official: Probable (Injury/Illness - Right Hamstring Strain)
+IND,T.J. McConnell,AVAIL,1,Official: Available (Injury/Illness - Right Hamstring Strain)
 IND,Andrew Nembhard,AVAIL,1,Official: Available (Injury/Illness - Left Hip Sprain)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 IND,Braden Smith,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
+CLE,Zack Austin,OUT,0,Official: Out (G League - Two-Way)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Evan Mobley,OUT,0,Official: Out (Injury/Illness - Left Great Toe Sprain)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Jaylon Tyson,OUT,0,Official: Out
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
-CLE,Peyton Watson,Q,0.5,Official: Questionable (Injury/Illness - Low Back Contusion)
+CLE,Peyton Watson,AVAIL,1,Official: Available (Injury/Illness - Low Back Contusion)
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
@@ -49,7 +50,7 @@ DET,Duncan Robinson,OUT,0,Official: Out (Injury/Illness - Left Quadriceps Strain
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
 NO,Bryce McGowens,OUT,0,Official: Out (Injury/Illness - Left Elbow Infection)
-NO,Trey Murphy III,Q,0.5,Official: Questionable
+NO,Trey Murphy III,AVAIL,1,Official: Available
 NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 NO,Jaron Pierre Jr.,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Julian Reese,OUT,0,Official: Out (G League - Two-Way)
@@ -66,10 +67,10 @@ WSH,Felix Okpara,Q,0.5,Official: Questionable (G League - Two-Way)
 WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
 WSH,Jamir Watkins,OUT,0,Official: Out
 CHI,Tobe Awaka,OUT,0,Official: Out (G League - Two-Way)
-CHI,Noa Essengue,Q,0.9,Official: Probable
+CHI,Noa Essengue,AVAIL,1,Official: Available (-)
 CHI,Orlando Robinson,OUT,0,Official: Out (G League - On Assignment)
 CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
-CHI,Jalen Smith,Q,0.5,Official: Questionable (Injury/Illness - Gastrointestinal Illness)
+CHI,Jalen Smith,OUT,0,Official: Out (Injury/Illness - Gastrointestinal Illness)
 CHI,Dailyn Swain,OUT,0,Official: Out (G League - On Assignment)
 CHI,Caleb Wilson,OUT,0,Official: Out
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
