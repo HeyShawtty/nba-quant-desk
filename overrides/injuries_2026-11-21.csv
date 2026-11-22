@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/21/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/21/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIL,Ousmane Dieng,OUT,0,Official: Out (Injury/Illness - Left Finger Fracture)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
@@ -52,6 +52,7 @@ NO,Trey Murphy III,OUT,0,Official: Out
 NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 NO,Julian Reese,OUT,0,Official: Out (G League - Two-Way)
 NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+NO,Zion Williamson,OUT,0,Official: Out (Injury/Illness - Left Thigh Contusion)
 SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
 SA,Ja'Kobi Gillespie,OUT,0,Official: Out (G League - Two-Way)
 SA,Dylan Harper,OUT,0,Official: Out
@@ -65,5 +66,5 @@ BOS,Amari Williams,OUT,0,Official: Out (G League - Two-Way)
 SAC,Precious Achiuwa,Q,0.5,Official: Questionable
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
-SAC,Maxime Raynaud,OUT,0,Official: Out
+SAC,Maxime Raynaud,OUT,0,Official: Out (Injury/Illness - Right Patella)
 SAC,Ben Simmons,OUT,0,Official: Out
