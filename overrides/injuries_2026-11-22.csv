@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/22/26 5:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/22/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Cade Cunningham,AVAIL,1,Official: Available (Injury/Illness - Right Knee Soreness)
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
@@ -32,12 +32,12 @@ MIA,Myron Gardner,AVAIL,1,Official: Available
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
 MIA,Keshad Johnson,AVAIL,1,Official: Available (G League - Two-Way)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
-DAL,Walter Clayton Jr.,Q,0.5,Official: Questionable (Injury/Illness - Left Patellar Tendinitis)
+DAL,Walter Clayton Jr.,AVAIL,1,Official: Available (Injury/Illness - Left Patellar Tendinitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
 DAL,Tobi Lawal,OUT,0,Official: Out (Injury/Illness - Right Groin Strain)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
-DAL,P.J. Washington,Q,0.25,Official: Doubtful (Injury/Illness - Illness)
+DAL,P.J. Washington,OUT,0,Official: Out (Injury/Illness - Illness)
 UTAH,Jonas Aidoo,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Kobe Bufkin,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
@@ -60,11 +60,11 @@ ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jonathan Isaac,OUT,0,Official: Out
 ORL,Izaiyah Nelson,OUT,0,Official: Out
 ORL,Noah Penda,OUT,0,Official: Out
-WSH,Deandre Ayton,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+WSH,Deandre Ayton,AVAIL,1,Official: Available (Injury/Illness - Illness)
 WSH,Reece Beekman,OUT,0,Official: Out
-WSH,Bub Carrington,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+WSH,Bub Carrington,AVAIL,1,Official: Available (Injury/Illness - Illness)
 WSH,Justin Champagnie,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
-WSH,Felix Okpara,Q,0.5,Official: Questionable (G League - Two-Way)
+WSH,Felix Okpara,OUT,0,Official: Out (G League - Two-Way)
 WSH,Tristan Vukcevic,OUT,0,Official: Out (Injury/Illness - Left Hip Impingement)
 WSH,Jamir Watkins,OUT,0,Official: Out
 IND,Johnny Furphy,OUT,0,Official: Out
