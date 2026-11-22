@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/22/26 3:15 PM ET (read automatically). Not yet submitted: BOS.
+# Source: NBA official injury report 11/22/26 5:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Cade Cunningham,AVAIL,1,Official: Available (Injury/Illness - Right Knee Soreness)
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
@@ -19,17 +19,18 @@ ATL,Asa Newell,OUT,0,Official: Out (Injury/Illness - Left Great Toe Surgery)
 ATL,Henri Veesaar,OUT,0,Official: Out (Injury/Illness - Right ACL Tear)
 ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 OKC,Alex Caruso,OUT,0,Official: Out (Injury/Illness - Right Hip Soreness)
-OKC,Shai Gilgeous-Alexander,Q,0.5,Official: Questionable
+OKC,Shai Gilgeous-Alexander,OUT,0,Official: Out
 OKC,Chet Holmgren,OUT,0,Official: Out
+OKC,Aday Mara,OUT,0,Official: Out (Injury/Illness - Right Shin Contusion)
 OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 OKC,Nikola Topic,OUT,0,Official: Out (Injury/Illness - Left Hip Strain)
 OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
 OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
-MIA,Giannis Antetokounmpo,Q,0.5,Official: Questionable (Injury/Illness - Right Groin tendinitis)
-MIA,Myron Gardner,Q,0.9,Official: Probable
+MIA,Giannis Antetokounmpo,OUT,0,Official: Out (Injury/Illness - Right Groin tendinitis)
+MIA,Myron Gardner,AVAIL,1,Official: Available
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
-MIA,Keshad Johnson,OUT,0,Official: Out (G League - Two-Way)
+MIA,Keshad Johnson,AVAIL,1,Official: Available (G League - Two-Way)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
 DAL,Walter Clayton Jr.,Q,0.5,Official: Questionable (Injury/Illness - Left Patellar Tendinitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
@@ -51,9 +52,9 @@ CHI,Tobe Awaka,AVAIL,1,Official: Available (-)
 CHI,Nic Claxton,OUT,0,Official: Out (Injury/Illness - Illness)
 CHI,Norman Powell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 CHI,Orlando Robinson,AVAIL,1,Official: Available (-)
-CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
-CHI,Jalen Smith,Q,0.9,Official: Probable (Injury/Illness - Gastrointestinal Illness)
-CHI,Patrick Williams,Q,0.9,Official: Probable (Injury/Illness - Left Thumb Sprain)
+CHI,Jaylin Sellers,AVAIL,1,Official: Available (-)
+CHI,Jalen Smith,AVAIL,1,Official: Available (-)
+CHI,Patrick Williams,AVAIL,1,Official: Available (-)
 CHI,Caleb Wilson,OUT,0,Official: Out
 ORL,Paolo Banchero,OUT,0,Official: Out
 ORL,Jonathan Isaac,OUT,0,Official: Out
@@ -74,6 +75,10 @@ IND,Pascal Siakam,Q,0.5,Official: Questionable
 NY,OG Anunoby,OUT,0,Official: Out (Injury/Illness - Left Calf Tightness)
 NY,Jordan Clarkson,OUT,0,Official: Out (Injury/Illness - Right Plantar Fasciitis)
 NY,Karl-Anthony Towns,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+BOS,Paul George,OUT,0,Official: Out (Rest)
+BOS,Dillon Mitchell,OUT,0,Official: Out (G League - Two-Way)
+BOS,Mitchell Robinson,OUT,0,Official: Out (Injury/Illness - Illness)
+BOS,Amari Williams,OUT,0,Official: Out (G League - Two-Way)
 GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
 GS,Moses Moody,OUT,0,Official: Out
