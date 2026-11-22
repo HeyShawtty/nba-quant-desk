@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/21/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/21/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIL,Ousmane Dieng,OUT,0,Official: Out (Injury/Illness - Left Finger Fracture)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
@@ -25,13 +25,13 @@ LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
 LAC,Jordan Miller,OUT,0,Official: Out
 LAC,Jalen Pickett,OUT,0,Official: Out (G League - Two-Way)
 DAL,Tarik Biberovic,OUT,0,Official: Out (Injury/Illness - Right Heel Bursitis)
-DAL,Walter Clayton Jr.,Q,0.5,Official: Questionable (Injury/Illness - Left Patellar Tendinitis)
+DAL,Walter Clayton Jr.,AVAIL,1,Official: Available (Injury/Illness - Left Patellar Tendinitis)
 DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
-DAL,Jett Howard,Q,0.5,Official: Questionable (G League - Two-Way)
+DAL,Jett Howard,OUT,0,Official: Out (G League - Two-Way)
 DAL,Tobi Lawal,OUT,0,Official: Out (Injury/Illness - Right Groin Strain)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
-DAL,P.J. Washington,Q,0.25,Official: Doubtful (Injury/Illness - Illness)
+DAL,P.J. Washington,OUT,0,Official: Out (Injury/Illness - Illness)
 MEM,Cameron Boozer,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 MEM,GG Jackson,OUT,0,Official: Out
