@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/21/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/21/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIL,Ousmane Dieng,OUT,0,Official: Out (Injury/Illness - Left Finger Fracture)
 MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
@@ -63,7 +63,7 @@ BOS,Mitchell Robinson,OUT,0,Official: Out (Injury/Illness - Illness)
 BOS,Jayson Tatum,OUT,0,Official: Out (Rest)
 BOS,Derrick White,OUT,0,Official: Out
 BOS,Amari Williams,OUT,0,Official: Out (G League - Two-Way)
-SAC,Precious Achiuwa,Q,0.5,Official: Questionable
+SAC,Precious Achiuwa,AVAIL,1,Official: Available
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out (Injury/Illness - Right Patella)
