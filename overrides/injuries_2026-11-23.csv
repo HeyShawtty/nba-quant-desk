@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/23/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/23/26 6:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MEM,Cameron Boozer,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
@@ -21,7 +21,7 @@ PHI,Adem Bona,AVAIL,1,Official: Available (Injury/Illness - Cervical Spine Sprai
 PHI,Jaylen Brown,AVAIL,1,Official: Available (Injury/Illness - Left Hamstring Strain)
 PHI,Joel Embiid,OUT,0,Official: Out (Injury/Illness - Illness)
 PHI,Ariel Hukporti,OUT,0,Official: Out
-PHI,Dean Wade,Q,0.9,Official: Probable
+PHI,Dean Wade,AVAIL,1,Official: Available
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
 BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
 BKN,Chaney Johnson,OUT,0,Official: Out (G League - Two-Way)
