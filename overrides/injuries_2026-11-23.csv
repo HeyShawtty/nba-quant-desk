@@ -1,0 +1,101 @@
+team,name,status,p_play,note
+# Source: NBA official injury report 11/23/26 6:15 PM ET (read automatically). All listed teams submitted.
+# status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
+MEM,Cameron Boozer,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+MEM,GG Jackson,OUT,0,Official: Out
+MEM,Scotty Pippen Jr.,OUT,0,Official: Out
+MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
+CHA,Grayson Allen,OUT,0,Official: Out (Concussion Protocol)
+CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
+CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+CHA,Brandon Miller,AVAIL,1,Official: Available
+CHA,Dennis Schroder,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+CHA,Grant Williams,OUT,0,Official: Out
+POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
+POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+POR,Shaedon Sharpe,OUT,0,Official: Out (Injury/Illness - Right Meniscus)
+POR,Chris Youngblood,OUT,0,Official: Out
+PHI,Adem Bona,AVAIL,1,Official: Available (Injury/Illness - Cervical Spine Sprain)
+PHI,Jaylen Brown,AVAIL,1,Official: Available (Injury/Illness - Left Hamstring Strain)
+PHI,Joel Embiid,OUT,0,Official: Out (Injury/Illness - Illness)
+PHI,Ariel Hukporti,OUT,0,Official: Out
+PHI,Dean Wade,Q,0.9,Official: Probable
+BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
+BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
+BKN,Chaney Johnson,OUT,0,Official: Out (G League - Two-Way)
+BKN,Grant Nelson,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
+BKN,Drake Powell,OUT,0,Official: Out (G League - On Assignment)
+BKN,Ben Saraf,OUT,0,Official: Out (G League - On Assignment)
+BKN,Nolan Traore,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Face Mask)
+MIN,Jaylen Clark,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+MIN,Donte DiVincenzo,OUT,0,Official: Out
+MIN,Anthony Edwards,OUT,0,Official: Out
+MIN,Rocco Zikarsky,OUT,0,Official: Out (G League - Two-Way)
+MIL,Ousmane Dieng,AVAIL,1,Official: Available (-)
+MIL,Kam Jones,OUT,0,Official: Out (G League - Two-Way)
+MIL,Bogoljub Markovic,OUT,0,Official: Out (G League - On Assignment)
+TOR,RJ Barrett,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+TOR,Nate Bittle,OUT,0,Official: Out (G League - Two-Way)
+TOR,Jaden Bradley,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
+TOR,Kawhi Leonard,OUT,0,Official: Out
+TOR,Collin Murray-Boyles,AVAIL,1,Official: Available (Concussion Protocol)
+OKC,Alex Caruso,OUT,0,Official: Out
+OKC,Chet Holmgren,OUT,0,Official: Out
+OKC,Aday Mara,OUT,0,Official: Out (Injury/Illness - Right Shin Contusion)
+OKC,Thomas Sorber,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+OKC,Nikola Topic,OUT,0,Official: Out (Injury/Illness - Left Hip Strain)
+OKC,Cason Wallace,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
+OKC,Jalen Williams,OUT,0,Official: Out (Injury/Illness - Left Ankle Surgery)
+OKC,Jaylin Williams,OUT,0,Official: Out (Injury/Illness - Low Back Spasms)
+IND,Johnny Furphy,OUT,0,Official: Out
+IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
+IND,T.J. McConnell,OUT,0,Official: Out
+IND,Aaron Nesmith,OUT,0,Official: Out (Injury/Illness - Right Foot Soreness)
+IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
+IND,Pascal Siakam,Q,0.5,Official: Questionable
+CLE,Zack Austin,OUT,0,Official: Out (G League - Two-Way)
+CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
+CLE,Evan Mobley,OUT,0,Official: Out (Injury/Illness - Left Great Toe Sprain)
+CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
+CLE,Jaylon Tyson,Q,0.9,Official: Probable
+CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
+CHI,Nic Claxton,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+CHI,Norman Powell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
+CHI,Jalen Smith,Q,0.9,Official: Probable (Injury/Illness - Gastrointestinal Illness)
+CHI,Caleb Wilson,OUT,0,Official: Out
+PHX,Ryan Dunn,AVAIL,1,Official: Available (Injury/Illness - Right Quad Soreness)
+PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
+NO,Malik Dia,AVAIL,1,Official: Available (G League - Two-Way)
+NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
+NO,Bryce McGowens,AVAIL,1,Official: Available (Injury/Illness - Left Elbow Infection)
+NO,Trey Murphy III,AVAIL,1,Official: Available
+NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
+NO,Jaron Pierre Jr.,AVAIL,1,Official: Available (G League - Two-Way)
+NO,Julian Reese,OUT,0,Official: Out (G League - Two-Way)
+NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
+NO,Zion Williamson,Q,0.9,Official: Probable (Injury/Illness - Left Thigh Contusion)
+LAC,Bradley Beal,OUT,0,Official: Out
+LAC,Cam Christie,OUT,0,Official: Out (G League - Two-Way)
+LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
+LAC,Jordan Miller,OUT,0,Official: Out
+HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
+HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
+SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Right Shin Contusion)
+SA,Dylan Harper,OUT,0,Official: Out
+SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SA,Jordan McLaughlin,Q,0.5,Official: Questionable
+SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+SA,Victor Wembanyama,Q,0.5,Official: Questionable
+SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
+SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
+SAC,Maxime Raynaud,OUT,0,Official: Out
+SAC,Ben Simmons,OUT,0,Official: Out
+UTAH,Jaxson Hayes,OUT,0,Official: Out (Injury/Illness - Left Knee Strain)
+UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
+UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
+UTAH,Jusuf Nurkic,OUT,0,Official: Out
+LAL,Quentin Grimes,AVAIL,1,Official: Available (Injury/Illness - Right Finger Splint)
+LAL,Austin Reaves,OUT,0,Official: Out
