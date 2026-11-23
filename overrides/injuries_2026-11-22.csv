@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/22/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/22/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Cade Cunningham,AVAIL,1,Official: Available (Injury/Illness - Right Knee Soreness)
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
@@ -71,10 +71,11 @@ IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,OUT,0,Official: Out
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
-IND,Pascal Siakam,Q,0.5,Official: Questionable
+IND,Pascal Siakam,AVAIL,1,Official: Available
 NY,OG Anunoby,OUT,0,Official: Out (Injury/Illness - Left Calf Tightness)
 NY,Jordan Clarkson,OUT,0,Official: Out (Injury/Illness - Right Plantar Fasciitis)
-NY,Karl-Anthony Towns,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+NY,Miles McBride,OUT,0,Official: Out
+NY,Karl-Anthony Towns,AVAIL,1,Official: Available (Injury/Illness - Illness)
 BOS,Paul George,OUT,0,Official: Out (Rest)
 BOS,Dillon Mitchell,OUT,0,Official: Out (G League - Two-Way)
 BOS,Mitchell Robinson,OUT,0,Official: Out (Injury/Illness - Illness)
