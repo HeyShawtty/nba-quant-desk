@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/23/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/23/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MEM,Cameron Boozer,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
@@ -55,18 +55,20 @@ IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strai
 IND,T.J. McConnell,OUT,0,Official: Out
 IND,Aaron Nesmith,OUT,0,Official: Out (Injury/Illness - Right Foot Soreness)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
-IND,Pascal Siakam,Q,0.5,Official: Questionable
+IND,Pascal Siakam,AVAIL,1,Official: Available
 CLE,Zack Austin,OUT,0,Official: Out (G League - Two-Way)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Evan Mobley,OUT,0,Official: Out (Injury/Illness - Left Great Toe Sprain)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Jaylon Tyson,Q,0.9,Official: Probable
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
-CHI,Nic Claxton,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+CHI,Nic Claxton,AVAIL,1,Official: Available (-)
 CHI,Norman Powell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
-CHI,Jalen Smith,Q,0.9,Official: Probable (Injury/Illness - Gastrointestinal Illness)
+CHI,Jalen Smith,AVAIL,1,Official: Available (-)
 CHI,Caleb Wilson,OUT,0,Official: Out
 PHX,Ryan Dunn,AVAIL,1,Official: Available (Injury/Illness - Right Quad Soreness)
+PHX,Pat Spencer,OUT,0,Official: Out (G League - Two-Way)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 NO,Malik Dia,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
@@ -80,7 +82,7 @@ NO,Zion Williamson,Q,0.9,Official: Probable (Injury/Illness - Left Thigh Contusi
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Cam Christie,OUT,0,Official: Out (G League - Two-Way)
 LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
-LAC,Jordan Miller,OUT,0,Official: Out
+LAC,Jordan Miller,OUT,0,Official: Out (Injury/Illness - Left Rotator Cuff)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
 SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Right Shin Contusion)
