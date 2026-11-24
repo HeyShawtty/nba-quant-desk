@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/23/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/23/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MEM,Cameron Boozer,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
@@ -60,7 +60,7 @@ CLE,Zack Austin,OUT,0,Official: Out (G League - Two-Way)
 CLE,Khalifa Diop,OUT,0,Official: Out (G League - On Assignment)
 CLE,Evan Mobley,OUT,0,Official: Out (Injury/Illness - Left Great Toe Sprain)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
-CLE,Jaylon Tyson,Q,0.9,Official: Probable
+CLE,Jaylon Tyson,AVAIL,1,Official: Available
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
 CHI,Nic Claxton,AVAIL,1,Official: Available (-)
 CHI,Norman Powell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
@@ -78,7 +78,7 @@ NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 NO,Jaron Pierre Jr.,AVAIL,1,Official: Available (G League - Two-Way)
 NO,Julian Reese,OUT,0,Official: Out (G League - Two-Way)
 NO,Trendon Watford,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
-NO,Zion Williamson,Q,0.9,Official: Probable (Injury/Illness - Left Thigh Contusion)
+NO,Zion Williamson,AVAIL,1,Official: Available (Injury/Illness - Left Thigh Contusion)
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Cam Christie,OUT,0,Official: Out (G League - Two-Way)
 LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
