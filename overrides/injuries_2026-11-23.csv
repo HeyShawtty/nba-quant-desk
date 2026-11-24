@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/23/26 8:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/23/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MEM,Cameron Boozer,OUT,0,Official: Out (Injury/Illness - Right Ankle Sprain)
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
@@ -85,12 +85,12 @@ LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
 LAC,Jordan Miller,OUT,0,Official: Out (Injury/Illness - Left Rotator Cuff)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
-SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Right Shin Contusion)
+SA,De'Aaron Fox,OUT,0,Official: Out (Injury/Illness - Right Shin Contusion)
 SA,Dylan Harper,OUT,0,Official: Out
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
-SA,Jordan McLaughlin,Q,0.5,Official: Questionable
+SA,Jordan McLaughlin,AVAIL,1,Official: Available (-)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-SA,Victor Wembanyama,Q,0.5,Official: Questionable
+SA,Victor Wembanyama,OUT,0,Official: Out
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Sean Pedulla,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
@@ -98,6 +98,6 @@ SAC,Ben Simmons,OUT,0,Official: Out
 UTAH,Jaxson Hayes,OUT,0,Official: Out (Injury/Illness - Left Knee Strain)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
-UTAH,Jusuf Nurkic,OUT,0,Official: Out
+UTAH,Jusuf Nurkic,OUT,0,Official: Out (Injury/Illness - Right 2nd Plantar)
 LAL,Quentin Grimes,AVAIL,1,Official: Available (Injury/Illness - Right Finger Splint)
 LAL,Austin Reaves,OUT,0,Official: Out
