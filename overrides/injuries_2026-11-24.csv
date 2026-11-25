@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/24/26 7:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/24/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 DET,Cade Cunningham,OUT,0,Official: Out (Injury/Illness - Right Knee Soreness)
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
@@ -27,4 +27,4 @@ DAL,Sergio de Larrea,OUT,0,Official: Out (Injury/Illness - Right Knee Sprain)
 DAL,Tobi Lawal,OUT,0,Official: Out (Injury/Illness - Right Groin Strain)
 DAL,Dereck Lively II,OUT,0,Official: Out (Injury/Illness - Right Foot Surgery)
 DAL,Caleb Martin,AVAIL,1,Official: Available (Injury/Illness - Right Thumb Splint)
-DAL,P.J. Washington,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+DAL,P.J. Washington,AVAIL,1,Official: Available (Injury/Illness - Illness)
