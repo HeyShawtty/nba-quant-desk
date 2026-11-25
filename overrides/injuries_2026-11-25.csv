@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/25/26 4:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/25/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -10,12 +10,12 @@ PHI,Ariel Hukporti,OUT,0,Official: Out
 CHI,Tobe Awaka,OUT,0,Official: Out (G League - Two-Way)
 CHI,Norman Powell,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 CHI,Jaylin Sellers,OUT,0,Official: Out (G League - Two-Way)
-CHI,Jalen Smith,Q,0.5,Official: Questionable (Injury/Illness - Gastrointestinal Illness)
+CHI,Jalen Smith,OUT,0,Official: Out (Injury/Illness - Gastrointestinal Illness)
 CHI,Caleb Wilson,OUT,0,Official: Out
 CHA,Michael Ajayi,OUT,0,Official: Out (G League - Two-Way)
 CHA,Grayson Allen,OUT,0,Official: Out (Concussion Protocol)
 CHA,Kylan Boswell,OUT,0,Official: Out (G League - Two-Way)
-CHA,Sion James,Q,0.9,Official: Probable (Injury/Illness - Left Thigh Soreness)
+CHA,Sion James,AVAIL,1,Official: Available (Injury/Illness - Left Thigh Soreness)
 CHA,Ryan Kalkbrenner,OUT,0,Official: Out
 CHA,Kon Knueppel,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 CHA,Dennis Schroder,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
@@ -60,7 +60,7 @@ MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
-SAC,Zach LaVine,Q,0.5,Official: Questionable (Injury/Illness - Right Knee Soreness)
+SAC,Zach LaVine,OUT,0,Official: Out (Injury/Illness - Right Knee Soreness)
 SAC,Jonathan Mogbo,OUT,0,Official: Out (G League - Two-Way)
 SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
