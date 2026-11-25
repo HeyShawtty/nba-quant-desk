@@ -1,0 +1,88 @@
+SLATE 2026-11-24: 3 games | model favorite won 2/3 | 1 overs, 2 unders vs DK | total MAE model 22.0 vs DK 21.5 | margin MAE model 14.2 vs DK 15.5 | headline picks & parlays 39/99 | players projected 15+ min: 43 | pts MAE 5.2, within 5 pts 55.8% | causes: on track 24, minutes surplus 10, hot shooting 4, cold shooting 3, minutes short 2
+=== DAL @ DEN: DAL 120-101 DEN | fav DEN 71.0% WRONG | margin model +7.6 DK +7.5 actual -19 | total model 232.8 DK 234.5 actual 221 | Q1-3 84/77 | picks 11/44
+  RIGHT: 11 of 44 picks/parlays hit
+  WRONG: DEN lost at 71.0%; margin -19 vs +7.6 projected; 3 of 8 main players within 4 pts of projection; Aaron Gordon 1 pts vs 11.7 (cold shooting (0-3 FG, 0-3 3PT)); Kyrie Irving 11 pts vs 20.3 (cold shooting (5-19 FG, 1-8 3PT)); Caleb Martin 13 pts vs 4.6 (minutes surplus (30 vs 17))
+  [best_sgp] Cameron Johnson 10+ pts + Cameron Johnson 2+ threes + Naji Marshall 15+ PRA (23.4%) HIT 3/3 legs
+  [sgp4_bigger_payout] Aaron Gordon 1+ threes + Aaron Gordon 10+ pts + Kyrie Irving 3+ threes + P.J. Washington 6+ reb (14.0%) MISS 1/4 legs; missed: Aaron Gordon 1+ threes, Aaron Gordon 10+ pts, Kyrie Irving 3+ threes
+  [sgp4_bigger_payout] Aaron Gordon 4+ reb + Aaron Gordon 10+ pts + Kyrie Irving 3+ threes + Cooper Flagg 6+ ast (13.7%) MISS 1/4 legs; missed: Aaron Gordon 4+ reb, Aaron Gordon 10+ pts, Kyrie Irving 3+ threes
+  [sgp4_bigger_payout] Cooper Flagg 20+ pts + Kyrie Irving 4+ ast + Kyrie Irving 3+ threes + Cooper Flagg 6+ ast (13.5%) MISS 3/4 legs; missed: Kyrie Irving 3+ threes
+  [sgp4_boost_range] Nikola Jokic double-double + Daniel Gafford 4+ reb + Nikola Jokic 10+ reb + Max Christie 1+ threes (25.9%) MISS 3/4 legs; missed: Max Christie 1+ threes
+  [sgp4_boost_range] Nikola Jokic double-double + Christian Braun 2+ ast + Nikola Jokic 10+ reb + Zaccharie Risacher 1+ threes (26.0%) HIT 4/4 legs
+  [sgp4_boost_range] Christian Braun 15+ PRA + Nikola Jokic double-double + Nikola Jokic 10+ reb + Cooper Flagg 20+ pts (25.7%) HIT 4/4 legs
+  [sgp4_safest] Nikola Jokic 6+ ast + Nikola Jokic 20+ pts + Nikola Jokic double-double + Nikola Jokic 10+ reb (41.9%) MISS 2/4 legs; missed: Nikola Jokic 6+ ast, Nikola Jokic 20+ pts
+  [sgp4_safest] Cooper Flagg 15+ pts + Cooper Flagg 4+ reb + Nikola Jokic double-double + Nikola Jokic 10+ reb (41.8%) HIT 4/4 legs
+  [sgp4_safest] Kyrie Irving 2+ threes + Kyrie Irving 15+ pts + Nikola Jokic double-double + Nikola Jokic 10+ reb (39.3%) MISS 2/4 legs; missed: Kyrie Irving 2+ threes, Kyrie Irving 15+ pts
+  [top3_ml] DEN ML (71.0%) MISS 
+  [top3_q3] DEN 100+ thru Q3 (19.1%) MISS 
+  [top3_q3] DAL 100+ thru Q3 (7.5%) MISS 
+  [top5_25pts] Nikola Jokic PTS 25+ (47.2%) MISS actual 18
+  [top5_25pts] Jamal Murray PTS 25+ (50.4%) MISS actual 20
+  [top5_25pts] Cooper Flagg PTS 25+ (39.7%) MISS actual 24
+  [top5_25pts] Kyrie Irving PTS 25+ (29.8%) MISS actual 11
+  [top5_25pts] P.J. Washington PTS 25+ (4.8%) MISS actual 14
+  [top5_3pm] Jamal Murray 3PM 3+ (60.0%) MISS actual 2
+  [top5_3pm] Cameron Johnson 3PM 3+ (24.8%) HIT actual 4
+  [top5_3pm] Cooper Flagg 3PM 3+ (17.6%) MISS actual 1
+  [top5_3pm] Kyrie Irving 3PM 3+ (53.3%) MISS actual 1
+  [top5_3pm] P.J. Washington 3PM 3+ (23.2%) MISS actual 1
+  [top5_dd] Nikola Jokic DD (69.0%) HIT actual 2
+  [top5_dd] Jamal Murray DD (9.5%) MISS actual 1
+  [top5_dd] Aaron Gordon DD (5.5%) MISS actual 0
+  [top5_dd] Cooper Flagg DD (18.7%) HIT actual 2
+  [top5_dd] P.J. Washington DD (11.4%) MISS actual 1
+  [top5_ffg] Nikola Jokic FFG (12.9%) MISS actual 0
+  [top5_ffg] Jamal Murray FFG (11.8%) MISS actual 0
+  [top5_ffg] Christian Braun FFG (6.5%) MISS actual 0
+  [top5_ffg] Cooper Flagg FFG (10.8%) MISS actual 0
+  [top5_ffg] Kyrie Irving FFG (10.1%) MISS actual 0
+  [top5_q3all] Nikola Jokic Q3ALL (39.9%) HIT actual 3
+  [top5_q3all] Jamal Murray Q3ALL (41.7%) MISS actual 2
+  [top5_q3all] Cooper Flagg Q3ALL (35.0%) HIT actual 3
+  [top5_q3all] Kyrie Irving Q3ALL (27.5%) MISS actual 0
+  [top5_q3all] P.J. Washington Q3ALL (8.6%) MISS actual 0
+=== BOS @ WSH: BOS 131-116 WSH | fav BOS 80.5% RIGHT | margin model -12.1 DK -10.5 actual -15 | total model 219.8 DK 218.5 actual 247 | Q1-3 104/89 | picks 23/31
+  RIGHT: BOS won as the model's favorite (80.5%); margin within 5; 23 of 31 picks/parlays hit
+  WRONG: total 247 vs 220 projected (+27); 3 of 9 main players within 4 pts of projection; Jayson Tatum 41 pts vs 25.5 (hot shooting (13-25 FG, 6-15 3PT)); Neemias Queta 21 pts vs 9.0 (hot shooting (9-11 FG, 0-0 3PT)); Anthony Davis 33 pts vs 22.1 (hot shooting (12-21 FG, 1-3 3PT))
+  [sgp4_bigger_payout] Payton Pritchard 4+ ast + Jayson Tatum 3+ threes + BOS -10.5 + Jayson Tatum 25+ pts (13.8%) MISS 3/4 legs; missed: Payton Pritchard 4+ ast
+  [sgp4_bigger_payout] AJ Dybantsa 1+ threes + AJ Dybantsa 6+ reb + Jayson Tatum 3+ threes + Jayson Tatum 25+ pts (13.8%) HIT 4/4 legs
+  [sgp4_bigger_payout] Kyshawn George 2+ threes + Neemias Queta 2+ ast + Jayson Tatum 3+ threes + Jayson Tatum 25+ pts (13.9%) HIT 4/4 legs
+  [sgp4_boost_range] Jayson Tatum 2+ threes + Jayson Tatum 6+ reb + Anthony Davis 8+ reb + Anthony Davis 20+ pts (25.9%) HIT 4/4 legs
+  [sgp4_boost_range] Paul George 4+ reb + Paul George 15+ pts + Anthony Davis 8+ reb + Anthony Davis 20+ pts (24.6%) HIT 4/4 legs
+  [sgp4_boost_range] Paul George 2+ threes + Paul George 15+ pts + Anthony Davis 8+ reb + Kyshawn George 20+ PRA (26.0%) HIT 4/4 legs
+  [sgp4_safest] Jayson Tatum 4+ ast + Jayson Tatum 2+ threes + Jayson Tatum 20+ pts + Jayson Tatum 6+ reb (43.8%) HIT 4/4 legs
+  [sgp4_safest] Anthony Davis 6+ reb + Anthony Davis 15+ pts + Paul George 2+ threes + Paul George 15+ pts (44.6%) HIT 4/4 legs
+  [sgp4_safest] Trae Young 1+ threes + Jayson Tatum 2+ threes + Jayson Tatum 20+ pts + Trae Young 10+ pts (42.6%) HIT 4/4 legs
+  [top3_ml] BOS ML (80.5%) HIT 
+  [top3_q3] BOS 100+ thru Q3 (12.0%) HIT 
+  [top5_25pts] Anthony Davis PTS 25+ (37.3%) HIT actual 33
+  [top5_25pts] Jayson Tatum PTS 25+ (52.9%) HIT actual 41
+  [top5_3pm] Jayson Tatum 3PM 3+ (54.1%) HIT actual 6
+  [top5_3pm] Paul George 3PM 3+ (55.4%) HIT actual 6
+  [top5_3pm] Sam Hauser 3PM 3+ (37.5%) MISS actual 1
+  [top5_dd] Anthony Davis DD (42.7%) HIT actual 2
+  [top5_dd] Trae Young DD (24.8%) HIT actual 2
+  [top5_dd] Jayson Tatum DD (29.0%) MISS actual 1
+  [top5_ffg] Anthony Davis FFG (11.8%) MISS actual 0
+  [top5_ffg] Jayson Tatum FFG (12.8%) MISS actual 0
+  [top5_q3all] Anthony Davis Q3ALL (34.8%) HIT actual 4
+  [top5_q3all] Jayson Tatum Q3ALL (42.8%) HIT actual 3
+=== DET @ ORL: DET 104-86 ORL | fav DET 63.4% RIGHT | margin model -4.8 DK -2.5 actual -18 | total model 217.0 DK 212.5 actual 190 | Q1-3 73/61 | picks 5/24
+  RIGHT: DET won as the model's favorite (63.4%); 5 of 24 picks/parlays hit
+  WRONG: total 190 vs 217 projected (-27); 5 of 11 main players within 4 pts of projection; Isaiah Joe 21 pts vs 11.3 (minutes surplus (30 vs 20)); Anthony Black 5 pts vs 14.1 (cold shooting (2-8 FG, 0-2 3PT)); Cade Cunningham projected 29 min but did not play
+  [best_sgp] Ausar Thompson 25+ PRA + Kevin Huerter 10+ pts + Kevin Huerter 2+ threes (23.5%) MISS 1/3 legs; missed: Ausar Thompson 25+ PRA, Kevin Huerter 2+ threes
+  [sgp4_bigger_payout] Over 212.5 + Ronald Holland II 4+ reb + Ronald Holland II 2+ ast + Isaiah Joe 10+ pts (13.8%) MISS 1/4 legs; missed: Over 212.5, Ronald Holland II 4+ reb, Ronald Holland II 2+ ast
+  [sgp4_bigger_payout] DET -2.5 + Ronald Holland II 4+ reb + Daniss Jenkins 2+ threes + Ronald Holland II 2+ ast (13.4%) MISS 1/4 legs; missed: Ronald Holland II 4+ reb, Daniss Jenkins 2+ threes, Ronald Holland II 2+ ast
+  [sgp4_bigger_payout] Paul Reed 20+ PRA + DET -2.5 + Ronald Holland II 2+ ast + Isaiah Joe 10+ pts (14.0%) MISS 2/4 legs; missed: Paul Reed 20+ PRA, Ronald Holland II 2+ ast
+  [sgp4_boost_range] John Collins 1+ threes + John Collins 10+ pts + Daniss Jenkins 4+ ast + DET moneyline (25.9%) HIT 4/4 legs
+  [sgp4_boost_range] John Collins 1+ threes + Paul Reed 2+ ast + John Collins 10+ pts + Ausar Thompson 10+ pts (25.9%) MISS 2/4 legs; missed: Paul Reed 2+ ast, Ausar Thompson 10+ pts
+  [sgp4_boost_range] John Collins 1+ threes + Anthony Black 4+ ast + John Collins 10+ pts + Tristan da Silva 2+ threes (25.6%) MISS 3/4 legs; missed: Anthony Black 4+ ast
+  [sgp4_safest] Daniss Jenkins 1+ threes + Desmond Bane 10+ pts + Daniss Jenkins 10+ pts + Desmond Bane 2+ threes (49.5%) HIT 4/4 legs
+  [sgp4_safest] Desmond Bane 10+ pts + Anthony Black 1+ threes + Desmond Bane 2+ threes + Anthony Black 10+ pts (45.1%) MISS 2/4 legs; missed: Anthony Black 1+ threes, Anthony Black 10+ pts
+  [sgp4_safest] Daniss Jenkins 1+ threes + Anthony Black 1+ threes + Daniss Jenkins 10+ pts + Anthony Black 10+ pts (46.2%) MISS 2/4 legs; missed: Anthony Black 1+ threes, Anthony Black 10+ pts
+  [top3_ml] DET ML (63.4%) HIT 
+  [top5_25pts] Franz Wagner PTS 25+ (38.7%) MISS actual 20
+  [top5_3pm] Desmond Bane 3PM 3+ (50.2%) HIT actual 4
+  [top5_dd] Franz Wagner DD (31.6%) MISS actual 1
+  [top5_dd] Ausar Thompson DD (27.9%) MISS actual 1
+  [top5_ffg] Franz Wagner FFG (11.6%) MISS actual 0
+  [top5_q3all] Franz Wagner Q3ALL (36.4%) MISS actual 0
