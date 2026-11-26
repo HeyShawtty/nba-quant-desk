@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/25/26 7:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/25/26 7:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -57,6 +57,8 @@ MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 MEM,GG Jackson,OUT,0,Official: Out
 MEM,Scotty Pippen Jr.,OUT,0,Official: Out
 MEM,Richie Saunders,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
+PHX,Pat Spencer,OUT,0,Official: Out (G League - Two-Way)
+PHX,Drew Timme,OUT,0,Official: Out (G League - Two-Way)
 PHX,Mark Williams,OUT,0,Official: Out (Injury/Illness - Left Shoulder Surgery)
 HOU,Quadir Copeland,OUT,0,Official: Out (G League - Two-Way)
 HOU,Julian Phillips,OUT,0,Official: Out (G League - Two-Way)
