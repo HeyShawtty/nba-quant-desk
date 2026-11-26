@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/25/26 8:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/25/26 9:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -68,15 +68,15 @@ SAC,Maxime Raynaud,OUT,0,Official: Out
 SAC,Ben Simmons,OUT,0,Official: Out
 GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
-GS,Yaxel Lendeborg,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+GS,Yaxel Lendeborg,AVAIL,1,Official: Available (Injury/Illness - Illness)
 GS,Moses Moody,OUT,0,Official: Out
 GS,Kristaps Porzingis,OUT,0,Official: Out (Not With Team)
-GS,Brandon Williams,Q,0.5,Official: Questionable (Injury/Illness - Left Hamstring Strain)
-SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Right Shin Contusion)
+GS,Brandon Williams,AVAIL,1,Official: Available (Injury/Illness - Left Hamstring Strain)
+SA,De'Aaron Fox,OUT,0,Official: Out (Injury/Illness - Right Shin Contusion)
 SA,Dylan Harper,OUT,0,Official: Out
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
-SA,Victor Wembanyama,Q,0.5,Official: Questionable (Injury/Illness - Low Back Tightness)
+SA,Victor Wembanyama,AVAIL,1,Official: Available (-)
 POR,Vit Krejci,OUT,0,Official: Out (Injury/Illness - Left Ankle Fracture)
 POR,Ja Morant,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 POR,Shaedon Sharpe,OUT,0,Official: Out
