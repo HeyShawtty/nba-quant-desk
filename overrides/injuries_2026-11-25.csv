@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/25/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/25/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -25,11 +25,11 @@ CLE,Evan Mobley,OUT,0,Official: Out (Injury/Illness - Left Great Toe Sprain)
 CLE,Nae'Qwan Tomlin,OUT,0,Official: Out
 CLE,Ernest Udeh Jr.,OUT,0,Official: Out (G League - Two-Way)
 NY,OG Anunoby,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
-NY,Jalen Brunson,Q,0.9,Official: Probable (Injury/Illness - Illness)
+NY,Jalen Brunson,AVAIL,1,Official: Available (Injury/Illness - Illness)
 NY,Jordan Clarkson,OUT,0,Official: Out (Injury/Illness - Right Plantar Fasciitis)
-NY,Josh Hart,Q,0.9,Official: Probable (Injury/Illness - Right Shoulder Sprain)
+NY,Josh Hart,AVAIL,1,Official: Available (Injury/Illness - Right Shoulder Sprain)
 NY,Miles McBride,OUT,0,Official: Out
-NY,Karl-Anthony Towns,Q,0.9,Official: Probable
+NY,Karl-Anthony Towns,AVAIL,1,Official: Available
 MIN,Joan Beringer,AVAIL,1,Official: Available (Injury/Illness - Right Face Mask)
 MIN,Jaylen Clark,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 MIN,Donte DiVincenzo,OUT,0,Official: Out
@@ -51,7 +51,7 @@ BKN,Nolan Traore,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 LAC,Bradley Beal,OUT,0,Official: Out
 LAC,Nick Martinelli,OUT,0,Official: Out (G League - Two-Way)
 LAC,Jordan Miller,OUT,0,Official: Out
-LAC,Jalen Pickett,Q,0.5,Official: Questionable (G League - Two-Way)
+LAC,Jalen Pickett,OUT,0,Official: Out (G League - Two-Way)
 MEM,Cameron Boozer,OUT,0,Official: Out
 MEM,Jerami Grant,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 MEM,GG Jackson,OUT,0,Official: Out
