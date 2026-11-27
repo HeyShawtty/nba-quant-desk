@@ -248,8 +248,8 @@ namespace NbaQuant
             addG(d.Away + " moneyline", "ML", d.Away, 0, s => r.AwayPts[s] > r.HomePts[s]);
             addG(d.Home + " " + (spr > 0 ? "+" : "") + spr.ToString(U.IC), "SPR", d.Home, spr, s => r.HomePts[s] - r.AwayPts[s] + spr > 0);
             addG(d.Away + " " + (-spr > 0 ? "+" : "") + (-spr).ToString(U.IC), "SPR", d.Away, -spr, s => r.AwayPts[s] - r.HomePts[s] - spr > 0);
-            addG("Over " + tot.ToString(U.IC), "TOT", "OVER", tot, s => r.HomePts[s] + r.AwayPts[s] > tot);
-            addG("Under " + tot.ToString(U.IC), "TOT", "UNDER", tot, s => r.HomePts[s] + r.AwayPts[s] < tot);
+            addG("Over " + tot.ToString(U.IC), "TOT", "OVER", tot, s => Program.ShiftedTotal(r.HomePts[s] + r.AwayPts[s], s, g.TotalShift) > tot);
+            addG("Under " + tot.ToString(U.IC), "TOT", "UNDER", tot, s => Program.ShiftedTotal(r.HomePts[s] + r.AwayPts[s], s, g.TotalShift) < tot);
             // 15+ minutes so bench players with real roles can enter parlays, not only the headline names
             foreach (var ps in Players.Where(x => x.G == g && (all ? x.MeanMin >= 10 : x.MeanMin >= 15 && x.PPlays >= 0.9 && x.P.Status != "Q")))
             {

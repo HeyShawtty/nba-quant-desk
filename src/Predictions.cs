@@ -66,7 +66,7 @@ namespace NbaQuant
                 res.Add(new Pred { Date = date, GameId = g.Def.EspnId, Game = gl(g), Kind = "TOTAL", Stat = "OVER", Line = d.Total, P = g.POver, Odds = d.OverOdds, Selection = "Over " + d.Total.ToString(CultureInfo.InvariantCulture) });
                 res.Add(new Pred { Date = date, GameId = g.Def.EspnId, Game = gl(g), Kind = "TOTAL", Stat = "UNDER", Line = d.Total, P = 1 - g.POver, Odds = d.UnderOdds, Selection = "Under " + d.Total.ToString(CultureInfo.InvariantCulture) });
                 res.Add(new Pred { Date = date, GameId = g.Def.EspnId, Game = gl(g), Kind = "MEAN", Stat = "MARGIN", Team = g.Def.Home, Mean = g.MeanMargin, Selection = "home margin" });
-                res.Add(new Pred { Date = date, GameId = g.Def.EspnId, Game = gl(g), Kind = "MEAN", Stat = "TOTAL", Mean = g.MeanTotal, Selection = "game total" });
+                res.Add(new Pred { Date = date, GameId = g.Def.EspnId, Game = gl(g), Kind = "MEAN", Stat = "TOTAL", Mean = g.MeanTotal, PMarket = g.TotalShift, Selection = "game total" });
             }
             var q3top = Analysis.TeamQs.OrderByDescending(t => t.P100).Take(3).ToList();
             foreach (var t in Analysis.TeamQs)

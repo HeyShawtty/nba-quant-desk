@@ -105,7 +105,7 @@ namespace NbaQuant
                     "awayName", g.Info != null ? g.Info.AwayName : g.Def.Away, "homeName", g.Info != null ? g.Info.HomeName : g.Def.Home,
                     "dk", O("spreadHome", dk.SprH, "total", dk.Total, "mlHome", dk.MlH, "mlAway", dk.MlA),
                     "winHome", R3(g.WinH), "modelWinHome", R3(g.ModelWinH), "marketWinHome", R3(nv),
-                    "ptsHome", R1(r.SumPtsH / n), "ptsAway", R1(r.SumPtsA / n), "total", R1(g.MeanTotal), "totalLo", g.TotalPct[0], "totalHi", g.TotalPct[4],
+                    "ptsHome", R1(r.SumPtsH / n - g.TotalShift / 2), "ptsAway", R1(r.SumPtsA / n - g.TotalShift / 2), "total", R1(g.MeanTotal), "totalLo", g.TotalPct[0], "totalHi", g.TotalPct[4],
                     "pOver", R3(g.POver), "pCoverHome", R3(g.PCoverH), "pBlowout", R3(g.PBlowout), "pClose", R3(g.PClose), "pOT", R3(g.POT),
                     "evHome", dk.HasMl ? R3(U.EvPerDollar(g.WinH, dk.MlH)) : 0, "evAway", dk.HasMl ? R3(U.EvPerDollar(1 - g.WinH, dk.MlA)) : 0,
                     "b2bHome", g.Def.HomeB2B, "b2bAway", g.Def.AwayB2B,
@@ -234,7 +234,7 @@ namespace NbaQuant
                 "record", O("tags", tagRec, "slates", slates, "mlBrier", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.P - p.Y) * (p.P - p.Y))) : null, "mlBrierMkt", mlLive.Count > 0 ? (object)R3(mlLive.Average(p => (p.PMarket - p.Y) * (p.PMarket - p.Y))) : null),
                 "audit", audit, "tiers", tiers, "safest", Safest.Json(), "banned", Ban.Json(),
                 "trends", trends, "review", review, "favRecord", favRecord,
-                "learn", O("minTrend", S.MinTrend, "ptsK", S.LearnPtsK, "astK", S.LearnAstK, "players", Learner.Count, "through", Learner.Through, "hotStart", S.HotStartWeight, "teamForm", S.TeamFormWeight));
+                "learn", O("minTrend", S.MinTrend, "ptsK", S.LearnPtsK, "astK", S.LearnAstK, "players", Learner.Count, "through", Learner.Through, "hotStart", S.HotStartWeight, "teamForm", S.TeamFormWeight, "totalShift", R1(TotalLearn.Shift), "totalGames", TotalLearn.N));
             var ser = new JavaScriptSerializer { MaxJsonLength = int.MaxValue };
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             File.WriteAllText(path, "window.NBA = " + ser.Serialize(data) + ";\n", new UTF8Encoding(false));

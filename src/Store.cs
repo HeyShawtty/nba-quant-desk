@@ -41,6 +41,8 @@ namespace NbaQuant
         // per-player spread (2026-11-14): steady scorers get narrower simulated ranges, streaky ones wider
         public double SpreadK = 0;           // his scoring spread this season vs league-typical at his average, mixed with K games of league-typical (0 = off)
         public double SpreadPow = 2;         // his minutes-noise multiplier = (that mixed ratio) ^ SpreadPow, kept within 0.4 to 1.6
+        // totals learning (2026-11-27): model totals ran ~3 pts above final scores; the average miss on earlier games is taken off
+        public double TotalLearnK = 0;       // totals pricing shift = sum(raw model total - actual) / (games + K) over earlier games (0 = off)
         public string PropCal = "";          // per-stat logit maps for player thresholds, "PTS:shift:slope;..." (fitted out of sample)
         public string LastRecalibration = "";
 

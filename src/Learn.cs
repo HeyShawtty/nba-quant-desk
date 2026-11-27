@@ -119,6 +119,7 @@ namespace NbaQuant
             var all = new List<Pred>(); GameRecs = new List<GameRec>(); ChkSims = 0; ChkPtsBad = 0; ChkLadderBad = 0; ChkMin = 0; ChkMinExp = 0;
             lock (Program.BaseMargins) Program.BaseMargins.Clear();   // rebuilt date by date, so team form only sees earlier games
             Learner.Reset();                                          // trend learning also starts empty and only sees earlier dates
+            TotalLearn.Reset();                                       // totals shift too
             for (var d = from.Date; d <= to.Date; d = d.AddDays(1))
             {
                 Program.BuildSlate(d, false, true);
@@ -130,6 +131,7 @@ namespace NbaQuant
                 var byId = Program.Games.ToDictionary(g => g.Def.EspnId, g => g.Info);
                 Grader.Grade(preds, id => { GameData g; return id != null && byId.TryGetValue(id, out g) ? g : null; });
                 Learner.Add(preds);
+                TotalLearn.Add(preds);
                 all.AddRange(preds);
                 foreach (var g in Program.Games.Where(x => x.HasMarket))
                     GameRecs.Add(new GameRec
@@ -406,6 +408,22 @@ namespace NbaQuant
                 }
                 S.TeamFormWeight = bestW;
                 slopeNote += "\nTeam form vs the model's own margins, moneyline Brier earlier / later half: " + string.Join("; ", formNotes) + string.Format(U.IC, ". Using {0}.", bestW);
+                // totals learning (2026-11-27): judged on over/under Brier; the alternative must win on both halves of the dates
+                Func<List<Pred>, Tuple<double, double>> totHalves = ps =>
+                {
+                    var l = ps.Where(p => p.Kind == "TOTAL" && p.Stat == "OVER" && !p.Void && !double.IsNaN(p.Y) && !double.IsNaN(p.P)).ToList();
+                    var ds = l.Select(p => p.Date).Distinct().OrderBy(x => x).ToList(); if (ds.Count < 4) return Tuple.Create(double.NaN, double.NaN);
+                    string cut = ds[ds.Count / 2];
+                    Func<IEnumerable<Pred>, double> b = xs => xs.Average(x => (x.P - x.Y) * (x.P - x.Y));
+                    return Tuple.Create(b(l.Where(p => string.CompareOrdinal(p.Date, cut) < 0)), b(l.Where(p => string.CompareOrdinal(p.Date, cut) >= 0)));
+                };
+                double keepT = S.TotalLearnK, altT = keepT > 0 ? 0 : 20;
+                var baseT = totHalves(basePreds);
+                S.TotalLearnK = altT;
+                log(string.Format(U.IC, "Backtest with TotalLearnK = {0} ...", altT));
+                var altTot = totHalves(Run(from, to, S.BacktestSims, log));
+                if (!(altTot.Item1 < baseT.Item1 && altTot.Item2 < baseT.Item2)) S.TotalLearnK = keepT;
+                slopeNote += string.Format(U.IC, "\nTotalLearnK {0} vs {1}: over/under Brier earlier half {2:0.00000} vs {3:0.00000}, later half {4:0.00000} vs {5:0.00000}. Using {6}.", keepT, altT, baseT.Item1, altTot.Item1, baseT.Item2, altTot.Item2, S.TotalLearnK);
             }
             slopeNote += "\n" + FitDdCalibration(preds0);
             slopeNote += "\n" + FitPropCalibration(preds0);

@@ -63,4 +63,38 @@ namespace NbaQuant
             catch (Exception e) { Program.Warnings.Add("Trend learning not loaded (" + e.Message + "); projections run without it."); Reset(); }
         }
     }
+
+    // Totals learning (2026-11-27): the model's game totals ran about 3 points above the final scores (208 live games), while its
+    // spread of totals was about right. Before each slate the average miss of its raw totals on earlier games, shrunk with
+    // Settings.TotalLearnK games of no miss, is taken off the totals used to price overs and unders (Program.ShiftedTotal).
+    // Margins, moneylines and player projections are untouched. Each stored game total carries the shift it was made with
+    // (PMarket), so learning always starts from the raw total. Backtests feed it date by date (no look-ahead).
+    static class TotalLearn
+    {
+        static double sum; static int n; static HashSet<string> seen = new HashSet<string>();
+        public static void Reset() { sum = 0; n = 0; seen = new HashSet<string>(); }
+        public static int N { get { return n; } }
+        public static double Shift
+        {
+            get { double k = Program.S.TotalLearnK; return k <= 0 || n == 0 ? 0 : Math.Round(Math.Max(-8, Math.Min(8, sum / (n + k))), 2); }
+        }
+
+        public static void Add(IEnumerable<Pred> preds)
+        {   // the ledger can hold more than one run of a game: the last one counts
+            foreach (var p in preds.Where(p => p.Kind == "MEAN" && p.Stat == "TOTAL" && !p.Void && !double.IsNaN(p.Actual) && !double.IsNaN(p.Mean) && p.Mean > 0).Reverse())
+            {
+                if (!seen.Add(p.Date + "|" + p.GameId)) continue;
+                sum += p.Mean + (double.IsNaN(p.PMarket) ? 0 : p.PMarket) - p.Actual; n++;
+            }
+        }
+
+        // live runs: every graded game total before the slate date
+        public static void LoadLive(DateTime slate)
+        {
+            Reset();
+            string ds = slate.ToString("yyyy-MM-dd");
+            try { Add(Ledger.LoadAll().Where(p => p.Kind == "MEAN" && string.CompareOrdinal(p.Date, ds) < 0)); }
+            catch (Exception e) { Program.Warnings.Add("Totals learning not loaded (" + e.Message + "); totals run without it."); Reset(); }
+        }
+    }
 }

@@ -19,7 +19,7 @@ namespace NbaQuant
         public double ModelPtsH, ModelPtsA, ModelPoss, MktPtsH, MktPtsA, BlendPtsH, BlendPtsA, BlendPoss;
         public double OffH, DefH, OffA, DefA, PaceH, PaceA;
         public SimResult Res;
-        public double ModelWinH, ModelMeanMargin, ModelMeanTotal, FormShift;
+        public double ModelWinH, ModelMeanMargin, ModelMeanTotal, FormShift, TotalShift;
         public double WinH, MeanMargin, MeanTotal, SdMargin, SdTotal, PCoverH, POver, POT, PBlowout, PClose;
         public int[] TotalPct = new int[5];
         public List<PlayerP> Players = new List<PlayerP>();
@@ -165,6 +165,7 @@ namespace NbaQuant
             Completed = Store.CompletedBefore(d, S.SeasonStart);
             if (live) LoadBaseMargins();   // backtests build their own, date by date (Walk.Run)
             if (live) Learner.LoadLive(d); // trend learning from every graded game before this slate (backtests feed it date by date)
+            if (live) TotalLearn.LoadLive(d); // totals shift from every graded game total before this slate
             Environment(quiet);
             CalibrateGamma();
             DefenseProfiles();
@@ -621,6 +622,7 @@ namespace NbaQuant
                 d.DK = new MarketLine { Book = "none", SprH = Math.Round(ctx.ModelPtsA - ctx.ModelPtsH) + 0.5, Total = Math.Round(ctx.ModelPtsH + ctx.ModelPtsA) + 0.5, SprHOdds = -110, SprAOdds = -110, OverOdds = -110, UnderOdds = -110 };
             }
             lock (BaseMargins) BaseMargins[d.EspnId] = ctx.ModelPtsH - ctx.ModelPtsA;
+            ctx.TotalShift = TotalLearn.Shift;   // prices overs/unders only; the simulated scores (margins, players) are unchanged
             if (S.TeamFormWeight > 0)
             {   // team form: shift the expected margin toward teams that keep beating what was expected of them (tested in Recalibrate)
                 ctx.FormShift = S.TeamFormWeight * (TeamForm(d.Home) - TeamForm(d.Away));
@@ -711,7 +713,7 @@ namespace NbaQuant
                     var rm = new GameSim(g.H, g.A, g.P).Run(Math.Max(10000, nsim / 2), seed + 5, true);
                     int wins = 0; double mm = 0, mt = 0;
                     for (int s = 0; s < rm.N; s++) { if (rm.HomePts[s] > rm.AwayPts[s]) wins++; mm += rm.HomePts[s] - rm.AwayPts[s]; mt += rm.HomePts[s] + rm.AwayPts[s]; }
-                    g.ModelWinH = (double)wins / rm.N; g.ModelMeanMargin = mm / rm.N; g.ModelMeanTotal = mt / rm.N;
+                    g.ModelWinH = (double)wins / rm.N; g.ModelMeanMargin = mm / rm.N; g.ModelMeanTotal = mt / rm.N - g.TotalShift;
                 }
                 g.H.Eff = 1; g.A.Eff = 1; g.H.Kappa = 1; g.A.Kappa = 1;
                 CalibrateEff(g, g.P, g.BlendPtsH, g.BlendPtsA, g.BlendPoss, calibN, 5, seed + 2);
@@ -719,6 +721,14 @@ namespace NbaQuant
                 if (!modelOnlyRun) { g.ModelWinH = double.NaN; }
                 Summarize(g);
             });
+        }
+
+        // a simulated game total with the learned totals shift taken off. A fixed per-simulation offset in [-0.5, 0.5) spreads the
+        // shift evenly over whole-point totals (otherwise a 2.4 shift would act like 3 on half-point lines). Exact when the shift is 0.
+        public static double ShiftedTotal(int t, int s, double shift)
+        {
+            if (shift == 0) return t;
+            double u = s * 0.6180339887498949; return t - shift + (u - Math.Floor(u)) - 0.5;
         }
 
         public static double NoVigHome(MarketLine m)
@@ -739,18 +749,19 @@ namespace NbaQuant
                 if (m > 0) wins++;
                 double cm = m + g.Def.DK.SprH;
                 if (cm > 0) cover++; else if (cm == 0) push++;
-                if (t > g.Def.DK.Total) over++; else if (t == g.Def.DK.Total) opush++;
+                double ts = ShiftedTotal(t, s, g.TotalShift);
+                if (ts > g.Def.DK.Total) over++; else if (ts == g.Def.DK.Total) opush++;
                 if (r.OT[s] > 0) ot++; if (Math.Abs(m) >= 20) blow++; if (Math.Abs(m) <= 5) close++;
                 sm += m; st += t;
             }
-            g.WinH = (double)wins / n; g.MeanMargin = sm / n; g.MeanTotal = st / n;
+            g.WinH = (double)wins / n; g.MeanMargin = sm / n; g.MeanTotal = st / n - g.TotalShift;
             double vm = 0, vt = 0;
-            for (int s = 0; s < n; s++) { double a = r.HomePts[s] - r.AwayPts[s] - g.MeanMargin, b = totals[s] - g.MeanTotal; vm += a * a; vt += b * b; }
+            for (int s = 0; s < n; s++) { double a = r.HomePts[s] - r.AwayPts[s] - g.MeanMargin, b = totals[s] - (g.MeanTotal + g.TotalShift); vm += a * a; vt += b * b; }
             g.SdMargin = Math.Sqrt(vm / n); g.SdTotal = Math.Sqrt(vt / n);
             g.PCoverH = (double)cover / (n - push); g.POver = (double)over / (n - opush); g.POT = (double)ot / n; g.PBlowout = (double)blow / n; g.PClose = (double)close / n;
             Array.Sort(totals);
-            g.TotalPct[0] = (int)U.Quantile(totals, 0.10); g.TotalPct[1] = (int)U.Quantile(totals, 0.25); g.TotalPct[2] = (int)U.Quantile(totals, 0.5);
-            g.TotalPct[3] = (int)U.Quantile(totals, 0.75); g.TotalPct[4] = (int)U.Quantile(totals, 0.90);
+            g.TotalPct[0] = (int)Math.Round(U.Quantile(totals, 0.10) - g.TotalShift); g.TotalPct[1] = (int)Math.Round(U.Quantile(totals, 0.25) - g.TotalShift); g.TotalPct[2] = (int)Math.Round(U.Quantile(totals, 0.5) - g.TotalShift);
+            g.TotalPct[3] = (int)Math.Round(U.Quantile(totals, 0.75) - g.TotalShift); g.TotalPct[4] = (int)Math.Round(U.Quantile(totals, 0.90) - g.TotalShift);
         }
     }
 }
