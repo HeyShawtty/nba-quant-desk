@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/27/26 6:15 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/27/26 6:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -9,7 +9,7 @@ NY,OG Anunoby,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 NY,Jordan Clarkson,OUT,0,Official: Out (Injury/Illness - Right Plantar Fasciitis)
 NY,Andre Drummond,OUT,0,Official: Out (Injury/Illness - Concussion Protocol)
 NY,Miles McBride,OUT,0,Official: Out (Injury/Illness - Left Athletic Pubalgia)
-NY,Karl-Anthony Towns,Q,0.5,Official: Questionable
+NY,Karl-Anthony Towns,AVAIL,1,Official: Available
 BKN,Tyler Bilodeau,OUT,0,Official: Out (G League - Two-Way)
 BKN,Joshua Jefferson,OUT,0,Official: Out (G League - On Assignment)
 BKN,Drake Powell,OUT,0,Official: Out (G League - On Assignment)
@@ -34,20 +34,20 @@ DET,Duncan Robinson,OUT,0,Official: Out (Injury/Illness - Left Quadriceps Strain
 PHI,Jaylen Brown,OUT,0,Official: Out
 PHI,Joel Embiid,Q,0.5,Official: Questionable (Injury/Illness - Illness)
 PHI,Ariel Hukporti,OUT,0,Official: Out (Injury/Illness - Right Achilles Tendon)
-PHI,Dean Wade,Q,0.5,Official: Questionable
+PHI,Dean Wade,OUT,0,Official: Out
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,OUT,0,Official: Out
 IND,Larry Nance Jr.,Q,0.9,Official: Probable (Injury/Illness - Right Ankle Bruise)
 IND,Kelly Oubre Jr.,AVAIL,1,Official: Available (Injury/Illness - Right Hand Laceration)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
-ATL,Rafael Castro,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Rafael Castro,OUT,0,Official: Out (G League - Two-Way)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
 ATL,Jock Landale,OUT,0,Official: Out (Injury/Illness - Right Great Toe Sprain)
 ATL,CJ McCollum,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 ATL,Asa Newell,OUT,0,Official: Out (Injury/Illness - Left Great Toe Surgery)
 ATL,Henri Veesaar,OUT,0,Official: Out
-ATL,Jalen Wilson,Q,0.25,Official: Doubtful (G League - Two-Way)
+ATL,Jalen Wilson,OUT,0,Official: Out (G League - Two-Way)
 BOS,Devin Carter,OUT,0,Official: Out (G League - Two-Way)
 BOS,Dillon Mitchell,OUT,0,Official: Out (G League - Two-Way)
 BOS,Mitchell Robinson,OUT,0,Official: Out (Injury/Illness - Illness)
