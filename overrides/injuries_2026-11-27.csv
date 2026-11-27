@@ -1,7 +1,7 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/27/26 4:45 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/27/26 6:15 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
-MIA,Giannis Antetokounmpo,Q,0.9,Official: Probable (Injury/Illness - Right Groin Tendinitis)
+MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
 MIA,Vladislav Goldin,OUT,0,Official: Out (G League - Two-Way)
 MIA,Andrew Wiggins,AVAIL,1,Official: Available
@@ -18,7 +18,7 @@ BKN,Moritz Wagner,OUT,0,Official: Out
 TOR,RJ Barrett,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 TOR,Nate Bittle,OUT,0,Official: Out (G League - Two-Way)
 TOR,Kawhi Leonard,OUT,0,Official: Out
-TOR,Alijah Martin,Q,0.5,Official: Questionable (Injury/Illness - Left Knee Soreness)
+TOR,Alijah Martin,AVAIL,1,Official: Available (Injury/Illness - Left Knee Soreness)
 TOR,Kevin McCullar Jr.,OUT,0,Official: Out (G League - Two-Way)
 TOR,Malachi Smith,OUT,0,Official: Out (G League - Two-Way)
 MIL,Kasparas Jakucionis,OUT,0,Official: Out
@@ -37,9 +37,9 @@ PHI,Ariel Hukporti,OUT,0,Official: Out (Injury/Illness - Right Achilles Tendon)
 PHI,Dean Wade,Q,0.5,Official: Questionable
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
-IND,T.J. McConnell,Q,0.5,Official: Questionable
+IND,T.J. McConnell,OUT,0,Official: Out
 IND,Larry Nance Jr.,Q,0.9,Official: Probable (Injury/Illness - Right Ankle Bruise)
-IND,Kelly Oubre Jr.,Q,0.5,Official: Questionable (Injury/Illness - Right Hand Laceration)
+IND,Kelly Oubre Jr.,AVAIL,1,Official: Available (Injury/Illness - Right Hand Laceration)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 ATL,Rafael Castro,Q,0.25,Official: Doubtful (G League - Two-Way)
 ATL,Mouhamed Gueye,OUT,0,Official: Out (Injury/Illness - Left Foot Fracture)
