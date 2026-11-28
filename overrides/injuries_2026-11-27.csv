@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/27/26 8:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/27/26 9:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -100,9 +100,10 @@ POR,Chris Youngblood,OUT,0,Official: Out
 LAL,Quentin Grimes,AVAIL,1,Official: Available (Injury/Illness - Right Finger Splint)
 LAL,Austin Reaves,AVAIL,1,Official: Available
 SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
-SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Right Shin Contusion)
-SA,Dylan Harper,Q,0.5,Official: Questionable
+SA,De'Aaron Fox,AVAIL,1,Official: Available (-)
+SA,Dylan Harper,AVAIL,1,Official: Available (-)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
+SA,David Jones Garcia,OUT,0,Official: Out (G League - Two-Way)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
 NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
