@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/27/26 6:30 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/27/26 7:00 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -29,16 +29,16 @@ DET,Cade Cunningham,OUT,0,Official: Out
 DET,Jalen Duren,OUT,0,Official: Out (Injury/Illness - Right Hamstring Strain)
 DET,Ebuka Okorie,OUT,0,Official: Out (Injury/Illness - Left Oblique Strain)
 DET,Ugonna Onyenso,OUT,0,Official: Out (G League - Two-Way)
-DET,Taurean Prince,OUT,0,Official: Out (Injury/Illness - Right Arthroscopy)
+DET,Taurean Prince,OUT,0,Official: Out
 DET,Duncan Robinson,OUT,0,Official: Out (Injury/Illness - Left Quadriceps Strain)
 PHI,Jaylen Brown,OUT,0,Official: Out
-PHI,Joel Embiid,Q,0.5,Official: Questionable (Injury/Illness - Illness)
-PHI,Ariel Hukporti,OUT,0,Official: Out (Injury/Illness - Right Achilles Tendon)
+PHI,Joel Embiid,AVAIL,1,Official: Available (Injury/Illness - Illness)
+PHI,Ariel Hukporti,OUT,0,Official: Out
 PHI,Dean Wade,OUT,0,Official: Out
 IND,Johnny Furphy,OUT,0,Official: Out
 IND,Tyrese Haliburton,OUT,0,Official: Out (Injury/Illness - Left Hamstring Strain)
 IND,T.J. McConnell,OUT,0,Official: Out
-IND,Larry Nance Jr.,Q,0.9,Official: Probable (Injury/Illness - Right Ankle Bruise)
+IND,Larry Nance Jr.,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Bruise)
 IND,Kelly Oubre Jr.,AVAIL,1,Official: Available (Injury/Illness - Right Hand Laceration)
 IND,Ben Sheppard,OUT,0,Official: Out (Injury/Illness - Left Meniscus Surgery)
 ATL,Rafael Castro,OUT,0,Official: Out (G League - Two-Way)
@@ -83,7 +83,7 @@ UTAH,Jaxson Hayes,Q,0.5,Official: Questionable (Injury/Illness - Left Knee Strai
 UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
-UTAH,Jusuf Nurkic,Q,0.5,Official: Questionable
+UTAH,Jusuf Nurkic,Q,0.5,Official: Questionable (Injury/Illness - Right 2nd Plantar)
 GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
 GS,Moses Moody,OUT,0,Official: Out
@@ -98,7 +98,7 @@ LAL,Quentin Grimes,AVAIL,1,Official: Available (Injury/Illness - Right Finger Sp
 LAL,Austin Reaves,AVAIL,1,Official: Available
 SA,Maliq Brown,OUT,0,Official: Out (G League - Two-Way)
 SA,De'Aaron Fox,Q,0.5,Official: Questionable (Injury/Illness - Right Shin Contusion)
-SA,Dylan Harper,Q,0.5,Official: Questionable
+SA,Dylan Harper,Q,0.5,Official: Questionable (Injury/Illness - Left Hip External)
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
