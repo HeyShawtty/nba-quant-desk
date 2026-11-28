@@ -1,5 +1,5 @@
 team,name,status,p_play,note
-# Source: NBA official injury report 11/27/26 8:00 PM ET (read automatically). All listed teams submitted.
+# Source: NBA official injury report 11/27/26 8:30 PM ET (read automatically). All listed teams submitted.
 # status: OUT, Q (p_play: Doubtful 0.25, Questionable 0.5, Probable 0.9) or AVAIL.
 MIA,Giannis Antetokounmpo,AVAIL,1,Official: Available (Injury/Illness - Right Groin Tendinitis)
 MIA,Tre Donaldson,OUT,0,Official: Out (G League - Two-Way)
@@ -80,13 +80,13 @@ DEN,DaRon Holmes II,OUT,0,Official: Out (G League - On Assignment)
 DEN,Bryce Hopkins,OUT,0,Official: Out (G League - Two-Way)
 DEN,Cam Whitmore,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jonas Aidoo,OUT,0,Official: Out (G League - Two-Way)
-UTAH,Mo Bamba,Q,0.5,Official: Questionable (Injury/Illness - Illness)
+UTAH,Mo Bamba,OUT,0,Official: Out (Injury/Illness - Illness)
 UTAH,Kobe Bufkin,OUT,0,Official: Out (G League - Two-Way)
-UTAH,Jaxson Hayes,Q,0.5,Official: Questionable (Injury/Illness - Left Knee Strain)
+UTAH,Jaxson Hayes,AVAIL,1,Official: Available (Injury/Illness - Left Knee Strain)
 UTAH,Harrison Ingram,OUT,0,Official: Out (G League - Two-Way)
 UTAH,Jaren Jackson Jr.,OUT,0,Official: Out (Injury/Illness - Right MCL Tear)
 UTAH,Lauri Markkanen,OUT,0,Official: Out (Injury/Illness - Right Hand Fracture)
-UTAH,Jusuf Nurkic,Q,0.5,Official: Questionable
+UTAH,Jusuf Nurkic,AVAIL,1,Official: Available
 GS,Jimmy Butler III,OUT,0,Official: Out
 GS,Stephen Curry,OUT,0,Official: Out (Injury/Illness - Right Oblique Tear)
 GS,Moses Moody,OUT,0,Official: Out
@@ -105,13 +105,13 @@ SA,Dylan Harper,Q,0.5,Official: Questionable
 SA,Tobias Harris,OUT,0,Official: Out (Injury/Illness - Left Calf Strain)
 SA,Jayden Quaintance,OUT,0,Official: Out (Injury/Illness - Right Knee Surgery)
 NO,Malik Dia,OUT,0,Official: Out (G League - Two-Way)
-NO,Bennedict Mathurin,Q,0.25,Official: Doubtful (Injury/Illness - Left Plantar Fasciitis)
+NO,Bennedict Mathurin,OUT,0,Official: Out (Injury/Illness - Left Plantar Fasciitis)
 NO,Dejounte Murray,OUT,0,Official: Out (Injury/Illness - Left Ankle Sprain)
 NO,Jaron Pierre Jr.,OUT,0,Official: Out (G League - Two-Way)
 NO,Julian Reese,OUT,0,Official: Out (G League - Two-Way)
-NO,Trendon Watford,Q,0.9,Official: Probable (Injury/Illness - Right Ankle Sprain)
+NO,Trendon Watford,AVAIL,1,Official: Available (Injury/Illness - Right Ankle Sprain)
 LAC,Bradley Beal,OUT,0,Official: Out
-LAC,Cam Christie,Q,0.5,Official: Questionable (G League - Two-Way)
-LAC,Nick Martinelli,Q,0.5,Official: Questionable (G League - Two-Way)
+LAC,Cam Christie,OUT,0,Official: Out (G League - Two-Way)
+LAC,Nick Martinelli,AVAIL,1,Official: Available (G League - Two-Way)
 LAC,Jordan Miller,OUT,0,Official: Out
-LAC,Jalen Pickett,Q,0.5,Official: Questionable (G League - Two-Way)
+LAC,Jalen Pickett,OUT,0,Official: Out (G League - Two-Way)
